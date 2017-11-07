@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>贷款详情</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+</head>
+<body>
+<div class="loans_detail_t">
+	<div class="loans_detail_tm">
+		<div class="title ub ub-ac">
+			<img src="images/hot1.jpg" alt="" />
+			<h1>钱有路 - 现金贷</h1>
+		</div>
+		<div class="ub line_b">
+			<div class="ub-f1">
+				<strong class="f_pink">136445432</strong>
+				<em class="f_gray">申请人数（人）</em>
+			</div>
+			<div>
+				<strong class="f_pink">95%</strong>
+				<em class="f_gray">成功率</em>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="loans_detail_t1">
+	<div class="loans_detail_t1m ub">
+		<div class="ub-f1">
+			<em class="f_gray">贷款范围</em>
+			<strong>100 - 3000</strong>
+		</div>
+		<div class="ub-f1">
+			<em class="f_gray">贷款期限</em>
+			<strong>7日 - 42日</strong>
+		</div>
+		<div class="ub-f1">
+			<em class="f_gray">日利率</em>
+			<strong>0.03% - 0.03%</strong>
+		</div>
+	</div>
+</div>
+
+<div class="loans_detail_b">
+	<div class="ub b_m1">
+		<div class="ub ub-ac ub-f1">
+			<div class="title">金额</div>
+			<input id="loansMoney" class="ui_input" type="number" value="1000" />
+			<div>元</div>
+		</div>
+		<div class="ub ub-ac ub-f1">
+			<div class="title">期限</div>
+			<select id="applyLoansTime" class="ui_select">
+				<option>7</option>
+			</select>
+			<div>日</div>
+		</div>
+	</div>
+	<div class="ub b_m2">
+		<div class="ub-f1">
+			<span class="f_gray">月还款：</span>
+			<span class="f_pink" id="refundLoans">1004.5元</span>
+		</div>
+		<div class="ub-f1">
+			<span class="f_gray">总利息：</span>
+			<span class="f_pink" id="refundInterest">4.5元</span>
+		</div>
+		<div class="ub-f1">
+			<span class="f_gray">月利率：</span>
+			<span class="f_pink" id="interestRate">0.45%</span>
+		</div>
+	</div>
+</div>
+
+<div class="loans_details">
+	<div class="hot_loans_t">
+		<h1><span class="line_1"></span>审核说明</h1>
+	</div>
+	<div class="loans_details_m">
+		<p>审核方式：人工审核+自动审核</p>
+		<p>审核周期：最快2小时</p>
+		<p>还款方式：app还款</p>
+	</div>
+</div>
+<div class="loans_details">
+	<div class="hot_loans_t">
+		<h1><span class="line_1"></span>申请流程</h1>
+	</div>
+	<div class="loans_details_m">
+		<p>注册 > 下载 > 使命认证 > 人脸识别 > 申请贷款 > 等待放款</p>
+	</div>
+</div>
+<div class="loans_details">
+	<div class="hot_loans_t">
+		<h1><span class="line_1"></span>申请条件</h1>
+	</div>
+	<div class="loans_details_m">
+		<p>大于18周岁的中国公民</p>
+	</div>
+</div>
+
+
+
+<div class="loans_send" id="loansBtn">立即申请</div>
+
+<div class="ui_alert_bg">
+	<div class="ui_alert_box ub ub-ac ub-pc">
+		<div class="ui_alert_m">
+			<div class="ui_alert_msg">提示语</div>
+			<div class="ui_alert_b">
+				<div class="ub">
+					<div class="ui_alert_btn ui_alert_btn_y ub-f1">确定</div>
+					<div class="ui_alert_line"></div>
+					<div class="ui_alert_btn ui_alert_btn_n ub-f1">取消</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

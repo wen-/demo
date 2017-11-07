@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>贷款</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+</head>
+<body>
+<div class="ub ub-ver ub_layout">
+	<div class="sort">
+		<div class="sort1 ub ub-ac">
+			<div class="title">职业身份</div>
+			<div class="ub ub-ac ub-f1">
+				<div class="sort_list current">上班族</div>
+				<div class="sort_list">企业主</div>
+				<div class="sort_list">其他</div>
+			</div>
+		</div>
+		<div class="sort2 ub ub-ac">
+			<div class="title">贷款金额</div>
+			<input class="ui_input" type="number" placeholder="请输入金额" />
+			<div class="title">期限</div>
+			<select id="loansTime" class="ui_select">
+				<option>不限</option>
+				<option>3个月</option>
+				<option>6个月</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="loans ub-f1" style="margin-bottom: 50px;overflow: auto;">
+		<div class="hot_loans_m ui_listbox2">
+			<a href="贷款详情.html" class="ub list">
+				<div class="tp">
+					<img src="images/hot1.jpg" alt="" />
+					<p>钱有路-现金贷</p>
+				</div>
+				<div class="detail ub-f1">
+					<div class="ub t1 ub-ac">
+						<div class="ub-f1 t1_5">
+							<em>500-3000元</em>
+							<strong class="f_gray">额度</strong>
+						</div>
+						<div class="ub-f1">
+							<em class="rate f_pink">0.36%<img src="images/ico3.png" alt="" /></em>
+							<strong class="f_gray">日利率</strong>
+						</div>
+					</div>
+					<strong class="t2 f_pink">线下申请、3000额度、秒下秒用</strong>
+				</div>
+			</a>
+			<a href="贷款详情.html" class="ub list">
+				<div class="tp">
+					<img src="images/hot2.jpg" alt="" />
+					<p>天神贷</p>
+				</div>
+				<div class="detail ub-f1">
+					<div class="ub t1 ub-ac">
+						<div class="ub-f1 t1_5">
+							<em>1000-5000元</em>
+							<strong class="f_gray">额度</strong>
+						</div>
+						<div class="ub-f1">
+							<em class="rate f_pink">0.4%</em>
+							<strong class="f_gray">日利率</strong>
+						</div>
+					</div>
+					<strong class="t2 f_pink">极速审核，30秒放款</strong>
+				</div>
+			</a>
+			<a href="贷款详情.html" class="ub list">
+				<div class="tp">
+					<img src="images/hot1.jpg" alt="" />
+					<p>钱有路-现金贷</p>
+				</div>
+				<div class="detail ub-f1">
+					<div class="ub t1 ub-ac">
+						<div class="ub-f1 t1_5">
+							<em>500-3000元</em>
+							<strong class="f_gray">额度</strong>
+						</div>
+						<div class="ub-f1">
+							<em class="rate f_pink">0.36%<img src="images/ico3.png" alt="" /></em>
+							<strong class="f_gray">日利率</strong>
+						</div>
+					</div>
+					<strong class="t2 f_pink">线下申请、3000额度、秒下秒用</strong>
+				</div>
+			</a>
+			<a href="贷款详情.html" class="ub list">
+				<div class="tp">
+					<img src="images/hot2.jpg" alt="" />
+					<p>天神贷</p>
+				</div>
+				<div class="detail ub-f1">
+					<div class="ub t1 ub-ac">
+						<div class="ub-f1 t1_5">
+							<em>1000-5000元</em>
+							<strong class="f_gray">额度</strong>
+						</div>
+						<div class="ub-f1">
+							<em class="rate f_pink">0.4%</em>
+							<strong class="f_gray">日利率</strong>
+						</div>
+					</div>
+					<strong class="t2 f_pink">极速审核，30秒放款</strong>
+				</div>
+			</a>
+		</div>
+		<div class="load_more">正在加载更多数据</div>
+	</div>
+</div>
+
+
+<div class="ui_footer">
+	<div class="ub">
+		<a href="推荐.html" class="ub-f1 n1">
+			<div class="ico ico1"></div>
+			<h1>推荐</h1>
+		</a>
+		<a href="贷款.html" class="ub-f1 n2 current">
+			<div class="ico ico2"></div>
+			<h1>贷款</h1>
+		</a>
+		<a href="攻略.html" class="ub-f1 n3">
+			<div class="ico ico3"></div>
+			<h1>攻略</h1>
+		</a>
+		<a href="我的.html" class="ub-f1 n4">
+			<div class="ico ico4"></div>
+			<h1>我的</h1>
+		</a>
+	</div>
+</div>
+
+<script type="html/module" id="uTemplate">
+<a href="{%url%}" class="ub list">
+	<div class="tp">
+		<img src="{%imgsrc%}" alt="" />
+		<p>{%name%}</p>
+	</div>
+	<div class="detail ub-f1">
+		<div class="ub t1 ub-ac">
+			<div class="ub-f1 t1_5">
+				<em>{%money%}元</em>
+				<strong class="f_gray">额度</strong>
+			</div>
+			<div class="ub-f1">
+				<em class="rate f_pink">{%rate%}</em>
+				<strong class="f_gray">日利率</strong>
+			</div>
+		</div>
+		<strong class="t2 f_pink">线下申请、3000额度、秒下秒用</strong>
+	</div>
+</a>
+</script>
+<script>
+$(function(){
+	$("html,body,.ub_layout").css({"height":"100%"});
+	$("body").css({"margin":0});
+});
+</script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>注册</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+</head>
+<body>
+<div class="ui_listbox1">
+	<div class="list ub ub-ac">
+		<div class="title">手机号</div>
+		<div class="input_box ub ub-f1">
+			<input id="phone" class="input ub-f1" type="tel" maxlength="11" placeholder="请输入手机号" />
+		</div>
+	</div>
+	<div class="list ub ub-ac">
+		<div class="title">验证码</div>
+		<div class="input_box ub ub-ac ub-f1">
+			<input class="input ub-f1" id="code" type="text" placeholder="请输入验证码" />
+			<button type="button" class="btn1 f_white bg_pink get_code">获取验证码</button>
+		</div>
+	</div>
+	<div class="list ub ub-ac">
+		<div class="title">密码</div>
+		<div class="input_box ub ub-f1">
+			<input id="password" class="input ub-f1" type="password" placeholder="请输入密码" />
+		</div>
+	</div>
+</div>
+
+<div class="agreement ub ub-ac">
+	<span class="ui_checked"></span>
+	<a href="协议.html">
+		<span>我已同意《佰宝袋注册协议》</span>
+	</a>
+</div>
+
+<div class="err_tips" id="errTips"></div>
+
+<div class="reg_login_btn">
+	<button type="button" id="regBtn" class="btn bg_pink_img f_white">注册</button>
+</div>
+
+<div class="tc">
+	<a href="登录.html">已有账号，请登录</a>
+</div>
+
+<div class="ui_alert_bg">
+	<div class="ui_alert_box ub ub-ac ub-pc">
+		<div class="ui_alert_m">
+			<div class="ui_alert_msg">提示语</div>
+			<div class="ui_alert_b">
+				<div class="ub">
+					<div class="ui_alert_btn ui_alert_btn_y ub-f1">确定</div>
+					<div class="ui_alert_line"></div>
+					<div class="ui_alert_btn ui_alert_btn_n ub-f1">取消</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+	"name": "baibaodai",
+	"developer": "黄文雄",
+	"email": "yellowwen@126.com",
+	"date": "2017-10-30",
+	"details": "",
+	"version": "0.1.0",
+	"devDependencies": {
+		"grunt": "^1.0.0",
+		"grunt-contrib-uglify": "^1.0.1",
+		"grunt-autoprefixer": "^3.0.4",
+		"grunt-contrib-cssmin": "^1.0.1",
+		"grunt-contrib-clean": "*",
+		"grunt-contrib-concat": "*",
+		"grunt-contrib-copy": "*",
+		"grunt-contrib-watch": "*",
+		"grunt-newer": "*"
+	}
+}
