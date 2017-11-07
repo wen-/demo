@@ -81,6 +81,7 @@ a:hover{
 	box-shadow: none !important;
 }
 .load_more{
+	display: none;
 	padding: .5em;
 	text-align: center;
 	/*background-color: #efefef;*/
@@ -406,6 +407,8 @@ a:hover{
 	width:3em;
 	height:3em;
 	margin: 0 auto .5em;
+	border: solid 1px #ccc;
+	border-radius: 100%;
 }
 .question_menu img,
 .question_menu strong{
@@ -469,6 +472,7 @@ a:hover{
 }
 .user_box{
 	background-color: #fff;
+	margin-bottom: 1em;
 }
 .user_list{
 	padding-left: 1em;
@@ -507,6 +511,15 @@ a:hover{
 	box-shadow: 0 2px 5px #888;
 }
 
+.exit{
+	margin: 1em 1em 0;
+	padding-bottom: 1em;
+}
+.exit button{
+	padding: 1em;
+	width: 100%;
+	box-shadow: 0 2px 5px #888;
+}
 
 
 .banner{
@@ -660,7 +673,6 @@ a:hover{
 	width: 0;
 	border-left:solid 1px #efefef;
 }
-
 
 
 /*
