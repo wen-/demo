@@ -1,0 +1,634 @@
+@charset "utf-8";
+/* CSS Document */
+.touch_msg{
+	background-color: rgba(0, 0, 0, 0.6);
+    color: #FFFFFF;
+    font-size: 16px;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+.pb_10{
+	padding-bottom:5px;
+}
+.footer h4,.service_tel{
+	font-size:12px;	
+}
+.news_time,.content,.details_txt p,.details_time,.version1,.version2,.dt_page .dt_list dl,.mobile_login a{
+	font-size:14px;
+}
+.news-topbg li,.details_title,.dt_page .dt_list a,.search_list a{
+	font-size:16px;
+}
+.news_tab h1,.news_tab_content,.kf_content,.lc_page li,.jj_page li{
+	font-size:18px;
+}
+.ccb_title,.ccb_title h1,.search_list a,.wb_list p,.wb_list a,.page1 .news_tab h1,.column .title_1 .body,.dt_page .dt_list dl,.nav_page li{
+	font-size:18px;
+}
+.news-topbg li,.news_tab_content li,.nav_page li, .lc_page li, .jj_page li,.kf_content li,.dt_page .dt_list dd{
+	height:25px;
+	line-height:25px;
+}
+.financial_content a{
+	font-size:10px;
+	min-width:50px;
+	margin:5px 3px;
+}
+.financial_content a img{
+	width:40px;
+}
+.search_bg {
+	padding:0 10px;
+}
+.version1,.version2{
+	width:50px;
+	padding:0;
+}
+.wb_list {
+	margin-left:5px;	
+}
+.wb_list a{
+	min-width:50px;
+	font-size:16px;
+}
+.content {
+    padding:10px;
+}
+.nav li{
+	height:40px;
+	line-height:40px;
+	/*background:url(../images/nav-bg1.png) repeat-x;*/
+}
+.nav{
+	min-height:40px;
+}
+.nav li a{
+	margin-top:4px;
+	height:36px;
+	line-height:36px;
+	font-size:18px;
+}
+.ccb_title {
+	min-height:40px;
+	line-height:40px;
+	background:url(../images/title-bg0.png) repeat-x;
+}
+.mobile_login .login_ico_l,.search_bg .search_ico_l {
+    background: url("../images/bot-bg-l1.png") no-repeat;
+    height: 30px;
+}
+.mobile_login .login_ico_r,.search_bg .search_ico_r {
+    background: url("../images/bot-bg-r1.png") no-repeat;
+    height: 30px;
+}
+.mobile_login a,.search_bg {
+	margin:15px 0;
+	height:30px;
+	line-height:30px;
+    background: url("../images/bot-bg-m1.png") repeat-x;
+}
+.news_tab h1 {
+	min-height:40px;
+	line-height:40px;
+    background: url("../images/title2-bg.png") repeat-x #DCE1E7;
+}
+.news_tab .tab_this {
+    background: url("../images/title2-bg1.png") repeat-x #FFFFFF;
+}
+.news_tab h1 span {
+	min-height:40px;
+	line-height:40px;
+}
+.search{
+	min-height:20px;
+	margin:0;
+	padding:0;
+}
+.search h1{
+	min-height:20px;
+	margin:0;
+	padding:0;
+}
+.search_bg {
+    background: url("../images/bot-bg-m1.png") repeat-x;
+    height: 30px;
+    line-height: 30px;
+	margin:0;
+}
+.search_list a {
+	height:30px;
+	margin:0 10px;
+}
+.but1_bg {
+	height:24px;
+	line-height:24px;
+    background: url("../images/bot1-bg-m1.png") repeat-x;
+}
+.but1_ico_l {
+	height:24px;
+	line-height:24px;
+    background: url("../images/bot1-bg-l1.png") no-repeat;
+}
+.but1_ico_r {
+	height:24px;
+	line-height:24px;
+    background: url("../images/bot1-bg-r1.png") no-repeat;
+}
+.search_page .search_list {
+	min-height:480px;
+}
+.version1, .version2 {
+	height:20px;
+	line-height:20px;
+    background: url("../images/version-but-m1.png") repeat-x;
+}
+.vbg_r,vbg_l {
+	height:20px;
+	line-height:20px;
+    background: url("../images/version-but-r1.png") no-repeat;
+}
+.vbg_l {
+	background: url("../images/version-but-l1.png") no-repeat;
+}
+.financial_content {
+	padding:0;
+}
+
+
+
+/*--新版首页--20121210--*/
+.nav li{
+	width:25%;
+	background:url(../images/nav-bg1.png) repeat-x;
+}
+.new_ccb_title{
+	min-height:36px;
+	line-height:36px;
+	color:#fff;
+	font-size:28px;
+	background:url(../images/new_title_bg1.png) repeat-x;
+}
+.new_ccb_title h1{
+	padding-left:30px;
+	font-size:18px;
+	background:url(../images/title1_ico.png) no-repeat 10px center;
+}
+.newv_title{
+	font-size:16px;
+	padding:12px 10px;
+}
+.newv_list li,.news_list li,.kf_question li,.new_jy li{
+	height:auto;
+	line-height:normal;
+	font-size:16px;
+	background-position: 5px -503px;
+    padding: 10px 5px 10px 30px;
+}
+/*--home-ad--*/
+.ad_num{
+	bottom: 10px;
+    right: 10px;
+    position: absolute;
+}
+.ad_num li{
+	float:left;
+	height:8px !important;
+	line-height:normal !important;
+	width:8px !important;
+	overflow:hidden;
+	margin:0 5px;
+	text-indent:-999em;
+	border-radius:4px;
+	background-color:#fff;
+}
+/*--便捷导航--*/
+.new_navbtn{
+	padding:10px 0;
+}
+.new_navbtn .search_bg{
+	padding:0 8px;
+}
+.new_navbtn a{
+	color:#000;
+	margin:0;
+	font-size:14px;
+}
+/*--热点应用--*/
+.ad_box2_sort{
+	font-size:16px;
+}
+.ad_box2_sort .active1{
+	height:34px;
+	border-bottom:solid 2px red;
+}
+.hot_page span{
+	margin-top:-15px;
+}
+.hot_page img{
+	height:20px;	
+}
+.ad_box2,.ad_box3{
+	margin-bottom:1px;
+}
+.wrapper_data0{
+	padding:10px 0 5px;
+}
+.hot_app_ico3{
+	padding:10px 0 5px;
+}
+/*--金融产品--*/
+.ad_box4 dt,.news_more,.num_fund,.new_map{
+	height:40px;
+	line-height:40px;
+	font-size:16px;
+	background-position:0 -148px;
+}
+.ad_box4 dt span,.num_fund span,.new_map span{
+	padding-left:40px;
+	background:url(../images/fund_list_bg.png) 15px -685px no-repeat;
+}
+.ad_box4 dt span.blue_arrow{
+	background:url(../images/fund_list_bg.png) 15px -745px no-repeat;
+}
+.ad_box4 dd img{
+	width:25px;
+}
+.ad_box4 dd .list_info{
+	padding-left:10px;
+}
+
+/*--建行动态--*/
+.news_list{
+	font-size:16px;
+}
+.newv_list li a,.news_list li a,.kf_question li a,.new_jy li a{
+	background:url(../images/fund_list_bg.png) 100% -866px no-repeat;
+}
+/*--关注建行微博--*/
+.wb_content{
+	position:relative;
+}
+.wb_content .wb_list{
+	position:absolute;
+	bottom:10px;
+	left:45%;
+}
+.wb_list p{
+	padding-bottom:5px;
+}
+.wb_list a{
+	margin:0;	
+}
+a .btn1_ico_m{
+	padding:0 5px;
+}
+.wb_content{
+	margin-bottom:1px;
+}
+.kf_question{
+	margin-bottom:1px;
+}
+/*--基金买卖--*/
+.nav_site{
+	font-size:16px;
+	height:30px;
+	min-height:30px;
+	line-height:30px;
+}
+.new_fund_title{
+	height:50px;
+	line-height:50px;
+	background-position:0 -140px;
+}
+.new_fund_title .fund_title_list{
+	width:88%;
+	height:50px;
+}
+.new_fund_title li{
+	font-size:18px;
+}
+.new_fund_title .fund_pre span{
+	font-size:0;
+ 	height:0;
+ 	width:0;
+	line-height:0;      
+ 	border-style:solid;
+ 	_border-style:dashed solid dashed dashed; 
+	border-width:7px 7px 7px 0;
+ 	border-color:transparent #89bbec transparent transparent;
+	left: 30%;
+    line-height: 0;
+    margin-top: -18px;
+    position: absolute;
+    top: 50%;
+}
+.new_fund_title .fund_next span{
+	font-size:0;
+ 	height:0;
+ 	width:0;
+	line-height:0;      
+ 	border-style:solid;
+ 	_border-style:dashed dashed dashed solid; 
+	border-width:7px 0 7px 7px;
+ 	border-color:transparent transparent transparent #89bbec;
+	left: 30%;
+    line-height: 0;
+    margin-top: -18px;
+    position: absolute;
+    top: 50%;
+}
+.new_fund_title .active5{
+	height:47px;
+	color:#0066b3;
+	border-bottom:solid 3px #d80000;
+}
+.new_fund_data .list_t{
+	font-size:16px;
+	background-position:98% -393px;
+}
+.list_t span img{
+	margin-right:5px;
+	width:15px;
+}
+.new_fund_data .on_fund .list_t{
+	background-position:98% -345px;
+}
+.list_b{
+	margin:10px 10px;
+}
+.list_info{
+	font-size:12px;
+	padding:10px 5px;
+}
+.list_info4 a{
+	margin:0 2px;
+}
+.btn1_bg{
+	height:40px;
+	line-height:40px;
+}
+.btn1_ico_l{
+	height:40px;
+	background:url(../images/fund_ico_bg.png) no-repeat 0 -180px;
+}
+.btn1_ico_m{
+	height:40px;
+	padding:0 10px;
+	font-size:14px;
+	background:url(../images/fund_ico_bg.png) repeat-x 0 -220px;	
+}
+.btn1_ico_r{
+	height:40px;
+	background:url(../images/fund_ico_bg.png) no-repeat 0 -260px;
+}
+/*--贵金属--*/
+.gjs .list_t span,.new_lc .list_t span{
+    background-position: 0 -460px;
+    padding-left: 20px;
+}
+.gjs .list_info4 a{
+	margin:0 1px;
+}
+.gjs .btn1_ico_m{
+	padding:0;
+}
+/*--理财产品交易--*/
+.new_lc_head{
+	width:82%;
+	overflow:hidden;
+	margin:10px auto;
+	border:solid 2px #a5a5a5;
+	border-radius:6px;
+}
+.new_lc_head span{
+	padding:8px 0px;
+	font-size:16px;
+}
+.new_lc_head .on_lc{
+	color:#fff;
+	background-color:#288dd9;
+	box-shadow:inset 0 0 5px #FFFFFF;
+}
+/*--手机银行--*/
+.app_down img{
+	width:46%;
+}
+
+/*--go-top--*/
+.go_top{
+	top:5px;
+	height:25px;
+}
+.go_top img{
+	height:25px;
+}
+.tip_sjyh p{
+	/*background:url(../images/ico_10.png) no-repeat 5px 6px;
+	background-size:8px 8px;*/
+}
+/*--应用商店--*/
+
+.yysd_r{
+	padding-top:20px;
+}
+.yysd_r p{
+	font-size:16px;
+	margin:15px 0;
+	padding: 10px 0 10px 30px;
+	background:url(../images/yysd_2.png) no-repeat 10px 15px;
+	background-size:15px 15px;
+}
+.yysd_r p img{
+	height:30px;
+}
+.go_appstore a,.go_ysh_btn a{
+	height:50px;
+	line-height:50px;
+	font-size:20px;
+}
+.go_appstore a img,.go_ysh_btn a img{
+	vertical-align:middle;
+	margin-left:50px;
+	height:30px;
+}
+.yysd_arrow{
+	top:3px;
+	border-width:0 8px 8px 8px;
+}
+/*--进入悦生活--*/
+.hot_list1,.hot_list2,.hot_list3{
+	font-size:18px;
+}
+.hot_list1 a,.hot_list3 a{
+	height:50px;
+	line-height:50px;
+	margin:0 5px;
+}
+.hot_list3{
+	margin-top:30px;
+}
+.hot_list2{
+	left:50%;
+	margin-left:-20%;
+	position:absolute;
+	z-index:100;
+	width:40%;
+}
+.hot_list2 a{
+	height:50px;
+	line-height:50px;
+	margin-top:-12px;
+}
+.go_ysh p,.go_ydwy p{
+	font-size:16px;
+	padding:10px 20px;
+	line-height:1.5em;
+}
+.go_ysh p a{
+	color:red;
+}
+.go_ysh_btn{
+	padding:0;
+}
+.hot_title img{
+	width:300px;
+}
+.up_color,.drop_color{
+	margin:0 20px 0 0 !important;
+	font-size:14px !important;
+}
+/*--金融--*/
+.new_jy .news_more{
+	hegiht:40px;
+	line-height:40px;
+	background:url(../images/fund_list_bg.png) repeat-x 0 -1000px;	
+}
+.new_jy li{
+	background-position:8px -1052px;	
+}
+/*--移动网银--*/
+.ydwy img{
+	width:100%;
+}
+/*--信用卡--*/
+.new_xyk{
+	padding:20px;
+}
+.new_xyk li{
+	padding-top:0;
+	padding-bottom:0;
+	background-position:98% -850px;
+}
+.new_xyk li img{
+	height:35px;
+	vertical-align:middle;
+}
+.new_xyk li a{
+	font-size:16px;
+}
+.ad6{
+	width:320px;
+}
+.ad6_w{
+	width:300px;
+	height:60px;
+}
+.ad6_w ul{
+	width:500px;
+}
+.ad6 li{
+	width:90px;
+	height:60px;
+	margin-right:10px;
+}
+.ad6 li img{
+	max-width:90px;
+	max-height:60px;
+}
+.ad6 li a{
+	width:90px;
+}
+/*--商户信息--*/
+.sh_name img{
+	width:100px;
+}
+.sh_name h1{
+	display:inline;
+	font-size:18px;
+}
+.sh_box dl{
+	font-size:16px;
+	margin-bottom:10px;
+}
+.sh_box dt{
+	width:80px;
+	float:left;
+	text-align:justify;
+	text-justify:distribute;
+	
+}
+.sh_box dd{
+	padding-left:80px;
+	word-wrap: break-word;
+	line-height:1.5em;
+}
+/*--map--*/
+.map_box a,.fund_map dt{
+	font-size:16px;
+}
+.news_map,.news_map1,.wb_map,.hotapp_map,.fund_map dd,.jy_map dd{
+	padding-left:20px;
+}
+.fund_map dt{
+	height:40px;
+	line-height:40px;
+	padding-left:40px;
+	background-position:15px -1050px;
+}
+.hotapp_map a{
+	width:32%;
+}
+.lc_map a{
+	text-align:center;
+}
+.jy_map dd{
+	padding-left:40px;
+}
+.news_map1{
+	padding-bottom:0;
+}
+.news_map1 a{
+	width:48%;
+	margin-bottom:20px;
+}
+/*--金融--基金--搜索--*/
+.jijin_search{
+	height:40px;
+	line-height:40px;
+	padding-left:5px;
+	background:url(../images/fund_list_bg.png) repeat-x 0 -1201px;
+}
+.jijin_search img{
+	margin-top: 12px;
+    vertical-align: top;
+	height:20px;
+}
+.jijin_search input{
+	background-color:#fff;
+	border:solid 1px #a9a9a9;
+	border-radius:4px;
+	font-size:16px;
+	padding:5px 10px;
+	margin-top:5px;
+	vertical-align: top;
+}
+.jijin_search .jj_txt_input{
+	padding:5px 5px;
+	font-size:16px;
+	width:200px;
+	margin:5px 3px 0;
+}

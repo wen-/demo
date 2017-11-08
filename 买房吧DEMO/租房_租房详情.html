@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="author" content="yellowwen@126.com">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<title>租房详情</title>
+	<link type="text/css" rel="stylesheet" href="css/reset.min.css" />	<link type="text/css" rel="stylesheet" href="css/animate.min.css" />
+	<link type="text/css" rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
+	<link type="text/css" rel="stylesheet" href="font/iconfont.css" />
+	<link type="text/css" rel="stylesheet" href="css/user-login.css" />
+	<link type="text/css" rel="stylesheet" href="css/main.css" />
+	<link type="text/css" rel="stylesheet" href="css/house_detail.css" />
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<!--[if lt IE 9]>
+	<script type="text/javascript">
+		var h5Block = 'header,footer,section,aside,article,nav,hgroup,figure,figcaption,details,summary';
+		var h5Inline = 'time,mark,ruby,rt,rp,output,keygen,meter,progress,command,source';
+		var h5Other = 'video,audio,canvas,datalist';
+		var h5Elem = (h5Block + ',' + h5Inline + ',' + h5Other).split(',');
+		for(var i=0;i<h5Elem.length;i++){
+			document.createElement(h5Elem[i]);
+		}
+	</script>
+	<![endif]-->
+</head>
+<body>
+<!--页头star-->
+<header class="header">
+	<div class="m">
+		<a href="index.html" class="lfloat logo"><img src="images/logo.png" alt="" /></a>
+		<div class="rfloat login_info">
+			<div class="h_btn">
+				<a class="log" href="用户中心_登录.html">登录</a>
+				<a class="reg" href="注册.html">注册</a>
+			</div>
+			<div class="h_txt" style="display: none;">
+				<a href="#">
+					<img src="images/user_icon.jpg" class="headico" alt="" />
+					<span class="info_txt">欢迎<span>张三</span></span>
+				</a>
+				<a href="#" class="exit">退出</a>
+			</div>
+		</div>
+		<nav class="rfloat nav">
+			<dl>
+				<dt><a href="index.html">首页</a></dt>
+			</dl>
+			<dl>
+				<dt><a href="#">二手房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="二手房_房源列表.html">房源</a>
+					<a href="二手房_小区列表.html">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">新房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">新房首页</a>
+					<a href="#">广州新房</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="current"><a href="#">租房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">房源</a>
+					<a href="#">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">写字楼</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">出租</a>
+					<a href="#">出售</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">业主委托</a></dt>
+			</dl>
+		</nav>
+	</div>
+</header>
+
+<div class="guide-alink guide-alink-detailspage">
+	<div class="guide-alink-inner clearfix">
+		<a href="/">买房吧</a>
+		<i class="icons_saledetails"></i>
+		<a href="#">广州租房</a>
+		<i class="icons_saledetails"></i>
+		<a href="javascript:;" class="cur">海富花园</a>
+	</div>
+</div>
+
+<div class="page-container">
+	<div style="border:solid 1px #ddd;border-bottom:0;padding:0 15px 15px;background-color: #fff;">
+		<div class="house_slogan clearfix">
+			<div class="house_title">
+				<i class="icons_saledetails "></i>
+				<h2 class="text_of">海富花园四期2室 稀缺 随时可看</h2>
+				<p class="collect-hs-btn like rfloat"><i class="icons_saledetails"></i><span>收藏房源</span></p>
+				<p class="collect-hs-btn has-been-collecting unlike rfloat" style="display:none;"><i class="icons_saledetails"></i><span>已收藏</span></p>
+			</div>
+		</div>
+
+		<div class="house-meta clearfix" style="padding:0;">
+			<!--学校标签-->
+			<!--地铁站点标签-->
+			<p class="tag-item subway-distance lfloat">
+				<i class="icons-listings"></i>
+				<span>距离2号线江泰路站约404米</span>
+			</p>
+			<p class="tag-item bag-check lfloat"><i class="icons-listings"></i><span>家电齐全</span></p>
+			<p class="tag-item home-furniture lfloat"><i class="icons-listings"></i><span>有家私</span></p>
+			<!--房源标签-->
+			<span class="room-id">房号编号：GZHZ95872662</span>
+		</div>
+	</div>
+	<!--hs header-->
+	<div class="hs-header hs-header-newhs clearfix">
+		<!--hs header photo-->
+		<div class="hs-header-photo hs-header-photo-office lfloat">
+			<!--photoalbum-->
+			<div class="photoalbum_box photoalbum-hs-header-office" id="photoAlbumHsHeader">
+				<div class="preview" id="previewCon">
+					<img width="485" height="364" src="images/house_detail/show1.jpg" alt="">
+				</div>
+				<div class="guide_btns pr" id="guideBtns">
+					<div class="guide_minmap wen_play_body">
+						<ul id="guideMinmapCon" class="wen_play_box">
+							<li class="cur play_list">
+								<img width="89" height="66" src="images/house_detail/show_1.jpg" data-src="images/house_detail/show1.jpg" alt="中国美林湖">
+								<span class="photoalbum-dsp" style="bottom: 0; display: block;">封面图</span>
+							</li>
+							<li class="play_list">
+								<img width="89" height="66" src="images/house_detail/show_2.jpg" data-src="images/house_detail/show1.jpg">
+								<span class="photoalbum-dsp" style="bottom: -50px; display: none;">效果图</span>
+							</li>
+							<li class="play_list">
+								<img width="89" height="66" src="images/house_detail/show_3.jpg" data-src="images/house_detail/show1.jpg">
+								<span class="photoalbum-dsp" style="bottom: -50px; display: none;">实景图</span>
+							</li>
+							<li class="play_list">
+								<img width="89" height="66" src="images/house_detail/show_4.jpg" data-src="images/house_detail/show1.jpg">
+								<span class="photoalbum-dsp" style="bottom: -50px; display: none;">户型图</span>
+							</li>
+							<li class="play_list">
+								<img width="89" height="66" src="images/house_detail/show_5.jpg" data-src="images/house_detail/show1.jpg">
+								<span class="photoalbum-dsp" style="bottom: -50px; display: none;">样板图</span>
+							</li>
+						</ul>
+					</div>
+					<div id="curGuide" class="cur_guide" style="left: 0"></div>
+					<div class="wen_pre_page dn">&lt;</div>
+					<div class="wen_next_page dn">&gt;</div>
+				</div>
+			</div>
+			<!--end photoalbum-->
+		</div>
+		<!--/hs header photo-->
+		<!--hs header field-->
+		<div class="hs-header-field hs-header-field-office hs-header-field-sr hs-header-field-r lfloat">
+			<ul class="header-field-list" style="border:none;padding-bottom: 0;">
+				<li class="total-price-row address-icon">
+					<span class="field-text lfloat">租金：</span>
+					<span class="total-price lfloat"><b>4100</b><em>元/月</em></span>
+					<span class="average-price lfloat">80m²</span>
+				</li>
+				<li>
+					<span class="field-text lfloat">朝向：</span>
+					<span class="lfloat"> 南</span>
+				</li>
+				<li class="right">
+					<span class="field-text lfloat">租赁：</span>
+					<span class="lfloat">整租</span>
+					<span class="lease-tips lfloat">押一付三</span>
+				</li>
+				<li>
+					<span class="field-text lfloat">户型：</span>
+					<span class="lfloat"><b>2房1厅</b></span>
+				</li>
+				<li class="right">
+					<span class="field-text lfloat">类型：</span>
+					<span class="lfloat">住宅</span>
+				</li>
+				<li>
+					<span class="field-text lfloat">楼层：</span>
+            		<span class="lfloat">中层/24层</span>
+				</li>
+				<li class="right">
+					<span class="field-text lfloat">装修：</span>
+					<span class="lfloat"> 普通装修</span>
+				</li>
+				<li class="address-icon">
+					<span class="field-text lfloat">小区：</span>
+					<span class="field-garden-name lfloat"><a href="#" target="_blank">海富花园</a><em>2002年建</em></span>
+				</li>
+				<li class="address-icon">
+					<span class="field-text lfloat">地址：</span>
+            		<span class="field-garden-name lfloat">
+						<a href="#">海珠</a><b class="gap-hfword"></b><a href="#">江燕路</a>
+					</span>
+					<span class="field-address lfloat">
+					  <em>广州市海珠区江燕路</em>
+					  <a class="icons-listings address-link" id="anchor-3" date-scroll="#scrollto-3" href="javascript:;"></a>
+					</span>
+				</li>
+			</ul>
+
+			<!-- broker -->
+			<div class="hs-hder-broker clearfix">
+				<p class="broker-photo lfloat">
+					<img width="78" height="103" src="" alt="">
+				</p>
+				<div class="broker-info lfloat">
+					<p class="broker-basic-name">
+						<span>李洪宇</span>
+						<span key="roomDetailRoleInfo" style="" class="exclusive-entrust">
+							<i class="icons_saledetails"></i>该房源我最了解，实时保持更新
+						</span>
+					</p>
+					<p class="broker-id clearfix">
+						<span class="id-card"><i class="icons_saledetails"></i><em>身份认证</em></span>
+						<span class="business-card"><i class="icons_saledetails"></i><em>名片认证</em></span>
+					</p>
+					<p class="store-info">
+						德城行地产
+						双子分行
+					</p>
+				</div>
+
+				<div class="contacts lfloat">
+					<p class="im-start">
+						<i class="icons_saledetails"></i><span>在线沟通</span>
+					</p>
+					<p key="roomDetailQChartInfo"></p>
+					<p class="tel-order"><a href="javascript:;" id="makeAppointmentBtn">预约看房</a></p>
+				</div>
+			</div>
+			<!-- /broker -->
+
+			<!-- tel -->
+			<div key="roomDetailPersonPhone">
+				<div class="tel-style tel-style-mbp tel-style-office">
+					<input type="hidden" id="personPhone" value="183 xxxx xxxx">
+					<div class="tel-style-l tel-style-l-other lfloat">
+						<p class="tel-num">
+							<i class="icons_saledetails"></i>
+							<span><b>183 xxxx xxxx</b></span>
+							<em>联系时请说：“从买房吧看到...”</em>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- /tel -->
+		</div>
+		<!--/hs header field-->
+	</div>
+	<!--end hs header-->
+	<!--anchor-->
+	<div class="anchor-nav-box">
+		<div class="anchor-nav green_nav clearfix" id="anchorNav">
+			<ul>
+				<li data-type="anchor" class="cur">
+					<a href="javascript:;" id="anchor-1" date-scroll="#scrollto-1">房源点评</a>
+				</li>
+				<li data-type="anchor">
+					<a href="javascript:;" id="anchor-2" date-scroll="#scrollto-2">房源图片</a>
+				</li>
+				<li data-type="anchor">
+					<a href="javascript:;" id="anchor-3" date-scroll="#scrollto-3">周边配套</a>
+				</li>
+				<li data-type="anchor">
+					<a href="javascript:;" id="anchor-4" date-scroll="#scrollto-4">小区同类房</a>
+				</li>
+				<li data-type="anchor">
+					<a href="javascript:;" id="anchor-5" date-scroll="#scrollto-5">小区信息</a>
+				</li>
+			</ul>
+			<div class="broker-nt rfloat">
+				<i class="icons_saledetails"></i>
+				<span class="name">李洪宇</span>
+				<span class="tel" key="roomDetailPersonPhone">183 xxxx xxxx</span>
+			</div>
+		</div>
+	</div>
+	<!--end anchor-->
+
+	<div class="anchor-trigger" id="scrollto-1">
+		<div class="hs-features clearfix">
+			<ul>
+				<li>
+					<i class="icons_saledetails"></i>
+					<span>床</span>
+				</li>
+				<li>
+					<i class="icons_saledetails"></i>
+					<span>电视</span>
+				</li>
+				<li>
+					<i class="icons_saledetails"></i>
+					<span>洗衣机</span>
+				</li>
+				<li>
+					<i class="icons_saledetails"></i>
+					<span>空调</span>
+				</li>
+				<li>
+					<i class="icons_saledetails"></i>
+					<span>热水器</span>
+				</li>
+				<li>
+					<i class="icons_saledetails"></i>
+					<span>冰箱</span>
+				</li>
+				<li>
+					<i class="icons_saledetails"></i>
+					<span>宽带</span>
+				</li>
+			</ul>
+		</div>
+		<div class="hs-evaluation " id="hsEvaluation" style="height: 200px;">
+        	<div class="ct">
+                <p align="center"><font color="#0000ff" size="6"><strong>借优质服务 创造终身客户</strong></font></p>
+                <p align="center"><font size="5"><strong><font color="#ff0000">&nbsp;德诚行地产</font><font color="#0000ff">客户经理</font><font color="#ff0000">&nbsp; 李洪宇&nbsp;</font> <font color="#0000ff">实地验房推荐</font></strong></font></p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+                <p><font size="4"><strong><font color="#ff0000">1、小区介绍</font><font color="#0000ff">：小区简介：海富花园整体分四期开发，海富花园自1996年开发至今，已入住户数达到近2000户，社区配套齐全，是海珠区高尚住宅小区之一。作为海富花园后一期开发，户型设计以二房二厅70多平方米、三房二厅90多平方米及三房二厅二卫110多平方米实用型户型为主，全部单位南北对流，通风采光一流，部分10多层、部分20多层，有二梯四户或三梯六户结构。整体建筑风格：为现代典雅的设计风格，建筑物显得大气而高档。规划：6栋住宅分南北两排成半围合状分布，中间为中心园林设计，设计为地下停车场，人车分流。江南大道的大型园林社区，独具热带特色的花卉植物，形成罕有的全区立体式园艺观赏种植园。&nbsp; 更多&gt;&gt; 海富花园整体分四期开发，海富花园自1996年开发至今，已入住户数达到近2000户，社区配套齐全，是海珠区高尚住宅小区之一。作为海富花园后一期开发，户型设计以二房二厅70多平方米、三房二厅90多平方米及三房二厅二卫110多平方米实用型户型为主，全部单位南北对流，通风采光一流，部分10多层、部分20多层，有二梯四户或三梯六户结构。整体建筑风格：为现代典雅的设计风格，建筑物显得大气而高档。规划：6栋住宅分南北两排成半围合状分布，中间为中心园林设计，设计为地下停车场，人车分流。江南大道的大型园林社区，独具热带特色的花卉植物，形成罕有的全区立体式园艺观赏种植园。&nbsp; &lt;&lt; 收起</font></strong></font></p>
+                <p><font size="4"><strong><font color="#ff0000">2、户型介绍</font><font color="#0000ff">：户型：2室1厅1厨1卫2阳台;7层,共24层 </font></strong></font></p>
+                <p><font size="4"><strong><font color="#ff0000">3、周边配套</font><font color="#0000ff">：周围商店：江燕市场、晓燕湾市场、百佳超市、华润万家超市;餐饮：燕子岗体育场、东江酒楼、 燕汇广场;周边银行：建设银行、工商银行 、农商银行;周边医院：口腔医院、河南医院; </font></strong></font></p>
+                <p><font size="4"><strong><font color="#ff0000">4、交易流程</font><font color="#0000ff">：您只需要动动手指联系我，我就是您的助理！</font></strong></font></p>
+                <p><font size="4"><strong><font color="#ff0000">5、个人简介</font><font color="#0000ff">：本人是从事片区附近的房屋租赁活动已有多年，经验丰富，房源充足，满足您的需求就是我最大的乐趣。只要您将需求告诉我，我会在短的时间内为你找到合适的房子，为你提供优质的服务。</font></strong></font></p>
+                <p>&nbsp;<br>&nbsp;</p>
+                <p><font size="4"><font color="#ff0000">温馨提示：<br></font><font color="#0000ff">1.我不希望我的客户错过这么好的机会！另外建议尊敬的您趁现在的机会抓住时机，选择优质房源！住的舒心，事事顺心！&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></font></p>
+                <p><br><font color="#0000ff" size="4">2.目前会有好多同行以低价吸引您，远离市场价很多。但是请您相信这样的房子其实是不存在的！即使有的话，不用在网上发帖这房子就已经被一抢而光了！并且我保证我所发布的任何帖子都真实有效，不会浪费您宝贵的看房时间。</font></p>
+                <p><font size="4"></font>&nbsp;</p>
+                <p><font size="4"><font color="#ff0000">个人建议：<br></font><font color="#0000ff">什么市场都有成交量、都有人买房。现在买房的优势是：户型、位置、价格您都可以选择。您的主动权比较大！切莫有观望心理，希望我的客户理性看待<br></font></font></p>
+            </div>
+		</div>
+		<p class="more-hs-info" id="moreHsInfo" style="display: block;">
+			<a href="javascript:;">展开更多信息</a>
+		</p>
+	</div>
+
+	<div class="anchor-trigger" id="scrollto-2" key="RoomDetailPictureBig">
+		<div class="anchor-title">房源图片</div>
+		<div class="hs-pics" id="hsPics">
+			<ul class="clearfix">
+				<!--抓取房源图片 -->
+				<li>
+					<a href="javascript:;">
+						<img src="images/house_detail/pic1.jpg" data-src="images/house_detail/pic1.jpg" alt="海富花园四期2室 稀缺 随时可看" data-active="1">
+					</a>
+				</li>
+				<!--室内图 -->
+				<li>
+					<a href="javascript:;">
+						<img src="images/house_detail/pic1.jpg" data-src="images/house_detail/pic1.jpg" alt="海富花园四期2室 稀缺 随时可看" data-active="2">
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="images/house_detail/pic1.jpg" data-src="images/house_detail/pic1.jpg" alt="海富花园四期2室 稀缺 随时可看" data-active="3">
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="images/house_detail/pic1.jpg" data-src="images/house_detail/pic1.jpg" alt="海富花园四期2室 稀缺 随时可看" data-active="4">
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="images/house_detail/pic1.jpg" data-src="images/house_detail/pic1.jpg" alt="海富花园四期2室 稀缺 随时可看" data-active="5">
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="images/house_detail/pic1.jpg" data-src="images/house_detail/pic1.jpg" alt="海富花园四期2室 稀缺 随时可看" data-active="6">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<p class="more-hs-info more-photo-info"><a href="javascript:;" key="see-more">查看更多图片</a></p>
+		<p class="more-hs-info more-photo-info"><a href="javascript:;" key="see-less" style="display:none;">收起</a></p>
+	</div>
+
+	<!--/楼盘相册-->
+	<!--周边配套-->
+	<div class="anchor-trigger baidumap_box" id="scrollto-3">
+		<script type="text/javascript" src="http://api.map.baidu.com/getscript?v=2.0&ak=CSEFkLbH5U7UTIM5ErykpPaC"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/library/RichMarker/1.2/src/RichMarker_min.js"></script>
+
+		<script type="text/javascript">
+			var base="";
+			var gardenId="1106247";
+			var gardenName="海富花园";
+			var longitude="113.284";
+			var latitude="23.09";
+			var city="广州";
+		</script>
+
+		<div id="mapWapper">
+			<div class="anchor-title" style="margin-bottom: 0;">
+				<b class="cur" data-type="peripheral-supporting" id="mapPoiTab" >周边配套</b>
+			</div>
+
+			<div id="mapPoiBox">
+				<div class="map-surrounding clearfix">
+					<!-- map -->
+					<div class="map-surrounding-box lfloat" id="msb">
+						<div class="map-surrounding-layer" id="mapDiv">
+						</div>
+
+						<p class="map-funcs-tbs" id="mapFuncsTbs">
+							<a href="javascript:;" class="cur" keyText="地铁站,公交站" types="METRO,BUS">交通</a>
+							<a href="javascript:;" class="" keyText="幼儿园,小学,中学,高中,大学" types="KINDERGARTEN,PRIMARY_SCHOOL,JUNIOR_SCHOOL,MIDDLE_SCHOOL,UNIVERSITY">学校</a>
+							<a href="javascript:;" class="" keyText="医院,药店" types="HOSPITAL,PHARMACY">医疗</a>
+							<a href="javascript:;" class="" keyText="商场,超市,便利店" types="MALL,SUPERMARKET,CONVENIENCE_STORE">商超</a>
+							<a href="javascript:;" class="" keyText="ATM,银行,餐馆,KTV,咖啡厅,酒店" types="ATM,BANK,RESTAURANT,KTV,CAFE,HOTEL">生活</a>
+							<a href="javascript:;" class="" keyText="工厂,加油站" types="FACTORY,GAS_STATION">其他</a>
+						</p>
+
+						<div class="map-side-btns" id="map-side-btns">
+							<p class="full-screen-btn" data-type="full-screen" id="full-screen"><a class="icons"></a></p>
+							<div class="zoom-btns">
+								<p class="zoom-in-out" type="bigger"><a class="transverse"></a><a class="vertical"></a></p>
+								<i class="transverse-line"></i>
+								<p class="zoom-in-out" type="smaller"><a class="transverse"></a></p>
+							</div>
+						</div>
+					</div>
+					<!-- /map -->
+
+					<!-- list -->
+					<div class="map-surrounding-list rfloat" id="msl">
+					</div>
+					<!-- /list -->
+				</div>
+			</div>
+
+			<!--<div id="panoramaBox" class="panoramic-map-box dn" >
+				<div id="panorama" class="panoramic-map-box"></div>
+				<div class="map-side-btns" id="panroma-side-btns">
+					<p class="full-screen-btn" data-type="full-screen" id="full-screen"><a class="icons"></a></p>
+				</div>
+			</div>-->
+		</div>
+
+		<!--全屏地图-->
+		<div class="dialog-show-wrapper full-screen-map" id="fullScreenMap">
+			<div class="dialog-show-inner">
+				<div class="full-screen-map-wrap" id="fullScreenMapWrap"></div>
+			</div>
+		</div>
+		<!--end全屏地图-->
+	</div>
+	<!--/周边配套-->
+
+	<div class="anchor-trigger" id="scrollto-4">
+		<div class="anchor-title">本小区同类房</div>
+		<div class="hs-list">
+			<ul class="clearfix" id="gardenRooms">
+				<li>
+					<a class="js-access-location" target="_blank" href="#">
+						<img title="江泰地铁上盖海富花园精装2房随时看房13826252417阮" alt="江泰地铁上盖海富花园精装2房随时看房13826252417阮" src="images/newhouse/2_1.jpg">
+					</a>
+					<p class="hs-title">
+						<span class="color_999">[整租]</span>
+						<a class="js-access-location" title="江泰地铁上盖海富花园精装2房随时看房13826252417阮" href="#">江泰地铁上盖海富花园精装2房随时看房13826252417阮</a>
+					</p>
+					<p class="hs-meta">
+						<span class="hs-meta-price lfloat"><em>3600</em>元/月</span>
+						<span class="hs-meta-model rfloat">2室1厅<em class="gap-aword"></em>85m²</span>
+					</p>
+				</li>
+				<li>
+					<a class="js-access-location" target="_blank" href="#">
+						<img title="江泰地铁上盖海富花园精装2房随时看房13826252417阮" alt="江泰地铁上盖海富花园精装2房随时看房13826252417阮" src="images/newhouse/2_1.jpg">
+					</a>
+					<p class="hs-title">
+						<span class="color_999">[整租]</span>
+						<a class="js-access-location" title="江泰地铁上盖海富花园精装2房随时看房13826252417阮" href="#">江泰地铁上盖海富花园精装2房随时看房13826252417阮</a>
+					</p>
+					<p class="hs-meta">
+						<span class="hs-meta-price lfloat"><em>3600</em>元/月</span>
+						<span class="hs-meta-model rfloat">2室1厅<em class="gap-aword"></em>85m²</span>
+					</p>
+				</li>
+				<li>
+					<a class="js-access-location" target="_blank" href="#">
+						<img title="江泰地铁上盖海富花园精装2房随时看房13826252417阮" alt="江泰地铁上盖海富花园精装2房随时看房13826252417阮" src="images/newhouse/2_1.jpg">
+					</a>
+					<p class="hs-title">
+						<span class="color_999">[整租]</span>
+						<a class="js-access-location" title="江泰地铁上盖海富花园精装2房随时看房13826252417阮" href="#">江泰地铁上盖海富花园精装2房随时看房13826252417阮</a>
+					</p>
+					<p class="hs-meta">
+						<span class="hs-meta-price lfloat"><em>3600</em>元/月</span>
+						<span class="hs-meta-model rfloat">2室1厅<em class="gap-aword"></em>85m²</span>
+					</p>
+				</li>
+				<li>
+					<a class="js-access-location" target="_blank" href="#">
+						<img title="江泰地铁上盖海富花园精装2房随时看房13826252417阮" alt="江泰地铁上盖海富花园精装2房随时看房13826252417阮" src="images/newhouse/2_1.jpg">
+					</a>
+					<p class="hs-title">
+						<span class="color_999">[整租]</span>
+						<a class="js-access-location" title="江泰地铁上盖海富花园精装2房随时看房13826252417阮" href="#">江泰地铁上盖海富花园精装2房随时看房13826252417阮</a>
+					</p>
+					<p class="hs-meta">
+						<span class="hs-meta-price lfloat"><em>3600</em>元/月</span>
+						<span class="hs-meta-model rfloat">2室1厅<em class="gap-aword"></em>85m²</span>
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--小区信息-->
+	<div class="anchor-trigger" id="scrollto-5">
+		<div class="anchor-title">小区信息</div>
+		<div class="garden-info garden-info-crosswise clearfix">
+			<p class="garden-name"><a target="_blank" title="广州市海珠区江燕路" href="#">海富花园</a></p>
+			<!-- 小区详情 -->
+			<div class="garden-info-group clearfix">
+				<i class="icons_saledetails icon-g icon-g2 lfloat"></i>
+				<div class="garden-info-group-con lfloat">
+					<p class="title">小区详情</p>
+					<p class="list">
+						<span class="color_787878">占地面积：</span>62710亩
+					</p>
+					<p class="list">
+						<span class="color_787878">绿<em class="half_word"></em>化<em class="half_word"></em>率：</span>17%
+					</p>
+					<p class="list">
+						<span class="color_787878">物业费用：</span>1.7元/m²・月
+					</p>
+					<p class="list">
+						<span class="color_787878">车<em class="half_word"></em>位<em class="half_word"></em>数：</span>47个
+					</p>
+					<p class="list">
+						<span class="color_787878">停车费用：</span>240元/月
+					</p>
+				</div>
+			</div>
+			<!-- end 小区详情 -->
+
+			<!-- 单位信息 -->
+			<div class="garden-info-group clearfix">
+				<i class="icons_saledetails icon-g icon-g1 lfloat"></i>
+				<div class="garden-info-group-con lfloat">
+					<p class="title">单位信息</p>
+					<p class="list">
+						<span class="color_787878">物业公司：</span>广州市粤良物业有限公司
+					</p>
+					<p class="list">
+						<span class="color_787878">开<em class="half_word"></em>发<em class="half_word"></em>商：</span>广东宏天海富房地产开发有限公司
+					</p>
+					<p class="list">
+						<span class="color_787878">物业类型：</span>住宅
+					</p>
+				</div>
+			</div>
+			<!-- end 单位信息 -->
+			<!-- 统计数据 -->
+			<div key="roomDetailPriceTrend" class="garden-info-group last clearfix">
+				<i class="icons_saledetails icon-g icon-g3 lfloat"></i>
+				<div class="garden-info-group-con lfloat">
+					<p class="title">统计数据</p>
+					<p class="list">
+						<span class="color_787878">本小区在售房源数：</span>
+						<a target="_blank" title="广州市海珠区江燕路" href="#">255</a>
+						套；在租房源数
+						<a target="_blank" title="广州市海珠区江燕路" href="#">214</a>
+						套
+					</p>
+					<p class="list">
+						<span class="color_787878">海富花园 8月均价：</span>
+						<span class="f_red">26,482</span>元/m²，比7月下跌<span class="f_green">12.04%</span>
+					</p>
+				</div>
+			</div>
+			<!-- end 统计数据 -->
+		</div>
+	</div>
+	<!--/小区信息-->
+
+	<div class="anchor-trigger">
+		<div class="anchor-title">猜你喜欢</div>
+		<div class="hs-list">
+			<ul class="clearfix" id="interestedRooms">
+				<li key="GZTH91494811">
+					<a class="js-access-location" target="_blank" href="#">
+						<img title="非中介廉租房  全广州最便最靓房屋出租 居住安全舒适" alt="非中介廉租房  全广州最便最靓房屋出租 居住安全舒适" src="images/newhouse/2_1.jpg">
+					</a>
+					<p class="hs-title">
+						<span class="color_999">[整租]</span>
+						<a class="js-access-location" target="_blank" title="非中介廉租房  全广州最便最靓房屋出租 居住安全舒适" href="#">非中介廉租房  全广州最便最靓房屋出租 居住安全舒适</a>
+					</p>
+					<p class="hs-meta">
+						<span class="hs-meta-price lfloat"><em>780</em>元/月</span>
+						<span class="hs-meta-model rfloat">1室1厅<em class="gap-aword"></em>30m²</span>
+					</p>
+				</li>
+				<li key="GZTH91494811">
+					<a class="js-access-location" target="_blank" href="#">
+						<img title="非中介廉租房  全广州最便最靓房屋出租 居住安全舒适" alt="非中介廉租房  全广州最便最靓房屋出租 居住安全舒适" src="images/newhouse/2_1.jpg">
+					</a>
+					<p class="hs-title">
+						<span class="color_999">[整租]</span>
+						<a class="js-access-location" target="_blank" title="非中介廉租房  全广州最便最靓房屋出租 居住安全舒适" href="#">非中介廉租房  全广州最便最靓房屋出租 居住安全舒适</a>
+					</p>
+					<p class="hs-meta">
+						<span class="hs-meta-price lfloat"><em>780</em>元/月</span>
+						<span class="hs-meta-model rfloat">1室1厅<em class="gap-aword"></em>30m²</span>
+					</p>
+				</li>
+				<li key="GZTH91494811">
+					<a class="js-access-location" target="_blank" href="#">
+						<img title="非中介廉租房  全广州最便最靓房屋出租 居住安全舒适" alt="非中介廉租房  全广州最便最靓房屋出租 居住安全舒适" src="images/newhouse/2_1.jpg">
+					</a>
+					<p class="hs-title">
+						<span class="color_999">[整租]</span>
+						<a class="js-access-location" target="_blank" title="非中介廉租房  全广州最便最靓房屋出租 居住安全舒适" href="#">非中介廉租房  全广州最便最靓房屋出租 居住安全舒适</a>
+					</p>
+					<p class="hs-meta">
+						<span class="hs-meta-price lfloat"><em>780</em>元/月</span>
+						<span class="hs-meta-model rfloat">1室1厅<em class="gap-aword"></em>30m²</span>
+					</p>
+				</li>
+				<li key="GZTH91494811">
+					<a class="js-access-location" target="_blank" href="#">
+						<img title="非中介廉租房  全广州最便最靓房屋出租 居住安全舒适" alt="非中介廉租房  全广州最便最靓房屋出租 居住安全舒适" src="images/newhouse/2_1.jpg">
+					</a>
+					<p class="hs-title">
+						<span class="color_999">[整租]</span>
+						<a class="js-access-location" target="_blank" title="非中介廉租房  全广州最便最靓房屋出租 居住安全舒适" href="#">非中介廉租房  全广州最便最靓房屋出租 居住安全舒适</a>
+					</p>
+					<p class="hs-meta">
+						<span class="hs-meta-price lfloat"><em>780</em>元/月</span>
+						<span class="hs-meta-model rfloat">1室1厅<em class="gap-aword"></em>30m²</span>
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+
+<div class="toolbars" id="toolbars" style="display: block;">
+	<ul>
+		<li class="tool-app">
+			<span class="tool-icon"><a href="javascript:;"><i class="icons-sidetools"></i></a></span>
+			<p class="tool-desp" style="display: none; right: 60px; opacity: 0;">
+				<em><img src="images/ewm.png" alt="" /></em><i class="icons-sidetools"></i><span>下载买房吧app</span>
+			</p>
+		</li>
+		<li class="tool-backtop" style="visibility: hidden;">
+			<span class="tool-icon"><a href="javascript:;"><i class="icons-sidetools"></i></a></span>
+			<p class="tool-desp" style="display: none; right: 60px; opacity: 0;">
+				<i class="icons-sidetools"></i><span>返回顶部</span>
+			</p>
+		</li>
+	</ul>
+</div>
+
+<script type="html/module" id="loginTemplate">
+	<div class="login-box">
+		<div class="login-box-inner" id="loginBox">
+			<p class="login-tbs" id="loginTbs">
+				<a href="#" class="cur">登录</a>
+				<a href="#">账号注册</a>
+			</p>
+			<div class="login-form">
+				<!-- 登录 -->
+				<div class="login-form-item">
+					<ul>
+						<li class="parts-group">
+							<input class="lf-keyword" type="text" id="phone" maxlength="11">
+							<p class="lf-label" id="phoneTip">请输入手机号码</p>
+						</li>
+						<li class="parts-group">
+							<input class="lf-keyword" type="password" id="password" maxlength="18">
+							<input type="hidden" id="rememberPWDUse">
+							<p class="lf-label" id="pwdTip">请输入密码</p>
+						</li>
+						<li class="clearfix">
+							<p class="remember-password lfloat"><label><input type="checkbox" id="user_rememberPwd"><span>记住密码</span></label></p>
+							<p class="forgot-password rfloat"><a href="/userLogin/forgotPassword">忘记密码?</a></p>
+						</li>
+						<li class="login-btn">
+							<a class="btn_big btnoff" id="loginSubmit" href="javascript:;" onclick="Login.loginSubmit(this)">立即登录</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /登录 -->
+				<!-- 注册 -->
+				<div class="login-form-item" style="display: none;">
+					<ul>
+						<li class="parts-group">
+							<input class="lf-keyword" type="text" id="telNum" maxlength="11">
+							<p class="lf-label">请输入手机号码</p>
+						</li>
+						<li class="parts-group">
+							<input class="lf-keyword" type="text" id="msgCode" maxlength="6">
+							<p class="lf-label">请输入收到的短信验证码</p>
+							<p class="mb-msg-code" id="getVCode2" onclick="ImgCode.pictureCode(event);">发送验证码</p>
+							<!-- 图片验证码 -->
+							<!-- tips -->
+							<div class="confirm-tips confirm-tips-mbvcode dn" id="imgCode">
+								<i class="icons confirm-arrow"></i>
+								<a class="icons confirm-close" href="javascript:;"></a>
+								<div class="confirm-con clearfix">
+									<p class="gvcode-area clearfix">
+										<span class="gvcode-area-img lfloat"><img id="codeImg" src="" width="139" height="28"></span>
+										<span class="gvcode-area-refresh lfloat" onclick="ImgCode.changeSecurityCode();"><i class="icons"></i><em>换一张</em></span>
+									</p>
+									<div class="gvcode-input lfloat">
+										<input class="lf-keyword" type="text" id="imgCodeText" maxlength="6">
+										<p class="lf-label">图片验证码</p>
+										<p class="lf-error dn clearfix"><i class="icons"></i><span>错误提示</span></p>
+									</div>
+									<p class="confirm-btn lfloat"><a class="btn-orange" href="javascript:;" onclick="ImgCode.registerPhoneTrendCode('regist');">确定</a></p>
+								</div>
+							</div>
+							<!-- /tips -->
+							<!-- end 验证码 -->
+						</li>
+						<li class="parts-group">
+							<input class="lf-keyword" type="password" id="pwd" maxlength="16">
+							<p class="lf-label">请设置登录密码</p>
+							<i class="icons eyes" id="eyes"></i>
+						</li>
+						<li class="parts-group">
+							<input class="lf-keyword" type="text" id="telNum1" maxlength="11">
+							<p class="lf-label">请输入邀请人手机号码</p>
+						</li>
+						<li class="q-book-deal">
+							<label>
+								<input type="checkbox" id="agreeProtocol">
+								<span>我同意<a href="#" target="_blank">《买房吧服务协议》</a></span>
+							</label>
+						</li>
+						<li class="login-btn registered-btn">
+							<a class="btn_big btnoff" onclick="Register.registerSubmit()" href="javascript:;" id="registerBtn">立即注册</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /注册 -->
+			</div>
+		</div>
+	</div>
+</script>
+
+<script type="html/module" id="getyhTemplate">
+<div class="get-preferential-con">
+	<p class="remind-text">优惠信息将通过短信的方式发送到您填写的手机号码上</p>
+	<div class="get-preferential-item">
+		<input class="lf-keyword" type="text" id="telNum" maxlength="11">
+		<p class="lf-label">请输入您的手机号码</p>
+	</div>
+	<div class="get-preferential-item get-preferential-item-mbmsg lfloat">
+		<input class="lf-keyword" type="text" id="verificationCode">
+		<p class="lf-label">请输入收到的短信验证码</p>
+		<!-- tips -->
+		<div id="imgCode" class="confirm-tips confirm-tips-mbvcode dn ">
+			<i class="icons confirm-arrow"></i>
+			<a class="icons confirm-close" href="javascript:;" onclick="closePictureVerif()"></a>
+			<div class="confirm-con clearfix">
+				<p class="gvcode-area clearfix">
+					<span class="gvcode-area-img lfloat"><img src="images/vcode.jpg" id="codeImg" width="139" height="28"></span>
+					<span class="gvcode-area-refresh lfloat" onclick="ImgCode.changeSecurityCode()"><i class="icons"></i><em>换一张</em></span>
+				</p>
+				<div class="gvcode-input lfloat">
+					<input class="lf-keyword" type="text" id="imgCodeText">
+					<p class="lf-label">图形验证码</p>
+					<p class="lf-error dn clearfix"><i class="icons"></i><span>错误提示</span></p>
+				</div>
+				<p class="confirm-btn lfloat"><a class="btn-orange" href="javascript:;" onclick="ImgCode.registerPhoneTrendCode('apply_newhouse');">确定</a></p>
+			</div>
+		</div>
+		<!-- /tips -->
+	</div>
+	<p class="mb-msg-code get-preferential-code lfloat" id="getVCode" onclick="ImgCode.pictureCode_findRoom(event);">发送验证码</p>
+	<p class="get-preferential-btn"><a class="btn-orange" href="javascript:;" id="applySendNewHouse">确定获取</a></p>
+	<p class="free-consultation">免费咨询：400-020-0668 转 8889</p>
+</div>
+</script>
+
+<!--页脚star-->
+<footer class="footer">
+	<div class="m tc">
+		<div class="foot_nav">
+			<a href="#">关于买房吧</a>
+			<a href="#">联系我们</a>
+			<a href="#">用户协议</a>
+			<a href="#">友情链接</a>
+			<a href="#">房产百科</a>
+			<a href="#">房产问答</a>
+		</div>
+		<p>广州安信互联网金融服务有限公司</p>
+		<p class="copyright">Copyright&nbsp;©&nbsp;2016&nbsp;www.myfang8.com.&nbsp;All Rights Reserved&nbsp;ICP备案号：粤ICP备12345678号</p>
+	</div>
+</footer>
+<!--页脚end-->
+
+<script src="js/public.js"></script>
+<script src="js/json2.js"></script>
+<script src="js/jquery-ui/jquery-ui.min.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<script src="js/ghost.min.js"></script>
+<script src="js/echarts.js"></script>
+<script src="js/layer/layer.js"></script>
+<script src="js/user-imgcode.js"></script>
+<script src="js/user-login.js"></script>
+<script src="js/wen_play.js"></script>
+<script src="js/map/nearFacilityMap.js"></script>
+<script src="js/photoview.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

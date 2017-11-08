@@ -1,0 +1,691 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>湖北银行</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<script type="text/javascript" src="js/modernizr.js"></script>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/wen_slide.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<!--[if lte IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png_bg,.png_bg a:hover');
+  //页面所有的png_bg样式名称为处理IE6下png图片不透明的情况
+</script>
+<![endif]-->
+<style>
+.ad_box ul li{
+	width:974px;
+}
+.ad_box{
+	width:974px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.user_bank h1 a,.company_bank h1 a,.login_list .bills h1 a{
+	background:none;	
+}
+</style>
+</head>
+<body>
+<header class="header_bg">
+	<div class="h_body clearfix">
+    	<div class="h_logo lfloat">
+        	<a href="index.html"><img src="images/logo1.jpg" alt="湖北银行" /></a>
+        </div>
+        <div class="h_info rfloat">
+        	<div class="search_box clearfix">
+            	<span class="seavers_tel red png_bg">96599</span>
+                <form class="rfloat">
+                	<input type="text" />
+                    <button type="submit">搜索</button>
+                </form>
+            </div>
+            <div class="welcome">
+            	<p>今天是<span class="date">2013年7月19日</span><span class="week">星期五</span>欢迎您来到湖北银行！</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="nav relative">
+	<div class="nav_body">
+        <div class="l_bg"></div>
+        <ul class="clearfix">
+            <li class="nav_home png_bg"><a href="index.html">首&nbsp;页</a></li>
+            <li class="child png_bg"><a href="company_page.html">公司业务</a></li>
+            <li class="child png_bg"><a href="retail_page.html">零售业务</a></li>
+            <li class="child png_bg"><a href="#">小微业务</a></li>
+            <li class="child png_bg"><a href="#">金融市场</a></li>
+            <li class="png_bg"><a href="#">社区银行</a></li>
+            <li class="child png_bg"><a href="#">关于我行</a></li>
+            <li class="child png_bg"><a href="#">公告信息</a></li>
+            <li class="child no_bg"><a href="#">人才招聘</a></li>
+        </ul>
+        <div class="r_bg"></div>
+    </div>
+    <div class="nav_menu_box clearfix png_bg">
+        <ul class="nav_menu2">
+            <li><a href="#">结算服务</a></li>
+            <li><a href="#">贷款融资</a></li>
+            <li><a href="#">对公存款</a></li>
+            <li><a href="#">中间业务</a></li>
+            <li><a href="#">法人理财产品</a></li>
+        </ul>
+        <ul class="nav_menu3">
+            <li><a href="#">储蓄业务</a></li>
+            <li><a href="#">个人贷款</a></li>
+            <li><a href="#">投资理财</a></li>
+            <li><a href="#">贵宾服务</a></li>
+            <li><a href="#">银行卡业务</a></li>
+            <li><a href="#">电子银行</a></li>
+            <li><a href="#">分行特色业务</a></li>
+            <li><a href="#">个人存款证明</a></li>
+            <li><a href="#">柜面互通</a></li>
+        </ul>
+        <ul class="nav_menu4">
+            <li><a href="#">流动资金贷款</a></li>
+            <li><a href="#">固定资产贷款</a></li>
+            <li><a href="#">银行承兑汇票</a></li>
+            <li><a href="#">票据贴现</a></li>
+            <li><a href="#">湖北银行微贷款</a></li>
+            <li><a href="#">小企业个人贷款</a></li>
+        </ul>
+        <ul class="nav_menu5">
+            <li><a href="#">货币市场业务</a></li>
+            <li><a href="#">债券业务</a></li>
+            <li><a href="#">同业存放业务</a></li>
+            <li><a href="#">票据业务</a></li>
+            <li><a href="#">投行业务</a></li>
+            <li><a href="#">外汇业务</a></li>
+        </ul>
+        <ul class="nav_menu7">
+            <li><a href="#">我行简介</a></li>
+            <li><a href="#">企业文化</a></li>
+            <li><a href="#">组织架构</a></li>
+            <li><a href="#">投资者关系</a></li>
+        </ul>
+        <ul class="nav_menu9">
+            <li><a href="#">校园招聘</a></li>
+			<li><a href="#">总行本部招聘</a></li>
+			<li><a href="#">地市分行招聘</a></li>
+			<li><a href="#">武汉城区支行招聘</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="ad relative">
+	<div class="login_body">
+    	<div class="login_box absolute png_bg">
+        	<div class="login_list">
+            	<div class="user_bank">
+                	<h1><a href="#" class="png_bg">个人网银</a></h1>
+                    <div class="user_links">
+                    	<a href="#">功能演示</a>|<a href="#">安全提示</a>|<a href="#">帮助</a>
+                    </div>
+                </div>
+            	<div class="company_bank">
+                	<h1><a class="png_bg" href="#">企业网银</a></h1>
+                    <div class="company_links">
+                    	<a href="#">功能演示</a>|<a href="#">安全提示</a>|<a href="#">常见问题</a>
+                    </div>
+                </div>
+                <div class="bills">
+                	<h1><a class="png_bg" href="#">电子回单</a></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="ad_body" id="ad_play">
+    	<div class="ad_box wen_wrapper">
+    		<ul class="wen_move clearfix">
+            	<li><a href="#"><img src="images/1.jpg" alt="" /></a></li>
+            	<li><a href="#"><img src="images/2.jpg" alt="" /></a></li>
+            	<li><a href="#"><img src="images/3.jpg" alt="" /></a></li>
+            	<li><a href="#"><img src="images/4.jpg" alt="" /></a></li>
+            	<li><a href="#"><img src="images/5.jpg" alt="" /></a></li>
+            </ul>
+    	</div>
+        <div class="ad_page absolute">
+        	<span class="current png_bg"></span>
+        	<span class="png_bg"></span>
+        	<span class="png_bg"></span>
+        	<span class="png_bg"></span>
+        	<span class="png_bg"></span>
+        </div>
+    </div>
+    
+</div>
+
+<section class="content_bg relative png_bg">
+	<div class="content">
+    	<div class="content_list content_list1 clearfix">
+        	<div class="cp_recommend lfloat">
+            	<div class="cp_recommend_t relative">
+                	<h2>产品推荐</h2>
+                    <a href="#" class="more">更多</a>
+                </div>
+                <div class="cp_recommend_m">
+                	<div class="recommend_play" id="recommend_play">
+                        <div class="server_box wen_play_body">
+                            <ul class="wen_play_box clearfix">
+                                <li class="play_list">
+                                	<div class="recommend_data_bg png_bg">
+                                        <a href="#" class="png_bg">
+                                            <div class="recommend_data">
+                                                <img src="images/ico_jpg1.jpg" alt="" />
+                                                <h3>紫气东来——理财产品</h3>
+                                                <p>主要投资于银行间市场债券（包括国债、金融债、央票、企业债...</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="play_list">
+                                	<div class="recommend_data_bg png_bg">
+                                        <a href="#" class="png_bg">
+                                            <div class="recommend_data">
+                                                <img src="images/ico_jpg2.jpg" alt="" />
+                                                <h3>成长之路 — 信贷产品</h3>
+                                                <p>包括国债、金融债、央票、企业债中期债券以及短期融资券等）...</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="play_list">
+                                	<div class="recommend_data_bg png_bg">
+                                        <a href="#" class="png_bg">
+                                            <div class="recommend_data">
+                                                <img src="images/ico_jpg3.jpg" alt="" />
+                                                <h3>融易贷 — 信贷产品</h3>
+                                                <p>主要投资于银行间市场债券（包括国债、金融债、央票...</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="play_list">
+                                	<div class="recommend_data_bg png_bg">
+                                        <a href="#" class="png_bg">
+                                            <div class="recommend_data">
+                                                <img src="images/ico_jpg1.jpg" alt="" />
+                                                <h3>紫气东来——理财产品</h3>
+                                                <p>主要投资于银行间市场债券（包括国债、金融债、央票、企业债...</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="play_list">
+                                	<div class="recommend_data_bg png_bg">
+                                        <a href="#" class="png_bg">
+                                            <div class="recommend_data">
+                                                <img src="images/ico_jpg2.jpg" alt="" />
+                                                <h3>成长之路 — 信贷产品</h3>
+                                                <p>包括国债、金融债、央票、企业债中期债券以及短期融资券等）...</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="play_list">
+                                	<div class="recommend_data_bg png_bg">
+                                        <a href="#" class="png_bg">
+                                            <div class="recommend_data">
+                                                <img src="images/ico_jpg3.jpg" alt="" />
+                                                <h3>融易贷 — 信贷产品</h3>
+                                                <p>主要投资于银行间市场债券（包括国债、金融债、央票...</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--
+                        <div class="recommend_pre png_bg"></div>
+                        <div class="recommend_next png_bg"></div>
+                        -->
+                    </div>
+                </div>
+            </div>
+            <div class="quick_server">
+            	<div class="quick_server_t">
+                	<h2>快捷服务</h2>
+                </div>
+            	<div class="quick_server_m">
+                	<ul class="clearfix">
+                    	<li>
+                        	<a href="#">
+                            	<span class="quick_ico1"></span>
+                                <h3>人民币存款利率</h3>
+                            </a>
+                        </li>
+                    	<li>
+                        	<a href="#">
+                            	<span class="quick_ico2"></span>
+                                <h3>人民币贷款利率</h3>
+                            </a>
+                        </li>
+                    	<li>
+                        	<a href="#">
+                            	<span class="quick_ico3"></span>
+                                <h3>网点分布</h3>
+                            </a>
+                        </li>
+                    	<li>
+                        	<a href="#">
+                            	<span class="quick_ico4"></span>
+                                <h3>ATM分布</h3>
+                            </a>
+                        </li>
+                    	<li>
+                        	<a href="#" class="red1">
+                            	<span class="quick_ico5 png_bg"></span>
+                                <h3>小企业在线申请</h3>
+                            </a>
+                        </li>
+                    	<li>
+                        	<a href="#" class="red1">
+                            	<span class="quick_ico6 png_bg"></span>
+                                <h3>零售在线申请</h3>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content_list content_list2 clearfix">
+        	<div class="all_server lfloat">
+            	<div class="all_server_t">
+                	<h2>业务服务</h2>
+                </div>
+                <div class="all_server_m">
+                	<div class="server_play" id="server_play">
+                        <div class="server_box wen_play_body">
+                            <ul class="wen_play_box clearfix" style="width:1140px;">
+                                <li class="server_l play_list">
+                                    <div class="server_data_bg png_bg">
+                                        <div class="server_data">
+                                            <a href="#" class="server_data_pic">
+                                                <img src="images/ico_jpg4.jpg" alt="" />
+                                            </a>
+                                            <h3>公司业务</h3>
+                                            <div class="server_list">
+                                                <ul>
+                                                    <li><a href="#">存款业务</a></li>
+                                                    <li><a href="#">账户结算</a></li>
+                                                    <li><a href="#">融资授信</a></li>
+                                                    <li><a href="#">同业金融</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="server_l play_list">
+                                    <div class="server_data_bg png_bg">
+                                        <div class="server_data">
+                                            <a href="#" class="server_data_pic">
+                                                <img src="images/ico_jpg5.jpg" alt="" />
+                                            </a>
+                                            <h3>零售业务</h3>
+                                            <div class="server_list">
+                                                <ul>
+                                                    <li><a href="#">银行卡业务</a></li>
+                                                    <li><a href="#">个人贷款</a></li>
+                                                    <li><a href="#">投资理财</a></li>
+                                                    <li><a href="#">贵宾服务</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="server_l play_list">
+                                    <div class="server_data_bg png_bg">
+                                        <div class="server_data">
+                                            <a href="#" class="server_data_pic">
+                                                <img src="images/ico_jpg6.jpg" alt="" />
+                                            </a>
+                                            <h3>小微业务</h3>
+                                            <div class="server_list">
+                                                <ul>
+                                                    <li><a href="#">微贷款</a></li>
+                                                    <li><a href="#">融易贷</a></li>
+                                                    <li><a href="#">快易贷</a></li>
+                                                    <li><a href="#">联易贷</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="server_l play_list">
+                                    <div class="server_data_bg png_bg">
+                                        <div class="server_data">
+                                            <a href="#" class="server_data_pic">
+                                                <img src="images/ico_jpg4.jpg" alt="" />
+                                            </a>
+                                            <h3>金融市场</h3>
+                                            <div class="server_list">
+                                                <ul>
+                                                    <li><a href="#">同行拆借</a></li>
+                                                    <li><a href="#">票据转贴现</a></li>
+                                                    <li><a href="#">同行存放</a></li>
+                                                    <li><a href="#">投行业务</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="server_l play_list">
+                                    <div class="server_data_bg png_bg">
+                                        <div class="server_data">
+                                            <a href="#" class="server_data_pic">
+                                                <img src="images/ico_jpg6.jpg" alt="" />
+                                            </a>
+                                            <h3>社区银行</h3>
+                                            <div class="server_list">
+                                                <ul>
+                                                    <li><a href="#">流动资金贷款</a></li>
+                                                    <li><a href="#">固定资产贷款</a></li>
+                                                    <li><a href="#">银行承兑汇票</a></li>
+                                                    <li><a href="#">票据贴现</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--
+                        <div class="server_pre"></div>
+                        <div class="server_next"></div>
+                        -->
+                    </div>
+                </div>
+            </div>
+            <div class="calculator">
+            	<div class="calculator_t relative">
+                	<h2>金融计算器</h2>
+                    <a href="#" class="more">更多</a>
+                </div>
+                <div class="calculator_m">
+                	<ul>
+						<li>
+                        	<a href="#" class="calculator1 png_bg">活期储蓄计算器</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="calculator2 png_bg">整存整取计算器</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="calculator3 png_bg">零存整取计算器</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="calculator4 png_bg">整存零取计算器</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="calculator5 png_bg">个人商业贷款计算器</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="calculator6 png_bg">公积金贷款计算器</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content_list content_list3 clearfix">
+        	<div class="trends lfloat">
+            	<div class="trends_t">
+                	<h2>我行动态</h2>
+                    <a href="#" class="more">更多</a>
+                </div>
+            	<div class="trends_m">
+                	<div class="trends_pt clearfix">
+                    	<div class="trends_pic lfloat">
+                        	<img src="images/ico_jpg7.jpg" alt="" />
+                        </div>
+                        <div class="trends_txt">
+                        	<h3><a href="#">我行组织开展革命老区“红色感恩之旅”活动</a></h3>
+                            <p><a href="#">6月1日至2日，总行成功开展 2013年红安革命老区“红色感恩之旅”活动，来自总行部室的36名青年员工赴红安县七里坪镇八一爱民小学捐赠图书、体验老区农村生活、参观革命遗址缅怀先烈... </a><span class="txt_time">2013-06-09</span></p>   
+                        </div>
+                    </div>
+                    <div class="trends_list">
+                    	<ul>
+                        	<li class="png_bg">
+                            	<span class="t_time">2013-06-09</span>
+                            	<a href="#">我行组织开展革命老区“红色感恩之旅”活动...</a>
+                            </li>
+                        	<li class="png_bg">
+                            	<span class="t_time">2013-06-04</span>
+                            	<a href="#">我行组织党员干部到武汉革命博物馆接受革命传统教育和...</a>
+                            </li>
+                        	<li class="png_bg">
+                            	<span class="t_time">2013-06-01</span>
+                            	<a href="#">我行与湖北省楚天广电网络公司签署战略合作协议...</a>
+                            </li>
+                        	<li class="no_border png_bg">
+                            	<span class="t_time">2013-05-31</span>
+                            	<a href="#">我行与湖北省水利厅签署全面合作协议...</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="news">
+            	<div class="news_t">
+                	<h2>公告信息</h2>
+                    <a href="#" class="more">更多</a>
+                </div>
+                <div class="news_m">
+                	<div class="news_txt">
+                        <h3><a href="#">湖北银行股份有限公司分红派息公告</a></h3>
+                        <p><a href="#">开通"个人柜面互通"业务后，持我行银行卡和人民币活期储蓄存折可在成员行间近千个网点柜面免手续费办理...</a><span class="txt_time">2013-06-09</span></p>
+                    </div>
+                    <div class="news_list">
+                    	<ul>
+                        	<li class="png_bg">
+                            	<span class="t_time">2013-06-09</span>
+                            	<a href="#">湖北银行2012年年度报告...</a>
+                            </li>
+                        	<li class="png_bg">
+                            	<span class="t_time">2013-06-05</span>
+                            	<a href="#">紫气东来好运系列人民币...</a>
+                            </li>
+                        	<li class="png_bg">
+                            	<span class="t_time">2013-06-04</span>
+                            	<a href="#">紫气东来好运系列...</a>
+                            </li>
+                        	<li class="png_bg">
+                            	<span class="t_time">2013-06-02</span>
+                            	<a href="#">湖北银行股份有限公司...</a>
+                            </li class="clearfix">
+                        	<li class="no_border png_bg">
+                            	<span class="t_time">2013-06-01</span>
+                            	<a href="#">我行组织党员干部到武汉... </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer relative">
+	<div class="footer_nav clearfix">
+    	<dl class="lfloat">
+        	<dt>关于我行</dt>
+            <dd><a href="#">我行简介</a></dd>
+            <dd><a href="#">企业文化</a></dd>
+            <dd><a href="#">组织架构</a></dd>
+            <dd><a href="#">投资者关系</a></dd>
+        </dl>
+    	<dl class="lfloat">
+        	<dt>帮助中心</dt>
+            <dd><a href="#">你问我答</a></dd>
+        </dl>
+    	<dl class="lfloat">
+        	<dt>金融信息</dt>
+            <dd><a href="#">人民币存款利率表</a></dd>
+            <dd><a href="#">人民币贷款利率表</a></dd>
+        </dl>
+    	<dl class="lfloat">
+        	<dt>客户服务</dt>
+            <dd><a href="#">客户帮助</a></dd>
+            <dd><a href="#">客户调查</a></dd>
+            <dd><a href="#">客户反馈</a></dd>
+            <dd><a href="#">安全提示</a></dd>
+        </dl>
+    	<dl class="lfloat no_bg">
+        	<dt>联系我们</dt>
+            <dd><a href="#">客户电话</a></dd>
+            <dd><a href="#">96599</a></dd>
+            <dd><a href="#">人才招聘</a></dd>
+            <dd><a href="#">网点地图</a></dd>
+        </dl>
+    </div>
+    <div class="footer_info clearfix">
+    	<div class="copyright lfloat">
+        	<div class="ewm lfloat">
+            	<img src="images/e_code.gif" alt="二维码" />
+            </div>
+            <div class="copyright_txt">
+            	<p>Copyright 湖北银行股份有限公司　版权所有<br />   
+鄂ICP备10216859-5 号</p>
+            </div>
+        </div>
+        <div class="addree rfloat">
+        	<div class="e_police lfloat">
+            	<img src="images/e_police.gif" alt="网警" />
+            </div>
+            <div class="addree_txt">
+            	<p>联系地址：湖北省武汉市武昌区中北路81号湖北银行大厦</p>
+                <p><a href="#">设为首页</a> | <a href="#">加入收藏</a></p> 
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--弹出窗口-->
+<div class="popup_box_bg"></div>
+
+<!--网点分布ATM-->
+<div class="gps_box popup_box">
+    <div class="gps_bg png_bg">
+        <div class="gps_body">
+            <img src="images/gps.jpg" alt="" />
+        </div>
+    </div>
+    <div class="arrow_ico1 png_bg"></div>
+    <div class="close_box png_bg"></div>
+</div>
+<!--理财计算器-->
+<div class="calculator_box popup_box">
+	<div class="calculator_bg png_bg">
+        <div class="calculator_box_body">
+            <div class="calculator_box_t">
+                <h4>活期计算器</h4>
+            </div>
+            <div class="calculator_box_m">
+                <p>温馨提示：活期储蓄存款指不规定存期，客户可随时凭存折、
+借记卡存取，存取金额不限的储蓄存款业务。</p>
+                <dl>
+                    <dt>输入</dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                <label>初始存入日期:</label>
+                                <input type="text" />
+                            </li>
+                            <li>
+                                <label>提取日期:</label>
+                                <input type="text" />
+                            </li>
+                            <li>
+                                <label>存款金额:</label>
+                                <input type="text" />元 1元起存
+                            </li>
+                            <li>
+                                <label>年利率:</label>
+                                <input type="text" />%
+                            </li>
+                            <li>
+                                <label></label>
+                                <button type="button" class="calculator_btn png_bg">开始计算</button>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>计算结果</dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                <label>到期本息总额:</label>
+                                <input type="text" />元
+                            </li>
+                            <li>
+                                <label>利息税:</label>
+                                <input type="text" />元
+                            </li>
+                            <li>
+                                <label>扣除利息税金额:</label>
+                                <input type="text" />元
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <p>注：本计算结果，仅供参考</p>
+            </div>
+        </div>
+    </div>
+    <div class="arrow_ico1 png_bg"></div>
+    <div class="close_box png_bg"></div>
+</div>
+<!--二维码-->
+<div class="ewm_box popup_box">
+	<div class="ewm_bg png_bg">
+        <div class="ewm_body">
+            <img src="images/ewm.png" class="png_bg" alt="" />
+        </div>
+    </div>
+    <div class="arrow_ico2 png_bg"></div>
+    <div class="close_box png_bg"></div>
+</div>
+<!--侧边栏-->
+<div class="float_menu absolute">
+	<ul>
+    	<li>
+        	<a href="#">
+            	<span class="float_menu_ico1 png_bg"></span>
+                <em>客户帮助</em>
+            </a>
+        </li>
+    	<li>
+        	<a href="#">
+            	<span class="float_menu_ico2 png_bg"></span>
+                <em>客户反馈</em>
+            </a>
+        </li>
+    	<li>
+        	<a href="#">
+            	<span class="float_menu_ico3 png_bg"></span>
+                <em>客户调查</em>
+            </a>
+        </li>
+    	<li>
+        	<a href="#">
+            	<span class="float_menu_ico4 png_bg"></span>
+                <em>安全提示</em>
+            </a>
+        </li>
+    	<li>
+        	<a href="#" class="go_top no_border">
+            	<span class="float_menu_ico5 png_bg"></span>
+                <em>返回顶部</em>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

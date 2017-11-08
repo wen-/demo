@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="author" content="yellowwen@126.com">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<title>用户中心</title>
+	<link type="text/css" rel="stylesheet" href="css/reset.min.css" />	<link type="text/css" rel="stylesheet" href="css/animate.min.css" />
+	<link type="text/css" rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
+	<link type="text/css" rel="stylesheet" href="font/iconfont.css" />
+	<link type="text/css" rel="stylesheet" href="css/main.css" />
+	<link type="text/css" rel="stylesheet" href="css/user-center.css" />
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<!--[if lt IE 9]>
+	<script type="text/javascript">
+		var h5Block = 'header,footer,section,aside,article,nav,hgroup,figure,figcaption,details,summary';
+		var h5Inline = 'time,mark,ruby,rt,rp,output,keygen,meter,progress,command,source';
+		var h5Other = 'video,audio,canvas,datalist';
+		var h5Elem = (h5Block + ',' + h5Inline + ',' + h5Other).split(',');
+		for(var i=0;i<h5Elem.length;i++){
+			document.createElement(h5Elem[i]);
+		}
+	</script>
+	<![endif]-->
+</head>
+<body>
+<!--页头star-->
+<header class="header">
+	<div class="m">
+		<a href="index.html" class="lfloat logo"><img src="images/logo.png" alt="" /></a>
+		<div class="rfloat login_info">
+			<div class="h_btn" style="display: none;">
+				<a class="log" href="用户中心_登录.html">登录</a>
+				<a class="reg" href="注册.html">注册</a>
+			</div>
+			<div class="h_txt">
+				<a href="#">
+					<img src="images/user_icon.jpg" class="headico" alt="" />
+					<span class="info_txt">欢迎<span>张三</span></span>
+				</a>
+				<a href="#" class="exit">退出</a>
+			</div>
+		</div>
+		<nav class="rfloat nav">
+			<dl>
+				<dt><a href="index.html">首页</a></dt>
+			</dl>
+			<dl>
+				<dt><a href="#">二手房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">房源</a>
+					<a href="#">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">新房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">新房首页</a>
+					<a href="#">广州新房</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">租房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">房源</a>
+					<a href="#">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">写字楼</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">出租</a>
+					<a href="#">出售</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">业主委托</a></dt>
+			</dl>
+		</nav>
+	</div>
+</header>
+<!--页头end-->
+
+<section class="section bg_grey">
+	<!--用户中心str-->
+	<div class="user-container clearfix">
+		<!-- left -->
+		<div class="container-left lfloat">
+			<!-- photo -->
+			<p class="user-photo">
+				<a><img src="images/xtg.png"></a>
+			</p>
+			<p class="user-name">林晓冬</p>
+			<!-- /photo -->
+			<!-- nav -->
+			<div class="side-nav">
+				<ul>
+					<li><a href="用户中心_首页.html"><span>首<em class="gap-dbword"></em>页</span></a></li>
+					<li><a href="用户中心_房源收藏.html"><span>房源收藏</span></a></li>
+					<li><a href="用户中心_浏览历史.html"><span>浏览历史</span></a></li>
+					<li class="cur"><a href="用户中心_委托记录.html"><span>委托记录</span></a></li>
+					<li><a href="用户中心_我邀请的人.html"><span>我邀请的人</span></a></li>
+				</ul>
+			</div>
+			<!-- /nav -->
+		</div>
+		<!-- /left -->
+		<!-- right -->
+		<div class="container-right lfloat">
+			<div class="container-right-inner">
+				<div class="right-inner-main">
+					<!-- top -->
+					<div class="title clearfix">
+						<span class="welcomes lfloat">欢迎来到买房吧</span>
+						<p class="exit cur rfloat">
+							<a href="javascript:;"><i class="icon-user"></i></a>
+						</p>
+						<p class="setting  rfloat">
+							<a href="用户中心_个人资料.html"><i class="icon-user"></i></a>
+						</p>
+						<!--   消息提醒模块
+						<p class="msg  rfloat">
+							<a href="/uo/remindMsgList"><i class="icon-user"></i></a>
+						</p>-->
+						<p class="qr-code rfloat" id="qrCode">
+							<a href="javascript:;"><i class="icon-user"></i></a>
+							<span class="qr-code-dropmenu">
+								<b class="icon-user"></b>
+								<i class="icons"><img src="images/ewm.png" alt="" /></i>
+								<em>用买房吧APP找房更方便扫描二维码进行下载</em>
+							</span>
+						</p>
+					</div>
+					<!-- /top -->
+					<!-- main -->
+					<div class="content-layer">
+						<!-- 已委托房源 -->
+						<div class="hs-history hs-entrust entrust-sale-box">
+							<p class="title">已委托房源</p>
+							<!-- no data -->
+							<div class="hs-history-box">
+								<ul class="hs-history-list">
+									<li class="hs-history-group">
+										<!-- between -->
+										<div class="hs-history-item clearfix">
+											<p class="hs-photo lfloat">
+												<a href="javascript:;">
+													<img src="images/u_pic2.jpg" width="147" height="110">
+												</a>
+											</p>
+											<div class="hs-mid-info lfloat">
+												<p class="hs-info-name">
+													<a style="text-decoration:none;">中信广场 7803 218.0㎡ 1房0厅</a>
+												</p>
+												<p class="entrust-price clearfix"><em>目前租金：</em><span class="price-num">20,000</span>元/月</p>
+											</div>
+										</div>
+										<!-- /between -->
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- /已委托房源 -->
+						<!-- 已委托找房 -->
+						<div class="no-data-wrap">
+							<i class="icons-qdoll"><img src="images/user_icon.jpg" alt="" /></i>
+							<div class="no-data-txt">
+								<p class="no-data-titbig">您还没有收藏任何房源哦！</p>
+								<p class="no-data-titsml">去Q房网找感兴趣的房子</p>
+								<p class="no-data-btns">
+									<a class="btn-orange" href="http://GUANGZHOU.qfang.com/sale">找二手房</a>
+									<a class="btn-orange" href="http://GUANGZHOU.qfang.com/rent">找租房</a>
+								</p>
+							</div>
+						</div>
+						<!-- /已委托找房 -->
+					</div>
+					<!-- /main -->
+				</div>
+			</div>
+		</div>
+		<!-- /right -->
+	</div>
+	<!--用户中心end-->
+</section>
+
+<!--页中end-->
+
+<!--页脚star-->
+<footer class="footer">
+	<div class="m tc">
+		<div class="foot_nav">
+			<a href="#">关于买房吧</a>
+			<a href="#">联系我们</a>
+			<a href="#">用户协议</a>
+			<a href="#">友情链接</a>
+			<a href="#">房产百科</a>
+			<a href="#">房产问答</a>
+		</div>
+		<p>广州安信互联网金融服务有限公司</p>
+		<p class="copyright">Copyright&nbsp;©&nbsp;2016&nbsp;www.myfang8.com.&nbsp;All Rights Reserved&nbsp;ICP备案号：粤ICP备12345678号</p>
+	</div>
+</footer>
+<!--页脚end-->
+
+<script src="js/public.js"></script>
+<script src="js/json2.js"></script>
+<script src="js/jquery-ui/jquery-ui.min.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<script src="js/ghost.min.js"></script>
+<script src="js/echarts.js"></script>
+<script src="js/layer/layer.js"></script>
+<script src="js/wen_play.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

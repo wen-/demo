@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* 
+ * CSS Document for 安信
+ * developer: 黄文雄
+ * email: yellowwen@126.com
+ * Date: 2016-08-05
+ */
+blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0;font-size:100%;vertical-align:baseline}table{border-collapse:collapse;border-spacing:0}ol,ul{list-style:none}a{text-decoration:none}a:hover{text-decoration:underline}sup{vertical-align:text-top}sub{vertical-align:text-bottom}legend{color:#000}fieldset,img{border:0}button,h1,h2,h3,h4,h5,h6,input,select,textarea{font-size:100%}input,textarea{outline:0;background:#fff}article,aside,audio,details,figcaption,figure,footer,header,hgroup,mark,menu,nav,section,summary,time,video{display:block;margin:0;padding:0}mark{background:#ff0}audio,canvas,video{display:inline-block}audio:not([controls]){display:none}address,cite,dfn,em,i,var{font-style:normal}code,kbd,pre,samp{font-family:courier new,courier,monospace}small{font-size:12px}hr{height:1px;background-color:#eee;border:none}.lfloat{float:left;display:inline}.rfloat{float:right;display:inline}.pr{position:relative}.pa{position:absolute}.inlineb{display:inline-block!important;vertical-align:middle}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both;overflow:hidden}.clearfix{zoom:1}.clear{clear:both}.tr{text-align:right!important}.tl{text-align:left!important}.tc{text-align:center!important}.tj{text-align:justify!important}.vt{vertical-align:top!important}.vm{vertical-align:middle!important}.vb{vertical-align:bottom!important}

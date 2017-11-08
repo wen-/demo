@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="author" content="yellowwen@126.com">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<title>用户中心</title>
+	<link type="text/css" rel="stylesheet" href="css/reset.min.css" />	<link type="text/css" rel="stylesheet" href="css/animate.min.css" />
+	<link type="text/css" rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
+	<link type="text/css" rel="stylesheet" href="font/iconfont.css" />
+	<link type="text/css" rel="stylesheet" href="css/main.css" />
+	<link type="text/css" rel="stylesheet" href="css/user-entrust.css" />
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<!--[if lt IE 9]>
+	<script type="text/javascript">
+		var h5Block = 'header,footer,section,aside,article,nav,hgroup,figure,figcaption,details,summary';
+		var h5Inline = 'time,mark,ruby,rt,rp,output,keygen,meter,progress,command,source';
+		var h5Other = 'video,audio,canvas,datalist';
+		var h5Elem = (h5Block + ',' + h5Inline + ',' + h5Other).split(',');
+		for(var i=0;i<h5Elem.length;i++){
+			document.createElement(h5Elem[i]);
+		}
+	</script>
+	<![endif]-->
+</head>
+<body>
+<!--页头star-->
+<header class="header">
+	<div class="m">
+		<a href="index.html" class="lfloat logo"><img src="images/logo.png" alt="" /></a>
+		<div class="rfloat login_info">
+			<div class="h_btn" style="display: none;">
+				<a class="log" href="用户中心_登录.html">登录</a>
+				<a class="reg" href="注册.html">注册</a>
+			</div>
+			<div class="h_txt">
+				<a href="#">
+					<img src="images/user_icon.jpg" class="headico" alt="" />
+					<span class="info_txt">欢迎<span>张三</span></span>
+				</a>
+				<a href="#" class="exit">退出</a>
+			</div>
+		</div>
+		<nav class="rfloat nav">
+			<dl>
+				<dt><a href="index.html">首页</a></dt>
+			</dl>
+			<dl>
+				<dt><a href="#">二手房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">房源</a>
+					<a href="#">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">新房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">新房首页</a>
+					<a href="#">广州新房</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">租房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">房源</a>
+					<a href="#">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">写字楼</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">出租</a>
+					<a href="#">出售</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">业主委托</a></dt>
+			</dl>
+		</nav>
+	</div>
+</header>
+<!--页头end-->
+
+<section class="section bg_grey">
+	<!--用户中心str-->
+	<div class="entrust-pagemain">
+		<div class="entrust-con">
+			<p class="entrust-title">在线委托</p>
+			<div class="entrust-con-inner">
+				<!-- steps -->
+				<div class="entrust-steps">
+					<ul>
+						<li class="cur">
+							<a href="javascript:;">
+								<i class="icons-entrust">1</i>
+								<span>填写基本信息</span>
+								<em class="icons-entrust"></em>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<i class="icons-entrust">2</i>
+								<span>完善房源资料</span>
+								<em class="icons-entrust"></em>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<i class="icons-entrust">3</i>
+								<span>提交完成</span>
+								<em class="icons-entrust"></em>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- end steps -->
+				<input type="hidden" id="intial-entrust" value="SALE">
+				<input type="hidden" id="eflag" value="">
+				<div class="step-con">
+					<p class="step-con-title clearfix"><span>房源信息</span></p>
+					<!-- step01 -->
+					<div class="step01">
+						<ul>
+							<li class="entrust-type clearfix">
+								<span class="field-name lfloat">委托类型</span>
+								<p class="entrust-type-con lfloat" id="entrustType">
+									<span class="cur" id="sale-house">委托出售<i class="icons-entrust"></i></span>
+									<span id="rent-house">委托出租<i class="icons-entrust"></i></span>
+									<span data-type="type-office" id="rent-office">写字楼出租<i class="icons-entrust"></i></span>
+									<span data-type="type-office" id="sale-office">写字楼出售<i class="icons-entrust"></i></span>
+								</p>
+							</li>
+							<li class="clearfix">
+								<span class="field-name lfloat">所在城市</span>
+								<span class="crt-city lfloat">广州</span>
+							</li>
+							<!-- sale -->
+							<li data-type="sale">
+								<div class="step01-sale">
+									<ul>
+										<li class="clearfix">
+											<span class="field-name lfloat">小区名称</span>
+											<p class="dft-input lfloat">
+												<input type="text" id="gardenName" name="gardenName" class="ui-autocomplete-input" autocomplete="off">
+											</p>
+										</li>
+										<li class="clearfix">
+											<span class="field-name lfloat">栋<em class="double_words"></em>座</span>
+											<p class="dft-input lfloat">
+												<input type="text" id="buildingName" name="buildingName" class="ui-autocomplete-input" autocomplete="off">
+											</p>
+										</li>
+
+										<li class="clearfix">
+											<span class="field-name lfloat">房<em class="double_words"></em>号</span>
+											<p class="dft-input lfloat">
+												<input type="text" id="roomNumber" name="roomNumber" class="ui-autocomplete-input" autocomplete="off">
+											</p>
+										</li>
+
+										<li>
+											<p class="btn-stepnext">
+												<a href="javascript:;" class="btn_big" id="firstnext">下一步</a>
+											</p>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<!-- end sale -->
+							<!-- office -->
+							<li data-type="office" class="dn">
+								<div class="step01-office">
+									<ul>
+										<li class="clearfix">
+											<span class="field-name lfloat">写字楼名称</span>
+											<p class="dft-input lfloat">
+												<input type="text" name="officeName" id="officeName" class="ui-autocomplete-input" autocomplete="off">
+											</p>
+										</li>
+
+										<li class="clearfix">
+											<span class="field-name lfloat">栋<em class="double_words"></em>座</span>
+											<p class="dft-input lfloat">
+												<input type="text" id="officebuildingName" name="officebuildingName" class="ui-autocomplete-input" autocomplete="off">
+											</p>
+										</li>
+
+										<li class="short clearfix">
+											<span class="field-name lfloat">楼<em class="double_words"></em>层</span>
+											<p class="dft-input lfloat">
+												<input type="text" id="officefloorName" name="officefloorName" value="" class="ui-autocomplete-input" autocomplete="off">
+											</p>
+											<div class="short-r">
+												<span class="field-name lfloat">室<em class="a_word"></em>号</span>
+												<p class="dft-input lfloat">
+													<input maxlength="10" type="text" id="officeroomNum" name="officeroomNum">
+												</p>
+											</div>
+										</li>
+
+										<li class="clearfix">
+											<span class="field-name lfloat">面<em class="double_words"></em>积</span>
+											<p class="dft-input lfloat">
+												<input maxlength="8" type="text" class="has-unit" id="officebuildArea">
+												<span class="unit">平方</span>
+											</p>
+										</li>
+
+										<li class="prices clearfix">
+											<span class="field-name lfloat">租<em class="double_words"></em>金</span>
+											<p class="dft-input lfloat">
+												<span class="unit-field lfloat">总价：</span>
+												<input type="text" class="has-unit" id="officePrice" onblur="checkofficePrice();">
+												<span class="unit">元/月</span>
+											</p>
+											<p class="equal lfloat"></p>
+											<div class="average">
+												<p class="dft-input lfloat">
+													<span class="unit-field lfloat">每平方：</span>
+													<input type="text" class="has-unit" id="avgoffice">
+													<span class="unit">元/月</span>
+												</p>
+											</div>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+							<!-- end office -->
+						</ul>
+					</div>
+					<!-- end step01 -->
+					<!-- step02 -->
+					<div class="step02 dn">
+						<ul>
+							<li class="clearfix">
+								<span class="field-name lfloat">面<em class="double_words"></em>积</span>
+								<p class="dft-input lfloat">
+									<input maxlength="8" type="text" class="has-unit" id="buildArea" name="buildArea" autocomplete="off">
+									<span class="unit">平方</span>
+								</p>
+							</li>
+							<li class="clearfix">
+								<span class="field-name lfloat">房<em class="double_words"></em>型</span>
+								<div class="dropdown-box lfloat">
+									<p class="dropdown-selected"><em class="unit">室</em><span id="bedroom"></span><i class="icons-entrust"></i></p>
+									<p class="dropdown-menu">
+										<a href="javascript:;">1</a>
+										<a href="javascript:;">2</a>
+										<a href="javascript:;">3</a>
+										<a href="javascript:;">4</a>
+										<a href="javascript:;">5</a>
+										<a href="javascript:;">6</a>
+										<a href="javascript:;">7</a>
+										<a href="javascript:;">8</a>
+									</p>
+								</div>
+								<div class="dropdown-box lfloat">
+									<p class="dropdown-selected"><em class="unit">厅</em><span id="livingRoom"></span><i class="icons-entrust"></i></p>
+									<p class="dropdown-menu">
+										<a href="javascript:;">0</a>
+										<a href="javascript:;">1</a>
+										<a href="javascript:;">2</a>
+										<a href="javascript:;">3</a>
+										<a href="javascript:;">4</a>
+										<a href="javascript:;">5</a>
+										<a href="javascript:;">6</a>
+										<a href="javascript:;">7</a>
+										<a href="javascript:;">8</a>
+									</p>
+								</div>
+								<div class="dropdown-box lfloat">
+									<p class="dropdown-selected"><em class="unit">卫</em><span id="bathroom"></span><i class="icons-entrust"></i></p>
+									<p class="dropdown-menu">
+										<a href="javascript:;">0</a>
+										<a href="javascript:;">1</a>
+										<a href="javascript:;">2</a>
+										<a href="javascript:;">3</a>
+										<a href="javascript:;">4</a>
+										<a href="javascript:;">5</a>
+										<a href="javascript:;">6</a>
+										<a href="javascript:;">7</a>
+										<a href="javascript:;">8</a>
+									</p>
+								</div>
+							</li>
+							<li class="clearfix">
+								<span class="field-name lfloat">价<em class="double_words"></em>格</span>
+								<p class="dft-input lfloat">
+									<input type="text" maxlength="6" class="has-unit" id="buildingPrice" name="buildingPrice" autocomplete="off">
+									<span class="unit">万元</span>
+								</p>
+							</li>
+						</ul>
+					</div>
+					<!-- end step02 -->
+					<!-- 我是业主/代业主委托 -->
+					<div class="step-office dn" id="setTabBox">
+						<p class="step-con-title clearfix"><span>委托人信息</span></p>
+						<div class="settab_box">
+							<ul>
+								<li class="clearfix">
+									<span class="field-name lfloat">您的姓名</span>
+									<p class="dft-input lfloat">
+										<input maxlength="10" type="text" class="ownerName" id="loginName">
+									</p>
+									<p class="gender lfloat clearfix">
+										<label class="cur lfloat">
+											<i class="icons-entrust"></i>
+											<span>先生</span>
+										</label>
+										<label class="lfloat">
+											<i class="icons-entrust"></i>
+											<span>女士</span>
+										</label>
+									</p>
+								</li>
+								<li class="set-pos-ele clearfix">
+									<span class="field-name lfloat">手机号码</span>
+									<p class="dft-input lfloat dn">
+										<input type="text" id="ownerPhone" name="ownerPhone" maxlength="11">
+									</p>
+									<p class="dft-input lfloat">
+										<span class="readonly login-Phone" id="loginPhone" name="loginPhone">13226618373</span>
+									</p>
+									<div class="get-vcode lfloat">
+										<p class="ver-code"><a id="sendCode" href="javascript:;"><span><em>获取验证码</em></span></a></p>
+									</div>
+									<!-- 图形验证码 -->
+									<div class="graphical-vcode" id="checkCode2">
+										<input type="hidden" id="checkCodeFlag2" value="N">
+										<a class="security-code-close" id="security-code-close-phonecode"><em class="icons-entrust"></em></a>
+										<i class="icons_saledetails arrow"></i>
+										<div class="clearfix">
+											<p class="gvc lfloat"><img id="codeImg2" width="56" height="20" src="#"></p>
+											<input type="text" maxlength="4" id="checkCodeTxt2" class="gvcode lfloat">
+											<a href="javascript:;" name="toCheckPhone" type="toCheckPhone2" class="gvcode-btn lfloat">确认</a>
+										</div>
+										<p class="refresh-gvc lfloat"><a href="javascript:;" id="changeVoliCode">换一张</a></p>
+									</div>
+									<!-- end 图形验证码 -->
+								</li>
+								<li class="clearfix">
+									<span class="field-name lfloat">验证码</span>
+									<p class="dft-input lfloat">
+										<input type="text" maxlength="6" id="trendCode">
+									</p>
+								</li>
+							</ul>
+						</div>
+						<div class="last-step">
+							<p class="protocol-text clearfix">
+								<input type="checkbox" checked="checked" id="agreement">
+								<label>同意<a href="/authorize/protocol" target="_blank">《买房吧房屋出售/出租协议》</a></label>
+							</p>
+							<p class="btn-stepnext">
+								<a href="javascript:;" class="go-back dn" id="goBack">返回上一步</a>
+								<a href="javascript:;" class="btn_big btnoff" id="offciesumbit">提交房源</a>
+								<a href="javascript:;" class="btn_big btnoff dn" id="buildsumbit">提交房源</a>
+							</p>
+						</div>
+					</div>
+					<!-- end 我是业主/代业主委托 -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--用户中心end-->
+</section>
+
+<!--页中end-->
+
+<!--页脚star-->
+<footer class="footer">
+	<div class="m tc">
+		<div class="foot_nav">
+			<a href="#">关于买房吧</a>
+			<a href="#">联系我们</a>
+			<a href="#">用户协议</a>
+			<a href="#">友情链接</a>
+			<a href="#">房产百科</a>
+			<a href="#">房产问答</a>
+		</div>
+		<p>广州安信互联网金融服务有限公司</p>
+		<p class="copyright">Copyright&nbsp;©&nbsp;2016&nbsp;www.myfang8.com.&nbsp;All Rights Reserved&nbsp;ICP备案号：粤ICP备12345678号</p>
+	</div>
+</footer>
+<!--页脚end-->
+
+<script src="js/public.js"></script>
+<script src="js/json2.js"></script>
+<script src="js/jquery-ui/jquery-ui.min.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<script src="js/ghost.min.js"></script>
+<script src="js/echarts.js"></script>
+<script src="js/layer/layer.js"></script>
+<script src="js/wen_play.js"></script>
+<script src="js/main.js"></script>
+<script src="js/user-entrust.js"></script>
+</body>
+</html>

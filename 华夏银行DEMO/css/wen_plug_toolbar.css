@@ -1,0 +1,199 @@
+﻿@charset "utf-8";
+div.toolbar {
+	position:fixed;
+	z-index:1002; 
+	top:0;
+	left:0; 
+	width:100%; 
+	height: 100px;
+	background: url(../images/toolbar_bg.png) repeat;
+	
+	_position:absolute;
+	_top:expression(eval(documentElement.scrollTop)); 
+}
+div.toolbar_tool { 
+	position:absolute;
+	left:50%;
+	_width:1000px;
+	margin-left:-400px; 
+}
+div.toolbar ul { 
+	float: left; 
+	padding: 0 6px 0 2px; 
+	list-style: none; 
+	margin: 0; 
+	/*background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAABkCAIAAADMux0KAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAWpJREFUeNp0U9FOwzAMTNxuj2j//wl8BBK/wgOvA4Q01sQ2PtvpGiSqqXIdn313zurzy+vn9fp0uVApRVXtTfZiFdGCnLAgh0j2iHnOGUIcTOzleZr9os4+IhpYZtaihtVpRtYlthL13uaclWBuraTqPIG1yFhZTtBDqkVABD/xB/zW87l33u53x2qw9zaIuHPvHcphgLGq6AxW6OcqJRk4l0rruhqkxLShvBqmqnceOQe4Nh0PENY2VVqc7M0QR1jIoBHsAT4gwmXkIjFUxowSxuCUMDDZx8+Z7puJDwo9GrtU3evcdPIEKqAttx/SdNp06NXU6/bP92AwNRvN1hKdvTuVYVbulw0bRpXdNWxG9Dg33fXAb9Pu7n9R8SiskuD3uLFjW8OiUG469HiqelTuDsmc07+59ON4D2b/EBIEBj/duzx8yc7xn8ncsp64daKF2rYtp1Nrjd5/2sft9vb1bdPs4lrN+ivAAFKKx0mVxjXXAAAAAElFTkSuQmCC) no-repeat right top; */
+}
+div.toolbar ul.pluginlast { 
+	background: none; 
+}
+div.toolbar ul li { 
+	float: left; 
+	position: relative; 
+	padding: 21px 0px 20px; 
+}
+div.toolbar ul li input { 
+	display: block;
+	width:88px;
+	padding: 40px 10px 0px;
+	*padding: 40px 5px 0px; 
+	margin: 0; 
+	border:none; 
+	height: 60px; 
+	background: none; 
+	font-family: "Microsoft YaHei","黑体"; 
+	cursor: pointer;
+	font-size:12px; 
+	color: #abaaab;
+	background-repeat:no-repeat;
+	background-image:url(../images/toolbar_ico.png);
+}
+div.toolbar ul li input#textMode { 
+	background-position:center top;
+}
+div.toolbar ul li input#textTips2 { 
+	background-position:center -120px;
+}
+div.toolbar ul li input#pageZoom1 { 
+	background-position:center -240px; 
+}
+div.toolbar ul li input#pageZoom2 { 
+	background-position:center -300px; 
+}
+div.toolbar ul li input#fontZoom1 { 
+	background-position:center -360px; 
+}
+div.toolbar ul li input#fontZoom2 { 
+	background-position:center -420px; 
+}
+div.toolbar ul li input#hightContrast { 
+	background-position:center -540px; 
+}
+div.toolbar ul li input#guides { 
+	background-position:center -600px; 
+}
+div.toolbar ul li input#barReset { 
+	background-position:center -660px; 
+}
+div.toolbar ul li input#barClose { 
+	background-position:center -720px; 
+}
+div.toolbar ul li ol#hightContrastList { 
+	position: absolute; 
+	left: -3px; 
+	top: 80px; 
+	width: 80px; 
+	background-color:rgb(224, 224, 224); 
+	border: 1px solid rgb(153, 153, 153); 
+	font-size: 12px; 
+	line-height: 14px; 
+	padding-top: 3px; 
+	z-index: 1003; 
+}
+div.toolbar ul li ol.hclistclose{
+	display:none;
+}
+div.toolbar ul li ol#hightContrastList li { 
+	float: none; 
+	padding: 2px 0px 3px 22px; 
+	background: none; 
+	margin-bottom: 3px; 
+	text-align: left; 
+	cursor:pointer; 
+}
+div.toolbar ul li ol#hightContrastList li#de { 
+	color:#333
+}
+div.toolbar ul li ol#hightContrastList li#bw { 
+	background-color: rgb(0, 0, 0); 
+	color:#fff;
+}
+div.toolbar ul li ol#hightContrastList li#wp { 
+	background-color: rgb(153, 51, 255);  
+	color:#fff;
+}
+div.toolbar ul li ol#hightContrastList li#bb { 
+	background-color: rgb(0, 153, 255); 
+	color:#000;
+}
+div.toolbar ul li ol#hightContrastList li#rw { 
+	background-color: red;  
+	color:#fff;
+}
+
+/*--文字提示--*/
+.tipsMsgBox{
+	width:100%;
+	background-color:#d3121f;
+	background:url("../images/toolbar_bg.png") repeat 0 0;
+    border-top: 2px solid #927336;
+    bottom: 0;
+    height: 140px;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    text-align: center;
+    z-index: 1001;
+	color:#fff;
+	
+	_position:absolute;
+	_top:expression(eval(documentElement.scrollTop + document.documentElement.offsetHeight - 140)); 
+}
+.closeTipsMsgBox {
+    float: right;
+    font-size: 0;
+    height: 20px;
+    line-height: 0;
+    padding: 8px 8px 0 0;
+    width: 20px;
+}
+.closeTipsMsgBox a {
+    display: block;
+    height: 20px;
+    line-height: 0;
+    width: 20px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABAlJREFUeNpcVEtLJGcUvVXVvh/dGtt3Q2sUdYyjxlnIgChmwBFxNmo2ZhVQ0E1W2bnJPxCyyE50shiQCIJB0E2PM4ooqKN0EBt1tNs3Ptv3q805l6kwpOCr+qrqfveec+7DaGxslMfHR7m9vZXr62t9Pjw8yN3dnfvm5qZCRF44HA4XnrS7iEQin2JiYuawdqOiop6io6MFezEMgybikP9dOJAORy2pqanttbW1JVVVVakpKSn6LxwOy+LiYtjn8wX29/f/Mk3zHT4Hvz5vfI3w/Pz8OZD91tDQ8Kajo8P0er2CQ3J/fy9PT08CRIpke3tb+vv7ZXh4+D3+9yQmJk7xPy+rsLBQN0D1HT7+3tXV9bq7u9sATQEKOTk5EcuyKIHs7e3pe0JCgtTV1UlmZqZ3fn6+CoD88fHxQdK3CgoKSNMNhL0tLS0Nra2tsrOzI0dHR4oOgSQtLU33x8fHwkAHBwdydnYmpaWlAkeZS0tLz+DMBwYnJr0iQmtxcXFzRUWFrK2tKTJEl6KiIpXCThilISOPx6MBV1ZW1KaysrIaifwZviwzLi7um6SkpJ+ys7PN3d1d4crLy5OsrCyZm5uTzc1NdQQW6mByclKQMHVMpGSTkZEhSFwbWHhNGH6fnJz8jMITHZwLZZiYmJCZmRlFwjLif+4XFhZkbGxMcnNzxe12y+rqqlxcXIjT6fwWDn9wxMbGvgBUFymdnp5Kenq6bG1tyfT0tOpGZHTGZWtI5KRK6mREO+hnQc98B24uZpA6MfU8yAOHh4dCfflOyrZDlg7tZ2dnpaysTCuE7/yPYMkmDAz7Ax0SAZ3xMDPJYr66utLFdy6WDhNHZKxLmwF8mQ7czumQjvjkoj5EzPqzkVFHlhCD8kkbykH9eNEOLRg2XS7XIt4veYBO/H6/lJeXa+ZoTAQjIyMyOjqqAag1kijV1dUSCATk8vJSJQGQCDomZKIEZpHZAA1JYWpqSpODjmHmlCIzub6+rnvqirZU2/HxcQ1IxOieIED4LHTHFaA6NzY2XlFwarW8vCz19fXS1NTETtDDLJGamhrp7OzUfW9vrwSDQZ00ZFJSUvIWzfDO6Ovr40cPau5PFG4t6TAipBAEU2rs3S/9LuhdGRoa0oJmMAwUNsEyAPwITf3GwMCARoE+L0HhDyB9zuK2M0fabEOitIcDtbSRoW4/Y2L9AilGmAervb1ddQDdEIr1HxgVhUIhjz2u6JRlxMW9nXlKgxb1Nzc3/4rm+JsJ1fHV1tZmD1ZmL4gJ8gHihnHAjSS4cNiye/nLMwKKnzG+3oJmDwJ8pDP+0wE7ODj437SlfqSCgUEn+WirOmQ8H86d8GNAszBsQjk5Oe9BMYDvdywbOmT98vpXgAEAPKObxlCohCgAAAAASUVORK5CYII=) no-repeat;
+}
+.textbgbuttonbox{
+    float: right;
+    height: 18px;
+    line-height: 18px;
+    padding: 8px 8px 0 0;
+	color:#fff;
+	font-size:12px;
+}
+.pinyinbuttonbox {
+    float: right;
+    height: 18px;
+    line-height: 18px;
+    padding: 8px 8px 0 0;
+	color:#fff;
+	font-size:12px;
+}
+.pinyinbuttonbox a {
+	color:#333;
+}
+.tipsMsgBoxContent {
+    clear: both;
+    font-family: "微软雅黑","Microsoft YaHei","黑体";
+    font-size: 26px;
+    line-height: 26px;
+    padding-top: 20px;
+    width: 100%;
+}
+.tipsMsgBoxContent span {
+    display: inline-block;
+    font-size: 26px;
+    height: 28px;
+    line-height: 28px;
+    margin-top: -20px;
+    padding: 20px 2px;
+	color:#333;
+}
+.tipsMsgBoxContent span sup {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: -47px;
+	color:#333;
+}

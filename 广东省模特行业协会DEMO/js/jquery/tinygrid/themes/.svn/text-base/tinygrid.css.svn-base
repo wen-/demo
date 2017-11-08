@@ -1,0 +1,515 @@
+@charset "UTF-8";
+/* tinygrid连接样式 */
+
+/* tinygrid全局样式 */
+.globalContainerClass {
+	position: relative;
+	overflow: hidden;
+	color: #000;
+	border: 1px solid #ababab;
+}
+
+/* 标题栏的样式 */
+.titleContainerClass {
+	background: #E3EBEE;
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	position: relative;
+	height: 26px;
+	line-height: 26px;
+}
+
+/* 标题的样式 */
+.titleClass {
+	font-size: 12px;
+	font-weight: bold;
+	float: left;
+	display: inline;
+	padding-left: 5px;
+	color: #333;
+}
+
+/* 工具栏样式 */
+.buttonContainerClass {
+	background-color: #F1F5F8;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	padding-top: 1px;
+	padding-bottom: 4px;
+	padding-right: 5px;
+	height: 22px;
+}
+
+.buttonContainerClass .innerContainer {
+	float: left;
+	display: inline;
+	padding: 1px;
+}
+.buttonContainerClass .innerContainerRight {
+	float: right;
+	display: inline;
+	padding: 1px;
+}
+
+.globalContainerClass div.toolbarItemClass, 
+.globalContainerClass div.buttonItemClass { 
+	font-size: 13px;
+    height:22px;
+	float: left;
+	display: block;
+	cursor: default;
+	margin-left:5px;
+}
+.globalContainerClass div.buttonItemClass {
+	cursor: pointer;	
+	line-height:22px;
+}
+.globalContainerClass div.buttonItemClass:hover,
+.globalContainerClass div.buttonItemClass.hover { 
+	border-bottom: 2px solid #4fca6c;
+}
+.buttonContainerClass .innerContainer button {
+	 height:22px;
+	 font-size: 12px;
+	 cursor: pointer;	
+}
+.globalContainerClass div.buttonGroupItemClass {
+	border: #c3c3c3 solid 1px;
+    height:20px;
+	line-height:20px;
+	display: block;
+	cursor: pointer;
+	margin-left:5px;
+}
+
+/* 表格标题区域的样式 */
+.tableHeadContainerClass {
+	background-color: #E3EBEE;
+	overflow: hidden;
+	width: 100%;
+	border-top: 1px solid #A9ADAE;
+	border-bottom: 1px solid #A9ADAE;
+}
+.globalContainerClass .no-border-top {
+	border-top: 0px;
+}
+
+/* 不要改这两个值! */
+.tableHeadContainerClass div.box {
+	float: left;
+	display: inline;
+	padding-right: 20px;
+	*padding-right: 20px;
+	_padding-right: 20px;
+}
+
+.tableHeadContainerClass table {
+	border-bottom: 0px solid #ccc;
+}
+
+.tableHeadContainerClass table th {
+	text-align: left;
+	font-size: 13px;
+	border-right: 1px solid #A9ADAE;
+	overflow: hidden;
+	vertical-align: middle;
+	height: 27px;
+	line-height: 27px;
+	white-space: nowrap;
+	font-weight: normal;
+	padding-left: 3px;
+}
+.tableHeadContainerClass table th.multicol {
+	border-bottom: 1px solid #A9ADAE;
+	height: 26px;	
+}
+.tableHeadContainerClass table th.sorted {
+}
+
+.tableHeadContainerClass table th div.desc {
+	background: url(images/dn.png) no-repeat center top;
+}
+
+.tableHeadContainerClass table th div.asc {
+	background: url(images/up.png) no-repeat center top;
+}
+
+/* 表格数据区域的样式 */
+.tableContainerClass {
+	background: #fff;
+	overflow: auto;
+}
+
+.tableContainerClass table tbody td {
+	border-right: 1px solid #A9ADAE;
+	border-bottom: 1px solid #A9ADAE;
+	padding-left: 3px;
+}
+.tableContainerClass table tbody td:hover,.tableContainerClass table tbody td.tdhover {
+	background-color: #CFCFCF;
+}
+
+.tableContainerClass table tbody td a {
+	text-decoration: none;
+	color: #58c;
+}
+.tableContainerClass table tbody td a.blue {
+	color:#2962BB;
+}
+.tableContainerClass table tbody td a.black {
+	color:#161519;
+}
+
+.tableContainerClass table tbody td a:hover {
+	text-decoration: underline;
+	color: #e60;
+}
+
+.tableContainerClass table tbody tr {
+	padding-left: 5px;
+	height: 23px;
+	line-height: 23px;
+	font-size: 12px;
+	color: #717171c;
+}
+
+.tableContainerClass table tbody tr:hover, .tableContainerClass table tbody tr.trhover {
+	background-color: #E9F4FA;
+}
+
+.tableContainerClass table tbody tr.selectedClass {
+	background-color: #D4D9FF;
+}
+
+.tableContainerClass .editableClass {
+}
+.tableContainerClass .editableClass-left {
+	text-align: left;
+}
+.tableContainerClass .editableClass-right {
+	text-align: right;
+}
+.tableContainerClass .editableClass-center {
+	text-align: center;
+}
+.tableContainerClass .editableClass:focus {
+	text-align: left;
+}
+
+/* 信息提示区域 */
+.messageTipContainerClass {
+	text-align: center;
+	background: #ffffff;
+	font-size: 14px;
+}
+
+.messageGroupContainerClass {
+	height: 25px;
+	line-height:25px;
+	position: relative;
+	padding-left: 5px;
+}
+
+.loadingMessageTipClass {
+	width: 22px;
+	height: 22px;
+	background: url(images/load.gif) no-repeat center;
+}
+
+.errorMessageTipClass {
+	text-align: left;
+}
+
+/* 统计栏 */
+.statisticsContainerClass {
+	background-color: #E3EBEE;
+	overflow: hidden;
+	width: 100%;
+	border-top: 1px solid #A9ADAE;
+	height: 22px;
+}
+
+.statisticsContainerClass table th {
+	text-align: left;
+	font-size: 13px;
+	border-right: 1px solid #A9ADAE;
+	overflow: hidden;
+	vertical-align: middle;
+	height: 22px;
+	line-height: 22px;
+	white-space: nowrap;
+	font-weight: normal;
+	padding-left: 3px;
+}
+
+/* 分页栏样式 */
+.pagerContainerClass {
+	background-color: #F1F5F8;
+	overflow: hidden;
+	height: 22px;
+	line-height: 22px;
+	white-space: nowrap;
+	color: #4D4D4D;
+	border-top: 1px solid #ababab;
+	font-size: 12px;
+}
+
+.pagerContainerClass .group {
+	float: left;
+	display: inline;
+	margin: 0px 3px;
+	height: 22px;
+	line-height: 22px;
+}
+.pagerContainerClass .group select {
+	margin-top: 2px;
+	border: 1px solid #E3EBEE;
+	color: #4D4D4D;
+}
+.pagerContainerClass .group input {
+	border: 1px solid #E3EBEE;
+	width: 30px;
+	color: #4D4D4D;
+}
+.pagerContainerClass  div.pbutton {
+	float: left;
+	display: inline;
+	width: 16px;
+	height: 22px;
+	cursor: pointer;
+	overflow: hidden;
+	background-image: url("images/table-icon.png");
+	background-repeat: no-repeat;
+	border: 1px solid #F1F5F8;
+}
+* html .pagerContainerClass  div.pbutton {
+	*background-image: url("images/table-icon8.png"); /* ie6 */
+}
+.pagerContainerClass  div.pbutton:hover {
+	border: 1px solid #ccc;
+}
+
+.pagerContainerClass .pcontrol {
+	overflow: visible;
+	*padding-top : 3px;
+}
+
+.pagerContainerClass .pageStat {
+	position: relative;
+	overflow: visible;
+}
+
+.pagerContainerClass .first {
+	background-position: 0px 5px;
+	margin-left: 10px;
+}
+
+.pagerContainerClass .prev {
+	background-position: 0px -16px;
+	margin-left: 5px;
+}
+
+.pagerContainerClass .next {
+	background-position: 0px -35px;
+	margin-left: 5px;
+}
+
+.pagerContainerClass .last {
+	background-position: 0px -55px;
+	margin-left: 5px;
+}
+
+.pagerContainerClass .reload {
+	background-position: 0px -138px;
+	margin-left: 5px;
+}
+
+.pagerContainerClass .reload.loading {
+	background: url(images/load.gif) no-repeat center;
+}
+.status-bar {
+	font-size: 11px;
+	color: #666666;
+	float: right;
+	margin-right: 5px;	
+}
+
+/* 行样式 */
+/* 白色 */
+.tableContainerClass table tbody tr.white {
+	background-color: white;
+}
+
+/* 红色 */
+.tableContainerClass table tbody tr.red {
+	background-color: red;
+}
+
+/* 淡红色 */
+.tableContainerClass table tbody tr.lightred {
+	background-color: #FF9797;
+}
+
+.tableContainerClass table tbody tr.ECF3FC {
+	background-color: #ECF3FC;
+}
+
+/* 灰色 */
+.tableContainerClass table tbody tr.gray {
+	background-color: gray;
+}
+
+/* 蓝色 */
+.tableContainerClass table tbody tr.blue {
+	background-color: blue;
+}
+
+/* 绿色 */
+.tableContainerClass table tbody tr.green {
+	background-color: green;
+}
+
+/* 浅绿色 */
+.tableContainerClass table tbody tr.aqua {
+	background-color: aqua;
+}
+
+/* 紫红色 */
+.tableContainerClass table tbody tr.fuchsia {
+	background-color: fuchsia;
+}
+
+.tableContainerClass table tbody tr.lime {
+	background-color: lime;
+}
+
+/* 栗色 */
+.tableContainerClass table tbody tr.maroon {
+	background-color: maroon;
+}
+
+.tableContainerClass table tbody tr.navy {
+	background-color: navy;
+}
+
+/* 橄榄色 */
+.tableContainerClass table tbody tr.olive {
+	background-color: #CACA00;
+}
+
+/* 橙色 */
+.tableContainerClass table tbody tr.orange {
+	background-color: orange;
+}
+
+/* 紫色 */
+.tableContainerClass table tbody tr.purple {
+	background-color: purple;
+}
+
+/* 银色 */
+.tableContainerClass table tbody tr.silver {
+	background-color: silver;
+}
+
+.tableContainerClass table tbody tr.teal {
+	background-color: teal;
+}
+
+/* 黄色 */
+.tableContainerClass table tbody tr.yellow {
+	background-color: yellow;
+}
+
+/* 浅黄色  */
+.tableContainerClass table tbody tr.lightyellow {
+	background-color: #FFF9AD;
+}
+
+.tableContainerClass table tbody tr.lightgreen {
+	background-color:#E2FBFF;
+}
+
+
+/* 操作按钮的样式 */
+.grid-button {
+	background-image: url("images/table-icon.png?t=3");
+	background-repeat: no-repeat;
+	padding-left: 24px;
+	padding-top: 3px;
+	background-position: 0px -5000px;
+}
+
+* html .grid-button {
+	*background-image: url("images/table-icon8.png?t=3"); /* ie6 */
+}
+
+/* 有效时的增加操作样式 */
+.grid-add {
+	background-position: 8px -80px;
+}
+/* 无效时的增加操作样式 */
+.grid-add-disabled {
+	background-position: 8px -110px;
+}
+/* 减号图标 */
+.grid-sub {
+	background-position: 8px -95px;
+}
+.grid-sub-disabled {
+	background-position: 8px -125px;
+}
+/* 查询图标 */
+.grid-query {
+	background-position: 8px -162px;
+}
+/* 确定图标 */
+.grid-ok {
+	background-position: 8px -179px;
+}
+/* 取消图标 */
+.grid-cancel {
+	background-position: 8px -197px;
+}
+/* 历史图标 */
+.grid-history {
+	background-position: 8px -215px;
+}
+/* 管理图标 */
+.grid-manage {
+	background-position: 8px -250px;
+}
+/* 分析图标 */
+.grid-analysis {
+	background-position: 7px -233px;
+}
+/* 清单图标 */
+.grid-manifest {
+	background-position: 8px -268px;
+}
+/*未显示时快速录入图标*/
+.grid-fastAdd-disabled {
+	background-position: 8px -287px;
+}
+/*显示时快速录入图标*/
+.grid-fastAdd {
+	background-position: 8px -303px;
+}
+/* 刷新图标 */
+.grid-reload {
+	background-position: 8px -320px;
+}
+/*自动计算图标*/
+.grid-auto {
+	background-position: 8px -361px;
+}
+/*新增样板图标*/
+.grid-add-yangban {
+	background-position: 5px -381px;
+}
+/*订单导入*/
+.grid-intention {
+	background-position: 5px -401px;	
+}

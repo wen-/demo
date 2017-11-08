@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>TinyGrid Test</title>
+	<link rel="stylesheet" type="text/css" media="all" href="themes/tinygrid.css"  />
+	<link rel="stylesheet" type="text/css" media="all" href="themes/tinygrid-rowcolor.css"  />
+	<script type="text/javascript" src="../jquery-1.6.min.js"></script>
+	<script type="text/javascript" src="./jquery.tinygrid.js"></script>
+	<script type="text/javascript">
+		// $(document).ready(function() {
+		$(function() {
+			$('#tinygridContainer').tinygrid({
+				dataType: 'json',
+				title : '标题',
+				colModel:[			
+					{header:'标题1', dataIndex:'ctrl_id', field:'field1', width:150, sortable:true, align:'left', cellRenderer:cellRenderer},			
+					{header:'标题2', dataIndex:'state', field:'field2', width:100, sortable:false, align:'left', rowClassRenderer:rowClassRenderer}, 
+					{header:'标题3', dataIndex:'cbProcRule', field:'field3', width:25, sortable:false, align:'left', hide:true}, 
+					{header:'标题4', dataIndex:'ctrl_name1', field:'field4', width:150, sortable:true, align:'left', cellRenderer2:cellRenderer2}, 
+					{header:'标题5', dataIndex:'ctrl_name2', field:'field5', width:150, sortable:true, align:'center', editable:true}, 
+					{header:'标题6', dataIndex:'ctrl_name3', field:'field6', width:150, sortable:true, align:'left', cellRenderer2:cellRenderer2}, 
+					{header:'标题9', align:'center', children : [
+						{header:'标题7', dataIndex:'ctrl_name4', field:'field7', width:150, align:'center', cellRenderer : canSelectInput},
+						{header:'标题8', dataIndex:'ctrl_name5', width:150, sortable:false, align:'left'}
+					]}, 
+					{header:'标题6', dataIndex:'ctrl_name30', field:'field6', width:150, sortable:true, align:'left', cellRenderer2:cellRenderer2}, 
+					{header:'标题6', dataIndex:'ctrl_name31', field:'field6', width:150, sortable:true, align:'left', cellRenderer2:cellRenderer2}, 
+					{header:'标题6', dataIndex:'ctrl_name32', field:'field6', width:150, sortable:true, align:'left', cellRenderer2:cellRenderer2}, 
+					{header:'标题6', dataIndex:'ctrl_name33', field:'field6', width:150, sortable:true, align:'left', cellRenderer2:cellRenderer2}, 
+					{header:'标题6', dataIndex:'ctrl_name34', field:'field6', width:150, sortable:true, align:'left', cellRenderer2:cellRenderer2}, 
+					{header:'标题6', dataIndex:'ctrl_name35', field:'field6', width:150, sortable:true, align:'left', cellRenderer2:cellRenderer2}, 
+					{header:'标题6', dataIndex:'ctrl_name36', field:'field6', width:150, sortable:true, align:'left', cellRenderer2:cellRenderer2}, 
+					{header:'标题6', dataIndex:'ctrl_name37', field:'field6', width:150, sortable:true, align:'left', cellRenderer2:cellRenderer2}, 
+					{header:'标题6', dataIndex:'ctrl_name38', field:'field6', width:150, sortable:true, align:'left', cellRenderer2:cellRenderer2}
+				], 
+				buttons : [
+					{id : 'id1', name : '按钮1', onpress : pressId1, tip : '提示信息1', bclass: 'grid-add'},
+					{id : 'id2', name : '按钮2', onpress : pressId1, bclass: 'grid-add-disabled'},
+					{id : 'id3', name : '被选中的值', onpress : getSelectedValues, bclass: 'grid-sub'},
+					{id : 'id3', name : '偶数行的值', onpress : getEvenRowsValues, bclass: 'grid-sub-disabled'},
+					{id : 'id3', name : '改变偶数行的值', onpress : setEvenRowsValues, bclass: 'grid-add-disabled'},
+					{id : 'id4', name : '确定', bclass: 'grid-ok'},
+					{name : '取消', bclass: 'grid-cancel'},
+					{name : '查询', bclass: 'grid-query'}
+				],
+				sortname : 'ctrl_id',
+				sortorder : 'desc',
+				autoload : false,
+				showTitle : true,
+				rowClickToDoTick: true,
+				usepager: true,
+				onSubmit: queryConditionSetted
+			});
+			
+			var jsonData = {
+				page : 1,
+				total : 20,
+				rows : [
+					{field1:'-aaaa-00', field2:'-aaaa-01', field3:'-aaaa-02', field4:'-aaaa-03', field5:'-aaaa-04', field6:'-aaaa-05', field7:'-aaaa-06'},
+					{field1:'-aaaa-10', field2:'-aaaa-11', field3:'-aaaa-12', field4:'-aaaa-13', field5:'-aaaa-14', field6:'-aaaa-15', field7:'-aaaa-16'},
+					{field1:'-aaaa-20', field2:'-aaaa-21', field3:'-aaaa-22', field4:'-aaaa-23', field5:'-aaaa-24', field6:'-aaaa-25', field7:'-aaaa-26'},
+					{field1:'-aaaa-30', field2:'-aaaa-31', field3:'-aaaa-32', field4:'-aaaa-33', field5:'-aaaa-34', field6:'-aaaa-35', field7:'-aaaa-36'},
+					{field1:'-aaaa-40', field2:'-aaaa-41', field3:'-aaaa-42', field4:'-aaaa-43', field5:'-aaaa-44', field6:'-aaaa-45', field7:'-aaaa-46'},
+					{field1:'-aaaa-50', field2:'-aaaa-51', field3:'-aaaa-52', field4:'-aaaa-53', field5:'-aaaa-54', field6:'-aaaa-55', field7:'-aaaa-56'},
+					{field1:'-aaaa-60', field2:'-aaaa-61', field3:'-aaaa-62', field4:'-aaaa-63', field5:'-aaaa-64', field6:'-aaaa-65', field7:'-aaaa-66'},
+					{field1:'-aaaa-60', field2:'-aaaa-61', field3:'-aaaa-62', field4:'-aaaa-63', field5:'-aaaa-64', field6:'-aaaa-65', field7:'-aaaa-66'},
+					{field1:'-aaaa-60', field2:'-aaaa-61', field3:'-aaaa-62', field4:'-aaaa-63', field5:'-aaaa-64', field6:'-aaaa-65', field7:'-aaaa-66'},
+					{field1:'-aaaa-60', field2:'-aaaa-61', field3:'-aaaa-62', field4:'-aaaa-63', field5:'-aaaa-64', field6:'-aaaa-65', field7:'-aaaa-66'}
+				]
+			};
+			
+			$('#tinygridContainer')[0].tinygrid.addData(jsonData);
+			
+			$('#reload').click(function() {
+				$('#tinygridContainer').gridOptions({params : [{name: 'a', value: 'b'}]}).gridReload();
+			});
+			
+			function pressId1(name, placeholder) {
+				window.alert(name + placeholder);
+			}
+			
+			function queryConditionSetted($placeholder) {
+				// $placeholder.gridOptions({params : $('#formId').serializeArray()})
+				return true;
+			}
+		});
+		function getSelectedValues(name, placeholder) {
+			var values = placeholder.tinygrid.getSelectedCellValues('ctrl_id', 'ctrl_name1', 'ctrl_name2', 'ctrl_name4'); // 方法一
+			//var values = placeholder.tinygrid.getSelectedCellValues(['ctrl_id', 'ctrl_name1']); // 方法二
+			window.alert('selected values:\n' + parseReturnMessage(values));
+		}
+		function getEvenRowsValues(name, placeholder) {
+			var values = placeholder.tinygrid.getCellValuesInSpecifiedRows($('tbody tr:even', placeholder), ['ctrl_name1', 'ctrl_name3']);
+			window.alert('selected values:\n' + parseReturnMessage(values));
+		}
+		function parseReturnMessage(values) {
+			var message = '';
+			$.each(values, function(i, value) {
+				message += '{';
+				for (var key in value) {
+					message += key + ':' + value[key] + ', ';
+				}
+				message += '}\n';
+			});
+			return message;
+		}
+		function cellRenderer(val) {
+			if (/.*30/.test(val)) {
+				return '<span style="color:red;">' + val + '</span>';
+			}
+			if (/.*50/.test(val)) {
+				return '<span style="color:blue;">' + val + '</span>';
+			}
+			if (/.*60/.test(val)) {
+				//return val + '<span style="color:red;">K</span>';
+				return '<input type="checkbox" checked="checked" />';
+			}
+			if (/.*70/.test(val)) {
+				return '<a href="#" onclick="aClicked(event);">' + val + '</a>';
+			}
+			return val;
+		}
+		function aClicked(e) {
+			e = e || window.event;
+			e.stopPropagation(); // 阻止一个事件起泡
+			window.alert('haha');
+		}
+		function cellRenderer2(dataIndexs) {
+			return '标题3:' + dataIndexs['cbProcRule'];
+		}
+		function rowClassRenderer(val) {
+			if (/.*21/.test(val)) {
+				return 'base gray';
+			}
+			return false; // 不定制行的样式，而是使用默认样式
+		}
+		
+		function canSelectInput(amount, trId) {
+			var input = '<input class="editableClass text2" style="width:70px;" type="text" value="' + amount + '" />' + 
+			              '<input onclick="toChangeColorSize(this, \'' + trId + '\');" type="image" ' +
+			              		'src="../../../images/main/threedot.gif" />'
+			return input;
+		}
+		
+		function setEvenRowsValues(name, placeholder) {
+			var rows = $('tbody tr:even', placeholder);
+			var datas = {
+				'ctrl_id' : 'ctrl_id', 
+				'ctrl_name1' : 'ctrl_name1', 
+				'ctrl_name2' : 'ctrl_name2', 
+				'ctrl_name4' : 'ctrl_name4'
+			};
+			placeholder.tinygrid.setCellValuesInSpecifiedRows(rows, datas);
+		}
+	</script>
+	
+</head>
+<body>
+	<div>
+		<div id="tinygridContainer"></div>
+	</div>
+	
+	<br />
+	<br />
+
+	<input type="button" id="reload" value="Reload" />
+	
+</body>
+</html>

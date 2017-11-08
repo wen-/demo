@@ -1,0 +1,299 @@
+.eyes {
+	position: absolute;
+	z-index: 4;
+	top: 13px;
+	right: 10px;
+	width: 20px;
+	height: 15px;
+	cursor: pointer;
+	background:url(../images/eye.png) no-repeat left 3px;
+}
+.eyes.open {
+	background:url(../images/eye.png) no-repeat left -13px;
+}
+.confirm-tips {
+	position: absolute;
+	z-index: 100;
+	text-align: left;
+	background-color: #fff;
+	border: #eee solid 1px;
+	box-shadow: 0 1px 9px rgba(0, 0, 0, .2);
+}
+.confirm-tips .confirm-arrow {
+	position: absolute;
+	width: 15px;
+	height: 8px;
+	top: -8px;
+	background:url("../images/icon-user.png") no-repeat -13px -121px;
+}
+.confirm-tips .confirm-close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 12px;
+	height: 12px;
+	background:url("../images/icons-entrust.gif") no-repeat -68px -51px;
+}
+.confirm-tips .confirm-title {
+	font-size: 14px;
+	color: #666;
+	padding: 15px 20px 0;
+	font-weight: bold;
+}
+.confirm-tips .confirm-con {
+	padding: 0 20px 20px;
+}
+.confirm-tips .confirm-btn .btn-orange {
+	width: 80px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+}
+/* 验证码 */
+.confirm-tips-mbvcode {
+	width: 260px;
+	top: -10px;
+	right: 40px;
+}
+.confirm-tips-mbvcode .confirm-arrow {
+	right: 44px;
+}
+.gvcode-area {
+	padding-top: 25px;
+}
+.gvcode-area-img {
+	width: 138px;
+	height: 28px;
+	overflow: hidden;
+	border: #ddd solid 1px;
+	border-right: 0;
+}
+.gvcode-area-refresh {
+	width: 81px;
+	height: 30px;
+	text-align: center;
+	background-color: #eee;
+	font-size: 0;
+	cursor: pointer;
+}
+.gvcode-area-refresh i,
+.gvcode-area-refresh em {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.gvcode-area-refresh i {
+	width: 14px;
+	height: 14px;
+	background:url("../images/refresh.png") no-repeat;
+}
+.gvcode-area-refresh em {
+	font-size: 12px;
+	color: #666;
+	padding-left: 8px;
+	line-height: 30px;
+}
+.gvcode-input {
+	position: relative;
+	width: 139px;
+	height: 30px;
+	margin-top: 10px;
+}
+.gvcode-input .lf-keyword,
+.gvcode-input .lf-label {
+	border: #ddd solid 1px!important;
+	border-right: 0!important;
+	width: 118px!important;
+	padding-top: 5px!important;
+	padding-bottom: 5px!important;
+	font-size: 12px!important;
+	resize: none!important;
+	top: 0!important;
+	left: 0!important;
+}
+.gvcode-input .lf-error {
+	left: 0;
+	bottom: -18px;
+}
+.confirm-tips-mbvcode .confirm-btn {
+	padding-top: 10px;
+}
+.confirm-tips-mbvcode .confirm-btn a {
+	width: 81px;
+	height: 30px!important;
+	line-height: 30px!important;
+	border-radius: 0;
+	display: block;
+}
+.parts-group .confirm-tips-mbvcode {
+	top: 40px;
+	right: 0;
+}
+.parts-group .confirm-tips-mbvcode .confirm-arrow {
+	right: 48px;
+}
+.parts-group .confirm-tips-mbvcode .lf-error i {
+	position: relative;
+	top: -1px;
+}
+.parts-group .confirm-tips-mbvcode .lf-error span {
+	font-size: 12px;
+}
+.login-wrapper{
+	min-height: 850px;
+	background: url("../images/login_bg.jpg") no-repeat center top;
+}
+.welcomes-slogan {
+	padding-top: 87px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+.welcomes-slogan h1{
+	color:#fff;
+	font-size: 60px;
+	text-shadow: 3px 3px 5px #999;
+	letter-spacing: 5px;
+}
+.welcomes-slogan span {
+	padding-top: 12px;
+	display: block;
+	font-size: 30px;
+	color: #fff;
+	text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+}
+.login-box {
+	width: 500px;
+	min-height: 300px;
+	margin: 0 auto;
+	background-color: #fff;
+	box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+}
+.login-box-inner {
+	padding: 25px 50px 50px;
+}
+.login-tbs {
+	height: 49px;
+	border-bottom: #eee solid 1px;
+}
+.login-tbs a {
+	float: left;
+	width: 50%;
+	text-align: center;
+	font-size: 16px;
+	line-height: 48px;
+	display: block;
+	text-decoration: none;
+}
+.login-tbs a.cur,
+.login-tbs a.cur:hover {
+	color: #f60;
+	cursor: default;
+	text-decoration: none;
+	border-bottom: #f60 solid 2px;
+}
+.login-form {
+	position: relative;
+}
+.login-form-item {
+	padding-top: 20px;
+}
+.parts-group {
+	position: relative;
+	height: 41px;
+	margin-top: 25px;
+}
+.lf-keyword,
+.lf-label {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	width: 380px;
+	display: block;
+	height: 18px;
+	line-height: 18px;
+	padding: 11px 10px;
+	font-size: 14px;
+	border: 0;
+	background-color: transparent;
+}
+.lf-keyword {
+	color: #333;
+	border-bottom: #ddd solid 1px;
+}
+.lf-keyword-error {
+	border-color: #ff5050!important;
+}
+.lf-label {
+	color: #999;
+	z-index: 1;
+	cursor: text;
+}
+.login-btn {
+	margin-top: 15px;
+	padding-bottom: 20px;
+}
+.registered-btn {
+	margin-top: 30px;
+}
+.registered-remind {
+	color: #999;
+	text-align: center;
+}
+.login-btn a, .login-btn a:link {
+	width: 100%;
+	font-size: 18px;
+	height: 48px;
+	line-height: 48px;
+	padding: 0;
+	text-align: center;
+}
+.mb-msg-code {
+	position: absolute;
+	z-index: 4;
+	top: -10px;
+	right: 0;
+	width: 112px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	color: #666;
+	border: #e6e6e6 solid 1px;
+	background-color: #f5f5f5;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.remember-password, .forgot-password {
+	margin-top: 20px;
+}
+.remember-password * {
+	display: inline-block;
+	vertical-align: middle;
+}
+.remember-password span {
+	color: #999;
+	font-size: 12px;
+}
+.q-book-deal {
+	padding-top: 20px;
+}
+.q-book-deal label {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	*display: inline;
+	*zoom:1;overflow: hidden
+}
+.q-book-deal label input {
+	float: left;
+	vertical-align: middle;
+}
+.q-book-deal label span {
+	position: relative;
+	top: -3px;
+	float: left;
+	color: #999;
+	padding-left: 5px
+}

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/tech/!svn/ver/8740/trunk/i2sp/i2sp-model-portal/src/main/webapp/js/jquery/validate
+END
+jquery.validate.js
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/tech/!svn/ver/8740/trunk/i2sp/i2sp-model-portal/src/main/webapp/js/jquery/validate/jquery.validate.js
+END
+jquery.validate.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/tech/!svn/ver/8740/trunk/i2sp/i2sp-model-portal/src/main/webapp/js/jquery/validate/jquery.validate.min.js
+END
+additional-methods.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/tech/!svn/ver/8740/trunk/i2sp/i2sp-model-portal/src/main/webapp/js/jquery/validate/additional-methods.min.js
+END
+demo.html
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/tech/!svn/ver/8740/trunk/i2sp/i2sp-model-portal/src/main/webapp/js/jquery/validate/demo.html
+END
+validate-tip.js
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/tech/!svn/ver/8740/trunk/i2sp/i2sp-model-portal/src/main/webapp/js/jquery/validate/validate-tip.js
+END

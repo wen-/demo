@@ -1,0 +1,30 @@
+[{
+  "index":0,
+  "date":null,
+  "updateTime":null,
+  "desc":"15年10月24日基准利率",
+  "fmtDate":"",
+  "loanType":null,
+  "rate":4.9,
+  "updateBy":null,
+  "fmtUpdateTime":"",
+  "rateType":null,
+  "minLoanPeriod":0,
+  "maxLoanPeriod":0,
+  "id":null
+  },
+  {
+	"index":0,
+	"date":null,
+	"updateTime":null,
+	"desc":"15年10月24日基准利率下限(7折)",
+	"fmtDate":"",
+	"loanType":null,
+	"rate":3.43,
+	"updateBy":null,
+	"fmtUpdateTime":"",
+	"rateType":null,
+	"minLoanPeriod":0,
+	"maxLoanPeriod":0,
+	"id":null
+}]

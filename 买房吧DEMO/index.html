@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="author" content="yellowwen@126.com">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<title>房源列表</title>
+	<link type="text/css" rel="stylesheet" href="css/reset.min.css" />
+	<link type="text/css" rel="stylesheet" href="css/animate.min.css" />
+	<link type="text/css" rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
+	<link type="text/css" rel="stylesheet" href="font/iconfont.css" />
+	<link type="text/css" rel="stylesheet" href="css/main.css" />
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<!--[if lt IE 9]>
+	<script type="text/javascript">
+		var h5Block = 'header,footer,section,aside,article,nav,hgroup,figure,figcaption,details,summary';
+		var h5Inline = 'time,mark,ruby,rt,rp,output,keygen,meter,progress,command,source';
+		var h5Other = 'video,audio,canvas,datalist';
+		var h5Elem = (h5Block + ',' + h5Inline + ',' + h5Other).split(',');
+		for(var i=0;i<h5Elem.length;i++){
+			document.createElement(h5Elem[i]);
+		}
+	</script>
+	<![endif]-->
+</head>
+<body>
+<!--页头star-->
+<header class="header">
+	<div class="m">
+		<a href="index.html" class="lfloat logo"><img src="images/logo.png" alt="" /></a>
+		<div class="rfloat login_info">
+			<div class="h_btn">
+				<a class="log" href="用户中心_登录.html">登录</a>
+				<a class="reg" href="注册.html">注册</a>
+				<style type="text/css">
+					.header .h_btn{position: relative;z-index: 10;}
+					.loginPOP{width: 100px;border: solid 1px #ddd;background-color: #fff;z-index: 10;left: -16px;top:38px;}
+					.loginPOP a{width: auto;border: 0;padding:0;display: block;text-align: center;margin: 0;height:30px;line-height: 30px;}
+					.loginPOP a:hover{background-color: #2dae54;color:#fff}
+					.loginPOP .arrow_ico {display: block;height: 5px;position: absolute;width: 100%;top: -5px;left: 0;background: url("images/arrow.png") center top no-repeat;}
+				</style>
+				<script>
+					$(function(){
+						$(".header .log").mouseenter(function(){
+							$(".loginPOP").show();
+						});
+						$(".header .h_btn,.loginPOP").mouseleave(function(){
+							$(".loginPOP").hide();
+						});
+					});
+				</script>
+				<div class="loginPOP pa dn">
+					<i class="arrow_ico"></i>
+					<a href="用户中心_登录.html">我的买房吧</a>
+					<a href="用户中心_登录.html">经纪人后台</a>
+				</div>
+			</div>
+			<div class="h_txt" style="display: none;">
+				<a href="#">
+					<img src="images/user_icon.jpg" class="headico" alt="" />
+					<span class="info_txt">欢迎<span>张三</span></span>
+				</a>
+				<a href="#" class="exit">退出</a>
+			</div>
+		</div>
+		<nav class="rfloat nav">
+			<dl>
+				<dt><a href="index.html">首页</a></dt>
+			</dl>
+			<dl>
+				<dt><a href="#">二手房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="二手房_房源列表.html">房源</a>
+					<a href="二手房_小区列表.html">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">新房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">新房首页</a>
+					<a href="#">广州新房</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">租房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">房源</a>
+					<a href="#">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">写字楼</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">出租</a>
+					<a href="#">出售</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">业主委托</a></dt>
+			</dl>
+		</nav>
+	</div>
+</header>
+
+<div class="show_box tt">
+	<img class="show_t" src="images/t.png" alt="" />
+	<div class="h_search_bg">
+		<div class="m">
+			<div class="h_search_box">
+            	<form id="searchHs" data-url="http://www.myfang8.com">
+                    <div class="tab clearfix">
+                        <span class="current" data-type="1">二手房<i class="arrow_ico"></i></span>
+                        <span data-type="2">租房<i class="arrow_ico"></i></span>
+                        <span data-type="3">写字楼<i class="arrow_ico"></i></span>
+                        <input type="hidden" name="hstype" value="1" />
+                    </div>
+                    <div class="search_m">
+                        <input type="text" name="hsname" placeholder="请输入房源名称、房型、地址..." class="houseVal" data-url="json/data2.json" />
+                        <button type="submit" id="searchHsBtn">搜索</button>
+                    </div>
+                </form>
+			</div>
+			<div class="tips" style="display:block;">
+				<p>区域：
+					<a href="#">天河</a>
+					<a href="#">越秀</a>
+					<a href="#">荔湾</a>
+					<a href="#">黄埔</a>
+					<a href="#">海珠</a>
+					<a href="#">白云</a>
+					<a href="#">番禺</a>
+					<a href="#">增城</a>
+					<a href="#">花都</a>
+					<a href="#">南沙</a>
+				</p>
+				<p>价格：
+					<a href="#">50万以下</a>
+					<a href="#">50-80万</a>
+					<a href="#">80-100万</a>
+					<a href="#">100-120万</a>
+					<a href="#">120-150万</a>
+					<a href="#">150-200万</a>
+					<a href="#">200-300万</a>
+					<a href="#">300-500万</a>
+					<a href="#">500万以上</a>
+				</p>
+			</div>
+			<div class="tips">
+				<p>区域：
+					<a href="#">天河</a>
+					<a href="#">海珠</a>
+					<a href="#">白云</a>
+					<a href="#">越秀</a>
+					<a href="#">番禺</a>
+					<a href="#">花都</a>
+					<a href="#">荔湾</a>
+					<a href="#">南沙</a>
+					<a href="#">增城</a> 
+					<a href="#">黄埔</a>
+				</p>
+				<p>价格：
+					<a href="#">500以下</a>
+					<a href="#">500-1000</a>
+					<a href="#">1000-2000</a>
+					<a href="#">2000-3000</a>
+					<a href="#">3000-5000</a>
+					<a href="#">5000-8000</a>
+					<a href="#">8000-10000</a>
+					<a href="#">10000以上</a>        
+				</p>
+			</div>
+			<div class="tips">
+				<p>区域：
+					<a href="#">珠江新城</a>
+					<a href="#">东风东</a>
+					<a href="#">芳村</a>
+					<a href="#">天河北</a>
+					<a href="#">滨江东</a>
+					<a href="#">环市东</a>
+					<a href="#">华南</a>
+					<a href="#">广州大道南</a>
+					<a href="#">新港西</a>
+					<a href="#">五羊新城</a>          
+				</p>
+				<p>价格：
+					<a href="#">50元/平米•月以下</a>
+					<a href="#">50-80元</a>
+					<a href="#">80-120元</a>
+					<a href="#">120-160元</a>
+					<a href="#">160-200元</a>
+					<a href="#">200元/平米•月以上</a>      
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--页头end-->
+
+<!--页中star-->
+<div class="sub_nav tc">
+	<div class="m">
+		<a href="#" class="link ghost fadeInLeft" data-ghost-delay=".5s">
+			<span class="ico ico1"></span>
+			<h2>二手房</h2>
+			<p>海量真实优质的二手房源</p>
+		</a>
+		<a href="#" class="link ghost fadeInLeft">
+			<span class="ico ico2"></span>
+			<h2>新房</h2>
+			<p>优质楼盘，团购特惠</p>
+		</a>
+		<a href="#" class="link ghost fadeInRight">
+			<span class="ico ico3"></span>
+			<h2>租房</h2>
+			<p>质优好房专业服务，海量出租房源</p>
+		</a>
+		<a href="#" class="link ghost fadeInRight" data-ghost-delay=".5s">
+			<span class="ico ico4"></span>
+			<h2>卖房</h2>
+			<p>专业一对一服务，安全省心</p>
+		</a>
+	</div>
+</div>
+
+<section class="section bg_grey">
+	<div class="h_content m">
+		<div class="module_t pr clearfix">
+			<h1>广州热门二手房</h1>
+			<div class="lfloat t_link">
+				<a href="#">南沙二手房</a>
+				<a href="#">从化郊区二手房</a>
+				<a href="#">珠江新城二手房</a>
+				<a href="#">市桥南二手房</a>
+				<a href="#">山前大道二手房</a>
+			</div>
+			<a href="#" class="rfloat more">更多广州热门二手房&gt;&gt;</a>
+		</div>
+		<div class="module_m">
+			<ul class="clearfix">
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic1.jpg" alt="" />
+						</div>
+						<div class="pt_txt">
+							<h2 class="m_name">碧桂园天玺湾<span class="price"><em>250</em>万</span></h2>
+							<p class="m_advantage">景观房、带飘窗、双阳台、厨卫朝北</p>
+							<p class="m_detail clearfix"><em>南沙区</em><em class="tc">3房2厅</em><em class="tr">90m<sup>2</sup></em></p>
+						</div>
+					</a>
+				</li>
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic1.jpg" alt="" />
+						</div>
+						<div class="pt_txt">
+							<h2 class="m_name">碧桂园天玺湾<span class="price"><em>250</em>万</span></h2>
+							<p class="m_advantage">景观房、带飘窗、双阳台、厨卫朝北</p>
+							<p class="m_detail clearfix"><em>南沙区</em><em class="tc">3房2厅</em><em class="tr">90m<sup>2</sup></em></p>
+						</div>
+					</a>
+				</li>
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic1.jpg" alt="" />
+						</div>
+						<div class="pt_txt">
+							<h2 class="m_name">碧桂园天玺湾<span class="price"><em>250</em>万</span></h2>
+							<p class="m_advantage">景观房、带飘窗、双阳台、厨卫朝北</p>
+							<p class="m_detail clearfix"><em>南沙区</em><em class="tc">3房2厅</em><em class="tr">90m<sup>2</sup></em></p>
+						</div>
+					</a>
+				</li>
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic1.jpg" alt="" />
+						</div>
+						<div class="pt_txt">
+							<h2 class="m_name">碧桂园天玺湾<span class="price"><em>250</em>万</span></h2>
+							<p class="m_advantage">景观房、带飘窗、双阳台、厨卫朝北</p>
+							<p class="m_detail clearfix"><em>南沙区</em><em class="tc">3房2厅</em><em class="tr">90m<sup>2</sup></em></p>
+						</div>
+					</a>
+				</li>
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic1.jpg" alt="" />
+						</div>
+						<div class="pt_txt">
+							<h2 class="m_name">碧桂园天玺湾<span class="price"><em>250</em>万</span></h2>
+							<p class="m_advantage">景观房、带飘窗、双阳台、厨卫朝北</p>
+							<p class="m_detail clearfix"><em>南沙区</em><em class="tc">3房2厅</em><em class="tr">90m<sup>2</sup></em></p>
+						</div>
+					</a>
+				</li>
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic1.jpg" alt="" />
+						</div>
+						<div class="pt_txt">
+							<h2 class="m_name">碧桂园天玺湾<span class="price"><em>250</em>万</span></h2>
+							<p class="m_advantage">景观房、带飘窗、双阳台、厨卫朝北</p>
+							<p class="m_detail clearfix"><em>南沙区</em><em class="tc">3房2厅</em><em class="tr">90m<sup>2</sup></em></p>
+						</div>
+					</a>
+				</li>
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic1.jpg" alt="" />
+						</div>
+						<div class="pt_txt">
+							<h2 class="m_name">碧桂园天玺湾<span class="price"><em>250</em>万</span></h2>
+							<p class="m_advantage">景观房、带飘窗、双阳台、厨卫朝北</p>
+							<p class="m_detail clearfix"><em>南沙区</em><em class="tc">3房2厅</em><em class="tr">90m<sup>2</sup></em></p>
+						</div>
+					</a>
+				</li>
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic1.jpg" alt="" />
+						</div>
+						<div class="pt_txt">
+							<h2 class="m_name">碧桂园天玺湾<span class="price"><em>250</em>万</span></h2>
+							<p class="m_advantage">景观房、带飘窗、双阳台、厨卫朝北</p>
+							<p class="m_detail clearfix"><em>南沙区</em><em class="tc">3房2厅</em><em class="tr">90m<sup>2</sup></em></p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="h_content m">
+		<div class="module_t pr clearfix">
+			<h1>广州二手房楼市数据</h1>
+		</div>
+		<div class="house_data clearfix">
+			<div class="lfloat echart" id="deal"></div>
+			<div class="lfloat data_info">
+				<h2>买房吧广州数据</h2>
+				<p>2016年6月广州地区二手房成交均价为：21132元/m<sup>2</sup><br/>相比5月：<span class="f_orange">0.12%↑</span></p>
+				<form action="">
+					<div class="search_price">
+						<input type="text" placeholder="查看小区房价，请输入小区名..." />
+						<button type="submit">搜索</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section bg_grey">
+	<div class="h_content h_hot m">
+		<div class="module_t pr clearfix">
+			<h1>广州热门楼盘</h1>
+			<div class="lfloat t_link">
+				<a href="#">天河</a>
+				<a href="#">荔湾</a>
+				<a href="#">海珠</a>
+				<a href="#">白云</a>
+				<a href="#">番禺</a>
+				<a href="#">花都</a>
+				<a href="#">黄埔</a>
+				<a href="#">南沙</a>
+				<a href="#">从化</a>
+				<a href="#">增城</a>
+			</div>
+			<a href="#" class="rfloat more">更多广州热门楼盘&gt;&gt;</a>
+		</div>
+		<div class="module_m2 clearfix">
+			<div class="b_pt lfloat">
+				<a class="b_pic" href="#">
+					<img class="lazy" data-original="images/pic2.jpg" alt="" />
+					<div class="b_txt">
+						<h2 class="m_name">珠光御景骏庭 | 天河区<span class="price">10000元/m<sup>2</sup></span></h2>
+						<p>于花城大道赛马场南面，地处珠江新城东部，南靠珠江水脉，西邻城市中轴线，是集景观、商务、休闲、娱乐于一体……</p>
+					</div>
+				</a>
+			</div>
+			<ul class="lfloat">
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic3.jpg" alt="" />
+							<div class="pt_txt tt">
+								<h2 class="m_name tt">碧桂园天玺湾<span class="price">10000元/m<sup>2</sup></span></h2>
+								<p class="m_area">区域：天河区</p>
+								<p class="m_type">类型：小户型/现房/地铁沿线</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic4.jpg" alt="" />
+							<div class="pt_txt tt">
+								<h2 class="m_name tt">碧桂园天玺湾<span class="price">10000元/m<sup>2</sup></span></h2>
+								<p class="m_area">区域：天河区</p>
+								<p class="m_type">类型：小户型/现房/地铁沿线</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic3.jpg" alt="" />
+							<div class="pt_txt tt">
+								<h2 class="m_name tt">碧桂园天玺湾<span class="price">10000元/m<sup>2</sup></span></h2>
+								<p class="m_area">区域：天河区</p>
+								<p class="m_type">类型：小户型/现房/地铁沿线</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic4.jpg" alt="" />
+							<div class="pt_txt tt">
+								<h2 class="m_name tt">碧桂园天玺湾<span class="price">10000元/m<sup>2</sup></span></h2>
+								<p class="m_area">区域：天河区</p>
+								<p class="m_type">类型：小户型/现房/地铁沿线</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic3.jpg" alt="" />
+							<div class="pt_txt tt">
+								<h2 class="m_name tt">碧桂园天玺湾<span class="price">10000元/m<sup>2</sup></span></h2>
+								<p class="m_area">区域：天河区</p>
+								<p class="m_type">类型：小户型/现房/地铁沿线</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic4.jpg" alt="" />
+							<div class="pt_txt tt">
+								<h2 class="m_name tt">碧桂园天玺湾<span class="price">10000元/m<sup>2</sup></span></h2>
+								<p class="m_area">区域：天河区</p>
+								<p class="m_type">类型：小户型/现房/地铁沿线</p>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="h_content m">
+		<div class="module_t pr clearfix">
+			<h1>广州热门二手房</h1>
+			<div class="lfloat t_link">
+				<a href="#">南沙二手房</a>
+				<a href="#">从化郊区二手房</a>
+				<a href="#">珠江新城二手房</a>
+				<a href="#">市桥南二手房</a>
+				<a href="#">山前大道二手房</a>
+			</div>
+			<a href="#" class="rfloat more">更多广州热门二手房&gt;&gt;</a>
+		</div>
+		<div class="module_m">
+			<ul class="clearfix">
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic1.jpg" alt="" />
+						</div>
+						<div class="pt_txt">
+							<h2 class="m_name">碧桂园天玺湾<span class="price"><em>250</em>万</span></h2>
+							<p class="m_advantage">景观房、带飘窗、双阳台、厨卫朝北</p>
+							<p class="m_detail clearfix"><em>南沙区</em><em class="tc">3房2厅</em><em class="tr">90m<sup>2</sup></em></p>
+						</div>
+					</a>
+				</li>
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic1.jpg" alt="" />
+						</div>
+						<div class="pt_txt">
+							<h2 class="m_name">碧桂园天玺湾<span class="price"><em>250</em>万</span></h2>
+							<p class="m_advantage">景观房、带飘窗、双阳台、厨卫朝北</p>
+							<p class="m_detail clearfix"><em>南沙区</em><em class="tc">3房2厅</em><em class="tr">90m<sup>2</sup></em></p>
+						</div>
+					</a>
+				</li>
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic1.jpg" alt="" />
+						</div>
+						<div class="pt_txt">
+							<h2 class="m_name">碧桂园天玺湾<span class="price"><em>250</em>万</span></h2>
+							<p class="m_advantage">景观房、带飘窗、双阳台、厨卫朝北</p>
+							<p class="m_detail clearfix"><em>南沙区</em><em class="tc">3房2厅</em><em class="tr">90m<sup>2</sup></em></p>
+						</div>
+					</a>
+				</li>
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic1.jpg" alt="" />
+						</div>
+						<div class="pt_txt">
+							<h2 class="m_name">碧桂园天玺湾<span class="price"><em>250</em>万</span></h2>
+							<p class="m_advantage">景观房、带飘窗、双阳台、厨卫朝北</p>
+							<p class="m_detail clearfix"><em>南沙区</em><em class="tc">3房2厅</em><em class="tr">90m<sup>2</sup></em></p>
+						</div>
+					</a>
+				</li>
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic1.jpg" alt="" />
+						</div>
+						<div class="pt_txt">
+							<h2 class="m_name">碧桂园天玺湾<span class="price"><em>250</em>万</span></h2>
+							<p class="m_advantage">景观房、带飘窗、双阳台、厨卫朝北</p>
+							<p class="m_detail clearfix"><em>南沙区</em><em class="tc">3房2厅</em><em class="tr">90m<sup>2</sup></em></p>
+						</div>
+					</a>
+				</li>
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic1.jpg" alt="" />
+						</div>
+						<div class="pt_txt">
+							<h2 class="m_name">碧桂园天玺湾<span class="price"><em>250</em>万</span></h2>
+							<p class="m_advantage">景观房、带飘窗、双阳台、厨卫朝北</p>
+							<p class="m_detail clearfix"><em>南沙区</em><em class="tc">3房2厅</em><em class="tr">90m<sup>2</sup></em></p>
+						</div>
+					</a>
+				</li>
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic1.jpg" alt="" />
+						</div>
+						<div class="pt_txt">
+							<h2 class="m_name">碧桂园天玺湾<span class="price"><em>250</em>万</span></h2>
+							<p class="m_advantage">景观房、带飘窗、双阳台、厨卫朝北</p>
+							<p class="m_detail clearfix"><em>南沙区</em><em class="tc">3房2厅</em><em class="tr">90m<sup>2</sup></em></p>
+						</div>
+					</a>
+				</li>
+				<li class="ghost fadeInUp">
+					<a href="#" class="pt">
+						<div class="pt_pic">
+							<img class="lazy" data-original="images/pic1.jpg" alt="" />
+						</div>
+						<div class="pt_txt">
+							<h2 class="m_name">碧桂园天玺湾<span class="price"><em>250</em>万</span></h2>
+							<p class="m_advantage">景观房、带飘窗、双阳台、厨卫朝北</p>
+							<p class="m_detail clearfix"><em>南沙区</em><em class="tc">3房2厅</em><em class="tr">90m<sup>2</sup></em></p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<!--页中end-->
+
+<!--页脚star-->
+<footer class="footer">
+	<div class="m tc">
+		<div class="foot_nav">
+			<a href="#">关于买房吧</a>
+			<a href="#">联系我们</a>
+			<a href="#">用户协议</a>
+			<a href="#">友情链接</a>
+			<a href="#">房产百科</a>
+			<a href="#">房产问答</a>
+		</div>
+		<p>广州安信互联网金融服务有限公司</p>
+		<p class="copyright">Copyright&nbsp;©&nbsp;2016&nbsp;www.myfang8.com.&nbsp;All Rights Reserved&nbsp;ICP备案号：粤ICP备12345678号</p>
+	</div>
+</footer>
+<!--页脚end-->
+
+<script src="js/public.js"></script>
+<script src="js/json2.js"></script>
+<script src="js/jquery-ui/jquery-ui.min.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<script src="js/ghost.min.js"></script>
+<script src="js/echarts.js"></script>
+<script src="js/layer/layer.js"></script>
+<script src="js/wen_play.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="author" content="yellowwen@126.com">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<title>广州新房</title>
+	<link type="text/css" rel="stylesheet" href="css/reset.min.css" />	<link type="text/css" rel="stylesheet" href="css/animate.min.css" />
+	<link type="text/css" rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
+	<link type="text/css" rel="stylesheet" href="font/iconfont.css" />
+	<link type="text/css" rel="stylesheet" href="css/main.css" />
+	<link type="text/css" rel="stylesheet" href="css/new-house.css" />
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<!--[if lt IE 9]>
+	<script type="text/javascript">
+		var h5Block = 'header,footer,section,aside,article,nav,hgroup,figure,figcaption,details,summary';
+		var h5Inline = 'time,mark,ruby,rt,rp,output,keygen,meter,progress,command,source';
+		var h5Other = 'video,audio,canvas,datalist';
+		var h5Elem = (h5Block + ',' + h5Inline + ',' + h5Other).split(',');
+		for(var i=0;i<h5Elem.length;i++){
+			document.createElement(h5Elem[i]);
+		}
+	</script>
+	<![endif]-->
+</head>
+<body>
+<!--页头star-->
+<header class="header">
+	<div class="m">
+		<a href="index.html" class="lfloat logo"><img src="images/logo.png" alt="" /></a>
+		<div class="rfloat login_info">
+			<div class="h_btn">
+				<a class="log" href="用户中心_登录.html">登录</a>
+				<a class="reg" href="注册.html">注册</a>
+			</div>
+			<div class="h_txt" style="display: none;">
+				<a href="#">
+					<img src="images/user_icon.jpg" class="headico" alt="" />
+					<span class="info_txt">欢迎<span>张三</span></span>
+				</a>
+				<a href="#" class="exit">退出</a>
+			</div>
+		</div>
+		<nav class="rfloat nav">
+			<dl>
+				<dt><a href="index.html">首页</a></dt>
+			</dl>
+			<dl>
+				<dt><a href="#">二手房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">房源</a>
+					<a href="#">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="current"><a href="#">新房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">新房首页</a>
+					<a href="#">广州新房</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">租房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">房源</a>
+					<a href="#">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">写字楼</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">出租</a>
+					<a href="#">出售</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">业主委托</a></dt>
+			</dl>
+		</nav>
+	</div>
+</header>
+
+<div class="list_search_box">
+	<div class="m">
+        <div class="h_search_box">
+            <div class="search_m">
+                <input type="text" placeholder="请输入房源名称、房型、地址..." />
+                <button type="button">搜索</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--页头end-->
+
+<section class="section bg_grey pt24 gz_newhouse">
+	<div class="search_select m">
+		<div class="search_select_t clearfix">
+			<h1 class="current"><a href="#">所有楼盘</a></h1>
+		</div>
+		<div class="search_select_m bg_white">
+			<div class="s1">
+				<dl class="clearfix">
+					<dt>区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;域：</dt>
+					<dd>
+						<a class="current" href="#">不限</a>
+						<a href="#">天河</a>
+						<a href="#">越秀</a>
+						<a href="#">荔湾</a>
+						<a href="#">黄埔</a>
+						<a href="#">海珠</a>
+						<a href="#">白云</a>
+						<a href="#">番禺</a>
+						<a href="#">增城</a>
+						<a href="#">花都</a>
+						<a href="#">南沙</a>
+						<a href="#">从化</a>
+						<a href="#">广州周边</a>
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>均&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：</dt>
+					<dd>
+						<a class="current" href="#">不限</a>
+						<a href="#">6000元以下</a>
+						<a href="#">6000-8000元</a>
+						<a href="#">8000-1万</a>
+						<a href="#">1万-1.2万</a>
+						<a href="#">1.2万-1.5万</a>
+						<a href="#">1.5万-2万</a>
+						<a href="#">2万-2.5万</a>
+						<a href="#">2.5万-3万</a>                                    
+						<form action="">
+							<div><input type="text" /> - <input type="text" /> 元 <button type="submit">确定</button></div>
+						</form>
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>户&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型：</dt>
+					<dd>
+						<a class="current" href="#">不限</a>
+						<a href="#">一室</a>
+						<a href="#">二室</a>
+						<a href="#">三室</a>
+						<a href="#">四室</a>
+						<a href="#">五室</a>
+						<a href="#">五室以上</a>
+						<a href="#">别墅</a>
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>销售状态：</dt>
+					<dd>
+						<a class="current" href="#">不限</a>
+						<a href="#">在售</a>
+						<a href="#">待售</a>
+						<a href="#">售罄</a>
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>楼盘特色：</dt>
+					<dd class="ts">
+						<a class="current" href="#">不限</a>
+						<a href="#">打折优惠</a>
+						<a href="#">小户型</a>
+						<a href="#">低总价</a>
+						<a href="#">现房</a>
+						<a href="#">学区房</a>
+						<a href="#">地铁沿线</a>
+						<a href="#">花园洋房</a>
+						<a href="#">不限购</a>
+						<a href="#">投资地产</a>
+						<a href="#">公园地产</a>
+						<a href="#">生态宜居</a>
+						<a href="#">水景地产</a>
+						<a href="#">山景地产</a>
+						<a href="#">景观居所</a>
+						<a href="#">科技住宅</a>
+						<a href="#">旅游地产</a>
+						<a href="#">酒店式公寓</a>
+						<a href="#">新盘首开</a>
+						<a href="#">年度热盘</a>
+						<a href="#">别墅</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+
+	<div class="search_result m clearfix">
+		<div class="house_list house_list1 bg_white lfloat">
+			<div class="house_list_t clearfix">
+				<div class="sort lfloat">
+					排序：
+					<a href="#">默认</a>
+					<a href="#" class="down">均价</a>
+					<a href="#" class="up">开盘时间</a>
+				</div>
+				<div class="info rfloat">
+					共找到<span class="f_orange">1234</span>套房源
+				</div>
+			</div>
+			<div class="house_list_m">
+
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">中国美林湖</a><span class="newhouse_tips1">在售</span></h2>
+						<p class="t2">
+							<span class="first"><em>开盘时间：</em>2016-07-20</span>
+						</p>
+						<p class="t2"><em>主推户型：</em>3房2厅[86m²]，3房2厅[98m²]，3房2厅[76m²]</p>
+						<p class="t5"><em>楼盘地址：</em><span class="list_address">[ 黄埔 黄埔区府 ] 广园快速路笔村立交旁（东区小学对面）</span><a href="#">查看地图</a></p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_green f_green xq">花都小学</span>
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+								<span class="b_green f_green">学区</span>
+								<span class="b_blue f_blue">急售</span>
+							</div>
+						</div>
+
+						<div class="t6 clearfix">
+							<div class="unfold rfloat">展开查看户型图</div>
+						</div>
+					</div>
+					<div class="average">
+						<p>
+							<span class="f_orange"><em class="f24">7476</em>元/平米</span>
+						</p>
+						<p><i class="iconfont">&#xe605;</i> <strong>400-xxx-xxxx</strong></p>
+						<div class="compare dn">
+							<a href="#" class="checkbox">加入对比</a>
+						</div>
+					</div>
+
+					<div class="house_img clear clearfix dn">
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<div class="more tc"><a href="#">查看全部户型图</a></div>
+					</div>
+				</div>
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">中国美林湖</a><span class="newhouse_tips2">待售</span></h2>
+						<p class="t2">
+							<span class="first"><em>开盘时间：</em>2016-07-20</span>
+						</p>
+						<p class="t2"><em>主推户型：</em>3房2厅[86m²]，3房2厅[98m²]，3房2厅[76m²]</p>
+						<p class="t5"><em>楼盘地址：</em><span class="list_address">[ 黄埔 黄埔区府 ] 广园快速路笔村立交旁（东区小学对面）</span><a href="#">查看地图</a></p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_green f_green xq">花都小学</span>
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+								<span class="b_green f_green">学区</span>
+								<span class="b_blue f_blue">急售</span>
+							</div>
+						</div>
+
+						<div class="t6 clearfix">
+							<div class="unfold rfloat">展开查看户型图</div>
+						</div>
+					</div>
+					<div class="average">
+						<p>
+							<span class="f_orange"><em class="f24">7476</em>元/平米</span>
+						</p>
+						<p><i class="iconfont">&#xe605;</i> <strong>400-xxx-xxxx</strong></p>
+						<div class="compare dn">
+							<a href="#" class="checkbox">加入对比</a>
+						</div>
+					</div>
+
+					<div class="house_img clear clearfix dn">
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<div class="more tc"><a href="#">查看全部户型图</a></div>
+					</div>
+				</div>
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">中国美林湖</a><span class="newhouse_tips3">售罄</span></h2>
+						<p class="t2">
+							<span class="first"><em>开盘时间：</em>2016-07-20</span>
+						</p>
+						<p class="t2"><em>主推户型：</em>3房2厅[86m²]，3房2厅[98m²]，3房2厅[76m²]</p>
+						<p class="t5"><em>楼盘地址：</em><span class="list_address">[ 黄埔 黄埔区府 ] 广园快速路笔村立交旁（东区小学对面）</span><a href="#">查看地图</a></p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_green f_green xq">花都小学</span>
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+								<span class="b_green f_green">学区</span>
+								<span class="b_blue f_blue">急售</span>
+							</div>
+						</div>
+
+						<div class="t6 clearfix">
+							<div class="unfold rfloat">展开查看户型图</div>
+						</div>
+					</div>
+					<div class="average">
+						<p>
+							<span class="f_orange"><em class="f24">7476</em>元/平米</span>
+						</p>
+						<p><i class="iconfont">&#xe605;</i> <strong>400-xxx-xxxx</strong></p>
+						<div class="compare dn">
+							<a href="#" class="checkbox">加入对比</a>
+						</div>
+					</div>
+
+					<div class="house_img clear clearfix dn">
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<div class="more tc"><a href="#">查看全部户型图</a></div>
+					</div>
+				</div>
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">中国美林湖</a><span class="newhouse_tips1">在售</span></h2>
+						<p class="t2">
+							<span class="first"><em>开盘时间：</em>2016-07-20</span>
+						</p>
+						<p class="t2"><em>主推户型：</em>3房2厅[86m²]，3房2厅[98m²]，3房2厅[76m²]</p>
+						<p class="t5"><em>楼盘地址：</em><span class="list_address">[ 黄埔 黄埔区府 ] 广园快速路笔村立交旁（东区小学对面）</span><a href="#">查看地图</a></p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_green f_green xq">花都小学</span>
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+								<span class="b_green f_green">学区</span>
+								<span class="b_blue f_blue">急售</span>
+							</div>
+						</div>
+
+						<div class="t6 clearfix">
+							<div class="unfold rfloat">展开查看户型图</div>
+						</div>
+					</div>
+					<div class="average">
+						<p>
+							<span class="f_orange"><em class="f24">7476</em>元/平米</span>
+						</p>
+						<p><i class="iconfont">&#xe605;</i> <strong>400-xxx-xxxx</strong></p>
+						<div class="compare dn">
+							<a href="#" class="checkbox">加入对比</a>
+						</div>
+					</div>
+
+					<div class="house_img clear clearfix dn">
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<div class="more tc"><a href="#">查看全部户型图</a></div>
+					</div>
+				</div>
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">中国美林湖</a><span class="newhouse_tips1">在售</span></h2>
+						<p class="t2">
+							<span class="first"><em>开盘时间：</em>2016-07-20</span>
+						</p>
+						<p class="t2"><em>主推户型：</em>3房2厅[86m²]，3房2厅[98m²]，3房2厅[76m²]</p>
+						<p class="t5"><em>楼盘地址：</em><span class="list_address">[ 黄埔 黄埔区府 ] 广园快速路笔村立交旁（东区小学对面）</span><a href="#">查看地图</a></p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_green f_green xq">花都小学</span>
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+								<span class="b_green f_green">学区</span>
+								<span class="b_blue f_blue">急售</span>
+							</div>
+						</div>
+
+						<div class="t6 clearfix">
+							<div class="unfold rfloat">展开查看户型图</div>
+						</div>
+					</div>
+					<div class="average">
+						<p>
+							<span class="f_orange"><em class="f24">7476</em>元/平米</span>
+						</p>
+						<p><i class="iconfont">&#xe605;</i> <strong>400-xxx-xxxx</strong></p>
+						<div class="compare dn">
+							<a href="#" class="checkbox">加入对比</a>
+						</div>
+					</div>
+
+					<div class="house_img clear clearfix dn">
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<div class="more tc"><a href="#">查看全部户型图</a></div>
+					</div>
+				</div>
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">中国美林湖</a><span class="newhouse_tips1">在售</span></h2>
+						<p class="t2">
+							<span class="first"><em>开盘时间：</em>2016-07-20</span>
+						</p>
+						<p class="t2"><em>主推户型：</em>3房2厅[86m²]，3房2厅[98m²]，3房2厅[76m²]</p>
+						<p class="t5"><em>楼盘地址：</em><span class="list_address">[ 黄埔 黄埔区府 ] 广园快速路笔村立交旁（东区小学对面）</span><a href="#">查看地图</a></p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_green f_green xq">花都小学</span>
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+								<span class="b_green f_green">学区</span>
+								<span class="b_blue f_blue">急售</span>
+							</div>
+						</div>
+
+						<div class="t6 clearfix">
+							<div class="unfold rfloat">展开查看户型图</div>
+						</div>
+					</div>
+					<div class="average">
+						<p>
+							<span class="f_orange"><em class="f24">7476</em>元/平米</span>
+						</p>
+						<p><i class="iconfont">&#xe605;</i> <strong>400-xxx-xxxx</strong></p>
+						<div class="compare dn">
+							<a href="#" class="checkbox">加入对比</a>
+						</div>
+					</div>
+
+					<div class="house_img clear clearfix dn">
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<div class="more tc"><a href="#">查看全部户型图</a></div>
+					</div>
+				</div>
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">中国美林湖</a><span class="newhouse_tips1">在售</span></h2>
+						<p class="t2">
+							<span class="first"><em>开盘时间：</em>2016-07-20</span>
+						</p>
+						<p class="t2"><em>主推户型：</em>3房2厅[86m²]，3房2厅[98m²]，3房2厅[76m²]</p>
+						<p class="t5"><em>楼盘地址：</em><span class="list_address">[ 黄埔 黄埔区府 ] 广园快速路笔村立交旁（东区小学对面）</span><a href="#">查看地图</a></p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_green f_green xq">花都小学</span>
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+								<span class="b_green f_green">学区</span>
+								<span class="b_blue f_blue">急售</span>
+							</div>
+						</div>
+
+						<div class="t6 clearfix">
+							<div class="unfold rfloat">展开查看户型图</div>
+						</div>
+					</div>
+					<div class="average">
+						<p>
+							<span class="f_orange"><em class="f24">7476</em>元/平米</span>
+						</p>
+						<p><i class="iconfont">&#xe605;</i> <strong>400-xxx-xxxx</strong></p>
+						<div class="compare dn">
+							<a href="#" class="checkbox">加入对比</a>
+						</div>
+					</div>
+
+					<div class="house_img clear clearfix dn">
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<div class="more tc"><a href="#">查看全部户型图</a></div>
+					</div>
+				</div>
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">中国美林湖</a><span class="newhouse_tips1">在售</span></h2>
+						<p class="t2">
+							<span class="first"><em>开盘时间：</em>2016-07-20</span>
+						</p>
+						<p class="t2"><em>主推户型：</em>3房2厅[86m²]，3房2厅[98m²]，3房2厅[76m²]</p>
+						<p class="t5"><em>楼盘地址：</em><span class="list_address">[ 黄埔 黄埔区府 ] 广园快速路笔村立交旁（东区小学对面）</span><a href="#">查看地图</a></p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_green f_green xq">花都小学</span>
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+								<span class="b_green f_green">学区</span>
+								<span class="b_blue f_blue">急售</span>
+							</div>
+						</div>
+
+						<div class="t6 clearfix">
+							<div class="unfold rfloat">展开查看户型图</div>
+						</div>
+					</div>
+					<div class="average">
+						<p>
+							<span class="f_orange"><em class="f24">7476</em>元/平米</span>
+						</p>
+						<p><i class="iconfont">&#xe605;</i> <strong>400-xxx-xxxx</strong></p>
+						<div class="compare dn">
+							<a href="#" class="checkbox">加入对比</a>
+						</div>
+					</div>
+
+					<div class="house_img clear clearfix dn">
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<a href="#">
+							<img class="lazy" data-original="images/newhouse/hxt.jpg" alt="" />
+							<p>A1-4户型 3室 2厅 76平</p>
+						</a>
+						<div class="more tc"><a href="#">查看全部户型图</a></div>
+					</div>
+				</div>
+
+			</div>
+			<div class="house_list_b">
+				<div class="pages">
+					<a href="#">&lt;上一页</a>
+					<a class="current" href="javascript:void(0);">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">...</a>
+					<a href="#">10</a>
+					<a href="#">11</a>
+					<a href="#">下一页&gt;</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<!--页中end-->
+
+<!--页脚star-->
+<footer class="footer">
+	<div class="m tc">
+		<div class="foot_nav">
+			<a href="#">关于买房吧</a>
+			<a href="#">联系我们</a>
+			<a href="#">用户协议</a>
+			<a href="#">友情链接</a>
+			<a href="#">房产百科</a>
+			<a href="#">房产问答</a>
+		</div>
+		<p>广州安信互联网金融服务有限公司</p>
+		<p class="copyright">Copyright&nbsp;©&nbsp;2016&nbsp;www.myfang8.com.&nbsp;All Rights Reserved&nbsp;ICP备案号：粤ICP备12345678号</p>
+	</div>
+</footer>
+<!--页脚end-->
+
+<script src="js/public.js"></script>
+<script src="js/json2.js"></script>
+<script src="js/jquery-ui/jquery-ui.min.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<script src="js/ghost.min.js"></script>
+<script src="js/echarts.js"></script>
+<script src="js/layer/layer.js"></script>
+<script src="js/wen_play.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

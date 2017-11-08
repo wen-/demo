@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="author" content="yellowwen@126.com">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<title>小区列表</title>
+	<link type="text/css" rel="stylesheet" href="css/reset.min.css" />	<link type="text/css" rel="stylesheet" href="css/animate.min.css" />
+	<link type="text/css" rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
+	<link type="text/css" rel="stylesheet" href="font/iconfont.css" />
+	<link type="text/css" rel="stylesheet" href="css/main.css" />
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<!--[if lt IE 9]>
+	<script type="text/javascript">
+		var h5Block = 'header,footer,section,aside,article,nav,hgroup,figure,figcaption,details,summary';
+		var h5Inline = 'time,mark,ruby,rt,rp,output,keygen,meter,progress,command,source';
+		var h5Other = 'video,audio,canvas,datalist';
+		var h5Elem = (h5Block + ',' + h5Inline + ',' + h5Other).split(',');
+		for(var i=0;i<h5Elem.length;i++){
+			document.createElement(h5Elem[i]);
+		}
+	</script>
+	<![endif]-->
+</head>
+<body>
+<!--页头star-->
+<header class="header">
+	<div class="m">
+		<a href="index.html" class="lfloat logo"><img src="images/logo.png" alt="" /></a>
+		<div class="rfloat login_info">
+			<div class="h_btn">
+				<a class="log" href="用户中心_登录.html">登录</a>
+				<a class="reg" href="注册.html">注册</a>
+			</div>
+			<div class="h_txt" style="display: none;">
+				<a href="#">
+					<img src="images/user_icon.jpg" class="headico" alt="" />
+					<span class="info_txt">欢迎<span>张三</span></span>
+				</a>
+				<a href="#" class="exit">退出</a>
+			</div>
+		</div>
+		<nav class="rfloat nav">
+			<dl>
+				<dt><a href="index.html">首页</a></dt>
+			</dl>
+			<dl>
+				<dt><a href="#">二手房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">房源</a>
+					<a href="#">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">新房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">新房首页</a>
+					<a href="#">广州新房</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="current"><a href="#">租房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">房源</a>
+					<a href="#">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">写字楼</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">出租</a>
+					<a href="#">出售</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">业主委托</a></dt>
+			</dl>
+		</nav>
+	</div>
+</header>
+
+<div class="list_search_box">
+	<div class="m">
+        <div class="h_search_box">
+            <div class="search_m">
+				<form action="" id="searchHs" data-url="http://www.myfang8.com">
+					<input type="text" name="hsname" placeholder="请输入房源名称、房型、地址..." class="houseVal" data-url="json/data2.json" />
+					<button type="submit" id="searchHsBtn">搜索</button>
+				</form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--页头end-->
+
+<section class="section bg_grey pt24">
+	<div class="search_select m">
+		<div class="search_select_t clearfix">
+			<h1 class="current"><a href="#">按区域搜索</a></h1>
+		</div>
+		<div class="search_select_m bg_white">
+			<div class="s1">
+				<dl class="clearfix">
+					<dt>区域：</dt>
+					<dd>
+						<a class="current" href="#">不限</a>
+						<a href="#">天河</a>
+						<a href="#">越秀</a>
+						<a href="#">荔湾</a>
+						<a href="#">黄埔</a>
+						<a href="#">海珠</a>
+						<a href="#">白云</a>
+						<a href="#">番禺</a>
+						<a href="#">增城</a>
+						<a href="#">花都</a>
+						<a href="#">南沙</a>
+						<a href="#">从化</a>
+						<a href="#">广州周边</a>
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>均价：</dt>
+					<dd>
+						<a class="current" href="#">不限</a>
+						<a href="#">6000元以下</a>
+						<a href="#">6000-8000元</a>
+						<a href="#">8000-1万</a>
+						<a href="#">1万-1.2万</a>
+						<a href="#">1.2万-1.5万</a>
+						<a href="#">1.5万-2万</a>
+						<a href="#">2万-2.5万</a>
+						<a href="#">2.5万-3万</a>                                    
+						<form action="">
+							<div><input type="text" /> - <input type="text" /> 元 <button type="submit">确定</button></div>
+						</form>
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>类型：</dt>
+					<dd>
+						<a class="current" href="#">不限</a>
+						<a href="#">住宅</a>
+						<a href="#">别墅</a>
+						<a href="#">商业综合体</a>
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>房龄：</dt>
+					<dd>
+						<a class="current" href="#">不限</a>
+						<a href="#">5年内</a>
+						<a href="#">5-10年</a>
+						<a href="#">10-20年</a>
+						<a href="#">20年以上</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="search_select_b bg_white search_history">
+			<dl>
+				<dt>找房历史：</dt>
+				<dd>
+					<a href="#">御景花园</a>
+					<a href="#">骏景花园</a>
+					<a href="#">信和苑</a>          
+				</dd>
+			</dl>
+		</div>
+	</div>
+
+	<div class="search_result m clearfix">
+		<div class="house_list house_list1 bg_white lfloat">
+            
+            	<!--搜索不到提示        
+                <div class="no_data_wrap clearfix">
+                    <i class="pic lfloat"><img src="images/user_icon.jpg" alt="" /></i>
+                    <div class="txt">
+                        <p class="no_data_titbig">抱歉，没有找到”xxxx“的房源，换个搜索条件试试吧！</p>
+                        <p class="no_data_titsml">买房吧为您推荐的套房源，猜你会喜欢！</p>
+                    </div>
+                </div>
+        		-->
+                        
+            <!--搜索结果提示
+            <div class="search_result_tips">
+                <div class="result_price">
+                    <span>山水华府二期</span>本月<em>21,291元/平方米</em>，比上月<em class="left">↑0.42%</em>
+                </div>
+                <div class="result_tag">
+                    <p>[番禺 华南]广州市番禺区华南干线迎宾路段</p>
+                    <a target="_blank" href="#" class="details"><i class="icons_listings"></i><span>详情</span></a>
+                    <a target="_blank" href="#" class="surrounding"><i class="icons_listings"></i><span>查看周边</span></a>
+                    <a target="_blank" href="#" class="price"><i class="icons_listings"></i><span>价格走势</span></a>
+                </div>
+            </div>
+            -->
+            
+        
+			<div class="house_list_t clearfix">
+				<div class="sort lfloat">
+					排序：
+					<a href="#">默认</a>
+					<a href="#" class="down">均价</a>
+					<a href="#" class="up">涨幅</a>
+				</div>
+				<div class="info rfloat">
+					共找到<span class="f_orange">1234</span>套房源
+				</div>
+			</div>
+			<div class="house_list_m">
+
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">中国美林湖</a></h2>
+						<p class="t2">
+							<span class="first"><em>户型面积：</em>14-895平米</span>
+							<span><em>建造时间：</em>2012年</span>
+						</p>
+						<p class="t3"><span>在售二手房（<em class="f_orange">1234</em>套）</span><span>在租租房（<em class="f_orange">6</em>套）</span></p>
+						<p class="t5"><span>花都 山前大道168号</span><a href="#">查看地图</a></p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_green f_green xq">花都小学</span>
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+							</div>
+						</div>
+                        <div class="t1 clearfix">
+							<p class="lfloat">租金：<span class="f_orange"><em class="f24">1500</em>元/月</span></p>
+							<p class="lfloat">售价：<span class="f_orange"><em class="f24">7476</em>元/平米<strong>1.47%</strong><span></p>
+						</div>
+					</div>
+					<div class="zj">
+						<p><span class="f_grey">小区专家：</span>谢军林</p>
+						<p>123-4567-8910</p>
+						<div class="msg">
+							<a href="" class="msg_ico1">在线沟通</a>
+						</div>
+					</div>
+				</div>
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">中国美林湖</a></h2>
+						<p class="t2">
+							<span class="first"><em>户型面积：</em>14-895平米</span>
+							<span><em>建造时间：</em>2012年</span>
+						</p>
+						<p class="t3"><span>在售二手房（<em class="f_orange">1234</em>套）</span><span>在租租房（<em class="f_orange">6</em>套）</span></p>
+						<p class="t5"><span>花都 山前大道168号</span><a href="#">查看地图</a></p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_green f_green xq">花都小学</span>
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+							</div>
+						</div>
+						<div class="t1 clearfix">
+							<p class="lfloat">租金：<span class="f_orange"><em class="f24">1500</em>元/月</span></p>
+							<p class="lfloat">售价：<span class="f_orange"><em class="f24">7476</em>元/平米<strong>1.47%</strong><span></p>
+						</div>
+					</div>
+					<div class="zj">
+						<p><span class="f_grey">小区专家：</span>谢军林</p>
+						<p>123-4567-8910</p>
+						<div class="msg">
+							<a href="" class="msg_ico1">在线沟通</a>
+						</div>
+					</div>
+				</div>
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">中国美林湖</a></h2>
+						<p class="t2">
+							<span class="first"><em>户型面积：</em>14-895平米</span>
+							<span><em>建造时间：</em>2012年</span>
+						</p>
+						<p class="t3"><span>在售二手房（<em class="f_orange">1234</em>套）</span><span>在租租房（<em class="f_orange">6</em>套）</span></p>
+						<p class="t5"><span>花都 山前大道168号</span><a href="#">查看地图</a></p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_green f_green xq">花都小学</span>
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+							</div>
+						</div>
+						<div class="t1 clearfix">
+							<p class="lfloat">租金：<span class="f_orange"><em class="f24">1500</em>元/月</span></p>
+							<p class="lfloat">售价：<span class="f_orange"><em class="f24">7476</em>元/平米<strong>1.47%</strong><span></p>
+						</div>
+					</div>
+					<div class="zj">
+						<p><span class="f_grey">小区专家：</span>谢军林</p>
+						<p>123-4567-8910</p>
+						<div class="msg">
+							<a href="" class="msg_ico1">在线沟通</a>
+						</div>
+					</div>
+				</div>
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">中国美林湖</a></h2>
+						<p class="t2">
+							<span class="first"><em>户型面积：</em>14-895平米</span>
+							<span><em>建造时间：</em>2012年</span>
+						</p>
+						<p class="t3"><span>在售二手房（<em class="f_orange">1234</em>套）</span><span>在租租房（<em class="f_orange">6</em>套）</span></p>
+						<p class="t5"><span>花都 山前大道168号</span><a href="#">查看地图</a></p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_green f_green xq">花都小学</span>
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+							</div>
+						</div>
+						<div class="t1 clearfix">
+							<p class="lfloat">租金：<span class="f_orange"><em class="f24">1500</em>元/月</span></p>
+							<p class="lfloat">售价：<span class="f_orange"><em class="f24">7476</em>元/平米<strong>1.47%</strong><span></p>
+						</div>
+					</div>
+					<div class="zj">
+						<p><span class="f_grey">小区专家：</span>谢军林</p>
+						<p>123-4567-8910</p>
+						<div class="msg">
+							<a href="" class="msg_ico1">在线沟通</a>
+						</div>
+					</div>
+				</div>
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">中国美林湖</a></h2>
+						<p class="t2">
+							<span class="first"><em>户型面积：</em>14-895平米</span>
+							<span><em>建造时间：</em>2012年</span>
+						</p>
+						<p class="t3"><span>在售二手房（<em class="f_orange">1234</em>套）</span><span>在租租房（<em class="f_orange">6</em>套）</span></p>
+						<p class="t5"><span>花都 山前大道168号</span><a href="#">查看地图</a></p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_green f_green xq">花都小学</span>
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+							</div>
+						</div>
+						<div class="t1 clearfix">
+							<p class="lfloat">租金：<span class="f_orange"><em class="f24">1500</em>元/月</span></p>
+							<p class="lfloat">售价：<span class="f_orange"><em class="f24">7476</em>元/平米<strong>1.47%</strong><span></p>
+						</div>
+					</div>
+					<div class="zj">
+						<p><span class="f_grey">小区专家：</span>谢军林</p>
+						<p>123-4567-8910</p>
+						<div class="msg">
+							<a href="" class="msg_ico1">在线沟通</a>
+						</div>
+					</div>
+				</div>
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">中国美林湖</a></h2>
+						<p class="t2">
+							<span class="first"><em>户型面积：</em>14-895平米</span>
+							<span><em>建造时间：</em>2012年</span>
+						</p>
+						<p class="t3"><span>在售二手房（<em class="f_orange">1234</em>套）</span><span>在租租房（<em class="f_orange">6</em>套）</span></p>
+						<p class="t5"><span>花都 山前大道168号</span><a href="#">查看地图</a></p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_green f_green xq">花都小学</span>
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+							</div>
+						</div>
+						<div class="t1 clearfix">
+							<p class="lfloat">租金：<span class="f_orange"><em class="f24">1500</em>元/月</span></p>
+							<p class="lfloat">售价：<span class="f_orange"><em class="f24">7476</em>元/平米<strong>1.47%</strong><span></p>
+						</div>
+					</div>
+					<div class="zj">
+						<p><span class="f_grey">小区专家：</span>谢军林</p>
+						<p>123-4567-8910</p>
+						<div class="msg">
+							<a href="" class="msg_ico1">在线沟通</a>
+						</div>
+					</div>
+				</div>
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">中国美林湖</a></h2>
+						<p class="t2">
+							<span class="first"><em>户型面积：</em>14-895平米</span>
+							<span><em>建造时间：</em>2012年</span>
+						</p>
+						<p class="t3"><span>在售二手房（<em class="f_orange">1234</em>套）</span><span>在租租房（<em class="f_orange">6</em>套）</span></p>
+						<p class="t5"><span>花都 山前大道168号</span><a href="#">查看地图</a></p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_green f_green xq">花都小学</span>
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+							</div>
+						</div>
+						<div class="t1 clearfix">
+							<p class="lfloat">租金：<span class="f_orange"><em class="f24">1500</em>元/月</span></p>
+							<p class="lfloat">售价：<span class="f_orange"><em class="f24">7476</em>元/平米<strong>1.47%</strong><span></p>
+						</div>
+					</div>
+					<div class="zj">
+						<p><span class="f_grey">小区专家：</span>谢军林</p>
+						<p>123-4567-8910</p>
+						<div class="msg">
+							<a href="" class="msg_ico1">在线沟通</a>
+						</div>
+					</div>
+				</div>
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">中国美林湖</a></h2>
+						<p class="t2">
+							<span class="first"><em>户型面积：</em>14-895平米</span>
+							<span><em>建造时间：</em>2012年</span>
+						</p>
+						<p class="t3"><span>在售二手房（<em class="f_orange">1234</em>套）</span><span>在租租房（<em class="f_orange">6</em>套）</span></p>
+						<p class="t5"><span>花都 山前大道168号</span><a href="#">查看地图</a></p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_green f_green xq">花都小学</span>
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+							</div>
+						</div>
+						<div class="t1 clearfix">
+							<p class="lfloat">租金：<span class="f_orange"><em class="f24">1500</em>元/月</span></p>
+							<p class="lfloat">售价：<span class="f_orange"><em class="f24">7476</em>元/平米<strong>1.47%</strong><span></p>
+						</div>
+					</div>
+					<div class="zj">
+						<p><span class="f_grey">小区专家：</span>谢军林</p>
+						<p>123-4567-8910</p>
+						<div class="msg">
+							<a href="" class="msg_ico1">在线沟通</a>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+			<div class="house_list_b">
+				<div class="pages">		
+                    <span class="page_body">
+                        <a class="page_cur_page" href="javascript:void(0);"><b>1</b></a>
+                        <a href="/house/all/2">2</a>
+                        <a href="/house/all/3">3</a>
+                    </span>
+                    <span class="page_bar_subfix">
+                        <a href="/house/all/2">下页</a>
+                        <a href="/house/all/4">尾页</a>
+                    </span>
+                    <span class="page_cur"> 第1/4页</span><script>function ekup(){if(event.keyCode==13){clkyup();}}function clkyup(){var num=document.getElementById('gsd09fhas9d343951').value;if(!/^\d+$/.test(num)||num<=0||num>4){alert('请输入正确页码!');return;};location='/house/all/{page}'.replace(/\{page\}/,document.getElementById('gsd09fhas9d343951').value);}</script>
+                    <span class="page_input_num" style="/*line-height: 30px;height: 30px;display: inline-block;vertical-align: middle;*/">
+                        <input class="f-input" onkeyup="ekup()" type="text" id="gsd09fhas9d343951">
+                    </span>
+                    <span class="page_btn_go" onclick="clkyup();" style="cursor:pointer;">转到</span>
+                </div>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<!--页中end-->
+
+<!--页脚star-->
+<footer class="footer">
+	<div class="m tc">
+		<div class="foot_nav">
+			<a href="#">关于买房吧</a>
+			<a href="#">联系我们</a>
+			<a href="#">用户协议</a>
+			<a href="#">友情链接</a>
+			<a href="#">房产百科</a>
+			<a href="#">房产问答</a>
+		</div>
+		<p>广州安信互联网金融服务有限公司</p>
+		<p class="copyright">Copyright&nbsp;©&nbsp;2016&nbsp;www.myfang8.com.&nbsp;All Rights Reserved&nbsp;ICP备案号：粤ICP备12345678号</p>
+	</div>
+</footer>
+<!--页脚end-->
+
+<script src="js/public.js"></script>
+<script src="js/json2.js"></script>
+<script src="js/jquery-ui/jquery-ui.min.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<script src="js/ghost.min.js"></script>
+<script src="js/echarts.js"></script>
+<script src="js/layer/layer.js"></script>
+<script src="js/wen_play.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

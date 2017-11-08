@@ -1,0 +1,729 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>中国建设银行手机网</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/new_version1.css" />
+<link rel="stylesheet" href="" id="min320" />
+<link rel="stylesheet" href="css/media.css" />
+<script src="js/jquery-1.6.min.js"></script>
+<script src="js/modernizr_css.js"></script>
+<script src="js/iScroll.js"></script>
+<script src="js/main.js"></script>
+<style type="text/css">
+#no_css{
+	display:none;	
+}
+
+</style>
+<script type="text/javascript">
+$(function(){
+	$("#ad_box2_sort li").click(function(){
+	
+	})
+	$("#news_sort li").click(function(){
+		
+	});
+});
+if(Modernizr.csstransforms){//判断是否支持CSS3的动画样式
+//实例化对象
+var myScroll,myScroll1,myScroll2,myScroll3;
+//ad1
+function loaded() {
+	myScroll = new iScroll('home_ad', {
+		snap: true,
+		momentum: false,
+		vScroll: false,
+		hScrollbar: false,
+		onBeforeScrollStart:function(e){
+			e.preventDefault();
+			oTouch1 = Modernizr.touch ? e.touches[0] : e;
+			ad1_y = oTouch1.pageY;
+			//console.log(e.pageY);
+		},
+		onBeforeScrollMove:function(e){
+			//console.log(e.pageX)
+			oTouch11 = Modernizr.touch ? e.touches[0] : e;
+			ad1_moveY = oTouch11.pageY;
+			ad1_move_y = Math.abs(ad1_moveY - ad1_y);
+			ad1_move_y1 = ad1_moveY - ad1_y;
+			if(ad1_move_y1 < 0){
+				var scrollY1 = $(document).height() - $(window).height();
+				if(window.scrollY + ad1_move_y >= scrollY1){
+					window.scrollBy(0,scrollY1);
+				}else{
+					window.scrollBy(0,ad1_move_y);
+				};
+			}else if(ad1_move_y1 > 0){
+				if(window.scrollY - ad1_move_y <= 0){
+					window.scrollBy(0,0);
+				}else{
+					window.scrollBy(0,-ad1_move_y);
+				};
+			}
+		},
+		onScrollEnd: function () {
+			document.querySelector('#ad_num > li.active').className = '';
+			document.querySelector('#ad_num > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+		}
+	 });
+};
+//ad2
+
+function loaded1() {
+	myScroll1 = new iScroll('wrapper', {
+		snap: true,
+		momentum: false,
+		hScrollbar: false,
+		vScrollbar: false,
+		vScroll: false,
+		onBeforeScrollStart:function(e){
+			e.preventDefault();
+			oTouch3 = Modernizr.touch ? e.touches[0] : e;
+			ad3_y = oTouch3.pageY;
+			//console.log(e.pageY);
+		},
+		onBeforeScrollMove:function(e){
+			//console.log(e.pageX)
+			oTouch13 = Modernizr.touch ? e.touches[0] : e;
+			ad3_moveY = oTouch13.pageY;
+			ad3_move_y = Math.abs(ad3_moveY - ad3_y);
+			ad3_move_y1 = ad3_moveY - ad3_y;
+			if(ad3_move_y1 < 0){
+				//if(window.scrollY != 0){
+					window.scrollBy(0,ad3_move_y);
+				//};
+			}else if(ad3_move_y1 > 0){
+				if(window.scrollY != 0){
+					window.scrollBy(0,-ad3_move_y);
+				};
+			}
+		},
+		onScrollEnd:function(){
+			if(myScroll1.x == 0){
+				$("div.list_b").hide();
+			}else{
+				$("div.list_b").show();
+			};
+			document.querySelector('#ad_box2_tab > li.active1').className = '';
+			document.querySelector('#ad_box2_tab > li:nth-child(' + (this.currPageX+1) + ')').className = 'active1';
+		}
+	 });
+};
+
+//ad3
+function loaded2() {
+	myScroll2 = new iScroll('wrapper3', {
+		snap: true,
+		momentum: false,
+		hScrollbar: false,
+		onBeforeScrollStart:function(e){
+			e.preventDefault();
+			oTouch4 = Modernizr.touch ? e.touches[0] : e;
+			ad4_x = oTouch4.pageX;
+			ad4_y = oTouch4.pageY;
+			//console.log(e.pageY);
+		},
+		onBeforeScrollMove:function(e){
+			//console.log(e.pageX)
+			oTouch14 = Modernizr.touch ? e.touches[0] : e;
+			ad4_moveX = oTouch4.pageX;
+			ad4_moveY = oTouch14.pageY;
+			ad4_move_y = Math.abs(ad4_moveY - ad4_y);
+			ad4_move_y1 = ad4_moveY - ad4_y;
+			if(ad4_move_y1 < 0){
+				var scrollY1 = $(document).height() - $(window).height();
+				if(window.scrollY + ad4_move_y >= scrollY1){
+					window.scrollBy(0,scrollY1);
+				}else{
+					window.scrollBy(0,ad4_move_y);
+				};
+			}else if(ad4_move_y1 > 0){
+				if(window.scrollY - ad4_move_y <= 0){
+					window.scrollBy(0,0);
+				}else{
+					window.scrollBy(0,-ad4_move_y);
+				};
+			}
+		},
+		onScrollEnd:function(){
+			if(myScroll2.x == 0||myScroll2.x+1 == 0){
+				$("span.hot1_next").show();
+				$("span.hot1_pre").hide();
+			};
+			if(myScroll2.x == myScroll2.maxScrollX||myScroll2.x-1 == myScroll2.maxScrollX){
+				$("span.hot1_next").hide();
+				$("span.hot1_pre").show();
+			};
+		}
+	 });
+};
+//ad4
+function loaded3() {
+	myScroll3 = new iScroll('news1', {
+		snap: true,
+		momentum: false,
+		hScrollbar: false,
+		vScrollbar: false,
+		onBeforeScrollStart:function(e){
+			e.preventDefault();
+			oTouch2 = Modernizr.touch ? e.touches[0] : e;
+			ad2_x = oTouch2.pageX;
+			ad2_y = oTouch2.pageY;
+			//page_X = myScroll3.currPageX;
+		},
+		onBeforeScrollMove:function(e){
+			//console.log(e.pageX)
+			oTouch12 = Modernizr.touch ? e.touches[0] : e;
+			ad2_moveX = oTouch2.pageX;
+			ad2_moveY = oTouch12.pageY;
+			ad2_move_y = Math.abs(ad2_moveY - ad2_y);
+			ad2_move_y1 = ad2_moveY - ad2_y;
+			if(ad2_move_y1 < 0){
+				var scrollY1 = $(document).height() - $(window).height();
+				if(window.scrollY + ad2_move_y >= scrollY1){
+					window.scrollBy(0,scrollY1);
+				}else{
+					window.scrollBy(0,ad2_move_y);
+				};
+			}else if(ad2_move_y1 > 0){
+				if(window.scrollY - ad2_move_y <= 0){
+					window.scrollBy(0,0);
+				}else{
+					window.scrollBy(0,-ad2_move_y);
+				};
+			}
+		},
+		onScrollEnd: function () {
+			document.querySelector('#news_sort > li.active1').className = '';
+			document.querySelector('#news_sort > li:nth-child(' + (this.currPageX+1) + ')').className = 'active1';
+		}
+	 });
+};
+document.addEventListener('DOMContentLoaded', loaded, false);
+document.addEventListener('DOMContentLoaded', loaded1, false);
+document.addEventListener('DOMContentLoaded', loaded2, false);
+document.addEventListener('DOMContentLoaded', loaded3, false);
+
+//点击第一个AD 
+$("#ad_num li").live("click",function(){
+	myScroll.scrollToPage($(this).index(), 0);
+});
+//热点应用左、右按钮
+/*$("span.hot_pre").live("click",function(){
+	myScroll1.scrollToPage('prev', 0);
+	return false;
+});
+$("span.hot_next").live("click",function(){
+	myScroll1.scrollToPage('next', 0);
+	return false;
+});
+*/
+$("span.hot1_pre").live("click",function(){
+	myScroll2.scrollToPage('prev', 0);
+	return false;
+});
+$("span.hot1_next").live("click",function(){
+	myScroll2.scrollToPage('next', 0);
+	return false;
+});
+//点击热点应用的分类
+$("#ad_box2_tab li").live("click",function(){
+	myScroll1.scrollToPage($(this).index(), 0);
+	//var index = $(this).index();
+	//$(this).addClass("active1").siblings().removeClass("active1");
+	
+	//if(index == 0){
+		//myScroll1.scrollToPage(0, 0);
+		//return false;
+		/*var w = $("div.ad_box2 li").width();
+		$("div.ad_box2").show();
+		$("div.ad_box4").hide();
+		if(w == 0){
+			$(".hot_app_ico1 li").width($(".hot_app_ico1").width()*0.25);
+			$(".ico_w1").css({"width":Math.ceil($(".hot_app_ico1").width()*0.25*$(".hot_app_ico1 a").length)});
+			$(".hot_app_ico1").height($(".hot_app_ico1 li").height());
+			myScroll1._resize();
+		};*/
+	//}else if(index == 1){
+		//myScroll1.scrollToPage(1, 0);
+		//return false;
+		//$("div.ad_box4").show();
+		//$("div.ad_box2").hide();
+		
+	//};
+});
+//点击建行动态 
+$("#news_sort li").live("click",function(){
+	myScroll3.scrollToPage($(this).index(), 0);
+});
+$(window).resize(function(){
+	if(Modernizr.csstransforms){
+		myScroll._resize();
+		//myScroll1._resize();
+		myScroll2._resize();
+		myScroll3._resize();
+	};
+})
+}else{//-------------如果不支持CSS3的动画样式则执行以下代码--------------------------
+
+$(function(){
+//点击第一个AD 
+$("#ad_num li").live("click",function(){
+	var index = $(this).index();
+	var m_left = $("#home_ad li").eq(0).width()*index;
+	$(this).addClass("active").siblings("li").removeClass("active");
+	$("#home_ad ul").animate({"margin-left":-m_left},500);
+});
+//热点应用左、右按钮
+$("#wrapper ul,#wrapper3 ul").css({"position":"absolute"});
+$("#scroller").myplay({show_n:4,pre_page:"span.hot_pre",next_page:"span.hot_next"});
+
+//点击热点应用的分类
+var w1 = $("div.ad_box3 li").width();//隐藏时宽度为0
+$("#ad_box2_sort li").live("click",function(){
+	var index = $(this).index();
+	$(this).addClass("active1").siblings().removeClass("active1");
+	if(index == 0){
+		$("div.ad_box2").show();
+		$("div.ad_box4").hide();
+	}else if(index == 1){
+		$("div.ad_box4").show();
+		$("div.ad_box2").hide();
+		/*
+		if(w1 == 0){//如果是0则执行一次然后赋值防止重复执行
+			w = $("div.ad_box3 li").width();
+			$("#scroller3").myplay({show_n:4,pre_page:"span.hot1_pre",next_page:"span.hot1_next"});
+		};
+		*/
+	};
+});
+//点击建行动态 
+$("#news_sort li").live("click",function(){
+	var index = $(this).index();
+	$(this).addClass("active1").siblings().removeClass("active1");
+	$("#news_list1 .news_list_slide").eq(index).show().siblings(".news_list_slide").hide();	
+});
+
+$(window).resize(function(){
+	$("#scroller").myplay({show_n:4,pre_page:"span.hot_pre",next_page:"span.hot_next"});
+	$("#scroller3").myplay({show_n:4,pre_page:"span.hot1_pre",next_page:"span.hot1_next"});
+});
+});
+};
+
+function ismobile(a){
+				try{
+					if(/android/i.test(a)){
+						return "wa";
+					}else if(/ip(hone|od)/i.test(a)){
+						return "wi";
+					}else if(/windows (ce|phone)/i.test(a)){
+						return "wp";
+					}else{
+						var agent=navigator.userAgent.toLowerCase();
+						if(agent.indexOf("win64")>=0||agent.indexOf("wow64")>=0){
+							return "w64";
+						}else{
+							return "w32";
+						}
+					}
+
+				}catch(e){
+					window.location=c;
+				}
+}
+function aaa(type,name){
+//alert("进入方法-"+type+"-"+name);
+	var getphonetype=ismobile(navigator.userAgent||navigator.vendor||window.opera);
+	if(type=="yue"){
+		//alert("悦生活-"+getphonetype);
+		if(getphonetype=="wi"){
+			var appstore = "new_ysh.html";  
+			applink(appstore);
+		}
+	}
+
+	if(type=="ying"){
+		//alert("应用商店");
+		window.location.href=name;
+	}
+}
+</script>
+
+</head>
+<body>
+<div id="no_css">抱歉！您的浏览器可能不支持CSS或者页面未加载完毕！因此，页面可能无法正常显示，请尝试刷新页面。</div>
+<div id="no_js">抱歉！您的浏览器可能不支持JavaScript或者页面未加载完毕！因此，页面可能无法正常显示，请尝试刷新页面。</div>
+<div class="page">
+	<div class="header">
+    	<div class="site_header">
+        	<div class="clearfix">
+            <div class="ccblogo lfloat">
+                <a href="index.html" class="a1"><img id="ccblogo" src="images/ccblogo.png" alt="中国建设银行－手机网" /></a>
+            </div>
+            <div class="version rfloat">
+                <div class="ccb_version_but"><a href="#" class="version1"><span class="vbg_l"></span>简洁版<span class="vbg_r"></span></a><a href="#" class="version2"><span class="vbg_l"></span>完整版<span class="vbg_r"></span></a></div>
+            </div>
+            </div>
+            <div class="service"><span class="service_tel">客户服务热线：<span><a href="tel:+86-95533">95533</a></span></span></div>
+        </div>
+        
+        <div class="nav clearfix">
+            <ul>
+                <!--<li><a href="http://m.ccb.com" class="ui-btn-active">首页</a></li>-->
+                <li><a href="new_ysh.html">悦生活</a></li>
+                <li><a href="new_jy.html">金融</a></li>
+                <li><a href="new_xyk.html">信用卡</a></li>
+                <li><a href="new_dh.html">导航</a></li>
+            </ul>
+        </div>
+	</div>
+	<!-- /header -->
+    <div class="news news-topbg">	
+		<div class="news1_list1">
+			<div class="newv_title">
+				<a href="#">“善融商务岁末狂欢季”</a>
+			</div>
+        	<ul class="newv_list clearfix">
+            	<li><a href="details-page1.html">二代网银盾宣传语创作大赛</a></li>
+                <li><a href="details.html">中国建设银行2012年招收博士后研究人员公告</a></li>
+            </ul>
+			<div class="ad_box1">
+				<div id="home_ad" class="home_ad">
+					<ul class="clearfix">
+						<li><a href="#"><img src="images/ad_new.jpg" alt="建行手机网" /></a></li>
+						<li><a href="#"><img src="images/ad_new1.jpg" alt="建行手机网" /></a></li>
+						<li><a href="#"><img src="images/ad_new2.jpg" alt="建行手机网" /></a></li>
+					</ul>
+				</div>
+				<ul id="ad_num" class="ad_num clearfix">
+					<li class="active">1</li>
+					<li>2</li>
+					<li>3</li>
+				</ul>
+			</div>	
+        </div>
+	</div>	
+   
+	<!--新增-->	
+	<div class="new_ccb_title">
+        <h1>热点推荐</h1>
+    </div>
+	<div class="ad_box3 relative">
+		<div id="wrapper3" class="hot_app_ico3">
+			<div id="scroller3" class="ico_w3">
+				<ul class="clearfix">
+					<li><a href="new_sjyh.html"><img src="images/hot4_ico.png" alt="" /></a></li>
+					<li><a href="ccblife://" id="applink2"><img src="images/hot2_ico.png" alt="" /></a></li>
+					<script type="text/javascript">
+$(function(){
+var getphonetype=ismobile(navigator.userAgent||navigator.vendor||window.opera);
+	if("wi"!=getphonetype){
+		$("#applink2").attr("href","new_ysh.html");
+		}
+});
+</script>
+<script type="text/javascript">   
+   var appstore = "new_ysh.html";  
+            function applink(fail){  
+                return function(){  
+                    var clickedAt = +new Date;  
+                    // During tests on 3g/3gs this timeout fires immediately if less than 500ms.  
+                    setTimeout(function(){  
+                              // To avoid failing on return to MobileSafari, ensure freshness!  
+                              if (+new Date - clickedAt < 500){  
+                              window.location = fail;  
+                              }  
+                              }, 500);      
+                };  
+            }
+ document.getElementById("applink2").onclick = applink(appstore);  
+</script>
+					<li><a href="new_yysd.html" onclick="javascript:aaa('ying','new_yysd.html');"><img src="images/hot3_ico.png" alt="" /></a></li>
+					<li><a href="new_ydwy.html"><img src="images/hot1_ico.png" alt="" /></a></li>
+					<li><a href="#"><img src="images/hot13_ico.png" alt="" /></a></li>
+					<li><a href="#"><img src="images/hot10_ico.png" alt="" /></a></li>
+					<li><a href="#"><img src="images/hot11_ico.png" alt="" /></a></li>
+					<li><a href="#"><img src="images/hot12_ico.png" alt="" /></a></li>
+					<li><a href="#"><img src="images/hot9_ico.png" alt="" /></a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="hot_page1" class="hot_page">
+			<span class="hot1_pre"><img src="images/l_ico.png" alt="上一页" /></span>
+			<span class="hot1_next"><img src="images/r_ico.png" alt="下一页" /></span>
+		</div>
+		
+	</div>
+	<!--新增-end-->
+    <div class="new_ccb_title ad_box2_title">
+        <h1>金融产品服务</h1>
+		<div id="ad_box2_sort" class="ad_box2_sort">
+			<ul id="ad_box2_tab" class="clearfix">
+				<li class="active1">投资理财</li>
+				<li>金融服务</li>
+			</ul>
+		</div>
+    </div>
+	
+	<div class="ad_box2">
+		<div id="wrapper" class="hot_app_ico1">
+			<div id="scroller" class="ico_w1 clearfix">
+				<div class="wrapper_data wrapper_data0 lfloat">
+					<ul class="clearfix">
+						<li><a href="new_jijin.html"><img src="images/hot5_ico.png" alt="" /></a></li>
+						<li><a href="new_lc.html"><img src="images/hot6_ico.png" alt="" /></a></li>
+						<li><a href="new_gjs.html"><img src="images/hot7_ico.png" alt="" /></a></li>
+						<li><a href="wh-page.html"><img src="images/hot8_ico.png" alt="" /></a></li>
+					</ul>
+				</div>
+				<div class="wrapper_data ad_box4 lfloat">
+					<dl>
+						<dt><span>龙卡信用卡</span></dt>
+						<dd>
+							<div class="list_b">
+								<div class="list_info list_info1">
+									<span class="list_info_t">
+										<a href="credit.html"><img alt="" src="images/b_ico1.png">信用卡申请</a>
+									</span>
+									<span class="list_info_t">
+										<a href="credit-inquires.html"><img alt="" src="images/b_ico2.png">申请进度查询</a>
+									</span>
+								</div>
+								<div class="list_info list_info2 no_border">
+									<span>
+										<a href="../ccb-mobile1_new/login.html"><img alt="" src="images/b_ico3.png">信用卡积分兑换电子券</a>
+									</span>
+								</div>							
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt><span class="blue_arrow">便捷查询</span></dt>
+						<dd>
+							<div class="list_b">
+								<div class="list_info list_info1">
+									<span class="list_info_t">
+										<a href="search-page2.html"><img alt="" src="images/b_ico7.png">网点及ATM查询</a>
+									</span>
+									<span class="list_info_t">
+										<a href="search-page11.html"><img alt="" src="images/b_ico8.png">跨行网点查询</a>
+									</span>
+								</div>
+								<div class="list_info list_info2 no_border">
+									<span class="list_info_t">
+										<a href="ll-page.html"><img alt="" src="images/b_ico13.png">利率查询</a>
+									</span>
+									<span class="list_info_t">
+										<a href="hq-page.html"><img alt="" src="images/b_ico14.png">金融行情</a>
+									</span>
+								</div>						
+							</div>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!----
+    <div class="ad_box2">
+		<div id="wrapper" class="hot_app_ico1">
+			<div id="scroller" class="ico_w1">
+				<ul class="clearfix">
+					<li><a href="new_jijin.html"><img src="images/hot5_ico.png" alt="" /></a></li>
+					<li><a href="new_lc.html"><img src="images/hot6_ico.png" alt="" /></a></li>
+					<li><a href="new_gjs.html"><img src="images/hot7_ico.png" alt="" /></a></li>
+					<li><a href="wh-page.html"><img src="images/hot8_ico.png" alt="" /></a></li>
+				</ul>
+			</div>
+		</div>
+		---->
+		<!--
+		<div id="hot_page" class="hot_page">
+			<span class="hot_pre"><img src="images/l_ico.png" alt="上一页" /></span>
+			<span class="hot_next"><img src="images/r_ico.png" alt="下一页" /></span>
+		</div>
+		-->
+	<!----
+	</div>
+	
+	<div class="ad_box4" style="display:none;">
+		<dl>
+			<dt><span>龙卡信用卡</span></dt>
+			<dd>
+				<div class="list_b">
+					<div class="list_info list_info1">
+						<span class="list_info_t">
+							<a href="credit.html"><img alt="" src="images/b_ico1.png">信用卡申请</a>
+						</span>
+						<span class="list_info_t">
+							<a href="credit-inquires.html"><img alt="" src="images/b_ico2.png">申请进度查询</a>
+						</span>
+					</div>
+					<div class="list_info list_info2 no_border">
+						<span>
+							<a href="../ccb-mobile1_new/login.html"><img alt="" src="images/b_ico3.png">信用卡积分兑换电子券</a>
+						</span>
+					</div>							
+				</div>
+			</dd>
+		</dl>
+		<dl>
+			<dt><span class="blue_arrow">便捷查询</span></dt>
+			<dd>
+				<div class="list_b">
+					<div class="list_info list_info1">
+						<span class="list_info_t">
+							<a href="search-page2.html"><img alt="" src="images/b_ico7.png">网点及ATM查询</a>
+						</span>
+						<span class="list_info_t">
+							<a href="search-page11.html"><img alt="" src="images/b_ico8.png">跨行网点查询</a>
+						</span>
+					</div>
+					<div class="list_info list_info2 no_border">
+						<span class="list_info_t">
+							<a href="ll-page.html"><img alt="" src="images/b_ico13.png">利率查询</a>
+						</span>
+						<span class="list_info_t">
+							<a href="hq-page.html"><img alt="" src="images/b_ico14.png">金融行情</a>
+						</span>
+					</div>						
+				</div>
+			</dd>
+		</dl>
+	</div>
+	---->
+    <div class="new_ccb_title ad_box2_title">
+        <h1>建行动态</h1>
+		<div class="ad_box2_sort">
+			<ul id="news_sort" class="clearfix">
+				<li class="active1">优惠</li>
+				<li>公告</li>
+				<li>新闻</li>
+				<li>招聘</li>
+			</ul>
+		</div>
+    </div>
+    <div class="new_news">
+        <div class="news_data">
+			<div id="news1">
+				<div id="news_list1" class="news_list clearfix">
+					<!--优惠-->
+					<div class="news_list_slide">
+						<ul>
+							<li><a href="#">时尚购物季，双节礼缤纷1</a></li>
+							<li><a href="#">万事达满千返千，千万好礼大回馈</a></li>
+							<li><a href="#">“相约周五，建行会员狂享日”苏宁易购网上</a></li>
+							<li><a href="#">2012年山东省分行个人电子银行积分换礼活动</a></li>
+						</ul>
+						<div class="news_more">
+							<a href="#">更多优惠与服务&nbsp;&gt;&gt;</a>
+						</div>
+					</div>
+					<!--公告-->
+					<div class="news_list_slide">
+						<ul>
+							<li><a href="#">时尚购物季，双节礼缤纷2</a></li>
+							<li><a href="#">万事达满千返千，千万好礼大回馈</a></li>
+							<li><a href="#">“相约周五，建行会员狂享日”苏宁易购网上</a></li>
+							<li><a href="#">2012年山东省分行个人电子银行积分换礼活动</a></li
+						></ul>
+						<div class="news_more">
+							<a href="#">更多公告信息&nbsp;&gt;&gt;</a>
+						</div>
+					</div>
+					<!--新闻-->
+					<div class="news_list_slide">
+						<ul>
+							<li><a href="#">时尚购物季，双节礼缤纷3</a></li>
+							<li><a href="#">万事达满千返千，千万好礼大回馈</a></li>
+							<li><a href="#">“相约周五，建行会员狂享日”苏宁易购网上</a></li>
+							<li><a href="#">2012年山东省分行个人电子银行积分换礼活动</a></li>
+						</ul>
+						<div class="news_more">
+							<a href="#">更多新闻信息&nbsp;&gt;&gt;</a>
+						</div>
+					</div>
+					<!--招聘-->
+					<div class="news_list_slide">
+						<ul>
+							<li><a href="#">时尚购物季，双节礼缤纷4</a></li>
+							<li><a href="#">万事达满千返千，千万好礼大回馈</a></li>
+							<li><a href="#">“相约周五，建行会员狂享日”苏宁易购网上</a></li>
+							<li><a href="#">2012年山东省分行个人电子银行积分换礼活动</a></li>
+						</ul>
+						<div class="news_more">
+							<a href="#">更多招聘信息&nbsp;&gt;&gt;</a>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+    </div>
+    
+    <div class="news wb new_ccb_title relative">
+        <h1>手机微博</h1>
+		<span class="go_top"><img src="images/go_top.png" alt="top" /></span>
+    </div>
+    <div class="wb_content content clearfix">
+    	<div class="wb_p lfloat">
+        	<img src="images/ad1.jpg" alt="关注建行微博" />
+        </div>
+        <div class="wb_list lfloat">
+            <p>关注建行微博</p>
+            <a href="#">
+				<span class="btn1_bg">
+					<span class="btn1_ico_l"></span>
+					<span class="btn1_ico_m">新浪</span>
+					<span class="btn1_ico_r"></span>
+				</span>
+			</a>
+            <a href="#">
+				<span class="btn1_bg">
+					<span class="btn1_ico_l"></span>
+					<span class="btn1_ico_m">腾讯</span>
+					<span class="btn1_ico_r"></span>
+				</span>
+			</a>
+            <a href="#">
+				<span class="btn1_bg">
+					<span class="btn1_ico_l"></span>
+					<span class="btn1_ico_m">搜狐</span>
+					<span class="btn1_ico_r"></span>
+				</span>
+			</a>
+        </div>
+    </div>
+    <div class="news kf new_ccb_title relative">
+        <h1>热点答疑</h1>
+		<span class="go_top"><img src="images/go_top.png" alt="top" /></span>
+    </div>
+    <div class="kf_question">
+        	<ul>
+                <li><a href="details-page3.html">可以通过建行网站查看到网点分布吗？ </a></li>
+                <li><a href="#">建行手机银行如何查询账户余额建行手机银行…</a></li>
+                <li><a href="#">建行手机银行如何查询账户余额</a></li>
+     		</ul>
+			<div class="news_more">
+				<a href="#">更多热点答疑&nbsp;&gt;&gt;</a>
+			</div>
+    </div>  
+	<div class="footer">
+	<!--
+	<div class="new_vesion">
+		<a href="#" class="vesion_1">简洁版</a><a href="#" class="vesion_2 on_vesion">完整版</a>
+	</div>
+    -->
+	<h4>©版权所有&nbsp;&nbsp;<span>中国建设银行版权所有&nbsp;<br/>
+      京ICP证&nbsp;050138号&nbsp;京公网安备&nbsp;110102000450</h4>
+  </div><!-- /footer -->
+</div><!-- /page -->
+</body>
+</html>

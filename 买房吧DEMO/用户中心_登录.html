@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="author" content="yellowwen@126.com">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<title>登录</title>
+	<link type="text/css" rel="stylesheet" href="css/reset.min.css" />	<link type="text/css" rel="stylesheet" href="css/animate.min.css" />
+	<link type="text/css" rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
+	<link type="text/css" rel="stylesheet" href="font/iconfont.css" />
+	<link type="text/css" rel="stylesheet" href="css/main.css" />
+	<link type="text/css" rel="stylesheet" href="css/user-login.css" />
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<!--[if lt IE 9]>
+	<script type="text/javascript">
+		var h5Block = 'header,footer,section,aside,article,nav,hgroup,figure,figcaption,details,summary';
+		var h5Inline = 'time,mark,ruby,rt,rp,output,keygen,meter,progress,command,source';
+		var h5Other = 'video,audio,canvas,datalist';
+		var h5Elem = (h5Block + ',' + h5Inline + ',' + h5Other).split(',');
+		for(var i=0;i<h5Elem.length;i++){
+			document.createElement(h5Elem[i]);
+		}
+	</script>
+	<![endif]-->
+</head>
+<body>
+<!--页头star-->
+<header class="header">
+	<div class="m">
+		<a href="index.html" class="lfloat logo"><img src="images/logo.png" alt="" /></a>
+		<div class="rfloat login_info">
+			<div class="h_btn" style="display: none;">
+				<a class="log" href="用户中心_登录.html">登录</a>
+				<a class="reg" href="注册.html">注册</a>
+			</div>
+			<div class="h_txt" style="display: none;">
+				<a href="#">
+					<img src="images/user_icon.jpg" class="headico" alt="" />
+					<span class="info_txt">欢迎<span>张三</span></span>
+				</a>
+				<a href="#" class="exit">退出</a>
+			</div>
+		</div>
+		<nav class="rfloat nav">
+			<dl>
+				<dt><a href="index.html">首页</a></dt>
+			</dl>
+			<dl>
+				<dt><a href="#">二手房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">房源</a>
+					<a href="#">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">新房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">新房首页</a>
+					<a href="#">广州新房</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">租房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">房源</a>
+					<a href="#">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">写字楼</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">出租</a>
+					<a href="#">出售</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">业主委托</a></dt>
+			</dl>
+		</nav>
+	</div>
+</header>
+<!--页头end-->
+
+<section class="section bg_grey">
+	<!--登录str-->
+	<div class="login-wrapper">
+		<div class="welcomes-slogan">
+			<h1>欢迎来到买房吧</h1>
+			<span>在这里，找到幸福，找到家。</span>
+		</div>
+		<div class="login-box">
+			<div class="login-box-inner" id="loginBox">
+				<p class="login-tbs" id="loginTbs">
+					<a href="#" class="cur">登录</a>
+					<a href="#">账号注册</a>
+				</p>
+				<div class="login-form">
+					<!-- 登录 -->
+					<div class="login-form-item">
+						<ul>
+							<li class="parts-group">
+								<input class="lf-keyword" type="text" id="phone" maxlength="11">
+								<p class="lf-label" id="phoneTip">请输入手机号码</p>
+							</li>
+							<li class="parts-group">
+								<input class="lf-keyword" type="password" id="password" maxlength="18">
+								<input type="hidden" id="rememberPWDUse">
+								<p class="lf-label" id="pwdTip">请输入密码</p>
+							</li>
+							<li class="clearfix">
+								<p class="remember-password lfloat"><label><input type="checkbox" id="user_rememberPwd"><span>记住密码</span></label></p>
+								<p class="forgot-password rfloat"><a href="/userLogin/forgotPassword">忘记密码?</a></p>
+							</li>
+							<li class="login-btn">
+								<a class="btn_big btnoff" id="loginSubmit" href="javascript:;" onclick="Login.loginSubmit(this)">立即登录</a>
+							</li>
+						</ul>
+					</div>
+					<!-- /登录 -->
+					<!-- 注册 -->
+					<div class="login-form-item" style="display: none;">
+						<ul>
+							<li class="parts-group">
+								<input class="lf-keyword" type="text" id="telNum" maxlength="11">
+								<p class="lf-label">请输入手机号码</p>
+							</li>
+							<li class="parts-group">
+								<input class="lf-keyword" type="text" id="msgCode" maxlength="6">
+								<p class="lf-label">请输入收到的短信验证码</p>
+								<p class="mb-msg-code" id="getVCode2" onclick="ImgCode.pictureCode(event);">发送验证码</p>
+								<!-- 图片验证码 -->
+								<!-- tips -->
+								<div class="confirm-tips confirm-tips-mbvcode dn" id="imgCode">
+									<i class="icons confirm-arrow"></i>
+									<a class="icons confirm-close" href="javascript:;"></a>
+									<div class="confirm-con clearfix">
+										<p class="gvcode-area clearfix">
+											<span class="gvcode-area-img lfloat"><img id="codeImg" src="" width="139" height="28"></span>
+											<span class="gvcode-area-refresh lfloat" onclick="ImgCode.changeSecurityCode();"><i class="icons"></i><em>换一张</em></span>
+										</p>
+										<div class="gvcode-input lfloat">
+											<input class="lf-keyword" type="text" id="imgCodeText" maxlength="6">
+											<p class="lf-label">图片验证码</p>
+											<p class="lf-error dn clearfix"><i class="icons"></i><span>错误提示</span></p>
+										</div>
+										<p class="confirm-btn lfloat"><a class="btn-orange" href="javascript:;" onclick="ImgCode.registerPhoneTrendCode('regist');">确定</a></p>
+									</div>
+								</div>
+								<!-- /tips -->
+								<!-- end 验证码 -->
+							</li>
+							<li class="parts-group">
+								<input class="lf-keyword" type="password" id="pwd" maxlength="16">
+								<p class="lf-label">请设置登录密码</p>
+								<i class="icons eyes" id="eyes"></i>
+							</li>
+							<li class="parts-group">
+								<input class="lf-keyword" type="text" id="telNum1" maxlength="11">
+								<p class="lf-label">请输入邀请人手机号码</p>
+							</li>
+							<li class="q-book-deal">
+								<label>
+									<input type="checkbox" id="agreeProtocol">
+									<span>我同意<a href="#" target="_blank">《买房吧服务协议》</a></span>
+								</label>
+							</li>
+							<li class="login-btn registered-btn">
+								<a class="btn_big btnoff" onclick="Register.registerSubmit()" href="javascript:;" id="registerBtn">立即注册</a>
+							</li>
+						</ul>
+					</div>
+					<!-- /注册 -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--登录end-->
+</section>
+
+<!--页中end-->
+
+<!--页脚star-->
+<footer class="footer">
+	<div class="m tc">
+		<div class="foot_nav">
+			<a href="#">关于买房吧</a>
+			<a href="#">联系我们</a>
+			<a href="#">用户协议</a>
+			<a href="#">友情链接</a>
+			<a href="#">房产百科</a>
+			<a href="#">房产问答</a>
+		</div>
+		<p>广州安信互联网金融服务有限公司</p>
+		<p class="copyright">Copyright&nbsp;©&nbsp;2016&nbsp;www.myfang8.com.&nbsp;All Rights Reserved&nbsp;ICP备案号：粤ICP备12345678号</p>
+	</div>
+</footer>
+<!--页脚end-->
+
+<script src="js/public.js"></script>
+<script src="js/json2.js"></script>
+<script src="js/jquery-ui/jquery-ui.min.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<script src="js/ghost.min.js"></script>
+<script src="js/echarts.js"></script>
+<script src="js/layer/layer.js"></script>
+<script src="js/wen_play.js"></script>
+<script src="js/main.js"></script>
+<script src="js/user-imgcode.js"></script>
+<script src="js/user-login.js"></script>
+</body>
+</html>

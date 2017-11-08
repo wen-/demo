@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* 
+ * CSS Document for ccb mobile
+ * http://m.ccb.com/
+ *
+ * Copyright 2012, wen CCB GEONG
+ * http://www.geong.com/
+ *
+ * Date: 2012-12-18
+ 
+ *@media Document
+ 
+ */
+
+@media only screen and (min-width:321px) and (max-width:639px){
+	.list_info{
+		font-size: 16px;
+	}
+	.btn1_bg{
+		min-width:60px;
+	}
+	/*--应用商店--*/
+	.yysd_r{
+		padding-top:40px;
+	}
+	.yysd_r p{
+		font-size:24px;
+		background:url(../images/yysd_2.png) no-repeat 0px 15px;
+		background-size:25px 25px;
+	}
+	/*.yysd_r p img{
+		height:40px;
+	}
+	*/
+	.go_appstore a{
+		height:60px;
+		line-height:60px;
+		font-size:30px;
+	}
+	.go_appstore a img{
+		vertical-align:middle;
+		margin-left:50px;
+		height:50px;
+	}
+}
+@media only screen and (min-width:480px) and (max-width:639px){
+	.ad6{
+		width:480px;
+	}
+	.ad6_w{
+		width:450px;
+		height:100px;
+	}
+	.ad6_w ul{
+		width:750px;
+	}
+	.ad6 li{
+		width:140px;
+		margin-right:10px;
+	}
+	.ad6 li img{
+		max-width:140px;
+		max-height:93px;
+	}
+}

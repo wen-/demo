@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="author" content="yellowwen@126.com">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<title>写字楼出租</title>
+	<link type="text/css" rel="stylesheet" href="css/reset.min.css" />	<link type="text/css" rel="stylesheet" href="css/animate.min.css" />
+	<link type="text/css" rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
+	<link type="text/css" rel="stylesheet" href="font/iconfont.css" />
+	<link type="text/css" rel="stylesheet" href="css/main.css" />
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<!--[if lt IE 9]>
+	<script type="text/javascript">
+		var h5Block = 'header,footer,section,aside,article,nav,hgroup,figure,figcaption,details,summary';
+		var h5Inline = 'time,mark,ruby,rt,rp,output,keygen,meter,progress,command,source';
+		var h5Other = 'video,audio,canvas,datalist';
+		var h5Elem = (h5Block + ',' + h5Inline + ',' + h5Other).split(',');
+		for(var i=0;i<h5Elem.length;i++){
+			document.createElement(h5Elem[i]);
+		}
+	</script>
+	<![endif]-->
+</head>
+<body>
+<!--页头star-->
+<header class="header">
+	<div class="m">
+		<a href="index.html" class="lfloat logo"><img src="images/logo.png" alt="" /></a>
+		<div class="rfloat login_info">
+			<div class="h_btn">
+				<a class="log" href="用户中心_登录.html">登录</a>
+				<a class="reg" href="注册.html">注册</a>
+			</div>
+			<div class="h_txt" style="display: none;">
+				<a href="#">
+					<img src="images/user_icon.jpg" class="headico" alt="" />
+					<span class="info_txt">欢迎<span>张三</span></span>
+				</a>
+				<a href="#" class="exit">退出</a>
+			</div>
+		</div>
+		<nav class="rfloat nav">
+			<dl>
+				<dt><a href="index.html">首页</a></dt>
+			</dl>
+			<dl>
+				<dt><a href="#">二手房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">房源</a>
+					<a href="#">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">新房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">新房首页</a>
+					<a href="#">广州新房</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">租房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">房源</a>
+					<a href="#">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="current"><a href="#">写字楼</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">出租</a>
+					<a href="#">出售</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">业主委托</a></dt>
+			</dl>
+		</nav>
+	</div>
+</header>
+
+<div class="list_search_box">
+	<div class="m">
+        <div class="h_search_box">
+            <div class="search_m">
+				<form action="" id="searchHs" data-url="http://www.myfang8.com">
+					<input type="text" name="hsname" placeholder="请输入房源名称、房型、地址..." class="houseVal" data-url="json/data2.json" />
+					<button type="submit" id="searchHsBtn">搜索</button>
+				</form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--页头end-->
+
+<section class="section bg_grey pt24">
+	<div class="search_select m">
+		<div class="search_select_t clearfix">
+			<h1 class="current"><a href="#">按区域找房</a></h1>
+		</div>
+		<div class="search_select_m bg_white">
+			<div class="s1">
+				<dl class="clearfix">
+					<dt>区域：</dt>
+					<dd>
+						<a class="current" href="#">不限</a>
+						<a href="#">天河</a>
+						<a href="#">越秀</a>
+						<a href="#">荔湾</a>
+						<a href="#">黄埔</a>
+						<a href="#">海珠</a>
+						<a href="#">白云</a>
+						<a href="#">番禺</a>
+						<a href="#">增城</a>
+						<a href="#">花都</a>
+						<a href="#">南沙</a>
+						<a href="#">从化</a>
+						<a href="#">广州周边</a>
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>租金：</dt>
+					<dd>
+						<a class="current" href="#">不限</a>
+						<a href="#">50元/平米•月以下</a>
+						<a href="#">50-80元</a>
+						<a href="#">80-120元</a>
+						<a href="#">120-160元</a>
+						<a href="#">160-200元</a>
+						<a href="#">200元/平米•月以上</a>
+						<form action="">
+							<div><input type="text" /> - <input type="text" /> 元/平米•月 <button type="submit">确定</button></div>
+						</form>
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>面积：</dt>
+					<dd>
+						<a class="current" href="#">不限</a>
+						<a href="#">100平米以下</a>
+						<a href="#">100-150平米</a>
+						<a href="#">150-200平米</a>
+						<a href="#">200-300平米</a>
+						<a href="#">300-500平米</a>
+						<a href="#">500-1000平米</a>
+						<a href="#">1000平米以上</a>
+						<form action="">
+							<div><input type="text" /> - <input type="text" /> 平米 <button type="submit">确定</button></div>
+						</form>
+					</dd>
+				</dl>
+			</div>
+			<div class="s2">
+				<dl>
+					<dt>筛选：</dt>
+					<dd class="clearfix">
+						<div class="select_box">
+							<span class="ui">通用</span>
+							<ul>
+								<li><a href="#" class="current">不限</a></li>
+								<li><a href="#">可注册</a></li>
+								<li><a href="#">高回报率</a></li>
+								<li><a href="#">中心商务区</a></li>
+								<li><a href="#">整栋</a></li>
+								<li><a href="#">交通便利</a></li>
+								<li><a href="#">繁华商圈</a></li>
+								<li><a href="#">商用两住</a></li>
+							</ul>
+						</div>
+						<div class="select_box">
+							<span class="ui">等级</span>
+							<ul>
+								<li><a href="#">不限</a></li>
+								<li><a href="#">甲级写字楼</a></li>
+								<li><a href="#">乙级写字楼</a></li>
+								<li><a href="#">丙级写字楼</a></li>
+							</ul>
+						</div>
+						<div class="select_box">
+							<span class="ui">时间</span>
+							<ul>
+								<li><a href="#">不限</a></li>
+								<li><a href="#">今天发布</a></li>
+								<li><a href="#">3天内</a></li>
+								<li><a href="#">7天内</a></li>
+							</ul>
+						</div>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="search_select_b bg_white">
+			<dl>
+				<dt>当前找房条件：</dt>
+				<dd>
+					<a href="#">100平米</a>
+					<a href="#">50元-80元</a>
+					<a href="#" class="clear">清空筛选条件</a>
+				</dd>
+			</dl>
+		</div>
+	</div>
+
+	<div class="search_result m clearfix">
+		<div class="house_list bg_white lfloat">
+            
+            <!--搜索不到提示        
+            <div class="no_data_wrap clearfix">
+                <i class="pic lfloat"><img src="images/user_icon.jpg" alt="" /></i>
+                <div class="txt">
+                    <p class="no_data_titbig">抱歉，没有找到”xxxx“的房源，换个搜索条件试试吧！</p>
+                    <p class="no_data_titsml">买房吧为您推荐的套房源，猜你会喜欢！</p>
+                </div>
+            </div>
+            -->
+                        
+            <!--搜索结果提示
+            <div class="search_result_tips">
+                <div class="result_price">
+                    <span>山水华府二期</span>本月<em>21,291元/平方米</em>，比上月<em class="left">↑0.42%</em>
+                </div>
+                <div class="result_tag">
+                    <p>[番禺 华南]广州市番禺区华南干线迎宾路段</p>
+                    <a target="_blank" href="#" class="details"><i class="icons_listings"></i><span>详情</span></a>
+                    <a target="_blank" href="#" class="surrounding"><i class="icons_listings"></i><span>查看周边</span></a>
+                    <a target="_blank" href="#" class="price"><i class="icons_listings"></i><span>价格走势</span></a>
+                </div>
+            </div>
+            -->
+            
+                
+			<div class="house_list_t clearfix">
+				<div class="sort lfloat">
+					排序：
+					<a href="#">默认</a>
+					<a href="#" class="down">面积</a>
+					<a href="#" class="up">租金</a>
+				</div>
+				<div class="info rfloat">
+					共找到<span class="f_orange">1234</span>套写字楼房源
+				</div>
+			</div>
+			<div class="house_list_m">
+
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">白云万达广场写字楼出租，空间实用，采光极佳，办公首选...</a></h2>
+						<div class="t1 clearfix">
+							<p class="lfloat f_orange"><span class="f24">76</span>元/平米•月</p><span class="line lfloat">|</span>
+							<p class="lfloat tc"><span class="f24">251</span>平米</p><span class="line lfloat">|</span>
+							<p class="lfloat tc last">总价：<span class="f24 f_orange">19076</span>元</p>
+						</div>
+						<p class="t2">
+							<span class="first">甲级写字楼</span><span class="line">|</span>
+							<span>中层/7层</span><span class="line">|</span>
+							<span>2012年建造</span>
+						</p>
+						<p class="t3">[白云万达广场] 广州市白云区云城东路501号</p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+							</div>
+							<div class="rfloat">
+								<p>周叉叉&nbsp;&nbsp;一周前更新</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">白云万达广场写字楼出租，空间实用，采光极佳，办公首选...</a></h2>
+						<div class="t1 clearfix">
+							<p class="lfloat f_orange"><span class="f24">76</span>元/平米•月</p><span class="line lfloat">|</span>
+							<p class="lfloat tc"><span class="f24">251</span>平米</p><span class="line lfloat">|</span>
+							<p class="lfloat tc last">总价：<span class="f24 f_orange">19076</span>元</p>
+						</div>
+						<p class="t2">
+							<span class="first">甲级写字楼</span><span class="line">|</span>
+							<span>中层/7层</span><span class="line">|</span>
+							<span>2012年建造</span>
+						</p>
+						<p class="t3">[白云万达广场] 广州市白云区云城东路501号</p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+							</div>
+							<div class="rfloat">
+								<p>周叉叉&nbsp;&nbsp;一周前更新</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">白云万达广场写字楼出租，空间实用，采光极佳，办公首选...</a></h2>
+						<div class="t1 clearfix">
+							<p class="lfloat f_orange"><span class="f24">76</span>元/平米•月</p><span class="line lfloat">|</span>
+							<p class="lfloat tc"><span class="f24">251</span>平米</p><span class="line lfloat">|</span>
+							<p class="lfloat tc last">总价：<span class="f24 f_orange">19076</span>元</p>
+						</div>
+						<p class="t2">
+							<span class="first">甲级写字楼</span><span class="line">|</span>
+							<span>中层/7层</span><span class="line">|</span>
+							<span>2012年建造</span>
+						</p>
+						<p class="t3">[白云万达广场] 广州市白云区云城东路501号</p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+							</div>
+							<div class="rfloat">
+								<p>周叉叉&nbsp;&nbsp;一周前更新</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">白云万达广场写字楼出租，空间实用，采光极佳，办公首选...</a></h2>
+						<div class="t1 clearfix">
+							<p class="lfloat f_orange"><span class="f24">76</span>元/平米•月</p><span class="line lfloat">|</span>
+							<p class="lfloat tc"><span class="f24">251</span>平米</p><span class="line lfloat">|</span>
+							<p class="lfloat tc last">总价：<span class="f24 f_orange">19076</span>元</p>
+						</div>
+						<p class="t2">
+							<span class="first">甲级写字楼</span><span class="line">|</span>
+							<span>中层/7层</span><span class="line">|</span>
+							<span>2012年建造</span>
+						</p>
+						<p class="t3">[白云万达广场] 广州市白云区云城东路501号</p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+							</div>
+							<div class="rfloat">
+								<p>周叉叉&nbsp;&nbsp;一周前更新</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">白云万达广场写字楼出租，空间实用，采光极佳，办公首选...</a></h2>
+						<div class="t1 clearfix">
+							<p class="lfloat f_orange"><span class="f24">76</span>元/平米•月</p><span class="line lfloat">|</span>
+							<p class="lfloat tc"><span class="f24">251</span>平米</p><span class="line lfloat">|</span>
+							<p class="lfloat tc last">总价：<span class="f24 f_orange">19076</span>元</p>
+						</div>
+						<p class="t2">
+							<span class="first">甲级写字楼</span><span class="line">|</span>
+							<span>中层/7层</span><span class="line">|</span>
+							<span>2012年建造</span>
+						</p>
+						<p class="t3">[白云万达广场] 广州市白云区云城东路501号</p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+							</div>
+							<div class="rfloat">
+								<p>周叉叉&nbsp;&nbsp;一周前更新</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">白云万达广场写字楼出租，空间实用，采光极佳，办公首选...</a></h2>
+						<div class="t1 clearfix">
+							<p class="lfloat f_orange"><span class="f24">76</span>元/平米•月</p><span class="line lfloat">|</span>
+							<p class="lfloat tc"><span class="f24">251</span>平米</p><span class="line lfloat">|</span>
+							<p class="lfloat tc last">总价：<span class="f24 f_orange">19076</span>元</p>
+						</div>
+						<p class="t2">
+							<span class="first">甲级写字楼</span><span class="line">|</span>
+							<span>中层/7层</span><span class="line">|</span>
+							<span>2012年建造</span>
+						</p>
+						<p class="t3">[白云万达广场] 广州市白云区云城东路501号</p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+							</div>
+							<div class="rfloat">
+								<p>周叉叉&nbsp;&nbsp;一周前更新</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">白云万达广场写字楼出租，空间实用，采光极佳，办公首选...</a></h2>
+						<div class="t1 clearfix">
+							<p class="lfloat f_orange"><span class="f24">76</span>元/平米•月</p><span class="line lfloat">|</span>
+							<p class="lfloat tc"><span class="f24">251</span>平米</p><span class="line lfloat">|</span>
+							<p class="lfloat tc last">总价：<span class="f24 f_orange">19076</span>元</p>
+						</div>
+						<p class="t2">
+							<span class="first">甲级写字楼</span><span class="line">|</span>
+							<span>中层/7层</span><span class="line">|</span>
+							<span>2012年建造</span>
+						</p>
+						<p class="t3">[白云万达广场] 广州市白云区云城东路501号</p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+							</div>
+							<div class="rfloat">
+								<p>周叉叉&nbsp;&nbsp;一周前更新</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pt clearfix">
+					<div class="pt_pic">
+						<a href="#"><img class="lazy" data-original="images/pic5.jpg" align="" /></a>
+					</div>
+					<div class="pt_txt">
+						<h2><a href="#">白云万达广场写字楼出租，空间实用，采光极佳，办公首选...</a></h2>
+						<div class="t1 clearfix">
+							<p class="lfloat f_orange"><span class="f24">76</span>元/平米•月</p><span class="line lfloat">|</span>
+							<p class="lfloat tc"><span class="f24">251</span>平米</p><span class="line lfloat">|</span>
+							<p class="lfloat tc last">总价：<span class="f24 f_orange">19076</span>元</p>
+						</div>
+						<p class="t2">
+							<span class="first">甲级写字楼</span><span class="line">|</span>
+							<span>中层/7层</span><span class="line">|</span>
+							<span>2012年建造</span>
+						</p>
+						<p class="t3">[白云万达广场] 广州市白云区云城东路501号</p>
+						<div class="t4 clearfix">
+							<div class="lfloat">
+								<span class="b_orange f_orange metro">距离2号线东晓南站约123米</span>
+							</div>
+							<div class="rfloat">
+								<p>周叉叉&nbsp;&nbsp;一周前更新</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="house_list_b">
+				<div class="pages">		
+                    <span class="page_body">
+                        <a class="page_cur_page" href="javascript:void(0);"><b>1</b></a>
+                        <a href="/house/all/2">2</a>
+                        <a href="/house/all/3">3</a>
+                    </span>
+                    <span class="page_bar_subfix">
+                        <a href="/house/all/2">下页</a>
+                        <a href="/house/all/4">尾页</a>
+                    </span>
+                    <span class="page_cur"> 第1/4页</span><script>function ekup(){if(event.keyCode==13){clkyup();}}function clkyup(){var num=document.getElementById('gsd09fhas9d343951').value;if(!/^\d+$/.test(num)||num<=0||num>4){alert('请输入正确页码!');return;};location='/house/all/{page}'.replace(/\{page\}/,document.getElementById('gsd09fhas9d343951').value);}</script>
+                    <span class="page_input_num" style="/*line-height: 30px;height: 30px;display: inline-block;vertical-align: middle;*/">
+                        <input class="f-input" onkeyup="ekup()" type="text" id="gsd09fhas9d343951">
+                    </span>
+                    <span class="page_btn_go" onclick="clkyup();" style="cursor:pointer;">转到</span>
+                </div>
+			</div>
+		</div>
+
+		<div class="house_aside rfloat">
+			<div class="info6 mb12 bg_white">
+				<div class="module_t3">
+					<h2>广州写字楼推荐</h2>
+				</div>
+				<div class="module_m3">
+					<div class="pt">
+						<a href="#" class="pt_pic"><img class="lazy" data-original="images/pic8.jpg" alt="" /></a>
+						<div class="pt_txt">
+							<h3><a href="#">锦城大厦</a></h3>
+							<p class="clearfix">
+								<span class="lfloat">109平米&nbsp;&nbsp;中层/7层</span>
+								<span class="rfloat f_orange">15246元/月</span>
+							</p>
+						</div>
+					</div>
+					<div class="pt">
+						<a href="#" class="pt_pic"><img class="lazy" data-original="images/pic8.jpg" alt="" /></a>
+						<div class="pt_txt">
+							<h3><a href="#">锦城大厦</a></h3>
+							<p class="clearfix">
+								<span class="lfloat">109平米&nbsp;&nbsp;中层/7层</span>
+								<span class="rfloat f_orange">15246元/月</span>
+							</p>
+						</div>
+					</div>
+					<div class="pt noborder">
+						<a href="#" class="pt_pic"><img class="lazy" data-original="images/pic8.jpg" alt="" /></a>
+						<div class="pt_txt">
+							<h3><a href="#">锦城大厦</a></h3>
+							<p class="clearfix">
+								<span class="lfloat">109平米&nbsp;&nbsp;中层/7层</span>
+								<span class="rfloat f_orange">15246元/月</span>
+							</p>
+						</div>
+					</div>
+                    <div class="pt">
+						<a href="#" class="pt_pic"><img class="lazy" data-original="images/pic8.jpg" alt="" /></a>
+						<div class="pt_txt">
+							<h3><a href="#">锦城大厦</a></h3>
+							<p class="clearfix">
+								<span class="lfloat">109平米&nbsp;&nbsp;中层/7层</span>
+								<span class="rfloat f_orange">15246元/月</span>
+							</p>
+						</div>
+					</div>
+					<div class="pt">
+						<a href="#" class="pt_pic"><img class="lazy" data-original="images/pic8.jpg" alt="" /></a>
+						<div class="pt_txt">
+							<h3><a href="#">锦城大厦</a></h3>
+							<p class="clearfix">
+								<span class="lfloat">109平米&nbsp;&nbsp;中层/7层</span>
+								<span class="rfloat f_orange">15246元/月</span>
+							</p>
+						</div>
+					</div>
+					<div class="pt noborder">
+						<a href="#" class="pt_pic"><img class="lazy" data-original="images/pic8.jpg" alt="" /></a>
+						<div class="pt_txt">
+							<h3><a href="#">锦城大厦</a></h3>
+							<p class="clearfix">
+								<span class="lfloat">109平米&nbsp;&nbsp;中层/7层</span>
+								<span class="rfloat f_orange">15246元/月</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+<!--页中end-->
+
+<!--页脚star-->
+<footer class="footer">
+	<div class="m tc">
+		<div class="foot_nav">
+			<a href="#">关于买房吧</a>
+			<a href="#">联系我们</a>
+			<a href="#">用户协议</a>
+			<a href="#">友情链接</a>
+			<a href="#">房产百科</a>
+			<a href="#">房产问答</a>
+		</div>
+		<p>广州安信互联网金融服务有限公司</p>
+		<p class="copyright">Copyright&nbsp;©&nbsp;2016&nbsp;www.myfang8.com.&nbsp;All Rights Reserved&nbsp;ICP备案号：粤ICP备12345678号</p>
+	</div>
+</footer>
+<!--页脚end-->
+
+<script src="js/public.js"></script>
+<script src="js/json2.js"></script>
+<script src="js/jquery.counter.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<script src="js/ghost.min.js"></script>
+<script src="js/echarts.js"></script>
+<script src="js/layer/layer.js"></script>
+<script src="js/wen_play.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

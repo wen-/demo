@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+<title>door</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.2.min.css" />
+<link rel="stylesheet" type="text/css" href="css/animateGame.css" />
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+
+<div id="door1" class="door1" data-role="page"  data-dom-cache="false">
+    <div role="main" class="">
+        <div class="door_m style_a">
+            <div class="doorM_t style_a">
+                <div class="doorMT_ico"></div>
+            </div>
+            <div class="doorM_m">
+                <div class="doorMM_lineBox">
+                    <div class="doorMM_line"></div>
+                </div>
+                <div class="doorMMDoor_box">
+                    <div class="doorMM_doorBox">
+                        <div class="doorMM_door tDuration touchDoor">
+                            <div class="doorMMDoor_1">
+                                <div class="doorMMDoor_2"></div>
+                            </div>
+                        </div>
+                        <div class="doorMM_in">
+                            <a href="#door2" data-transition="flip"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="doorM_b style_a">
+                <div class="doorMB_ico">
+                    <div class="doorMB_line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="door2" data-role="page">
+    <div role="main" class="">
+        <div class="door_m style_b">
+            <div class="doorM_t style_b">
+                <div class="doorMT_ico"></div>
+            </div>
+            <div class="doorM_m">
+                <div class="doorMM_lineBox">
+                    <div class="doorMM_line"></div>
+                </div>
+                <div class="doorMMDoor_box">
+                    <div class="doorMM_doorBox">
+                        <div class="doorMM_door doorMM_doorL tDuration touchDoor_l">
+                            <div class="doorMMDoor_1">
+                                <div class="doorMMDoor_2"></div>
+                            </div>
+                        </div>
+                        <div class="doorMM_door doorMM_doorR tDuration touchDoor_r">
+                            <div class="doorMMDoor_1">
+                                <div class="doorMMDoor_2"></div>
+                            </div>
+                        </div>
+                        <div class="doorMM_in">
+                            <a href="#door3" data-transition="flip"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="doorM_b style_b">
+                <div class="doorMB_ico">
+                    <div class="doorMB_line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="door3" data-role="page">
+    <div role="main" class="">
+        <div class="door_m style_b">
+            <div class="doorM_t style_b">
+                <div class="doorMT_ico"></div>
+            </div>
+            <div class="doorM_m">
+                <div class="doorMM_lineBox">
+                    <div class="doorMM_line"></div>
+                </div>
+                <div class="doorMMDoor_box">
+                    <div class="doorMM_doorBox">
+                        <div class="doorMM_door tDuration">
+                            <div class="doorMMDoor_1">
+                                <div class="doorMMDoor_2"></div>
+                            </div>
+                        </div>
+                        <div class="doorMM_in">
+                            <a href="#door4" data-transition="flip"></a>
+                        </div>
+                        <!--刷卡器-->
+                        <div id="cardBoxDoor3" class="card_box clearfix" data-door="card_for3">
+                            <div class="cardBox_led">
+                                <div class="cardBox_redLed"></div>
+                                <div class="cardBox_greenLed"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="doorM_b">
+                <div class="doorMB_ico">
+                    <div class="doorMB_line"></div>
+                </div>
+            </div>
+            <!--地毯-->
+            <div class="tool_for3">
+                <div class="rug rug_for3"></div>
+                <div class="card_for3" data-door="card_for3"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div id="door4" data-role="page">
+    <div role="main" class="">
+        <div class="door_m style_c">
+            <div class="doorM_t style_c">
+                <div class="doorMT_ico"></div>
+            </div>
+            <div class="doorM_m">
+                <div class="doorMM_lineBox">
+                    <!--方向提示-->
+                    <div class="openOrder">
+                        <span class="left ui-btn ui-corner-all ui-icon-arrow-l ui-btn-icon-notext">0</span>
+                        <span class="left ui-btn ui-corner-all ui-icon-arrow-l ui-btn-icon-notext">0</span>
+                        <span class="right ui-btn ui-corner-all ui-icon-arrow-r ui-btn-icon-notext">1</span>
+                        <span class="right ui-btn ui-corner-all ui-icon-arrow-r ui-btn-icon-notext">1</span>
+                        <span class="left ui-btn ui-corner-all ui-icon-arrow-l ui-btn-icon-notext">0</span>
+                        <span class="right ui-btn ui-corner-all ui-icon-arrow-r ui-btn-icon-notext">1</span>
+                        <span class="right ui-btn ui-corner-all ui-icon-arrow-r ui-btn-icon-notext">1</span>
+                        <span class="left ui-btn ui-corner-all ui-icon-arrow-l ui-btn-icon-notext">0</span>
+                    </div>
+                    <div class="doorMM_line"></div>
+                </div>
+                <div class="doorMMDoor_box">
+                    <div class="doorMM_doorBox">
+                        <div class="doorMM_door doorMM_doorL touchFollow_l">
+                            <div class="doorMMDoor_1">
+                                <div class="doorMMDoor_2 style_b"></div>
+                            </div>
+                        </div>
+                        <div class="doorMM_door doorMM_doorR touchFollow_r">
+                            <div class="doorMMDoor_1">
+                                <div class="doorMMDoor_2 style_b"></div>
+                            </div>
+                        </div>
+                        <div class="doorMM_in">
+                            <a href="#door5" data-transition="flip" style="display: none;"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="doorM_b style_b">
+                <div class="doorMB_ico">
+                    <div class="doorMB_line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="door5" data-role="page">
+    <div role="main" class="">
+        <div class="door_m style_d">
+            <div class="doorM_t style_d">
+                <div class="doorMT_ico"></div>
+            </div>
+            <div class="doorM_m">
+                <div class="doorMM_lineBox">
+                    <div class="doorMM_line"></div>
+                </div>
+                <div class="doorMMDoor_box">
+                    <div class="doorMM_doorBox">
+                        <div class="doorMM_door touchFollow_t">
+                            <div class="doorMMDoor_1">
+                                <div class="doorMMDoor_2 style_b style_c"></div>
+                            </div>
+                        </div>
+                        <div class="doorMM_in">
+                            <a href="#door6" data-transition="flip"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="doorM_b style_c">
+                <div class="doorMB_ico">
+                    <div class="doorMB_line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="door6" data-role="page">
+    <div role="main" class="">
+        <div class="door_m style_e">
+            <div class="doorM_t style_b">
+                <div class="doorMT_ico"></div>
+            </div>
+            <div class="doorM_m">
+                <div class="doorMM_lineBox">
+                    <div class="doorMM_board">
+                        <div class="doorMMBoard_txt">知足长乐</div>
+                    </div>
+                    <div class="doorMM_line"></div>
+                </div>
+                <div class="doorMMDoor_box">
+                    <div class="doorMM_doorBox">
+                        <div class="doorMM_door doorMM_doorL color_brown touchFollow_l magnetism">
+                            <div class="doorMMDoor_1">
+                                <div class="doorMMDoor_2 style_d"></div>
+                            </div>
+                        </div>
+                        <div class="doorMM_door doorMM_doorR color_brown touchFollow_r magnetism">
+                            <div class="doorMMDoor_1">
+                                <div class="doorMMDoor_2 style_d"></div>
+                            </div>
+                        </div>
+                        <div class="doorMM_in">
+                            <a href="#door7" data-transition="flip" style="display: none;"></a>
+                        </div>
+                    </div>
+                    <div class="ledBtn" id="ledBtn"></div>
+                </div>
+            </div>
+            <div class="doorM_b style_b">
+                <div class="doorMB_ico color_green">
+                    <div class="doorMB_line color_green"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="door7" data-role="page">
+    <div role="main" class="">
+        <div class="door_m style_f">
+            <div class="doorM_t style_c">
+                <div class="doorMT_ico"></div>
+            </div>
+            <div class="doorM_m">
+                <div class="doorMM_lineBox">
+                    <div class="clock_box">
+                        <div class="clock_small">
+                            <img id="clockSmall" src="img/clock_small.png" width="52" height="52" alt="" />
+                        </div>
+                        <div class="clock_big" id="clockBig">
+                            <img class="clockHand_hour" src="img/clock_hand.png" />
+                            <img class="clockHand_minute" src="img/clock_hand1.png" />
+                            <img class="clockHand_center" src="img/clock_center.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="doorMM_line"></div>
+                </div>
+                <div class="doorMMDoor_box">
+                    <div class="doorMM_doorBox">
+                        <div class="doorMM_door">
+                            <div class="doorMMDoor_1">
+                                <div class="doorMMDoor_2 style_b style_e"></div>
+                            </div>
+                        </div>
+                        <div class="doorMM_in">
+                            <a href="#door8" data-transition="flip"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="doorM_b style_b">
+                <div class="doorMB_ico color_orange">
+                    <div class="doorMB_line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div id="door8" data-role="page">
+    <div role="main" class="">
+        <div class="door_m style_e">
+            <div class="doorM_t style_b">
+                <div class="doorMT_ico"></div>
+            </div>
+            <div class="doorM_m">
+                <div class="doorMM_lineBox">
+                    <div class="doorMM_line"></div>
+                </div>
+                <div class="doorMMDoor_box">
+                    <div class="doorMM_doorBox">
+                        <div class="doorMM_door doorMM_doorL color_brown">
+                            <div class="doorMMDoor_1">
+                                <div class="doorMMDoor_2 style_d"></div>
+                            </div>
+                        </div>
+                        <div class="doorMM_in">
+                            <a href="#door9" data-transition="flip"></a>
+                        </div>
+                        <div class="fingerprint" id="fingerprint"><img src="img/fingerprint.png" width="40" alt="" /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="doorM_b style_b">
+                <div class="doorMB_ico color_green">
+                    <div class="doorMB_line color_green"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="door9" data-role="page">
+    <div role="main" class="">
+        <div class="door_m style_g">
+            <div class="doorM_t style_b">
+                <div class="doorMT_ico"></div>
+            </div>
+            <div class="doorM_m">
+                <div class="doorMM_lineBox">
+                    <div class="doorMM_board">
+                        <div class="doorMMBoard_txt">知 &iquest; &#63; 乐</div>
+                    </div>
+                    <div class="doorMM_line"></div>
+                </div>
+                <div class="doorMMDoor_box">
+                    <div class="doorMM_doorBox">
+                        <div class="doorMM_door doorMM_doorL color_brown1">
+                            <div class="doorMMDoor_1">
+                                <div class="doorMMDoor_2 style_d"></div>
+                            </div>
+                        </div>
+                        <div class="doorMM_in">
+                            <a href="#door10" data-transition="flip"></a>
+                        </div>
+                        <!--刷卡器-->
+                        <div id="cardBoxDoor9" class="card_box clearfix">
+                            <div class="cardBox_led">
+                                <div class="cardBox_redLed"></div>
+                                <div class="cardBox_greenLed"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="doorM_b style_c">
+                <div class="doorMB_ico">
+                    <div class="doorMB_line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="door10" data-role="page">
+    <div role="main" class="">
+        <div class="door_m">
+            <div class="doorM_t">
+                <div class="doorMT_ico"></div>
+            </div>
+            <div class="doorM_m">
+                <div class="doorMM_lineBox">
+                    <div class="doorMM_board">
+                        <div class="doorMMBoard_txt">
+                            <div class="doorMMBoard_num"><div class="doorMMBoard_num1">&nbsp;</div></div>
+                        </div>
+                    </div>
+                    <div class="doorMM_line"></div>
+                </div>
+                <div class="doorMMDoor_box">
+                    <div class="doorMM_doorBox">
+                        <div class="doorMM_door">
+                            <div class="doorMMDoor_1">
+                                <div class="doorMMDoor_2 style_b style_f"></div>
+                            </div>
+                        </div>
+                        <div class="doorMM_in">
+                            <a href="game1.html" data-ajax="false" data-dom-cache="false"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="doorM_b style_b">
+                <div class="doorMB_ico">
+                    <div class="doorMB_line"></div>
+                </div>
+            </div>
+            <!--地毯-->
+            <div class="rug_box">
+                <div class="rug_listBox">
+                    <div class="rug_list rug_list1">
+                        <div class="rug"></div>
+                        <div class="rug"></div>
+                        <div class="rug"></div>
+                    </div>
+                    <div class="rug_list rug_list2">
+                        <div class="rug"></div>
+                        <div class="rug"></div>
+                        <div class="rug"></div>
+                        <div class="rug"></div>
+                    </div>
+                    <div class="rug_list rug_list3">
+                        <div class="rug"></div>
+                        <div class="rug"></div>
+                        <div class="rug"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--标头-->
+<div class="game_t ui-alt-icon">
+    <a href="javascript:location.reload();" id="refreshGame" class="refreshGame ui-btn ui-shadow ui-corner-all ui-icon-refresh ui-btn-icon-notext">刷新</a>
+    <h1 class="game_title">room 1</h1>
+    <a href="index.html" data-ajax="false" id="backGame" class="backGame ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext">返回</a>
+</div>
+<!--道具栏-->
+<div class="toolBox">
+    <ul class="clearfix">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<!--<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>-->
+<script type="text/javascript" charset="utf-8" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.2.min.js"></script>
+<!--<script type="text/javascript" charset="utf-8" src="js/jquery-wen_plug_appupdate.js"></script>-->
+<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#door1").css({"opacity":0}).animate({"opacity":1},1000);
+    })
+</script>
+</body>
+</html>

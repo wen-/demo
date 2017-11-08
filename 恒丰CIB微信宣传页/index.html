@@ -1,0 +1,1026 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="author" content="yellowwen@126.com" />
+<meta content="telephone=no" name="format-detection" />
+<meta name='viewport' content='width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no'>
+<title>恒丰银行</title>
+<link rel="stylesheet" type="text/css" href="css/reset.min.css" />
+<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.page.min.css" />
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.page.min.js"></script>
+<style type="text/css">
+.loading_txt{
+	position: absolute;
+    z-index: 10000;
+    left: 50%;
+    top: 50%;
+	color:#fff;
+    margin: -10px 0 0 -10px;
+}
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:9999;
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+	/* COLOR 1 */
+    border-top-color: yellow;
+    -webkit-animation: spin 2s linear infinite; 
+	-ms-animation: spin 2s linear infinite; 
+	-moz-animation: spin 2s linear infinite;
+	-o-animation: spin 2s linear infinite;	
+	animation: spin 2s linear infinite;
+    z-index:1001;
+}
+#loader:before {
+	content: "";
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	/* COLOR 2 */		
+	border-top-color: green;
+	-webkit-animation: spin 3s linear infinite; 
+	-moz-animation: spin 3s linear infinite;
+	-o-animation: spin 3s linear infinite;
+	-ms-animation: spin 3s linear infinite;			
+	animation: spin 3s linear infinite;
+}
+#loader:after {
+	content: "";
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	right: 15px;
+	bottom: 15px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-top-color: #00F;
+	/* COLOR 3 */		
+	-moz-animation: spin 1.5s linear infinite; 
+	-o-animation: spin 1.5s linear infinite;
+	-ms-animation: spin 1.5s linear infinite;	
+	-webkit-animation: spin 1.5s linear infinite;
+	animation: spin 1.5s linear infinite;
+}
+
+
+@-webkit-keyframes spin {
+	0%{ 
+		-webkit-transform: rotate(0deg);  
+		-ms-transform: rotate(0deg); 
+		transform: rotate(0deg); 
+	}100%{
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg); 
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	0%{ 
+		-webkit-transform: rotate(0deg);  
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);  
+	}100%{
+		-webkit-transform: rotate(360deg); 
+		-ms-transform: rotate(360deg); 
+		transform: rotate(360deg); 
+	}
+}
+
+
+#loader-wrapper .loader-section {
+	position: fixed;
+	top: 0;
+	width: 51%;
+	height: 100%;
+	background: #000; 
+	z-index: 1000;
+	-webkit-transform: translateX(0); 
+	-ms-transform: translateX(0);
+	transform: translateX(0); 
+}
+#loader-wrapper .loader-section.section-left {
+	left: 0;
+}
+#loader-wrapper .loader-section.section-right {
+	right: 0;
+}
+
+/* Loaded */
+.loaded #loader-wrapper .loader-section.section-left {
+	height:100%;
+	-webkit-transform: translateX(-100%);  
+	-ms-transform: translateX(-100%); 
+	transform: translateX(-100%);
+	-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+	transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+.loaded #loader-wrapper .loader-section.section-right {
+	height:100%;	
+	-webkit-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	transform: translateX(100%);
+	-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+	transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+.loaded #loader {
+	opacity: 0;
+	-webkit-transition: all 0.3s ease-out;  
+	transition: all 0.3s ease-out;
+}
+.loaded #loader-wrapper {
+	visibility: hidden;
+	-webkit-transform: translateY(-100%); 
+	-ms-transform: translateY(-100%);
+	transform: translateY(-100%);
+	-webkit-transition: all 0.3s 1s ease-out;  
+	transition: all 0.3s 1s ease-out;
+}
+#loader-wrapper .load_title {
+	font-family:'Open Sans';
+	color:#fff; 
+	font-size:19px; 
+	width:100%; 
+	text-align:center; 
+	z-index:99999; 
+	position:absolute; 
+	top:60%; 
+	opacity:1; 
+	line-height:30px; 
+}
+#loader-wrapper .load_title span {	
+	font-weight:normal; 
+	font-style:italic; 
+	font-size:13px; 
+	color:#fff; 
+	opacity:0.5;
+}
+
+
+body{
+	/*max-width:828px;*/
+	margin:0 auto !important;
+	font-family:'Microsoft YaHei';
+}
+.section{
+	background:url(images/bg.jpg) no-repeat;
+	-webkit-background-size:100% 100%;
+	-moz-background-size:100% 100%;
+	background-size:100% 100%;
+}
+.section h1{
+	font-size:1.1em;
+	padding:2em 0;
+	text-align:center;
+	text-shadow:2px 2px 1px #000;
+	display:none;
+}
+.section p{
+    padding: 0 1.5em;
+    line-height: 1.5em;
+    text-indent: 2em;
+    text-align: justify;
+	font-size:.75em;
+	display:none;
+}
+.triangle1{
+    top: 2em;
+    width: 14em;
+    height: 14em;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+	background:url(images/triangle1.png) no-repeat;
+	-webkit-animation-duration: 1s;
+    animation-duration: 1s;
+	display:none;
+}
+.triangle2{
+    top: 3em;
+    width: 14em;
+    height: 14em;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+	background:url(images/triangle2.png) no-repeat;
+	display:none;
+}
+.triangle2 img{
+    position: absolute;
+    width: 9em;
+    margin: 2.6em auto 0;
+    display: none;
+    left: 0;
+    right: 0;
+	-webkit-animation-delay:1s;
+	animation-delay:1s;
+	display:none;
+}
+.section1 p{
+	line-height:1.5em;
+	text-align: center;
+	padding:0;
+	text-indent:0;
+}
+.section1_t1{
+	color: #fff;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+	-webkit-animation-delay:2s;
+	animation-delay:2s;
+	text-shadow:1px 1px 1px #000;
+	display:none;
+}
+.section1_t2{
+	position:absolute;
+	width:100%;
+	text-align:center;
+	bottom:2em;
+	-webkit-animation-delay:2.5s;
+	animation-delay:2.5s;
+	display:none;
+}
+.section1_t2 p{
+	display:block;
+	text-shadow:1px 1px 1px #fff;
+}
+.section1_t2 .section1_t2_1{
+	color:#fff;
+	text-shadow:1px 1px 1px #000;
+}
+
+.section2,.section3,.section4,.section5,.section6,.section7,.section8,.section9{
+	color:#fff;
+}
+
+.section2 p{
+	text-shadow:1px 1px 1px #000;
+}
+
+.section3 h2{
+    margin: 0 1em .5em;
+    padding: 0 0 .5em 1em;
+    border-bottom: solid 1px rgba(255,255,255,.5);
+    font-weight: normal;
+	text-shadow:1px 1px 1px #000;
+	display:none;
+}
+.section3 p{
+	font-size:.85em;
+	text-shadow:1px 1px 1px #000;
+}
+
+.section_img{
+	text-align:center;
+	padding:1px;
+}
+.section2_pic1,.section3_pic1,.section4_pic1 {
+    display: block;
+    max-width: 85%;
+    margin: 1em auto;
+	display:none;
+}
+.section3_pic1{
+    max-width: 80%;
+}
+.section4_pic1 {
+	margin-top:0;
+}
+.section4 p{
+	text-shadow:1px 1px 1px #000;
+}
+.pane1{
+    width: 17em;
+    height: 20em;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 6em;
+    background: url(images/pane1.png) no-repeat;
+	display:none;
+}
+.pane2{
+	width: 16em;
+    height: 19em;
+    left: 50%;
+    margin-left: -7.5em;
+    top: 7em;
+	background:url(images/pane2.png) no-repeat;
+	display:none;
+}
+.pane3{
+	width: 15em;
+    height: 20em;
+    top: 7.5em;
+    left: 50%;
+    margin-left: -8em;
+	background:url(images/pane3.png) no-repeat;
+	display:none;
+}
+.pane3 ul{
+	padding-top:.5em;
+}
+.pane3 li{
+	padding: .5em 1em;
+    background: url(images/line_bg.png) right bottom no-repeat;
+	-webkit-background-size:92% auto;
+	-moz-background-size:92% auto;
+	background-size: 92% auto;
+	display:none;
+}
+.pane3 li .list_bg{
+	text-align:center;
+	margin-left:1em;
+	background:url(images/list_bg.png) no-repeat left center;
+	-webkit-background-size:8px;
+	-moz-background-size:8px;
+	background-size:8px;
+}
+
+.section5 li{
+	-webkit-animation-delay:1s;
+	animation-delay:1s;
+	text-shadow:1px 1px 1px #000;
+}
+
+.section6 h1{
+	padding-bottom:1em;
+}
+.section6 p{
+	text-indent:0;
+}
+.section6 .slide_box{
+    width: 18em;
+    height: 15.4em;
+    margin: 0 auto;
+    position: relative;
+    background: url(images/pc.png) no-repeat;
+    background-size: 100% auto;
+}
+.section6 .slide_m{
+    width: 16.6em;
+    height: 9.8em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0.7em;
+    margin: 0 auto;
+}
+.section6 .slide_m img{
+	width:100%;
+	height:100%;
+}
+.section6 .fp-slidesNav.bottom{
+	top:14em;
+}
+.section6 .section6_txt1{
+    position: absolute;
+    bottom: 11em;
+    text-indent: 0;
+	text-shadow:1px 1px 1px #000;
+	z-index:1000;
+	display:none;
+}
+.section6 .section6_txt2{
+    text-align: center;
+    color: #000;
+    position: absolute;
+    width: 100%;
+    bottom: 4em;
+	text-shadow:1px 1px 1px #fff;
+	display:none;
+}
+
+.section7 li{
+    width: 40%;
+    margin: 1em 0 1em 10%;
+    float: left;
+	text-shadow:1px 1px 1px #000;
+	display:none;
+}
+.section7 .list1,.section7 .list2{
+	-webkit-animation-delay:.5s;
+	animation-delay:.5s;
+}
+.section7 .list3,.section7 .list4{
+	-webkit-animation-delay:1s;
+	animation-delay:1s;
+}
+.section7 .list5,.section7 .list6{
+	-webkit-animation-delay:1.5s;
+	animation-delay:1.5s;
+}
+.section7 .list7,.section7 .list8{
+	-webkit-animation-delay:2s;
+	animation-delay:2s;
+}
+.section7 .list9,.section7 .list10{
+	-webkit-animation-delay:2.5s;
+	animation-delay:2.5s;
+}
+.section7 .list11,.section7 .list12{
+	-webkit-animation-delay:3s;
+	animation-delay:3s;
+}
+.section7 li img{
+    width: 1em;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: .5em;
+}
+
+.section8 p{
+	padding-top:4em;
+	text-shadow:1px 1px 1px #000;
+}
+.section8 img{
+    max-width: 15em;
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: -2em auto;
+    top: 50%;
+	display:none;
+}
+.section8_pic8{
+	-webkit-transform: rotate(28deg);
+	-moz-transform: rotate(28deg);
+	transform: rotate(28deg);
+	-webkit-animation-delay:1s;
+	animation-delay:1s;
+}
+.section8_pic7{
+	-webkit-transform: rotate(20deg);
+	-moz-transform: rotate(20deg);
+	transform: rotate(20deg);
+	-webkit-animation-delay:3s;
+	animation-delay:3s;
+}
+.section8_pic6{
+	-webkit-transform: rotate(12deg);
+	-moz-transform: rotate(12deg);
+	transform: rotate(12deg);
+	-webkit-animation-delay:5s;
+	animation-delay:5s;
+}
+.section8_pic5{
+	-webkit-transform: rotate(4deg);
+	-moz-transform: rotate(4deg);
+	transform: rotate(4deg);
+	-webkit-animation-delay:7s;
+	animation-delay:7s;
+}
+.section8_pic4{
+	-webkit-transform: rotate(-4deg);
+	-moz-transform: rotate(-4deg);
+	transform: rotate(-4deg);
+	-webkit-animation-delay:9s;
+	animation-delay:9s;
+}
+.section8_pic3{
+	-webkit-transform: rotate(-12deg);
+	-moz-transform: rotate(-12deg);
+	transform: rotate(-12deg);
+	-webkit-animation-delay:11s;
+	animation-delay:11s;
+}
+.section8_pic2{
+	-webkit-transform: rotate(-20deg);
+	-moz-transform: rotate(-20deg);
+	transform: rotate(-20deg);
+	-webkit-animation-delay:13s;
+	animation-delay:13s;
+}
+.section8_pic1{
+	-webkit-transform: rotate(-28deg) !important;
+	-moz-transform: rotate(-28deg) !important;
+	transform: rotate(-28deg) !important;
+	-webkit-animation-delay:15s;
+	animation-delay:15s;
+}
+
+.section9 .ball{
+	width: 19em;
+    height: 19em;
+	text-align:center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: -13em auto 0;
+    top: 50%;
+	background:url(images/ball.png) no-repeat;
+	-webkit-background-size:100% 100%;
+	-moz-background-size:100% 100%;
+	background-size:100% 100%;
+	-webkit-animation-duration: 1s;
+    animation-duration: 1s;
+	display:none;
+}
+.section9 .ball h1{
+	font-size: 1.8em;
+    padding: 1.5em 0 .5em;
+	-webkit-animation-delay:1.5s;
+	animation-delay:1.5s;
+	display:none;
+}
+.section9 .ball h2{
+    line-height:1.5em;
+	margin-bottom:.5em;
+	-webkit-animation-delay:1.5s;
+	animation-delay:1.5s;
+	text-shadow:1px 1px 1px #000;
+	display:none;
+}
+.section9 .ball p{
+	margin-bottom: 1em;
+    padding: 0 .5em;
+	-webkit-animation-delay:1.5s;
+	animation-delay:1.5s;
+	text-shadow:1px 1px 1px #000;
+	display:none;
+}
+.section9 .ball .one{
+	font-size: 1.2em;
+    line-height: normal;
+    text-align: center;
+    padding: 0;
+    text-indent: 0;
+}
+
+
+
+.next_ico{
+	text-align: center;
+	position: fixed;
+	bottom:0;
+	width:100%;
+	z-index: 10;
+}
+.next_ico span{
+	display: inline-block;
+	padding:.5em 3em;
+	color:#fff;
+	opacity:.5;
+	text-shadow: 0 2px 3px #000;
+	-moz-animation: nextzoom 2s linear infinite; 
+    -o-animation: nextzoom 2s linear infinite; 
+    -ms-animation: nextzoom 2s linear infinite; 
+    -webkit-animation: nextzoom 2s linear infinite; 
+    animation: nextzoom 2s linear infinite; 
+}
+
+.triangle1,.triangle2,.pane1,.pane2,.pane3{
+	-webkit-background-size:100% auto;
+	-moz-background-size:100% auto;
+	background-size:100% auto;
+}
+.nobg{
+	background:none !important;
+}
+@-webkit-keyframes nextzoom {
+	0%,100%{ 
+		-webkit-transform: scale(1);  
+		-ms-transform: scale(1); 
+		transform: scale(1); 
+	}50%{
+		-webkit-transform: scale(2);  
+		-ms-transform: scale(2); 
+		transform: scale(2); 
+	}
+}
+
+@keyframes nextzoom {
+	0%,100%{ 
+		-webkit-transform: scale(1);  
+		-ms-transform: scale(1); 
+		transform: scale(1); 
+	}50%{
+		-webkit-transform: scale(2);  
+		-ms-transform: scale(2); 
+		transform: scale(2); 
+	}
+}
+.music_ico{
+    position: fixed;
+    right: 1em;
+    top: 1em;
+    background: url(images/music.png) no-repeat;
+    width: 2em;
+    height: 2em;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    background-size: 100% auto;
+    z-index: 1;
+	
+	-moz-animation: spin 3s linear infinite; 
+	-o-animation: spin 3s linear infinite;
+	-ms-animation: spin 3s linear infinite;	
+	-webkit-animation: spin 3s linear infinite;
+	animation: spin 3s linear infinite;
+}
+.music_stop{
+	animation-play-state:paused;
+}
+</style>
+</head>
+<body>
+
+<div id="loader-wrapper">
+	<div class="loading_txt">1%</div>
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+
+<div class="music_ico"></div>
+<audio src="mp3/hf_music.mp3" id="bgMusic" autoplay="autoplay" loop preload="auto"></audio>
+
+<div class="next_ico"><span>∨</span></div>
+<div id="fullpage">
+	<div class="section section1">
+    	<div class="triangle1 pa"></div>
+    	<div class="triangle2 pa">
+        	<img src="images/logo.png" alt="" />
+        </div>
+        <p class="section1_t1">恒丰银行CIB信息交互平台(门户网站)于<br/>2016年7月23日顺利上线！</p>
+        <div class="section1_t2">
+            <p class="section1_t2_1">CIB信息交互平台亮点</p>
+            <p>“1112•5556”治行理念“12345”行动纲领的践行者</p>
+            <p>第一个正式上线的内网门户</p>
+            <p>规划整合互动创新</p>
+            <p>科技业务高效协同</p>
+            <p>使用范围辐射最广</p>
+            <p>总分联动破冰之旅</p>
+        </div>
+    </div>
+	<div class="section section2">
+    	<h1>— CIB信息交互平台的战略意义 —</h1>
+        <p>作为承接和统筹全行大公司和投行业务的责任主体，CIB(公司与投资银行业务)板块将全力迎接中国经济新常态带来的新机遇与新挑战，紧密结合“十三五规划”产业新体系，切实贯彻董事长“1112•5556”战略和“12345”行动纲领，积极打造金融创新模式。在进一步规范中后台流程化的有序建设，提升我行整体的执行力、协同力的战略背景下，CIB信息交互平台应运而生。</p>
+        <div class="section_img"><img class="section2_pic1" src="images/show0.png" alt="" /></div>
+    </div>
+	<div class="section section3">
+		<h1>— CIB信息交互平台发展愿景 —</h1>
+        <!--<h2>CIB交互平台重要性</h2>-->
+        <p>CIB信息交互平台将以更直观的方式展示整个CIB版块的金融产品和金融服务，有效的整合我行的各类资源配置，增强与分行的互通互动，逐步实现CIB板块“基于客户价值链，打造以龙头金融和平台金融为增长双引擎，以交易银行和投资银行两大创新产品服务体系为两翼，最具特色的轻资产综合金融提供商”的发展愿景。</p>
+        <div class="section_img"><img class="section3_pic1" src="images/show1.png" alt="" /></div>
+	</div>
+	<div class="section section4">
+		<h1>—CIB信息交互平台的理念和目标—</h1>
+        <div class="section_img"><img class="section4_pic1" src="images/show2.jpg" alt="" /></div>
+        <p>CIB信息交互平台(门户网站)将以良好的“规划与整合、互动与创新”做出行内亮点，提升CIB版块对全行业务的贡献度，使之成为CIB版块的形象窗口、服务抓手以及沟通交流的平台，最终建成一个服务型、营销型、综合型的门户网站。</p>
+	</div>
+	<div class="section section5">
+		<h1>— 打造服务型、营销型、综合型 —<br/>的门户网站</h1>
+        <div class="pane1 pa"></div>
+        <div class="pane2 pa"></div>
+        <div class="pane3 pa">
+        	<ul>
+            	<li><div class="list_bg">交互平台</div></li>
+                <li><div class="list_bg">内部通讯</div></li>
+                <li><div class="list_bg">业务展示</div></li>
+                <li><div class="list_bg">产品营销</div></li>
+                <li><div class="list_bg">创新推广</div></li>
+                <li><div class="list_bg">专家互动</div></li>
+                <li class="nobg"><div class="list_bg">总分联动</div></li>
+            </ul>
+        </div>
+    </div>
+	<div class="section section6">
+		<h1>—— CIB信息交互平台展示 ——</h1>
+        <div class="slide_box">
+        	<div class="slide_m">
+                <div class="slide">
+                    <img src="images/slide1.jpg" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/slide2.jpg" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/slide3.jpg" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/slide4.jpg" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/slide5.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+    	<p class="section6_txt1">为切实贯彻落实董事长“1112•5556”战略和“12345”行动纲领，在战略执行年有效推动改革落地，完成各项任务指标。CIB交互平台将承载着整个板块的资源共享以及交流互动的职责。</p>
+        <div class="section6_txt2">合规、创新、联动<br/>及时、高效、便捷</div>
+    </div>
+	<div class="section section7">
+		<h1>—— CIB信息交互平台内容 ——</h1>
+        <ul class="clearfix">
+        	<li class="list1"><img src="images/ico1.png" alt="" />定价要点</li>
+        	<li class="list2"><img src="images/ico2.png" alt="" />产品工作室</li>
+        	<li class="list3"><img src="images/ico3.png" alt="" />专家在线问答</li>
+        	<li class="list4"><img src="images/ico4.png" alt="" />学习园地</li>
+        	<li class="list5"><img src="images/ico5.png" alt="" />便捷服务</li>
+        	<li class="list6"><img src="images/ico6.png" alt="" />CIB通讯录</li>
+        	<li class="list7"><img src="images/ico7.png" alt="" />规划发展</li>
+        	<li class="list8"><img src="images/ico8.png" alt="" />信息发布</li>
+        	<li class="list9"><img src="images/ico9.png" alt="" />产品研发</li>
+        	<li class="list10"><img src="images/ico10.png" alt="" />创新模式</li>
+        	<li class="list11"><img src="images/ico11.png" alt="" />交互平台</li>
+        	<li class="list12"><img src="images/ico12.png" alt="" />绩效展示</li>
+        </ul>
+    </div>
+	<div class="section section8">
+		<p>CIB战略规划管理部作为平台搭建的业务牵头部门，协调相关资源，顶住压力，统筹在前。在领导支持和关心下，科技开发部团队作为平台建设的中坚力量，洒下无数汗水，克服重重困难，昼夜奋战，经过业务及科技等同事近一个月的共同努力，确保了CIB信息交互平台如期上线。在此向大家表示衷心的感谢，说声辛苦了。</p>
+        <img class="section8_pic8" src="images/1.jpg" alt="" />
+        <img class="section8_pic7" src="images/2.jpg" alt="" />
+        <img class="section8_pic6" src="images/3.jpg" alt="" />
+        <img class="section8_pic5" src="images/4.jpg" alt="" />
+        <img class="section8_pic4" src="images/5.jpg" alt="" />
+        <img class="section8_pic3" src="images/6.jpg" alt="" />
+        <img class="section8_pic2" src="images/7.jpg" alt="" />
+        <img class="section8_pic1" src="images/8.jpg" alt="" />
+    </div>
+	<div class="section section9">
+    	<div class="ball">
+            <h1>携手同行</h1>
+            <h2>恒丰银行一家亲<br/>CIB与您相约信息交互平台</h2>
+            <p>平台网址：web.cib.hf</p>
+            <p>业务联络：战略规划部齐海涛18301687885</p>
+            <p>技术支持：科技开发部刘建平18910766753</p>
+            <p class="one">ONE BANK<br/>ONE CIB</p>
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function() {
+	var imgs = [
+		'images/bg.jpg',
+		'images/ball.png',
+		'images/triangle1.png',
+		'images/triangle2.png',
+		'images/pc.png',
+		'images/logo.png',
+		'images/show0.png',
+		'images/show1.png',
+		'images/show2.jpg',
+		'images/pane1.png',
+		'images/pane2.png',
+		'images/pane3.png',
+		'images/slide1.jpg',
+		'images/slide2.jpg',
+		'images/slide3.jpg',
+		'images/slide4.jpg',
+		//'images/slide5.jpg',
+		'images/1.jpg',
+		'images/2.jpg',
+		'images/3.jpg',
+		'images/4.jpg',
+		'images/5.jpg',
+		'images/6.jpg',
+		'images/7.jpg',
+		'images/8.jpg'
+	];
+	var imgs_l = imgs.length;
+	var n = 0;
+	$.each(imgs,function(i,url){
+		var img = new Image();
+		img.onload = function(){
+			n+=1;
+			init(n);
+		};
+		img.onerror = function(){
+			n+=1;
+			init(n);
+		}
+		img.src = url;
+	});
+	function init(num){
+		if(num < imgs_l){
+			var percent = parseInt(num/imgs_l*100);
+			$(".loading_txt").text(percent+"%");
+		}else{
+			$(".loading_txt").remove();
+			$("body").addClass("loaded");
+			initPage();
+		}
+	}
+	
+	var bgmusic = document.getElementById("bgMusic");
+	bgmusic.addEventListener('ended', function () {  
+		//alert('over');
+	}, false);
+	bgmusic.addEventListener('loadedmetadata', function () {  
+		//alert('over');
+	}, false);
+	bgmusic.addEventListener('loadeddata', function () {  
+		//alert('over');
+	}, false);
+	$(".music_ico").click(function(){
+		var $this = $(this);
+		if(bgmusic.paused){
+			bgmusic.play();
+			$this.removeClass("music_stop");
+			return;
+		}
+		bgmusic.pause();
+		$this.addClass("music_stop");
+	});
+	
+	function initPage(){
+		$('#fullpage').fullpage({
+			//导航菜单（或是几个小点）
+			menu: false,//'#myMenu',                                           //默认：false; 定义导航菜单元素
+			lockAnchors: false,                                               //默认：false; 锚锁定（未知）
+			anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fivePage', 'sixPage', 'sevenPage', 'eightPage', 'ninePage'],   //默认：[]，锚定义，唯一值，不能与其它ID名重复
+			navigation: false,                                                //默认：false; 如果为true，则显示导航小圆圈
+			navigationPosition: 'right',                                     //默认：none，导航位置显示：left/right
+			navigationTooltips: ['第一页', '第二页','第三页', '第四页', '第五页', '第六页', '第七页', '第八页', '第九页'],     //默认：[]，导航提示,【只作用于圆圈导航】
+			showActiveTooltip: false,                                       //默认：false; 当前页提示语一直显示
+			slidesNavigation: true,                                         //默认：false; 二级导航slide
+			slidesNavPosition: 'bottom',                                    //默认：bottom; 二级导航slide位置
+	
+			//滚动
+			css3: true,                                                      //默认：true，启用CSS3的切换效果
+			scrollingSpeed: 700,                                            //默认：700毫秒，滚动的速度,
+			autoScrolling: true,                                            //默认：true，滚动时自动滚动到下一页（隐藏滚动条），如果为false,则显示滚动条延迟滚动到下一页
+			fitToSection: true,                                             //默认：true，未知
+			fitToSectionDelay: 1000,                                        //默认：1000，未知
+			scrollBar: false,                                               //默认：false，是否显示滚动条
+			easing: 'easeInOutCubic',                                        //默认：easeInOutCubic，切换动画效果垂直或水平
+			easingcss3: 'ease',                                              //默认：ease，切换动画效果
+			loopBottom: false,                                              //默认：false，为true时，当滚动到最后一页时，再滚动就向上滚回第一页
+			loopTop: false,                                                  //同上相反
+			loopHorizontal: true,                                           //默认：true，水平循环
+			continuousVertical: false,                                      //默认：false，为true时，当滚动到最后一页时，再滚动就向下滚到第一页
+			normalScrollElements: '.element2',                              //默认：null，当内容有滚动条时，指定的元素内滚动，不触发外层滚动
+			scrollOverflow: false,                                          //默认：false，内容超出页面的处理方式。为true时，需要插件jquery.slimscroll.js支持
+			scrollOverflowOptions: null,
+			touchSensitivity: 15,                                           //默认：5，滑动宽高比
+			normalScrollElementTouchThreshold: 5,                         //未知
+	
+			//Accessibility
+			keyboardScrolling: true,                                        //默认：true，是否启用键盘滚动
+			animateAnchor: true,                                            //默认：true，当地址栏中存在锚点时是否启用滑动效果
+			recordHistory: true,                                            //默认：true，记录浏览器历史记录
+	
+			//Design
+			controlArrows: false,                                            //默认：true，slide左右滑动时是否显示左右箭头
+			verticalCentered: false,                                         //内容是否垂直居中
+			sectionsColor : [],                                             //默认：none，设置每一页的背景色
+			paddingTop: '0',                                                //默认：0，设置每一页的内边距
+			paddingBottom: '0',                                             //默认：0，设置每一页的内边距
+			fixedElements: '',
+			responsiveWidth: 0,
+			responsiveHeight: 0,
+	
+			//Custom selectors
+			sectionSelector: '.section',
+			slideSelector: '.slide',
+	
+			//events
+			onLeave: function(index, nextIndex, direction){
+				if(index == 1){
+					$(".section1 .triangle1").hide().removeClass("animated slideInUp");
+					$(".section1 .triangle2").hide().removeClass("animated slideInDown");
+					$(".section1 .triangle2 img").hide().removeClass("animated zoomIn");
+					$(".section1 .section1_t1,.section1 .section1_t2").hide().removeClass("animated fadeIn");
+				}else if(index == 2){
+					$(".section2 h1").hide().removeClass("animated slideInDown");
+					$(".section2 p").hide().removeClass("animated slideInUp");
+					$(".section2 .section2_pic1").hide().removeClass("animated slideInUp");
+				}else if(index == 3){
+					$(".section3 h1").hide().removeClass("animated slideInLeft");
+					//$(".section3 h2").hide().removeClass("animated slideInRight");
+					$(".section3 p").hide().removeClass("animated slideInLeft");
+					$(".section3 img").hide().removeClass("animated slideInRight");
+				}else if(index == 4){
+					$(".section4 h1").hide().removeClass("animated rotateInDownLeft");
+					$(".section4 img").hide().removeClass("animated rotateInDownRight");
+					$(".section4 p").hide().removeClass("animated rotateInDownLeft");
+				}else if(index == 5){
+					$(".section5 h1").hide().removeClass("animated zoomIn");
+					$(".section5 .pane1").hide().removeClass("animated zoomInLeft");
+					$(".section5 .pane2").hide().removeClass("animated zoomInRight");
+					$(".section5 .pane3").hide().removeClass("animated zoomInDown");
+					$(".section5 .pane3 li").hide().removeClass("animated flipInX");
+				}else if(index == 6){
+					$(".section6 h1").hide().removeClass("animated bounceInLeft");
+					//$(".section6 .slide_box").hide().removeClass("animated bounceInRight");
+					$(".section6 .section6_txt1").hide().removeClass("animated bounceInLeft");
+					$(".section6 .section6_txt2").hide().removeClass("animated bounceInRight");
+				}else if(index == 7){
+					$(".section7 h1").hide().removeClass("animated fadeInUp");
+					$(".section7 li").hide().removeClass("animated fadeInUp");
+				}else if(index == 8){
+					$(".section8 p").hide().removeClass("animated rotateIn");
+					$(".section8 .section8_pic8").hide().removeClass("animated rollIn");
+					$(".section8 .section8_pic7").hide().removeClass("animated rollIn");
+					$(".section8 .section8_pic6").hide().removeClass("animated rollIn");
+					$(".section8 .section8_pic5").hide().removeClass("animated rollIn");
+					$(".section8 .section8_pic4").hide().removeClass("animated rollIn");
+					$(".section8 .section8_pic3").hide().removeClass("animated rollIn");
+					$(".section8 .section8_pic2").hide().removeClass("animated rollIn");
+					$(".section8 .section8_pic1").hide().removeClass("animated rollIn");
+				}else if(index == 9){
+					$(".section9 .ball").hide().removeClass("animated zoomInUp");
+					$(".section9 h1").hide().removeClass("animated fadeIn");
+					$(".section9 h2").hide().removeClass("animated fadeIn");
+					$(".section9 p").hide().removeClass("animated fadeIn");
+				}
+			},
+			afterLoad: function(anchorLink, index){
+				if(index == 1){
+					$(".section1 .triangle1").show().addClass("animated slideInUp");
+					$(".section1 .triangle2").show().addClass("animated slideInDown");
+					$(".section1 .triangle2 img").show().addClass("animated zoomIn");
+					$(".section1 .section1_t1,.section1 .section1_t2").show().addClass("animated fadeIn");
+				}else if(index == 2){
+					$(".section2 h1").show().addClass("animated slideInDown");
+					$(".section2 p").show().addClass("animated slideInUp");
+					$(".section2 .section2_pic1").show().addClass("animated slideInUp");
+				}else if(index == 3){
+					$(".section3 h1").show().addClass("animated slideInLeft");
+					//$(".section3 h2").show().addClass("animated slideInRight");
+					$(".section3 p").show().addClass("animated slideInLeft");
+					$(".section3 img").show().addClass("animated slideInRight");
+				}else if(index == 4){
+					$(".section4 h1").show().addClass("animated rotateInDownLeft");
+					$(".section4 img").show().addClass("animated rotateInDownRight");
+					$(".section4 p").show().addClass("animated rotateInDownLeft");
+				}else if(index == 5){
+					$(".section5 h1").show().addClass("animated zoomIn");
+					$(".section5 .pane1").show().addClass("animated zoomInLeft");
+					$(".section5 .pane2").show().addClass("animated zoomInRight");
+					$(".section5 .pane3").show().addClass("animated zoomInDown");
+					$(".section5 .pane3 li").show().addClass("animated flipInX");
+				}else if(index == 6){
+					$(".section6 h1").show().addClass("animated bounceInLeft");
+					//$(".section6 .slide_box").show().addClass("animated bounceInRight");
+					$(".section6 .section6_txt1").show().addClass("animated bounceInLeft");
+					$(".section6 .section6_txt2").show().addClass("animated bounceInRight");
+				}else if(index == 7){
+					$(".section7 h1").show().addClass("animated fadeInUp");
+					$(".section7 li").show().addClass("animated fadeInUp");
+				}else if(index == 8){
+					$(".section8 p").show().addClass("animated rotateIn");
+					$(".section8 .section8_pic8").show().addClass("animated rollIn");
+					$(".section8 .section8_pic7").show().addClass("animated rollIn");
+					$(".section8 .section8_pic6").show().addClass("animated rollIn");
+					$(".section8 .section8_pic5").show().addClass("animated rollIn");
+					$(".section8 .section8_pic4").show().addClass("animated rollIn");
+					$(".section8 .section8_pic3").show().addClass("animated rollIn");
+					$(".section8 .section8_pic2").show().addClass("animated rollIn");
+					$(".section8 .section8_pic1").show().addClass("animated rollIn");
+				}else if(index == 9){
+					$(".section9 .ball").show().addClass("animated zoomInUp");
+					$(".section9 h1").show().addClass("animated fadeIn");
+					$(".section9 h2").show().addClass("animated fadeIn");
+					$(".section9 p").show().addClass("animated fadeIn");
+				}
+				if(anchorLink == "ninePage"){
+					$(".next_ico").hide();
+				}else{
+					$(".next_ico").show();
+				}
+			},
+			afterRender: function(){},
+			afterResize: function(){},
+			afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+			onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
+	
+			}
+		});
+		$(".next_ico span").click(function(){
+			$.fn.fullpage.moveSectionDown();
+		});
+		setInterval(function(){
+			$.fn.fullpage.moveSlideRight();
+		}, 3000);
+	}
+});
+</script>
+</body>
+</html>

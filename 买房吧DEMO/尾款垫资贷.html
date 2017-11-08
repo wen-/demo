@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="author" content="yellowwen@126.com">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<title>尾款垫资贷</title>
+	<link type="text/css" rel="stylesheet" href="css/reset.min.css" />	<link type="text/css" rel="stylesheet" href="css/animate.min.css" />
+	<link type="text/css" rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
+	<link type="text/css" rel="stylesheet" href="font/iconfont.css" />
+	<link type="text/css" rel="stylesheet" href="css/main.css" />
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<!--[if lt IE 9]>
+	<script type="text/javascript">
+		var h5Block = 'header,footer,section,aside,article,nav,hgroup,figure,figcaption,details,summary';
+		var h5Inline = 'time,mark,ruby,rt,rp,output,keygen,meter,progress,command,source';
+		var h5Other = 'video,audio,canvas,datalist';
+		var h5Elem = (h5Block + ',' + h5Inline + ',' + h5Other).split(',');
+		for(var i=0;i<h5Elem.length;i++){
+			document.createElement(h5Elem[i]);
+		}
+	</script>
+	<![endif]-->
+</head>
+<body>
+<!--页头star-->
+<header class="header">
+	<div class="m">
+		<a href="index.html" class="lfloat logo"><img src="images/logo.png" alt="" /></a>
+		<div class="rfloat login_info">
+			<div class="h_btn">
+				<a class="log" href="用户中心_登录.html">登录</a>
+				<a class="reg" href="注册.html">注册</a>
+			</div>
+			<div class="h_txt" style="display: none;">
+				<a href="#">
+					<img src="images/user_icon.jpg" class="headico" alt="" />
+					<span class="info_txt">欢迎<span>张三</span></span>
+				</a>
+				<a href="#" class="exit">退出</a>
+			</div>
+		</div>
+		<nav class="rfloat nav">
+			<dl>
+				<dt><a href="index.html">首页</a></dt>
+			</dl>
+			<dl>
+				<dt><a href="#">二手房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="二手房_房源列表.html">房源</a>
+					<a href="二手房_小区列表.html">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">新房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">新房首页</a>
+					<a href="#">广州新房</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">租房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">房源</a>
+					<a href="#">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">写字楼</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">出租</a>
+					<a href="#">出售</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">业主委托</a></dt>
+			</dl>
+		</nav>
+	</div>
+</header>
+
+<div class="show_box tt loan_showbox">
+	<img class="show_t" src="images/loan/t.png" alt="" />
+	<div class="h_search_bg">
+		<div class="m">
+			<div class="h_search_box">
+				<div class="tab clearfix">
+					<span class="current">二手房<i class="arrow_ico"></i></span>
+					<span>新房<i class="arrow_ico"></i></span>
+					<span>租房<i class="arrow_ico"></i></span>
+					<span>写字楼<i class="arrow_ico"></i></span>
+				</div>
+				<div class="search_m">
+					<input type="text" placeholder="请输入房源名称、房型、地址..." />
+					<button type="button">搜索</button>
+				</div>
+			</div>
+			<div class="tips">
+				<p>区域：
+					<a href="#">天河</a>
+					<a href="#">荔湾</a>
+					<a href="#">海珠</a>
+					<a href="#">白云</a>
+					<a href="#">番禺</a>
+					<a href="#">花都</a>
+					<a href="#">黄埔</a>
+					<a href="#">南沙</a>
+					<a href="#">从化</a>
+					<a href="#">增城</a>
+				</p>
+				<p>价格：
+					<a href="#">5千以下</a>
+					<a href="#">5千 - 1万</a>
+					<a href="#">1万 - 1.5万</a>
+					<a href="#">1.5万 - 2万</a>
+					<a href="#">2万 - 3万</a>
+					<a href="#">3万以上</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--页头end-->
+
+<!--页中star-->
+<section>
+	<div class="loan_details">
+		<div class="loan_details_t">
+			<!--anchor-->
+			<div class="anchor-nav-box">
+				<div class="anchor-nav green_nav clearfix" id="anchorNav">
+					<div class="m1">
+						<ul class="clearfix">
+						<li class="cur" data-type="anchor">
+							<a href="#" id="anchor-1" date-scroll="#scrollto-1">案例</a>
+						</li>
+
+						<li data-type="anchor">
+							<a href="#" id="anchor-2" date-scroll="#scrollto-2">产品说明</a>
+						</li>
+
+						<li data-type="anchor">
+							<a href="#" id="anchor-3" date-scroll="#scrollto-3">利率说明</a>
+						</li>
+
+						<li data-type="anchor">
+							<a href="#" id="anchor-4" date-scroll="#scrollto-4">申请条件</a>
+						</li>
+
+						<li data-type="anchor">
+							<a href="#" id="anchor-5" date-scroll="#scrollto-5">申请流程</a>
+						</li>
+						<li data-type="anchor">
+							<a href="#" id="anchor-6" date-scroll="#scrollto-6">申请材料</a>
+						</li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<!--end anchor-->
+		</div>
+		<div class="loan_details_m">
+			<div class="anchor-trigger" id="scrollto-1">
+				<div class="m1 loan_details_step1">
+					<div class="pic lfloat">
+						<img src="images/pic5.jpg" alt="" />
+					</div>
+					<div class="loan_stepico rfloat ghost slideInUp">
+						<img src="images/loan/step1_ico.png" alt="" />
+					</div>
+					<div class="txt">
+						<h1>孙女士<em>国企人员</em><span class="time rfloat">2016-08-22</span></h1>
+						<dl class="clearfix">
+							<dt>贷款金额：</dt>
+							<dd><strong>14</strong>万</dd>
+						</dl>
+						<dl class="clearfix">
+							<dt>案例详情：</dt>
+							<dd>
+								<p>我是孙静，时刻为买房准备着，经历了千辛万苦的找房波折，终于看中了一处好房源。业主也算爽快，双方谈得很好。可谁曾料想，业主急需用钱去置换新房，欲收全款，而银行贷款还未到帐。万般无奈又心急如焚，如何是好？</p>
+								<p>听说房易融的贷款服务挺不错的，于是我决定了解一下，看看是否能救急。看到尾款垫资贷这一项时，我眼前一亮，心说这个有戏！再深入了解，发现这项服务可以帮助买主现象向买方支付按揭部分的购房款，利率低、费率也是行业最低，并且过户当天即可拿到全款（不超过贷款金额），只要等到银行放款时，这笔资金就会由云燕安家直接从中扣除。</p>
+								<p>只要是二手房、只要25—65周岁、只要有相关材料，只要经过简单的申请流程，就能得到相应资金，以解燃眉之急。后来，我接受了这项服务，业主也拿到了全款，双方都得到了圆满的结果。</p>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="anchor-trigger bg_grey1" id="scrollto-2">
+				<div class="m1 loan_details_step2 clearfix">
+					<div class="pic lfloat ghost slideInUp">
+						<img src="images/loan/step2_ico.png" alt="" />
+					</div>
+					<div class="txt">
+						<h2>产品说明</h2>
+						<h3>银行按揭批下来，可放款太慢，让尾款垫资贷来帮您。贷款周期1个月，闪电放款。</h3>
+						<ul>
+							<li>为让卖方及时收回全部房款，帮买主先行向卖方支付按揭部分的购房款</li>
+							<li>利率低、过户当天拿全款、费率行业最低</li>
+							<li>借款于银行放贷后一次性扣回</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="anchor-trigger" id="scrollto-3">
+				<div class="m1 loan_details_step3 clearfix">
+					<div class="pic rfloat ghost slideInUp">
+						<img src="images/loan/step3_ico.png" alt="" />
+					</div>
+					<div class="txt">
+						<h2>利率说明</h2>
+						<p>期限：不超过1个月</p>
+						<p>额度：本次房屋交易过程银行按揭贷款批复金额</p>
+					</div>
+				</div>
+			</div>
+			<div class="anchor-trigger bg_grey1" id="scrollto-4">
+				<div class="m1 loan_details_step4 clearfix">
+					<div class="pic lfloat ghost slideInUp">
+						<img src="images/loan/step4_ico.png" alt="" />
+					</div>
+					<div class="txt">
+						<h2>申请条件</h2>
+						<ul>
+							<li>25-65周岁的中国公民</li>
+							<li>可提供有效收入证明</li>
+							<li>不限上班族或企业主</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="anchor-trigger" id="scrollto-5">
+				<div class="m1 loan_details_step5">
+					<div class="step5_t">
+						<h2>申请流程</h2>
+					</div>
+					<div class="step5_m clearfix ghost slideInUp">
+						<ul class="clearfix">
+							<li style="margin-left:12px;">提交贷款申请</li>
+							<li style="margin-left:42px;">风控审核成功</li>
+							<li style="margin-left:43px;">签订贷款合同<br/>同时进行放款</li>
+							<li style="margin-left:36px;">借款人购买新房</li>
+							<li style="margin-left:63px;">借款人申请<br/>银行按揭</li>
+							<li style="margin-left:50px;">银行放款</li>
+							<li style="margin-left:30px;">房易融一次性<br/>扣回借款</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="anchor-trigger bg_grey1" id="scrollto-6">
+				<div class="m1 loan_details_step6 clearfix">
+					<div class="pic lfloat ghost slideInUp">
+						<img src="images/loan/step6_ico.png" alt="" />
+					</div>
+					<div class="txt">
+						<h2>申请材料</h2>
+						<ul>
+							<li>卖方身份证</li>
+							<li>户口本</li>
+							<li>结婚证</li>
+							<li>一年内银行交易流水</li>
+							<li>房屋买卖合同</li>
+							<li>首付款凭证</li>
+							<li>原银行借款合同</li>
+							<li>还款卡</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="sq_btn">
+					<a href="#">立即申请</a>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</section>
+<!--页中end-->
+
+<div class="toolbars" id="toolbars" style="display: block;">
+	<ul>
+		<li class="tool-app">
+			<span class="tool-icon"><a href="javascript:;"><i class="icons-sidetools"></i></a></span>
+			<p class="tool-desp" style="display: none; right: 60px; opacity: 0;">
+				<em><img src="images/ewm.png" alt="" /></em><i class="icons-sidetools"></i><span>下载买房吧app</span>
+			</p>
+		</li>
+		<li class="tool-backtop" style="visibility: hidden;">
+			<span class="tool-icon"><a href="javascript:;"><i class="icons-sidetools"></i></a></span>
+			<p class="tool-desp" style="display: none; right: 60px; opacity: 0;">
+				<i class="icons-sidetools"></i><span>返回顶部</span>
+			</p>
+		</li>
+	</ul>
+</div>
+
+<!--页脚star-->
+<footer class="footer">
+	<div class="m tc">
+		<div class="foot_nav">
+			<a href="#">关于买房吧</a>
+			<a href="#">联系我们</a>
+			<a href="#">用户协议</a>
+			<a href="#">友情链接</a>
+			<a href="#">房产百科</a>
+			<a href="#">房产问答</a>
+		</div>
+		<p>广州安信互联网金融服务有限公司</p>
+		<p class="copyright">Copyright&nbsp;©&nbsp;2016&nbsp;www.myfang8.com.&nbsp;All Rights Reserved&nbsp;ICP备案号：粤ICP备12345678号</p>
+	</div>
+</footer>
+<!--页脚end-->
+
+<script src="js/public.js"></script>
+<script src="js/json2.js"></script>
+<script src="js/jquery-ui/jquery-ui.min.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<script src="js/ghost.min.js"></script>
+<script src="js/echarts.js"></script>
+<script src="js/layer/layer.js"></script>
+<script src="js/wen_play.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

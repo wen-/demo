@@ -1,0 +1,264 @@
+*{
+        margin:0;
+	padding:0;
+	list-style-type:none;
+	text-decoration:none;
+}
+
+img{
+	border:0px;
+}
+
+#show,#show1,#show2,#show3,#show4,#show5,#show6,#show7,#show8,#show9,#show10,#show11,#show12,#show13,#show14,#show15,#show16,#show17,#show18,#show19,#show20,#show21,#show22,#show23{
+	width:900px;
+	margin:0px auto 0px auto;
+}
+
+#tou image{
+	float:left;/*在IE６中如果不加这个底部会留白*/
+}
+
+#daohang ul{
+	clear:both;
+	float:left;
+	width:900px;
+	height:30px;
+	background:#858585 ;
+	
+}
+
+#daohang ul li{
+	float:left;
+	
+}
+
+#daohang ul li a{
+	display:block;
+	width:110px;
+	height:25px;
+	text-align:center;
+	line-height:26px;
+	color:#fff;
+	margin:5px 5px 0px 5px;
+	overflow:hidden;
+}
+
+#daohang ul li a:hover{
+	color:#95e5ee;
+}
+
+
+
+
+
+#zhongbu{
+	background:url(images/zhongbu2.jpg) repeat-y;
+}
+
+#zhongbu2{
+	float:left;
+	width:255px;
+}
+.lanmu{
+	margin:0px 0px 0px 30px;
+	padding:15px 20px 40px 50px;
+	background:url(images/lanmu.jpg) no-repeat;
+}
+.biaoti{
+	padding:15px 20px 20px 50px;
+	background:url(images/biaotidi1.jpg) no-repeat;
+}
+#zhongbu2 ul {
+	width:180px;
+	margin:0px 45px 20px 30px;
+	
+}
+#zhongbu2 ul li{
+	
+	padding:30px 0px 10px 55px;
+	border-bottom: 1px dotted;
+}
+#zhongbu2 ul li a{
+	color:#32a2f9;
+}
+#zhongbu2 ul li a:hover{
+	color:#ffff00;
+}
+#zhongbu2 image{
+	margin:30px 0px 0px 0px ;
+}
+#zhongbu3{
+	float:right;
+	width:600px;
+	margin:0px 0px 0px 15px;
+	
+}
+
+#zhongbu3 image{
+	margin:0px 20px 10px 0px;
+}
+#show #zhongbu3{
+	width:560px;
+
+}
+
+#show #zhongbu3 img{
+	float:left;
+
+}
+
+.gai1{
+	float:left;
+	
+}
+p{
+	margin:0px 35px 30px 0px;
+	text-indent:2em;
+}
+#show2 p,#show3 p,#show4 p,#show5 p,#show6 p,#show7 p,#show8 p,#show13 p,#show21 p,#show22 p,#show23 p{
+	clear:both;
+}	
+ 
+#show4 span,#show6 span{
+	color:red;
+}
+
+#show1 image.fazhanglicheng{
+	float:right;
+}
+#loupan dl{
+	width:138px;
+	float:left;
+	margin:0px 5px 50px 0px;
+}
+#loupan dl dt image{
+	width:130px;
+	height:100px;
+	border:0;
+	margin:0px 0px 10px 0px;
+}
+/*选择标签要选关键字DT与DD不能同时存在于DL*/
+#loupan dl dd{
+	margin:10px 10px 0px 40px;
+}
+
+#tiaozhuan ul{
+	clear:both;
+	margin:0px 0px 0px 40px;
+}
+
+#tiaozhuan li{
+	float:left;
+}
+#show13 #zhongbu3 ul{
+	float:left;
+}
+#show13 #zhongbu3 img{
+	float:left;
+}
+#show13 ul li{
+	margin:0px 0px 8px 0px;
+}
+#show14 table,#show15 table{
+	background:#dad8d8;
+	width:550px;
+	height:350px;
+	text-align:left;
+	margin:0px 0px 20px 0px;
+}
+
+.zhaoping{
+	width:550px;
+}
+#show16 #lianxi{
+	clear:both;
+	
+}
+#show16 #lianxi ul{
+	float:left;
+	width:250px;
+	height:180px;
+	margin:20px 10px 30px 10px;
+	background:url(images/LOGO2.jpg) no-repeat;
+}
+#show16 #lianxi #lianxi3{
+	clear:both;
+}
+
+#show18 table tr,#show19 table tr,#show20 table tr{
+	height:30px;
+	
+}
+#show18 table td,#show19 table td,#show20 table td{
+	border-bottom:1px dashed #000 ;
+}
+#show18 table a:hover,#show19 table a:hover,#show20 table a:hover{
+	color:#fff;
+}
+
+#show19 table th{
+	color:#262626;
+}
+#show21 p,#show22 p,#show23 p{
+	margin:20px 25px 0px 10px;
+}
+#show21 #zhongbu3 img,#show22 #zhongbu3 img,#show23 #zhongbu3 img{
+	margin:0px 0px 10px 10px;
+}
+
+
+
+
+
+
+
+#dibu{
+	text-align:center;
+	clear:both;
+}
+#dibulianjie ul{
+	
+	
+	height:20px;
+	width:900px;
+	background:#858585;
+	padding-bottom:5px;
+	
+}
+#dibulianjie ul li{
+	float:left;
+	margin:5px;
+	color:#fff;
+	text-align:center;
+	line-height:26px;
+}
+
+#dibulianjie ul li a{
+	color:#fff;
+	
+}
+#dibulianjie ul li a:hover{
+	color:#95e5ee;
+}
+#dibulianjie ul .guanyuwomen{
+	padding:0px 10px 0px 270px;
+}
+
+
+#banquan{
+	
+	height:77px;
+	background:url(images/dibu1.jpg) no-repeat;
+	
+	
+}
+
+#banquan ul{
+	text-indent:400px;
+	clear:both;
+	width:300px;
+	height:40px;
+	white-space:nowrap;
+	overflow:hidden;
+	
+}

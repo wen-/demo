@@ -1,0 +1,979 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="Generator" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>p2p信贷  --简单 、安全、借得到 - p2p信贷</title>
+<link rel="icon" href="favicon.ico" type="/image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico" type="/image/x-icon" />
+<meta name="keywords" content="p2p信贷—最大、最安全的网络借贷平台" />
+<meta name="description" content="p2p信贷—最大、最安全的网络借贷平台" />
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+
+</head>
+<body>
+<div class="header" id="header">
+    <div class="constr">
+        <div class="wrap">
+			<div class="app_down f_l" id="J_APP_DOWN">
+				<!--<a href="javascript:void(0);"><i class="iconfont">&#xe613;</i>下载移动客户端</a>-->
+                <span class="hotline_box">服务热线：400-8888-888（24h）
+                	<a href="#" class="hotline_wx"></a><a href="#" class="hotline_qq"></a>
+                </span>
+				<div class="grcode_box ps hide">
+					<img src="images/1ca638b4782093fe89c405487e6d1c31.png"  />
+				</div>
+			</div>
+			<div class="f_r lh30">
+				<div id="user_head_tip" class="pr f_r hide">
+					<span class="li"><a href="#" class="f_white">立即登录</a></span>
+					<span class="line"></span>
+					<span class="li"><a href="#" class="f_white">免费注册</a></span>
+					<!--<span class="li"><a href="index3094.html?ctl=helpcenter">帮助中心</a></span>-->
+				</div>
+                <!--登录后显示下面这块-->
+                <div id="user_head_tip" class="pr f_r">
+					<span class="li li_no" id="J_account">
+                        <span class="f14 f_white">您好，</span><a href="#" class="f_white">fanwe</a>
+                        <ul class="ui-nav-dropdown ui-nav-dropdown-account">
+                            <li class="ui-nav-dropdown-angle" style="_top: -13px;"><span></span></li>
+                            <li class="ui-nav-dropdown-item">
+                                <a href="#" class="rrd-dimgray">
+                                <i class="iconfont pm new_pm "></i>
+                                 消息(36)</a>
+                            </li>
+                            <li class="ui-nav-dropdown-separator"></li>
+                            <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="#">充值</a></li>
+                            <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="#">提现</a></li>
+                            <li class="ui-nav-dropdown-separator"></li>
+                            <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="#">资金管理</a></li>
+                            <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="#">投资管理</a></li>
+                            <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="#">借款管理</a></li>
+                            <li class="ui-nav-dropdown-separator"></li>
+                            <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="#">退出</a></li>
+                        </ul>
+                    </span>
+                    <script type="text/javascript">
+                    var acc_menu_hide = null;
+                    var hide_menu = null;
+                    jQuery(function(){
+                        $("#J_account").hover(function(){
+                            clearTimeout(acc_menu_hide);
+                            $(this).addClass("li_hover");
+                        },function(){
+                            var obj = $(this);
+                            hide_menu = function(){
+                                obj.removeClass("li_hover");
+                            }
+                            acc_menu_hide = setTimeout(hide_menu,100);
+                        });
+                    });
+                    </script>
+                    <span class="line"></span>
+                    <span class="li f_white"><a href="#">帮助中心</a></span>
+                </div>
+                <!--登录后显示-->
+			</div>		
+		</div>
+	</div>
+	<div class="main_bars">
+		<div class="main_bar wrap">	
+			<div class="logo mr15">
+				<a class="link f_l" href="index.html">
+					<span style='display:inline-block; width:402px; height:44px;margin-top:22px; background:url(images/logo.png) no-repeat; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=images/logo.png, sizingMethod=scale);_background-image:none;'></span>						
+                </a>
+			</div>     
+			<!--加载菜单-->
+			<ul class="main_nav">
+				<li class="current jcur ml5 bdr3 pr">
+					<a href="index.html" target="" class="pr20">首页</a>
+				</li>
+				<li class="jcur ml5 bdr3 pr">
+					<a href="invest.html" target="" class="pr20">我要投资 <i class="iconfont">&#xe61c;</i></a>
+					<div class="sub_main_nav ps hide">
+                        <a href="#" target="">债权转让</a>
+                        <a href="#" target="">个人贷款</a>
+                        <a href="#" target="">工具箱</a>
+                        <a href="#" target="">关于理财</a>
+                        <a href="#" target="">成为理财人</a>
+                        <a href="#" target="_blank">有限合伙</a>
+                    </div>
+                </li>
+				<li class="jcur ml5 bdr3 pr">
+					<a href="#" target="" class="pr20">安全保障 <i class="iconfont">&#xe61c;</i></a>
+					<div class="sub_main_nav ps hide">
+                        <a href="#" target="">政策法规</a>
+                        <a href="#" target="">隐私保护</a>
+                    </div>
+                </li>
+        		<li class="jcur ml5 bdr3 pr">
+					<a href="indexb7bb.html?ctl=acate&amp;id=25" target="" class="pr20">帮助中心 <i class="iconfont">&#xe61c;</i></a>
+					<div class="sub_main_nav ps hide">
+						<a href="#" target="">常见问题</a>
+						<a href="#" target="">平台原理</a>
+						<a href="#" target="">如何借款</a>
+						<a href="#" target="">P2P借贷费率</a>
+					</div>
+				</li>
+				<li class="ml5 bdr3 pr">
+					<a href="#" target="" >关于我们 </a>
+				</li>
+			</ul>
+			<!--加载菜单END-->
+		</div>
+	</div>
+</div>
+
+<div class="wrap " style="z-index:9; position:relative;">
+	<div class="login_block"> 
+		<!--<a title="点我"><div class="logingchange"></div></a> -->
+	   
+		<div class="freebj"></div>
+		<div class="freelogin" >
+			
+			<div class="freereg ">
+                <!--登录表单-->
+				<h3 class="fast_login" >快速登录</h3>
+				<div style="overflow:hidden;" >
+                    <div method="post" action="http://t2.fanwe.net/index.php?ctl=user&amp;act=dologin" name="ajax_login_form" id="Iajax_login_form">
+                        <div class="blank10"></div>
+                        <div class="field username pr" >
+                            <i class="iconfont ps">&#xe614;</i>
+                            <input type="text" value="" class="f-input ui-textbox" id="login-email-address" name="email" size="30" tabindex="1" holder="Email/昵称/手机" />
+                            <div class="blank0"></div>
+                        </div>
+                        <div class="blank10"></div>
+                        <div class="field password pr" >
+                            <i class="iconfont ps">&#xe615;</i>
+                            <input type="password" value="" class="f-input ui-textbox" id="login-password" name="user_pwd" size="30" tabindex="2" holder="密码" />
+                            <div class="blank0"></div>
+                        </div>
+                        <div class="blank10"></div>
+                        <div class="field verify" >				
+                            <input type="text" value="" class="f-input" name="verify" id="Jverify" tabindex="3"  />	
+                            <img class="ml10 f_l" maxlength="4" style="margin-top:0;width:77px; height:36px;" src="images/verifyc53e.gif?w=89&amp;h=44&amp;rand=71717627" onclick="this.src='verify5e61.gif?w=89&amp;h=44&amp;rand='+ Math.random();" id="Jverify_img" title="看不清楚？换一张" />			
+                            <div class="blank0"></div>
+                        </div>
+                                                            
+                        <div class="blank10"></div>
+                        <div class="act">
+                            <input type="hidden" id="autologin" name="auto_login" value="0" />
+                            <input type="hidden" name="ajax" value="1" />
+                            <input type="submit" class="sub_btn" id="Iajax-login-submit" name="commit" value="登录" tabindex="4" />
+                            <div class="blank10"></div>
+                            <a href="index69bd.html?ctl=user&amp;act=register" class="f12 f_white f_l" >立即注册</a>
+                      
+                            <a href="index4b60.html?ctl=user&amp;act=getpassword" class="f12 f_white f_r">忘记密码?</a>
+                        </div>
+                    </div>
+                </div>	
+                <!--登录表单-->		
+                
+                <!--登录后显示-->
+                <div class="after_login" style="display:none;">
+                    <div class="user_name">
+                         <span class="name">账户名：<span>fanwe</span></span>
+                    </div>
+                    <div class="user_info ">
+                        <div class="user_img"><img src="images/44virtual_avatar_big.jpg" /></div>
+                        
+                        <div class="user_info_d">
+                            <a href="#"><i class="iconfont"></i>账户中心</a>
+                            <a href="#"><i class="iconfont"></i>个人资料</a>
+                            <a href="#"><i class="iconfont"></i>资金记录</a>
+                            <a href="#"><i class="iconfont"></i>站内信息</a>
+                        </div>
+                    </div>
+                    <div class="user_money">
+                        <a href="#">充值</a>
+                        <a href="#">提现</a>
+                        <a class="rrd-dimgray" href="#">退出</a>
+                    </div>
+                </div>
+                <!--登录后显示end-->			
+			</div>
+			<div class="freecord"  style="display:none;">
+				<div class="qrcordtit">移动客户端下载</div>
+				<div class="qrcordimg">
+					<img src="images/1ca638b4782093fe89c405487e6d1c31.png"  />
+				</div>
+				<div class="qrcordfooter">手机扫描二维码下载IOS/安卓</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--横幅大广告图-->
+<div id="main_adv_box" class="main_adv_box f_l">
+	<div id="main_adv_img" class="main_adv_img">
+		<span rel="1"><img src="images/55234c4d2f92b.jpg" alt="" /></span>
+		<span rel="2"></span>
+		<span rel="3"></span>
+		<span rel="4"></span>	
+		<span rel="5"></span>					
+	</div>
+	<div id="main_adv_ctl" class="main_adv_ctl">
+		<ul>
+			<li rel="1">1</li>
+			<li rel="2">2</li>
+			<li rel="3">3</li>
+			<li rel="4">4</li>
+			<li rel="5">5</li>
+		</ul>
+	</div>
+</div>
+<div class="blank0"></div>
+
+<div class="showcase">
+	<div class="wrap">
+		<div class="caseblok">
+			<span>累计投资额</span>
+			<em>12000万元</em>
+		</div>
+		<div class="caseblok">
+			<span>为客户赚钱收益</span>
+			<em>1350万元</em>
+		</div>
+		<div class="caseblok">
+		<div class="back_img back_img_3"></div>
+    		<span>累计投资人数</span>
+			<em>23550人</em>
+    	</div>
+	</div>
+</div>
+
+<!--主体内容部分-->
+<div class="wrap">
+	<!--主体内容部分左侧-->
+	<div class="index_left f_l">
+    	<!--五大安全保障-->
+        <div class="five_safe">
+            <div class="feature">
+            	<div class="safe_title">
+                	<em>五大</em>
+                    <strong>安全保障</strong>
+                </div>
+                <a class="fea1">
+                    <i></i>
+                    <h3>担保垫付</h3>
+                    <span>为保证投资者利益，安信网贷的 每个项目均设有强有力的担保措 施，以防范项目的潜在违约风险。</span>
+                </a>
+                <a class="fea2">
+                    <i></i>
+                    <h3>资金托管</h3>
+                    <span>为保证投资者资金安全，安信网贷与经国家认证的第三方资金托管机构双乾达成战略合作</span>
+                </a>
+            </div>
+            <div class="feature">
+                <a class="fea3">
+                    <i></i>
+                    <h3>银行级数据加密</h3>
+                    <span>安信投资集团是珠三角规模最大的民间金融集团机构综合资产实力逾12亿元</span>
+                </a>
+                <a class="fea4">
+                    <i></i>
+                    <h3>三重风控</h3>
+                    <span>安信投资集团是珠三角规模 最大的民间金融集团机构 综合资产实力逾12亿元</span>
+                </a>
+                <a class="fea5">
+                    <i></i>
+                    <h3>集团实力保证</h3>
+                    <span>安信投资集团是珠三角规模最大的民间金融集团机构综合资产实力逾12亿元</span>
+                </a>
+            </div>
+            <!--上下两个三角-->
+            <div class="triangle_t"></div>
+            <div class="triangle_b"></div>
+		</div>
+        
+        <!--新标预告-->
+        <div class="newinvest" id="new_bid" style="display:none;">
+            <div class="newtit">
+                <span>新标预告</span>
+            </div>
+            <div class="listblok">
+                <div class="listtit ovhide">
+                    <div class="f_l">
+                        <img class="grade f_l mr5" src="images/icon_new.png" align="absmiddle" title="NEW" alt="HR" height="30" />
+                        <h3 class="f_l">
+                            <a href="index4f79.html?ctl=deal&amp;id=20566">房地产企业经营性贷款</a>              
+                        </h3> 
+                    </div>
+                </div>
+                <div class="blank0"></div>
+                <div class="listcon w170">
+                    <span><em style="font-size:30px;font-weight:bold;">￥200万</em></span>
+                </div>
+                <div class="listcon w220">
+                    <span><em class="f_red" style="font-size:30px;font-weight:bold;margin-right:5px;">13.00%</em><img src="images/icon_rates.png" alt="年化利率" /></span>
+                </div>
+                <div class="listcon w100">
+                    <span><em style="font-size:30px;font-weight:bold;margin-left:10px">3</em>个月</span>
+                </div>
+                <div class="listcona f_r">
+                    <h6>开放时间</h6>
+                    <span class="timebox">
+                    	<span class="month">07</span>
+                        <span>月</span>
+                        <span class="day">10</span>
+                        <span>日</span>
+                        <span class="min">10:30</span>
+                    </span>
+                </div>
+                <div class="blank0"></div>
+            </div>
+        </div>
+        <!--新标预告end-->
+        
+		<!--最新投资-->
+        <div class="newinvest" id="deal_list">
+            <div class="newtit">
+                <span style="font-size:36px;font-weight:normal;color:#333;">安信宝</span>
+            </div>
+            
+            <div class="listblok">
+                <div class="listtit ovhide">
+                    <div class="f_l">
+                        <img class="grade f_l mr5" src="images/HR.png" align="absmiddle" title="HR" alt="HR" height="30" />
+                        <h3 class="f_l">
+                            <a href="#">生意周转01</a>
+                        </h3> 
+                        <div class="is_new pr ml10 f_l" style="top:-10px"></div>
+                    </div>
+                </div>
+                <div class="blank0"></div>
+                <div class="listcon w135">
+                    <h6>借款金额</h6>
+                    <span><em>￥5.00万</em></span>
+                </div>
+                <div class="listcon w120">
+                    <h6>年化利率</h6>
+                    <span><em  class="f_red">14.60%<!--<span class="f14" title="投资返利:1%">+1%</span>--></em></span>
+                </div>
+                <div class="listcon w70">
+                    <h6>项目期限</h6>
+                    <span><em>6</em>个月</span>
+                </div>
+                <div class="listcon" style="border-right:none;">
+                    <h6>还款方式</h6>
+                    <span>等额本息</span>
+                </div>
+                <div class="listcona f_r info_start">
+                    <div class="progressvar mb5">
+                    	<em>投资进度：</em>
+                    	<span class="progress w80 mt9">
+                        	<span class="pr bdr3" title="20%" style="width:20%;"></span>
+                        </span>
+                        <span class="progresscon f_gray">20%</span>
+                    </div>
+                    <div class="deal_money mb5">
+                    	<em>可投金额：</em>
+                        <span>675,753元</span>
+                    </div>
+                    <a class="listbtn" href="#">
+                    	<span class="btn_red f_white">立即投资</span>
+                    </a>
+                </div>
+                <div class="blank0"></div>
+            </div>
+            <div class="blank15"></div>
+            <div class="listblok">
+                <div class="listtit ovhide">
+                    <div class="f_l">
+                        <img class="grade f_l mr5" src="images/D.png" align="absmiddle" title="D" alt="D" height="30" />
+                        <h3 class="f_l">
+                            <a href="#">智能理财标123</a>
+                        </h3> 
+                        <div class="is_new pr ml10 f_l" style="top:-10px"></div>
+                    </div>
+                </div>
+                <div class="blank0"></div>
+                <div class="listcon w135">
+                    <h6>借款金额</h6>
+                    <span><em>￥1.00万</em></span>
+                </div>
+                <div class="listcon w120">
+                    <h6>年化利率</h6>
+                    <span><em  class="f_red">10.00%</em></span>
+                </div>
+                <div class="listcon w70">
+                    <h6>项目期限</h6>
+                    <span><em>3</em>个月</span>
+                </div>
+                <div class="listcon" style="border-right:none;">
+                    <h6>还款方式</h6>
+                    <span>等额本息</span>
+                </div>
+                <div class="listcona f_r info_start">
+                    <div class="progressvar mb5">
+                    	<em>投资进度：</em>
+                    	<span class="progress w80 mt9">
+                        	<span class="pr bdr3" title="66.21%" style="width:66.21%;"></span>
+                        </span>
+                        <span class="progresscon f_gray">66.21%</span>
+                    </div>
+                    <div class="deal_money mb5">
+                    	<em>可投金额：</em>
+                        <span>675,753元</span>
+                    </div>
+                    <a class="listbtn" href="#">
+                    	<span class="btn_red f_white">我要预约</span>
+                    </a>
+                    <span class="reserve_tips">下午三点后的标只限预约，次日0点开始计息</span>
+                </div>
+                <div class="blank0"></div>
+            </div>
+            <div class="blank15"></div>
+            <div class="listblok">
+                <div class="listtit ovhide">
+                    <div class="f_l">
+                        <img class="grade f_l mr5" src="images/D.png" align="absmiddle" title="D" alt="D" height="30" />
+                        <h3 class="f_l">
+                            <a href="index65a0.html?ctl=deal&amp;id=20555">急需资金，筹款10万元</a>
+                        </h3> 
+                     </div>
+                </div>
+                <div class="blank0"></div>
+                <div class="listcon w135">
+                    <h6>借款金额</h6>
+                    <span><em>￥1.00万</em></span>
+                </div>
+                <div class="listcon w120">
+                    <h6>年化利率</h6>
+                    <span><em  class="f_red">19.80%</em></span>
+                </div>
+                <div class="listcon w70">
+                    <h6>项目期限</h6>
+                    <span><em>1</em>个月</span>
+                </div>
+                <div class="listcon" style="border-right:none;">
+                    <h6>还款方式</h6>
+                    <span>到期还本息</span>
+                </div>
+                <div class="listcona f_r info_stop">
+                    <div class="sell_tips">正在回款中......</div>
+                    <div class="sell_up">该项目历时<strong class="f_red">5小时</strong>被抢光</div>
+                    <div class="buy_num">一共199人投资</div>
+                </div>
+                <div class="blank0"></div>
+            </div>
+            <div class="blank15"></div>
+            <div class="listblok">
+                <div class="listtit ovhide">
+                    <div class="f_l">
+                        <img class="grade f_l mr5" src="images/HR.png" align="absmiddle" title="HR" alt="HR" height="30" />
+                        <h3 class="f_l">
+                            <a href="#">装修房子测试测试</a>
+                        </h3> 
+                     </div>
+                </div>
+                <div class="blank0"></div>
+                <div class="listcon w135">
+                    <h6>借款金额</h6>
+                    <span><em>￥10.00万</em></span>
+                </div>
+                <div class="listcon w120">
+                    <h6>年化利率</h6>
+                    <span><em  class="f_red">20.00%</em></span>
+                </div>
+                <div class="listcon w70">
+                    <h6>项目期限</h6>
+                    <span><em>3</em>个月</span>
+                </div>
+                <div class="listcon" style="border-right:none;">
+                    <h6>还款方式</h6>
+                    <span>等额本息</span>
+                </div>
+                <div class="listcona f_r info_over">
+                    <div class="sell_tips">已结案......</div>
+                    <div class="sell_up">该项目历时<strong class="f_red">5小时</strong>被抢光</div>
+                    <div class="buy_num">一共199人投资</div>
+                </div>
+                <div class="blank0"></div>
+            </div>
+            <div class="blank15"></div>
+            <a href="#" title="更多" class="more">查看更多投资信息 &gt;</a>
+        </div>
+        <!--最新投资end-->
+        
+	</div>
+	
+    <!--右侧栏-->
+	<div class="index_right f_r">
+		<div class="blank20"></div> 
+		<div class="blank10"></div>
+        <div class="right_adv">
+            <!--<a href="#"><img src="images/55234cc8095cf.png" alt="" /> </a>
+    		<div class="blank"></div>-->
+			<a href="invite.html"><img src="images/banner_mini02.png" alt="" /> </a>
+			<div class="blank"></div>
+        </div>
+        
+        <div class="r-block">
+            <div class="gray_title clearfix">
+                <div class="f_l pl10 f16">公司动态</div>
+                <div class="f_r pr10">
+                    <span style="font-weight: normal;">
+                        <a href="index2dfa.html?ctl=notice&amp;act=list_notice" class="f12" title="更多">更多></a>
+                    </span>
+                </div>
+            </div>
+            <div class="notice-list bdd bt0 pt5 pb5 pl10 pr10" >
+                <ul>
+                	<li>
+                        <span>
+                        	<a href="index726e.html?ctl=notice&amp;id=81" title="庆祝上线，免收成交费用">庆祝上线，免收成交费用</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                        	<a href="index97e4.html?ctl=notice&amp;id=67" title="2014-5-9   3月份运营数据：成交金额1530万">2014-5-9   3月份运营数据…</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                        	<a href="indexfd2a.html?ctl=notice&amp;id=7" title="p2p信贷即将上线">p2p信贷即将上线</a>
+                        </span>
+                    </li>
+            	</ul>
+            </div>
+        </div>
+        <div class="blank15"></div>
+        <div id="loadtop" class="r-block">
+            <div class="gray_title clearfix pr">
+                <div class="f_l pl10 f16">投资排行榜</div>
+                <div id="rightTitls">
+                    <ul>
+                        <li><a rel="1">周</a></li>
+                        <li class="current"><a rel="2">月</a></li>
+                        <li><a rel="3">总</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="J_conbox" class="bdd bt0 pt5 pb5 pl10 pr10" >
+                <ul class="clearfix hide" rel="1">
+                	<li class="dot">
+                        <span class="nums nums_1 tc f_l">01</span>
+                        <span class="uname f_l">f***e</span>
+                        <span class="f_r">￥123,133.00</span>
+                    </li>
+                    <li class="dot">
+                        <span class="nums nums_2 tc f_l">02</span>
+                        <span class="uname f_l">智***贷</span>
+                        <span class="f_r">￥10,000.00</span>
+                    </li>
+                    <li class="dot">
+                        <span class="nums nums_3 tc f_l">03</span>
+                        <span class="uname f_l">l***3</span>
+                        <span class="f_r">￥4,000.00</span>
+                    </li>
+                    <li class="dot">
+                        <span class="nums nums_4 tc f_l">04</span>
+                        <span class="uname f_l">w***y</span>
+                        <span class="f_r">￥2,000.00</span>
+                    </li>
+                    <li>
+                        <span class="nums nums_5 tc f_l">05</span>
+                        <span class="uname f_l">的***我</span>
+                        <span class="f_r">￥150.00</span>
+                    </li>
+                </ul>
+                <ul class="clearfix" rel="2">
+                	<li class="dot">
+                        <span class="nums nums_1 tc f_l">01</span>
+                        <span class="uname f_l">f***e</span>
+                        <span class="f_r">￥123,133.00</span>
+                    </li>
+                    <li class="dot">
+                        <span class="nums nums_2 tc f_l">02</span>
+                        <span class="uname f_l">智***贷</span>
+                        <span class="f_r">￥15,000.00</span>
+                    </li>
+                    <li class="dot">
+                        <span class="nums nums_3 tc f_l">03</span>
+                        <span class="uname f_l">l***3</span>
+                        <span class="f_r">￥4,000.00</span>
+                    </li>
+                    <li class="dot">
+                        <span class="nums nums_4 tc f_l">04</span>
+                        <span class="uname f_l">w***y</span>
+                        <span class="f_r">￥4,000.00</span>
+                    </li>
+                    <li >
+                        <span class="nums nums_5 tc f_l">05</span>
+                        <span class="uname f_l">的***我</span>
+                        <span class="f_r">￥200.00</span>
+                    </li>
+                </ul>
+                <ul class="clearfix hide" rel="3">
+                    <li class="dot">
+                        <span class="nums nums_1 tc f_l">01</span>
+                        <span class="uname f_l">f***e</span>
+                        <span class="f_r">￥15,416,909.00</span>
+                    </li>
+                    <li class="dot">
+                        <span class="nums nums_2 tc f_l">02</span>
+                        <span class="uname f_l">i***g</span>
+                        <span class="f_r">￥309,687.00</span>
+                    </li>
+                    <li class="dot">
+                        <span class="nums nums_3 tc f_l">03</span>
+                        <span class="uname f_l">i***6</span>
+                        <span class="f_r">￥251,000.00</span>
+                    </li>
+                    <li class="dot">
+                        <span class="nums nums_4 tc f_l">04</span>
+                        <span class="uname f_l">y***l</span>
+                        <span class="f_r">￥166,651.00</span>
+                    </li>
+                    <li class="dot">
+                        <span class="nums nums_5 tc f_l">05</span>
+                        <span class="uname f_l">小***</span>
+                        <span class="f_r">￥163,750.00</span>
+                    </li>
+                    <li class="dot">
+                        <span class="nums nums_6 tc f_l">06</span>
+                        <span class="uname f_l">y***z</span>
+                        <span class="f_r">￥142,600.00</span>
+                    </li>
+                    <li class="dot">
+                        <span class="nums nums_7 tc f_l">07</span>
+                        <span class="uname f_l">z***</span>
+                        <span class="f_r">￥142,600.00</span>
+                    </li>
+                    <li class="dot">
+                        <span class="nums nums_8 tc f_l">08</span>
+                        <span class="uname f_l">智***贷</span>
+                        <span class="f_r">￥105,000.00</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="blank20"></div>
+
+<div id="ftw">
+	
+	<div id="ft">
+		<div class="ftbj">
+        	<div class="wrap ">
+        		<div style="padding-bottom:20px;">
+	            	<ul class="cf f_l f_box">
+	            		<li class="col hp1">
+	                    	<h3 class="f_l">使用帮助</h3>
+							<div class="blank0"></div>
+	                    	<ul class="sub-list">
+								<li><a href="#" >常见问题</a></li>
+                                <li><a href="#" >平台原理</a></li>
+								<li><a href="#" >如何借款</a></li>
+								<li><a href="#" >P2P借贷费率</a></li>
+								<li class="blank0"></li>           
+							</ul>
+							<div class="blank0"></div>
+	                	</li> 
+						<li class="col hp2">
+	                    	<h3 class="f_l">关于我们</h3>
+							<div class="blank0"></div>
+	                    	<ul class="sub-list">
+								<li><a href="#" >授权服务机构登陆</a></li>
+								<li><a href="#" >企业客户登陆</a></li>
+								<li><a href="#" >公司简介</a></li>
+								<li><a href="#" >联系我们</a></li>
+								<li class="blank0"></li>           
+							</ul>
+							<div class="blank0"></div>
+	                	</li> 
+						<li class="col hp3">
+                            <h3 class="f_l">安全保护</h3>
+                            <div class="blank0"></div>
+                            <ul class="sub-list">
+                                <li><a href="#" target="_blank">政策法规</a></li>
+                                <li><a href="#" >隐私保护</a></li>
+                                <li class="blank0"></li>           
+                            </ul>
+                            <div class="blank0"></div>
+                        </li> 
+						<li class="col hp4">
+	                    	<h3 class="f_l">了解更多</h3>
+							<div class="blank0"></div>
+                            <ul class="sub-list">
+                                <li><a href="#" >咨询热点</a></li>
+                                <li class="blank0"></li>           
+                            </ul>
+                            <div class="blank0"></div>
+                        </li> 
+						<li class="col hp5" style="margin-left:50px;width:250px;">
+	                    	<h3 class="f_l">联系我们</h3>
+							<div class="blank0"></div>
+	                    	<ul class="sub-list">
+								<li>广州市海珠区</li>
+								<li>昌岗中路237号信和广场5楼</li>
+								<li>服务邮箱：service@anxinp2p.com</li>
+								<li class="blank0"></li>           
+							</ul>
+							<div class="blank0"></div>
+	                	</li> 
+						<li class="blank0"></li>  
+	            	</ul>
+					<div class="f_r customer">
+						<div class="telphone f_r">
+                            <div class="f_r">
+                                <span class="telep b">400-888-8888</span>
+                                <span class="time f12">24小时</span>
+                            </div>
+                            <i class="iconfont f_r mt1" style="font-size:50px;line-height:50px;">&#xe620;</i>
+                        </div>
+					</div>
+					<div class="blank25"></div>
+                    <div class="blank0"></div>
+				</div>
+			</div>
+            <!--<div class="wrap">
+            	<div class="creditworthiness_box">
+                    <a href="#"><img src="images/creditworthiness1.png" alt="" /></a>
+                    <a href="#"><img src="images/creditworthiness2.png" alt="" /></a>
+                    <a href="#"><img src="images/creditworthiness3.png" alt="" /></a>
+                    <a href="#"><img src="images/creditworthiness4.png" alt="" /></a>
+                    <a href="#"><img src="images/creditworthiness5.png" alt="" /></a>
+                    <a href="#"><img src="images/creditworthiness6.png" alt="" /></a>
+                </div>
+            </div>-->
+			<div class="warp">
+				<div class="copyright">版权所有 (C) Anxinp2p.com   粤ICP备15047167号</div>
+			</div>
+		</div>	
+	</div>
+
+</div>
+<!-- 右侧小图标 -->
+<div class="sidebar">
+    <a href="#" class="sidebar_wx"></a>
+    <a href="#" class="sidebar_phone"></a>
+    <a href="#" class="sidebar_qq"></a>
+    <a href="#" class="sidebar_calculator"></a>
+    <a href="#" id="jumptop" class="sidebar_top"></a>
+</div>
+<!-- 右侧小图标 -->
+
+
+
+
+<!--脚本重排部分可能用不到，时间紧以后再整理-->
+<script type="text/javascript">
+$(document).ready(function(){
+	 lgdh1();
+	 $(".freebj").css("opacity","0.5"); //设置透明度
+});	
+function lgdh1(){
+	$(".login_block").animate({
+	    top:'20px'
+	},800);
+	setTimeout("lgdh2()","100");  
+}	
+function lgdh2(){
+	$(".login_block").animate({
+	    top:'0px'
+	},300);
+}	
+</script>
+
+<!--登录区脚本-->
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#Iajax-login-submit").click(function(){
+		ajaxCheckLogin();
+	});	
+	
+	$("#Iajax_login_form input,#Iajax_login_form select").keydown(function(e){ 
+		var curKey = e.which; 
+		if(curKey == 13){
+			ajaxCheckLogin();
+		} 
+	});
+	//回到顶部
+	$("#jumptop").bind("click", function() {
+        $("html,body").animate({
+            scrollTop: 0
+        }, "fast", "swing", function() {});
+		return false;
+    })
+});
+	
+function ajaxCheckLogin(){
+	
+	if($.trim($("#login-email-address").val()).length == 0){
+		$.showErr("Email格式错误，请重新输入或者昵称格式错误，请重新输入");
+		$("#login-email-address").focus();
+		return false;
+	}
+
+	if(!$.minLength($("#login-password").val(),4,false)){
+		$.showErr("密码格式错误，请重新输入");
+		$("#login-password").focus();
+		return false;
+	}
+	
+	var ajaxurl = $("div#Iajax_login_form").attr("action");
+	var query = new Object();
+	query.email = $("div#Iajax_login_form #login-email-address").val();
+	query.user_pwd = FW_Password($("div#Iajax_login_form #login-password").val());
+	
+	if($("#Jverify").length > 0){
+		query.verify = $("#Jverify").val();
+	}
+	query.auto_login = $("div#Iajax_login_form #autologin").val();
+	query.ajax = 1;
+
+	$.ajax({ 
+		url: ajaxurl,
+		dataType: "json",
+		data:query,
+		type: "POST",
+		success: function(ajaxobj){
+			if(ajaxobj.status==0){
+				if($("#Jverify_img").length > 0)
+					$("#Jverify_img").attr("src",'verify5e61.gif?w=89&amp;h=44&amp;rand='+ Math.random());
+				$.showErr(ajaxobj.info);	
+			}else{
+				var integrate = $("<span id='integrate'>"+ajaxobj.data+"</span>");
+				$("body").append(integrate);														
+				close_pop();
+				
+				update_user_tip();
+				
+				$("#integrate").remove();
+				if(ajaxobj.status==1){
+					$.showSuccess(ajaxobj.info,function(){
+						window.location.reload();
+					});
+				}else{
+					$.showCfm(ajaxobj.info,function(){
+						location.href = ajaxobj.jump1;
+					},function(){
+						window.location.reload();
+					});
+				}					
+			}
+		}
+	});	
+	
+	return false;
+}
+
+function update_user_tip(){
+	var ajaxurl = APP_ROOT+"/index.php?ctl=ajax&act=update_user_tip";
+	$.ajax({ 
+		url: ajaxurl,
+		type: "POST",
+		success: function(ajaxobj){
+			$("#user_head_tip").html(ajaxobj);
+		}
+	});	
+}
+</script>
+
+<!--登录框右上角二维码-->
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".logingchange").bind('click',function(){
+		$(".logingchange").toggleClass("changev"); 
+		if ($(".logingchange").hasClass("changev")) {
+			$(".freereg").css("display","none");
+			$(".freereg").css("height","0px");
+			$(".freecord").css("display","block");
+			$(".freecord").animate({height:"290px"});
+		}else{
+			$(".freecord").css("display","none");
+			$(".freecord").css("height","0px");
+			$(".freereg").css("display","block");
+			$(".freereg").animate({height:"290px"});	
+		}
+	});
+});
+</script>
+
+<!--右侧栏滚动条效果-->
+<script type="text/javascript">
+$(function() {
+	var $sidebar = $(".index_right"),
+	$window = $(window),
+	leftset=$(".index_left").innerHeight(),
+	offset = $sidebar.offset(),
+	topPadding = 15;
+	$window.scroll(function() {
+		var	top= $window.scrollTop() - offset.top + topPadding;
+		if ($window.scrollTop() > offset.top && leftset>$window.scrollTop()) {
+			$sidebar.stop().css("marginTop", top);
+		} else if (top<61) {
+			$sidebar.stop().css("marginTop", 0);
+		}
+	});
+});
+</script>
+
+<!--倒计时-->
+<script type="text/javascript">
+var leftTimeActInv = null;
+$(function(){
+	$(".selct .gray_title .b a").click(function(){
+		$(".selct .gray_title .b a").parent().removeClass("foucs");
+		$(this).parent().addClass("foucs");
+		var rel=$(this).parent().attr("rel");
+		
+		$(".selct .gray_title .more-box .f_r").addClass("hide");
+		$(".selct .gray_title .more-box .f_r[rel='"+rel+"']").removeClass("hide");
+		
+		$(".selct .nicai").addClass("hide");
+		$(".selct  .nicai[rel='"+rel+"']").removeClass("hide");
+		
+	});
+	
+	$("#loadtop #rightTitls a").click(function(){
+		$("#loadtop #rightTitls a").parent().removeClass("current");
+		$(this).parent().addClass("current");
+		var rel=$(this).attr("rel");
+		$("#loadtop #J_conbox ul").addClass("hide");
+		$("#loadtop #J_conbox ul[rel='"+rel+"']").removeClass("hide");
+	});
+	leftTimeAct();
+});
+function leftTimeAct(){
+	clearTimeout(leftTimeActInv);
+	$(".AdvLeftTime").each(function(){
+		var leftTime = parseInt($(this).attr("data"));
+		if(leftTime > 0){
+			var day  =  parseInt(leftTime / 24 /3600);
+			var hour = parseInt((leftTime % (24 *3600)) / 3600);
+			var min = parseInt((leftTime % 3600) / 60);
+			var sec = parseInt((leftTime % 3600) % 60);
+			$(this).find(".day").html((day<10?"0"+day:day));
+			$(this).find(".hour").html((hour<10?"0"+hour:hour));
+			$(this).find(".min").html((min<10?"0"+min:min));
+			$(this).find(".sec").html((sec<10?"0"+sec:sec));
+			leftTime--;
+			$(this).attr("data",leftTime);
+		}else{
+			$(this).html('时间已结束');
+		}
+	});
+	
+	leftTimeActInv = setTimeout(function(){
+		leftTimeAct();
+	},1000);
+}
+</script>
+
+<script type="text/javascript" defer="defer">
+	//resetWindowBox();
+</script>
+</body>
+</html>

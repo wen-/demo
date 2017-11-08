@@ -1,0 +1,218 @@
+@charset "utf-8";
+/* 
+ * CSS Document for xxx
+ * Copyright 2012, wen 
+ * Date: 2012-12-17
+ */
+body{
+	font-size:12px;
+	color:#989898;
+	font-family:\5b8b\4f53, tahoma, arial, sans-serif; 
+	background:url(../images/app_bg.jpg);
+}
+.head,.nav,.content,.footer{
+	width:994px;
+	margin:0 auto;
+}
+.app_page .head{
+	height:170px;
+}
+.app_logo{
+	height:170px;
+	width:50%;
+	background:url(../images/app_txt1.png) left 120px no-repeat;
+}
+.app_logo a{
+	display:block;
+	font-size:0;
+	padding:10px;
+}
+.gz{
+	margin:50px 0 0 60px;
+}
+.gz a{
+	display:block;
+	margin-bottom:20px;
+}
+.content_show{
+	position:relative;
+	width:100%;
+	overflow:hidden;
+}
+.show_wall{
+	width:994px;
+	height:400px;
+	position:relative;
+	margin:0 auto;
+}
+.app_show_box{
+	position:absolute;
+	width:1600px;
+	height:400px;
+	overflow:hidden;
+	left:-303px;
+	z-index:100;
+}
+#app-last,#app-next{
+	display:block;
+	position:absolute;
+	height:66px;
+	width:66px;
+	font-size:0;
+	cursor:pointer;
+	overflow:hidden;
+	top:180px;
+	left:50%;
+	z-index:100;
+}
+#app-last{
+	margin-left:-600px;
+	background:url(../images/next_pre.png) no-repeat;
+}
+#app-next{
+	margin-left:534px;
+	background:url(../images/next_pre.png) 100% 0 no-repeat;
+}
+.app_show{
+	width:4800px;
+}
+.app_show li{
+	float:left;
+}
+.app_show a{
+	font-size:0;
+	display:block;
+}
+
+.change_box{
+	width:994px;
+	margin:0 auto;
+	position:relative;
+}
+.android_down{
+	display: block;
+    font-size: 0;
+    left: 100px;
+    position: absolute;
+    top: -140px;
+    z-index: 1000;
+}
+.ewm{
+	display: block;
+    font-size: 0;
+    left: 500px;
+    position: absolute;
+    top: -140px;
+    z-index: 1000;
+}
+.app_ico{
+	display: block;
+    font-size: 0;
+    left: 670px;
+    position: absolute;
+    top: -530px;
+    z-index: 1000;
+}
+.hot_app{
+    font-size: 0;
+    left: 0px;
+    position: absolute;
+    top: -130px;
+    z-index: 1000;
+}
+.change2,.change3{
+	display:none;
+}
+.seek_title{
+	margin-top:15px;
+	border-bottom:solid 2px #8b8b8b;
+}
+.seek_title h1{
+	font-size:26px;
+	font-family:"微软雅黑","黑体","宋体";
+	width:140px;
+	font-weight:normal;
+	border-bottom:solid 2px #4c8b21;
+}
+.seek_body{
+	margin-top:10px;
+}
+.seek_mv,.seek_news_box{
+	width:370px;
+	height:240px;
+	padding:10px 0;
+	border-right:dotted 1px #444;
+}
+.seek_news_box{
+	width:350px;
+	padding:5px 10px;
+}
+.seek_news_box h2,.seek_contact h2{
+	font-size:20px;
+	font-family:"微软雅黑","黑体","宋体";
+	color:#478609;
+	font-weight:normal;
+}
+.seek_news{
+	height:200px;
+	overflow:hidden;
+	margin-top:10px;
+}
+.seek_news li{
+	font-size:16px;
+	height:40px;
+	line-height:40px;
+	font-weight:normal;
+	font-family:"微软雅黑","黑体","宋体";
+}
+.seek_news li a{
+	color: #444444;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 250px;
+}
+.news_time{
+	float:right;
+}
+.seek_contact{
+	padding:5px 10px;
+}
+.contact_list p{
+	font-size:14px;
+	font-weight:normal;
+	font-family:"微软雅黑","黑体","宋体";
+}
+.contact_list strong{
+	color: #444444;
+	font-size:16px;
+	font-weight:normal;
+}
+.contact_list{
+	margin-top:20px;
+}
+
+.footer{
+	border-top: 1px solid #8B8B8B;
+    margin-top: 20px;
+    padding: 10px 0;
+    text-align: center;
+}
+.footer_nav{
+	line-height: 3em;
+    margin: 0 40px;
+}
+.footer_nav li{
+	display:inline;
+	margin:10px;
+	font-size:14px;
+}
+.footer_nav a{
+	color:#2d5e7e;
+}
+.footer p{
+	padding:20px 0 10px;
+	color:#484848;
+	font-size:14px;
+}

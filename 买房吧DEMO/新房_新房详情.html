@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="author" content="yellowwen@126.com">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<title>新房详情</title>
+	<link type="text/css" rel="stylesheet" href="css/reset.min.css" />	<link type="text/css" rel="stylesheet" href="css/animate.min.css" />
+	<link type="text/css" rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
+	<link type="text/css" rel="stylesheet" href="font/iconfont.css" />
+	<link type="text/css" rel="stylesheet" href="css/user-login.css" />
+	<link type="text/css" rel="stylesheet" href="css/main.css" />
+	<link type="text/css" rel="stylesheet" href="css/house_detail.css" />
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<!--[if lt IE 9]>
+	<script type="text/javascript">
+		var h5Block = 'header,footer,section,aside,article,nav,hgroup,figure,figcaption,details,summary';
+		var h5Inline = 'time,mark,ruby,rt,rp,output,keygen,meter,progress,command,source';
+		var h5Other = 'video,audio,canvas,datalist';
+		var h5Elem = (h5Block + ',' + h5Inline + ',' + h5Other).split(',');
+		for(var i=0;i<h5Elem.length;i++){
+			document.createElement(h5Elem[i]);
+		}
+	</script>
+	<![endif]-->
+</head>
+<body>
+<!--页头star-->
+<header class="header">
+	<div class="m">
+		<a href="index.html" class="lfloat logo"><img src="images/logo.png" alt="" /></a>
+		<div class="rfloat login_info">
+			<div class="h_btn">
+				<a class="log" href="用户中心_登录.html">登录</a>
+				<a class="reg" href="注册.html">注册</a>
+			</div>
+			<div class="h_txt" style="display: none;">
+				<a href="#">
+					<img src="images/user_icon.jpg" class="headico" alt="" />
+					<span class="info_txt">欢迎<span>张三</span></span>
+				</a>
+				<a href="#" class="exit">退出</a>
+			</div>
+		</div>
+		<nav class="rfloat nav">
+			<dl>
+				<dt><a href="index.html">首页</a></dt>
+			</dl>
+			<dl>
+				<dt><a href="#">二手房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="二手房_房源列表.html">房源</a>
+					<a href="二手房_小区列表.html">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="current"><a href="#">新房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">新房首页</a>
+					<a href="#">广州新房</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">租房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">房源</a>
+					<a href="#">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">写字楼</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">出租</a>
+					<a href="#">出售</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">业主委托</a></dt>
+			</dl>
+		</nav>
+	</div>
+</header>
+
+<div class="guide-alink guide-alink-detailspage">
+	<div class="guide-alink-inner clearfix">
+		<a href="/">买房吧</a>
+		<i class="icons_saledetails"></i>
+		<a href="#">广州新房</a>
+		<i class="icons_saledetails"></i>
+		<a href="javascript:;" class="cur">中国美林湖</a>
+	</div>
+</div>
+
+<div class="page-container">
+	<!--hs header-->
+	<div class="hs-header hs-header-newhs clearfix">
+		<!--hs header photo-->
+		<div class="hs-header-photo hs-header-photo-office lfloat">
+			<!--photoalbum-->
+			<div class="photoalbum_box photoalbum-hs-header-office" id="photoAlbumHsHeader">
+				<div class="preview" id="previewCon">
+					<img width="485" height="364" src="images/house_detail/show1.jpg" alt="">
+				</div>
+				<div class="guide_btns pr" id="guideBtns">
+					<div class="guide_minmap wen_play_body">
+						<ul id="guideMinmapCon" class="wen_play_box">
+							<li class="cur play_list">
+								<img width="89" height="66" src="images/house_detail/show_1.jpg" data-src="images/house_detail/show1.jpg" alt="中国美林湖">
+								<span class="photoalbum-dsp" style="bottom: 0; display: block;">封面图</span>
+							</li>
+							<li class="play_list">
+								<img width="89" height="66" src="images/house_detail/show_2.jpg" data-src="images/house_detail/show1.jpg">
+								<span class="photoalbum-dsp" style="bottom: -50px; display: none;">效果图</span>
+							</li>
+							<li class="play_list">
+								<img width="89" height="66" src="images/house_detail/show_3.jpg" data-src="images/house_detail/show1.jpg">
+								<span class="photoalbum-dsp" style="bottom: -50px; display: none;">实景图</span>
+							</li>
+							<li class="play_list">
+								<img width="89" height="66" src="images/house_detail/show_4.jpg" data-src="images/house_detail/show1.jpg">
+								<span class="photoalbum-dsp" style="bottom: -50px; display: none;">户型图</span>
+							</li>
+							<li class="play_list">
+								<img width="89" height="66" src="images/house_detail/show_5.jpg" data-src="images/house_detail/show1.jpg">
+								<span class="photoalbum-dsp" style="bottom: -50px; display: none;">样板图</span>
+							</li>
+						</ul>
+					</div>
+					<div id="curGuide" class="cur_guide" style="left: 0"></div>
+					<div class="wen_pre_page dn">&lt;</div>
+					<div class="wen_next_page dn">&gt;</div>
+				</div>
+			</div>
+			<!--end photoalbum-->
+		</div>
+		<!--/hs header photo-->
+		<!--hs header field-->
+		<div class="hs-header-field hs-header-field-office lfloat">
+			<!--slogan-->
+			<div class="house_slogan clearfix">
+				<div class="house_title">
+					<h2 class="text_of">中国美林湖</h2>
+					<span class="newhs-status newhouse_tips1 lfloat">在售</span>
+					<p class="collect-hs-btn rfloat like">
+						<i class="icons_saledetails"></i>
+						<span>收藏房源</span>
+					</p>
+					<p class="collect-hs-btn has-been-collecting rfloat unlike" style="display:none;">
+						<i class="icons_saledetails"></i>
+						<span>已收藏</span>
+					</p>
+				</div>
+			</div>
+			<!--end slogan-->
+			<!--tags-->
+			<div class="house-meta clearfix">
+				<p class="label-item label-style1">打折优惠</p>
+				<p class="label-item label-style2">生态宜居</p>
+			</div>
+			<!--end tags-->
+			<!--price-->
+			<div class="newhs-price">均价：
+				<b>6800</b>
+				<span class="unit">元/m²</span>
+			</div>
+			<!--<div class="newhs-price">均价：<em>价格待定</em></div>-->
+			<!--/price-->
+			<ul class="header-field-list">
+				<li>
+					<span class="field-text lfloat">装修情况：</span>
+					<span class="lfloat">精装修</span>
+				</li>
+				<li class="right">
+					<span class="field-text lfloat">物业类型：</span>
+					<span class="lfloat">住宅</span>
+				</li>
+				<li>
+					<span class="field-text lfloat">开盘时间：</span>
+					<span class="lfloat">2014年03月01日</span>
+				</li>
+				<li class="right">
+					<span class="field-text lfloat">交房时间：</span>
+					<span class="lfloat">2016年12月</span>
+				</li>
+				<li>
+					<span class="field-text lfloat">物业公司：</span>
+					<span class="lfloat">广州美林基业房地产开发有限物业公司</span>
+				</li>
+				<li class="right">
+					<span class="field-text lfloat">物业费用：</span>
+					<span class="lfloat">1.8&nbsp;-&nbsp;4.5元/m²</span>
+				</li>
+				<li class="address-icon">
+					<span class="field-text lfloat">项目地址：</span>
+					<span class="field-address lfloat">
+						<em>[花都山前大道]168号</em>
+						<a class="icons-listings address-link" id="addressLink" href="javascript:;"></a>
+					</span>
+				</li>
+			</ul>
+			<!--status-onsell status-waiting status-complete-->
+			<div class="status-onsell-show clearfix">
+				<!--tel-->
+				<div class="tel-style tel-style-mbp tel-style-newhs">
+					<div class="tel-style-l tel-style-l-other lfloat">
+						<!--400电话-->
+						<p class="tel-num">
+							<i class="icons_saledetails"></i>
+							<span>
+								<b>400-xxx-xxxx</b>
+								<em>转</em>
+								<b>xxxx</b>
+							</span>
+						</p>
+						<!--/400电话-->
+					</div>
+				</div>
+				<!--/tel-->
+			</div>
+		</div>
+		<!--/hs header field-->
+	</div>
+	<!--end hs header-->
+	<!--anchor-->
+	<div class="anchor-nav-box">
+		<div class="anchor-nav clearfix" id="anchorNav">
+			<ul>
+				<li class="cur" data-type="anchor">
+					<a href="javascript:;" id="anchor-7" date-scroll="#scrollto-7">最新优惠</a></li>
+				<li data-type="anchor" class="">
+					<a href="javascript:;" id="anchor-1" date-scroll="#scrollto-1">户型图</a></li>
+				<li data-type="anchor" class="">
+					<a href="javascript:;" id="anchor-6" date-scroll="#scrollto-6">楼盘动态</a></li>
+				<li data-type="anchor" class="">
+					<a href="javascript:;" id="anchor-2" date-scroll="#scrollto-2">楼盘相册</a></li>
+				<li data-type="anchor" class="">
+					<a href="javascript:;" id="anchor-3" date-scroll="#scrollto-3">周边配套</a></li>
+				<li data-type="anchor" class="">
+					<a href="javascript:;" id="anchor-4" date-scroll="#scrollto-4">楼盘信息</a></li>
+				<li data-type="anchor" class="">
+					<a href="javascript:;" id="anchor-5" date-scroll="#scrollto-5">周边楼盘</a></li>
+			</ul>
+			<div class="broker-nt rfloat">
+				<i class="icons_saledetails"></i>
+				<span class="tel">400-xxx-xxxx
+					<em>转</em>xxxx
+				</span>
+			</div>
+		</div>
+	</div>
+	<!--end anchor-->
+	<!--流程-->
+	<div class="anchor-trigger" id="scrollto-7">
+		<div class="involvement-process" style="padding:0;">
+			<div class="discount-info">
+				<p class="discount-info-left lfloat">
+					<span class="slogan">3万抵10万</span>
+					<span class="date">有效日期：2016.08.17-2016.12.31</span>
+				</p>
+				<p class="discount-info-center lfloat">洋房三万抵十万，中国美林湖以“生态都市”为理念,构筑“一区三镇八园”的开放式格局,实现了自然与都市生活的平衡。</p>
+				<p class="get-preferential rfloat">
+					<a class="js-access-location apply_newhouse">获取优惠</a>
+				</p>
+			</div>
+			<div class="process-legend">
+				<p class="title">参与流程</p>
+				<ul class="legend-item clearfix">
+					<li class="legend-item-con legend-item-con-1">
+						<i class="icons_saledetails"></i>
+						<span>
+							<em>01</em>线上报名获取优惠
+						</span>
+					</li>
+					<li class="icons_saledetails gap-arrow"></li>
+					<li class="legend-item-con legend-item-con-2">
+						<i class="icons_saledetails"></i>
+						<span>
+							<em>02</em>手机接收优惠信息
+						</span>
+					</li>
+					<li class="icons_saledetails gap-arrow"></li>
+					<li class="legend-item-con legend-item-con-3">
+						<i class="icons_saledetails"></i>
+						<span>
+							<em>03</em>前往楼盘实地看房
+						</span>
+					</li>
+					<li class="icons_saledetails gap-arrow"></li>
+					<li class="legend-item-con legend-item-con-4">
+						<i class="icons_saledetails"></i>
+						<span>
+							<em>04</em>签约合同享受优惠
+						</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--/流程-->
+	<!--户型图-->
+	<div class="anchor-trigger" id="scrollto-1">
+		<div class="anchor-title" style="" id="layoutTile">户型图</div>
+		<p class="newhs-dmf-tabs clearfix newhs-dmf-tabs-photo-other" id="layoutTile_P">
+			<a class="cur" href="javascript:;">全部(31)</a>
+			<a href="javascript:;">1室(3)</a>
+			<a href="javascript:;">2室(11)</a>
+			<a href="javascript:;">3室(17)</a></p>
+		<div class="newhs-dmf" id="newhsDMF">
+			<ul>
+				<li class="clearfix ">
+					<p class="newhs-dmf-photo lfloat">
+						<a href="javascript:;">
+							<img width="148" height="110" src="images/house_detail/house_img1.jpg" data-src="images/house_detail/house_img1.jpg" data-active="1">
+						</a>
+					</p>
+					<div class="newhs-dmf-center lfloat">
+						<p class="title">A户型1室2厅59平米</p>
+						<p class="reference clearfix">
+							<span>参考总价：40.12万</span>
+							<span>参考首付：12.036万</span>
+							<span>参考月供：1,222.23元/月</span>
+						</p>
+						<p class="view-original">
+							<a href="images/house_detail/house_img1.jpg" target="_blank">查看户型原图</a>
+						</p>
+					</div>
+					<p class="mortgage-calculate">
+						<a href="javascript:;" flg="4572933" avgprice="14500" area="86" layoutid="0145ee7a-0ad1-441e-839c-deaea57ff0ac">计算房贷</a>
+					</p>
+				</li>
+				<li class="clearfix ">
+					<p class="newhs-dmf-photo lfloat">
+						<a href="javascript:;">
+							<img width="148" height="110" src="images/house_detail/house_img2.jpg" data-src="images/house_detail/house_img2.jpg" data-active="2">
+						</a>
+					</p>
+					<div class="newhs-dmf-center lfloat">
+						<p class="title">A户型2室1厅62平米</p>
+						<p class="reference clearfix">
+							<span>参考总价：42.16万</span>
+							<span>参考首付：12.648万</span>
+							<span>参考月供：1,284.38元/月</span>
+						</p>
+						<p class="view-original">
+							<a href="images/house_detail/house_img2.jpg" target="_blank">查看户型原图</a>
+						</p>
+					</div>
+					<p class="mortgage-calculate">
+						<a href="javascript:;">计算房贷</a>
+					</p>
+				</li>
+				<li class="clearfix ">
+					<p class="newhs-dmf-photo lfloat">
+						<a href="javascript:;">
+							<img width="148" height="110" src="images/house_detail/house_img3.jpg" data-src="images/house_detail/house_img3.jpg" data-active="3">
+						</a>
+					</p>
+					<div class="newhs-dmf-center lfloat">
+						<p class="title">A户型1室2厅62平米</p>
+						<p class="reference clearfix">
+							<span>参考总价：42.16万</span>
+							<span>参考首付：12.648万</span>
+							<span>参考月供：1,284.38元/月</span>
+						</p>
+						<p class="view-original">
+							<a href="images/house_detail/house_img3.jpg" target="_blank">查看户型原图</a>
+						</p>
+					</div>
+					<p class="mortgage-calculate">
+						<a href="javascript:;">计算房贷</a>
+					</p>
+				</li>
+				<li class="clearfix dn">
+					<p class="newhs-dmf-photo lfloat">
+						<a href="javascript:;">
+							<img width="148" height="110" src="images/house_detail/house_img3.jpg" data-src="images/house_detail/house_img3.jpg" data-active="3">
+						</a>
+					</p>
+					<div class="newhs-dmf-center lfloat">
+						<p class="title">A户型1室2厅62平米</p>
+						<p class="reference clearfix">
+							<span>参考总价：42.16万</span>
+							<span>参考首付：12.648万</span>
+							<span>参考月供：1,284.38元/月</span>
+						</p>
+						<p class="view-original">
+							<a href="images/house_detail/house_img3.jpg" target="_blank">查看户型原图</a>
+						</p>
+					</div>
+					<p class="mortgage-calculate">
+						<a href="javascript:;">计算房贷</a>
+					</p>
+				</li>
+			</ul>
+		</div>
+		<div class="tc">
+			<p class="remaining-dmf closed" id="expandMore">
+				<a href="javascript:;">
+					<span>点击查看剩余1套户型图</span>
+					<i class="icons-listings"></i>
+				</a>
+			</p>
+		</div>
+	</div>
+	<!--end户型图-->
+	<!--楼盘动态-->
+	<div class="anchor-trigger" id="scrollto-6">
+		<div class="anchor-title">楼盘动态</div>
+		<div class="dynamic-tree">
+			<ul>
+				<!--导购-->
+				<li class="dynamic-tree-item clearfix ">
+					<p class="date lfloat">
+						<span>06月01日</span>
+						<em>2016年</em>
+					</p>
+					<div class="con lfloat">
+						<i class="icons_saledetails node-circle"></i>
+						<div class="dynamic-tree-con">
+							<!--hs-->
+							<div class="dynamic-tree-hs clearfix">
+								<p class="lfloat">
+									<a href="#" target="_blank">
+										<img width="150" height="112" src="images/pic5.jpg">
+									</a>
+								</p>
+								<div class="dynamic-tree-hs-con">
+									<p class="title">
+										<a href="#" target="_blank">中国美林湖--美汇半岛户型鉴赏</a>
+									</p>
+									<p class="text">中国美林湖--美汇半岛户型鉴赏，一房两房三房均有，多种户型满足你的多种需求，快来看看，小编给你一一讲解！</p>
+								</div>
+							</div>
+							<!--end hs-->
+						</div>
+					</div>
+				</li>
+				<!--动态-->
+				<li class="dynamic-tree-item clearfix ">
+					<p class="date lfloat">
+						<span>01月15日</span>
+						<em>2016年</em>
+					</p>
+					<div class="con lfloat">
+						<i class="icons_saledetails node-circle"></i>
+						<div class="dynamic-tree-con">
+							<!--text-->
+							<div class="dynamic-tree-text">中国美林湖【天汇半岛】洋房组团，户型涵盖60-140平米的一至三房单位，均价6500-7000元/平米。据悉，即日起至1月31日，到访参观美林湖根据到访指引签到即可领取0.1克六福美林金，限量10万份。1月9日看房团火热召集可随看房团前往取金。</div>
+							<!--end text-->
+						</div>
+					</div>
+				</li>
+				<!--动态-->
+				<li class="dynamic-tree-item clearfix last">
+					<p class="date lfloat">
+						<span>09月23日</span>
+						<em>2015年</em>
+					</p>
+					<div class="con lfloat">
+						<i class="icons_saledetails node-circle"></i>
+						<div class="dynamic-tree-con">
+							<!--text-->
+							<div class="dynamic-tree-text">中国美林湖主推【爱琴海】一线湖景精装洋房，包括花漾湾1—1栋，1—2栋，2—2栋，3—2栋，共671套单位，户型涵盖62-147㎡二至四房，均价6500元/平，精装2房29万/套起。另外项目配套广铁一中外国语学校于2015年9月开学，现已开始招生。</div>
+							<!--end text-->
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--翻页-->
+		<div class="pages">
+			<a href="#">&lt;上一页</a>
+			<a class="current" href="javascript:void(0);">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">...</a>
+			<a href="#">10</a>
+			<a href="#">11</a>
+			<a href="#">下一页&gt;</a>
+		</div>
+		<!--end翻页-->
+	</div>
+	<!--end楼盘动态-->
+	<!--楼盘相册-->
+	<div class="anchor-trigger" id="scrollto-2">
+		<div class="anchor-title">楼盘相册</div>
+		<p class="newhs-dmf-tabs newhs-dmf-tabs-photo clearfix">
+			<a class="cur" href="javascript:;">全部(12)</a>
+			<a href="javascript:;">项目图(8)</a>
+			<a href="javascript:;">样板图(4)</a>
+		</p>
+		<div class="hs-pics" id="hsPics">
+			<ul class="clearfix">
+				<li>
+					<a href="javascript:;">
+						<img data-active="1" data-type="效果图 (5)" src="images/house_detail/pic1.jpg" data-src="images/house_detail/pic1_1.jpg" />
+					</a>
+					<span class="hs-pics-dsp">效果图(5)</span>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img data-active="2" data-type="效果图 (5)" src="images/house_detail/pic1.jpg" data-src="images/house_detail/pic1_1.jpg" />
+					</a>
+					<span class="hs-pics-dsp">效果图(5)</span>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img data-active="3" data-type="效果图 (5)" src="images/house_detail/pic1.jpg" data-src="images/house_detail/pic1_1.jpg" />
+					</a>
+					<span class="hs-pics-dsp">效果图(5)</span>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img data-active="4" data-type="效果图 (5)" src="images/house_detail/pic1.jpg" data-src="images/house_detail/pic1_1.jpg" />
+					</a>
+					<span class="hs-pics-dsp">效果图(5)</span>
+				</li>
+			</ul>
+		</div>
+		<!--翻页-->
+		<div class="pages">
+			<a href="#">&lt;上一页</a>
+			<a class="current" href="javascript:void(0);">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">...</a>
+			<a href="#">10</a>
+			<a href="#">11</a>
+			<a href="#">下一页&gt;</a>
+		</div>
+		<!--end翻页-->
+	</div>
+	<!--/楼盘相册-->
+	<!--周边配套-->
+	<div class="anchor-trigger baidumap_box" id="scrollto-3">
+		<script type="text/javascript" src="http://api.map.baidu.com/getscript?v=2.0&ak=CSEFkLbH5U7UTIM5ErykpPaC"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/library/RichMarker/1.2/src/RichMarker_min.js"></script>
+
+		<script type="text/javascript">
+			var base="";
+			var gardenId="1110624";
+			var gardenName="富力泉天下";
+			var longitude="113.664816";
+			var latitude="23.642537";
+			var city="广州";
+		</script>
+
+		<div id="mapWapper">
+			<div class="anchor-title" style="margin-bottom:0;">
+				<b class="cur" data-type="peripheral-supporting" id="mapPoiTab" >周边配套</b>
+			</div>
+
+			<div id="mapPoiBox">
+				<div class="map-surrounding clearfix">
+					<!-- map -->
+					<div class="map-surrounding-box lfloat" id="msb">
+						<div class="map-surrounding-layer" id="mapDiv">
+						</div>
+
+						<p class="map-funcs-tbs" id="mapFuncsTbs">
+							<a href="javascript:;" class="cur" keyText="地铁站,公交站" types="METRO,BUS">交通</a>
+							<a href="javascript:;" class="" keyText="幼儿园,小学,中学,高中,大学" types="KINDERGARTEN,PRIMARY_SCHOOL,JUNIOR_SCHOOL,MIDDLE_SCHOOL,UNIVERSITY">学校</a>
+							<a href="javascript:;" class="" keyText="医院,药店" types="HOSPITAL,PHARMACY">医疗</a>
+							<a href="javascript:;" class="" keyText="商场,超市,便利店" types="MALL,SUPERMARKET,CONVENIENCE_STORE">商超</a>
+							<a href="javascript:;" class="" keyText="ATM,银行,餐馆,KTV,咖啡厅,酒店" types="ATM,BANK,RESTAURANT,KTV,CAFE,HOTEL">生活</a>
+							<a href="javascript:;" class="" keyText="工厂,加油站" types="FACTORY,GAS_STATION">其他</a>
+						</p>
+
+						<div class="map-side-btns" id="map-side-btns">
+							<p class="full-screen-btn" data-type="full-screen" id="full-screen"><a class="icons"></a></p>
+							<div class="zoom-btns">
+								<p class="zoom-in-out" type="bigger"><a class="transverse"></a><a class="vertical"></a></p>
+								<i class="transverse-line"></i>
+								<p class="zoom-in-out" type="smaller"><a class="transverse"></a></p>
+							</div>
+						</div>
+					</div>
+					<!-- /map -->
+
+					<!-- list -->
+					<div class="map-surrounding-list rfloat" id="msl">
+					</div>
+					<!-- /list -->
+				</div>
+			</div>
+
+			<!--<div id="panoramaBox" class="panoramic-map-box dn" >
+				<div id="panorama" class="panoramic-map-box"></div>
+				<div class="map-side-btns" id="panroma-side-btns">
+					<p class="full-screen-btn" data-type="full-screen" id="full-screen"><a class="icons"></a></p>
+				</div>
+			</div>-->
+		</div>
+
+		<!--全屏地图-->
+		<div class="dialog-show-wrapper full-screen-map" id="fullScreenMap">
+			<div class="dialog-show-inner">
+				<div class="full-screen-map-wrap" id="fullScreenMapWrap"></div>
+			</div>
+		</div>
+		<!--end全屏地图-->
+	</div>
+	<!--/周边配套-->
+	<!--楼盘信息-->
+	<div class="anchor-trigger" id="scrollto-4">
+		<div class="anchor-title">楼盘信息</div>
+		<div class="building-params clearfix">
+			<ul>
+				<li>
+					<span class="field lfloat">楼盘名称：</span>
+					<p class="text lfloat">中国美林湖</p>
+				</li>
+				<li>
+					<span class="field lfloat">占地面积：</span>
+					<p class="text lfloat">799992平米</p>
+				</li>
+				<li>
+					<span class="field lfloat">所属区域：</span>
+					<p class="text lfloat">花都山前大道</p>
+				</li>
+				<li>
+					<span class="field lfloat">车位数量：</span>
+					<p class="text lfloat">600</p>
+				</li>
+				<li>
+					<span class="field lfloat">物业类型：</span>
+					<p class="text lfloat">住宅</p>
+				</li>
+				<li>
+					<span class="field lfloat">容
+						<em class="gap-hfword"></em>积
+						<em class="gap-hfword"></em>率：</span>
+					<p class="text lfloat">1.25</p>
+				</li>
+				<li>
+					<span class="field lfloat">装修情况：</span>
+					<p class="text lfloat">精装</p>
+				</li>
+				<li>
+					<span class="field lfloat">绿
+						<em class="gap-hfword"></em>化
+						<em class="gap-hfword"></em>率：</span>
+					<p class="text lfloat">80%</p>
+				</li>
+				<li>
+					<span class="field lfloat">平均房价：</span>
+					<p class="text lfloat">6800元/m²</p>
+				</li>
+				<li>
+					<span class="field lfloat">物业公司：</span>
+					<p class="text lfloat">广州美林基业房地产开发有限物业公司</p>
+				</li>
+				<li>
+					<span class="field lfloat">开
+						<em class="gap-hfword"></em>发
+						<em class="gap-hfword"></em>商：</span>
+					<p class="text lfloat">广州美林基业投资有限公司</p>
+				</li>
+				<li>
+					<span class="field lfloat">停
+						<em class="gap-hfword"></em>车
+						<em class="gap-hfword"></em>费：</span>
+					<p class="text lfloat">200</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--/楼盘信息-->
+	<!--周边楼盘-->
+	<div class="anchor-trigger" id="scrollto-5">
+		<div class="anchor-title">周边楼盘</div>
+		<div class="hs-list">
+			<ul class="clearfix">
+				<li>
+					<a href="#" target="_blank">
+						<img src="images/newhouse/2_1.jpg" alt="" />
+					</a>
+					<p class="hs-title">
+						<a href="#" target="_blank">花都山前大道-碧桂园假日半岛</a>
+					</p>
+					<p class="hs-meta">
+						<span class="hs-meta-price lfloat">
+							<em>12000</em>元/m²
+						</span>
+					</p>
+				</li>
+				<li>
+					<a href="#" target="_blank">
+						<img src="images/newhouse/2_1.jpg" alt="" />
+					</a>
+					<p class="hs-title">
+						<a href="#" target="_blank">花都山前大道-碧桂园假日半岛</a>
+					</p>
+					<p class="hs-meta">
+						<span class="hs-meta-price lfloat">
+							<em>12000</em>元/m²
+						</span>
+					</p>
+				</li>
+				<li>
+					<a href="#" target="_blank">
+						<img src="images/newhouse/2_1.jpg" alt="" />
+					</a>
+					<p class="hs-title">
+						<a href="#" target="_blank">花都山前大道-碧桂园假日半岛</a>
+					</p>
+					<p class="hs-meta">
+							<span class="hs-meta-price lfloat">
+								<em>12000</em>元/m²
+							</span>
+					</p>
+				</li>
+				<li>
+					<a href="#" target="_blank">
+						<img src="images/newhouse/2_1.jpg" alt="" />
+					</a>
+					<p class="hs-title">
+						<a href="#" target="_blank">花都山前大道-碧桂园假日半岛</a>
+					</p>
+					<p class="hs-meta">
+						<span class="hs-meta-price lfloat">
+							<em>12000</em>元/m²
+						</span>
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--/周边楼盘-->
+	<!--同价位楼盘-->
+	<div class="anchor-trigger" id="similarPrices">
+		<div class="anchor-title">同价位楼盘</div>
+		<div class="hs-list">
+			<ul class="clearfix">
+				<li>
+					<a href="#" target="_blank">
+						<img src="images/newhouse/2_1.jpg" alt="" />
+					</a>
+					<p class="hs-title">
+						<a href="#" target="_blank">花都山前大道-碧桂园假日半岛</a>
+					</p>
+					<p class="hs-meta">
+						<span class="hs-meta-price lfloat">
+							<em>12000</em>元/m²
+						</span>
+					</p>
+				</li>
+				<li>
+					<a href="#" target="_blank">
+						<img src="images/newhouse/2_1.jpg" alt="" />
+					</a>
+					<p class="hs-title">
+						<a href="#" target="_blank">花都山前大道-碧桂园假日半岛</a>
+					</p>
+					<p class="hs-meta">
+						<span class="hs-meta-price lfloat">
+							<em>12000</em>元/m²
+						</span>
+					</p>
+				</li>
+				<li>
+					<a href="#" target="_blank">
+						<img src="images/newhouse/2_1.jpg" alt="" />
+					</a>
+					<p class="hs-title">
+						<a href="#" target="_blank">花都山前大道-碧桂园假日半岛</a>
+					</p>
+					<p class="hs-meta">
+						<span class="hs-meta-price lfloat">
+							<em>12000</em>元/m²
+						</span>
+					</p>
+				</li>
+				<li>
+					<a href="#" target="_blank">
+						<img src="images/newhouse/2_1.jpg" alt="" />
+					</a>
+					<p class="hs-title">
+						<a href="#" target="_blank">花都山前大道-碧桂园假日半岛</a>
+					</p>
+					<p class="hs-meta">
+						<span class="hs-meta-price lfloat">
+							<em>12000</em>元/m²
+						</span>
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--/同价位楼盘-->
+	<!--周边二手房-->
+	<div class="anchor-trigger" id="aroundRooms">
+		<div class="anchor-title">周边二手房</div>
+		<div class="hs-list">
+			<ul class="clearfix">
+				<li>
+					<a href="#" target="_blank">
+						<img alt="" src="images/newhouse/2_1.jpg">
+					</a>
+					<p class="hs-title">
+						<a target="_blank" href="#">中国美林湖省级学校三甲医院山脉环绕度假就来美林湖</a>
+					</p>
+					<p class="hs-meta">
+						<span class="hs-meta-price lfloat">
+							<em>6526</em>元/m²
+						</span>
+						<span class="hs-meta-model rfloat">3房2厅
+							<em class="gap-aword"></em>95m²
+						</span>
+					</p>
+				</li>
+				<li>
+					<a href="#" target="_blank">
+						<img alt="" src="images/newhouse/2_1.jpg">
+					</a>
+					<p class="hs-title">
+						<a target="_blank" href="#">中国美林湖省级学校三甲医院山脉环绕度假就来美林湖</a>
+					</p>
+					<p class="hs-meta">
+						<span class="hs-meta-price lfloat">
+							<em>6526</em>元/m²
+						</span>
+						<span class="hs-meta-model rfloat">3房2厅
+							<em class="gap-aword"></em>95m²
+						</span>
+					</p>
+				</li>
+				<li>
+					<a href="#" target="_blank">
+						<img alt="" src="images/newhouse/2_1.jpg">
+					</a>
+					<p class="hs-title">
+						<a target="_blank" href="#">中国美林湖省级学校三甲医院山脉环绕度假就来美林湖</a>
+					</p>
+					<p class="hs-meta">
+						<span class="hs-meta-price lfloat">
+							<em>6526</em>元/m²
+						</span>
+						<span class="hs-meta-model rfloat">3房2厅
+							<em class="gap-aword"></em>95m²
+						</span>
+					</p>
+				</li>
+				<li>
+					<a href="#" target="_blank">
+						<img alt="" src="images/newhouse/2_1.jpg">
+					</a>
+					<p class="hs-title">
+						<a target="_blank" href="#">中国美林湖省级学校三甲医院山脉环绕度假就来美林湖</a>
+					</p>
+					<p class="hs-meta">
+						<span class="hs-meta-price lfloat">
+							<em>6526</em>元/m²
+						</span>
+						<span class="hs-meta-model rfloat">3房2厅
+							<em class="gap-aword"></em>95m²
+						</span>
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--/周边二手房-->
+</div>
+
+<div class="toolbars" id="toolbars" style="display: block;">
+	<ul>
+		<li class="tool-app">
+			<span class="tool-icon"><a href="javascript:;"><i class="icons-sidetools"></i></a></span>
+			<p class="tool-desp" style="display: none; right: 60px; opacity: 0;">
+				<em><img src="images/ewm.png" alt="" /></em><i class="icons-sidetools"></i><span>下载买房吧app</span>
+			</p>
+		</li>
+		<li class="tool-backtop" style="visibility: hidden;">
+			<span class="tool-icon"><a href="javascript:;"><i class="icons-sidetools"></i></a></span>
+			<p class="tool-desp" style="display: none; right: 60px; opacity: 0;">
+				<i class="icons-sidetools"></i><span>返回顶部</span>
+			</p>
+		</li>
+	</ul>
+</div>
+
+<script type="html/module" id="loginTemplate">
+	<div class="login-box">
+		<div class="login-box-inner" id="loginBox">
+			<p class="login-tbs" id="loginTbs">
+				<a href="#" class="cur">登录</a>
+				<a href="#">账号注册</a>
+			</p>
+			<div class="login-form">
+				<!-- 登录 -->
+				<div class="login-form-item">
+					<ul>
+						<li class="parts-group">
+							<input class="lf-keyword" type="text" id="phone" maxlength="11">
+							<p class="lf-label" id="phoneTip">请输入手机号码</p>
+						</li>
+						<li class="parts-group">
+							<input class="lf-keyword" type="password" id="password" maxlength="18">
+							<input type="hidden" id="rememberPWDUse">
+							<p class="lf-label" id="pwdTip">请输入密码</p>
+						</li>
+						<li class="clearfix">
+							<p class="remember-password lfloat"><label><input type="checkbox" id="user_rememberPwd"><span>记住密码</span></label></p>
+							<p class="forgot-password rfloat"><a href="/userLogin/forgotPassword">忘记密码?</a></p>
+						</li>
+						<li class="login-btn">
+							<a class="btn_big btnoff" id="loginSubmit" href="javascript:;" onclick="Login.loginSubmit(this)">立即登录</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /登录 -->
+				<!-- 注册 -->
+				<div class="login-form-item" style="display: none;">
+					<ul>
+						<li class="parts-group">
+							<input class="lf-keyword" type="text" id="telNum" maxlength="11">
+							<p class="lf-label">请输入手机号码</p>
+						</li>
+						<li class="parts-group">
+							<input class="lf-keyword" type="text" id="msgCode" maxlength="6">
+							<p class="lf-label">请输入收到的短信验证码</p>
+							<p class="mb-msg-code" id="getVCode2" onclick="ImgCode.pictureCode(event);">发送验证码</p>
+							<!-- 图片验证码 -->
+							<!-- tips -->
+							<div class="confirm-tips confirm-tips-mbvcode dn" id="imgCode">
+								<i class="icons confirm-arrow"></i>
+								<a class="icons confirm-close" href="javascript:;"></a>
+								<div class="confirm-con clearfix">
+									<p class="gvcode-area clearfix">
+										<span class="gvcode-area-img lfloat"><img id="codeImg" src="" width="139" height="28"></span>
+										<span class="gvcode-area-refresh lfloat" onclick="ImgCode.changeSecurityCode();"><i class="icons"></i><em>换一张</em></span>
+									</p>
+									<div class="gvcode-input lfloat">
+										<input class="lf-keyword" type="text" id="imgCodeText" maxlength="6">
+										<p class="lf-label">图片验证码</p>
+										<p class="lf-error dn clearfix"><i class="icons"></i><span>错误提示</span></p>
+									</div>
+									<p class="confirm-btn lfloat"><a class="btn-orange" href="javascript:;" onclick="ImgCode.registerPhoneTrendCode('regist');">确定</a></p>
+								</div>
+							</div>
+							<!-- /tips -->
+							<!-- end 验证码 -->
+						</li>
+						<li class="parts-group">
+							<input class="lf-keyword" type="password" id="pwd" maxlength="16">
+							<p class="lf-label">请设置登录密码</p>
+							<i class="icons eyes" id="eyes"></i>
+						</li>
+						<li class="parts-group">
+							<input class="lf-keyword" type="text" id="telNum1" maxlength="11">
+							<p class="lf-label">请输入邀请人手机号码</p>
+						</li>
+						<li class="q-book-deal">
+							<label>
+								<input type="checkbox" id="agreeProtocol">
+								<span>我同意<a href="#" target="_blank">《买房吧服务协议》</a></span>
+							</label>
+						</li>
+						<li class="login-btn registered-btn">
+							<a class="btn_big btnoff" onclick="Register.registerSubmit()" href="javascript:;" id="registerBtn">立即注册</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /注册 -->
+			</div>
+		</div>
+	</div>
+</script>
+
+<script type="html/module" id="getyhTemplate">
+<div class="get-preferential-con">
+	<p class="remind-text">优惠信息将通过短信的方式发送到您填写的手机号码上</p>
+	<div class="get-preferential-item">
+		<input class="lf-keyword" type="text" id="telNum" maxlength="11">
+		<p class="lf-label">请输入您的手机号码</p>
+	</div>
+	<div class="get-preferential-item get-preferential-item-mbmsg lfloat">
+		<input class="lf-keyword" type="text" id="verificationCode">
+		<p class="lf-label">请输入收到的短信验证码</p>
+		<!-- tips -->
+		<div id="imgCode" class="confirm-tips confirm-tips-mbvcode dn ">
+			<i class="icons confirm-arrow"></i>
+			<a class="icons confirm-close" href="javascript:;" onclick="closePictureVerif()"></a>
+			<div class="confirm-con clearfix">
+				<p class="gvcode-area clearfix">
+					<span class="gvcode-area-img lfloat"><img src="images/vcode.jpg" id="codeImg" width="139" height="28"></span>
+					<span class="gvcode-area-refresh lfloat" onclick="ImgCode.changeSecurityCode()"><i class="icons"></i><em>换一张</em></span>
+				</p>
+				<div class="gvcode-input lfloat">
+					<input class="lf-keyword" type="text" id="imgCodeText">
+					<p class="lf-label">图形验证码</p>
+					<p class="lf-error dn clearfix"><i class="icons"></i><span>错误提示</span></p>
+				</div>
+				<p class="confirm-btn lfloat"><a class="btn-orange" href="javascript:;" onclick="ImgCode.registerPhoneTrendCode('apply_newhouse');">确定</a></p>
+			</div>
+		</div>
+		<!-- /tips -->
+	</div>
+	<p class="mb-msg-code get-preferential-code lfloat" id="getVCode" onclick="ImgCode.pictureCode_findRoom(event);">发送验证码</p>
+	<p class="get-preferential-btn"><a class="btn-orange" href="javascript:;" id="applySendNewHouse">确定获取</a></p>
+	<p class="free-consultation">免费咨询：400-020-0668 转 8889</p>
+</div>
+</script>
+
+
+<script type="html/module" id="jsqTemplate">
+<!-- 房贷计算器 -->
+<!-- 计算房贷 -->
+<div class="dialog-show-wrapper dialog-mortgage-calculate" id="mortgageCalculate" style="display:block;">
+	<div class="dialog-show-inner">
+		<div class="icons-dialogshow dialog-show-title dn">
+			<div class="dialog-show-title-text">
+				<h3>房贷计算器</h3>
+			</div>
+			<p class="btn-dialogclose">
+				<a href="javascript:;" id="mortgageCalculateClose"><i class="icons-dialogshow"></i></a>
+			</p>
+		</div>
+		<div class="mortgage-calculate-con clearfix">
+			<div class="switch-con clearfix" tag="loanPanel">
+				<div class="calculate-formula lfloat">
+					<div class="form form-loan">
+						<ul>
+							<li>
+								<div class="form-item clearfix">
+									<span class="form-field lfloat">户<em class="gap-dbword"></em>型</span>
+									<div class="select-box lfloat" id="layoutNameId">
+
+									</div>
+								</div>
+							</li>
+							<li id="totalPrice">
+								<div class="form-item clearfix">
+									<span class="form-field form-field-special lfloat">房屋总价</span>
+									<div class="input-box lfloat">
+										<input id="total" type="text" value="0" class="keywors-number lfloat">
+										<span class="form-unit lfloat">万元</span>
+									</div>
+								</div>
+							</li>
+
+							<li id="loanTotalPanel" style="display:none">
+								<div class="form-item clearfix">
+									<span class="form-field form-field-special lfloat">贷款总额：</span>
+									<div class="input-box lfloat">
+										<input type="text" value="0" class="keywors-number lfloat" id="loanTotal" maxLength="12"/>
+										<span class="form-unit lfloat">万元</span>
+									</div>
+								</div>
+							</li>
+							<li id="loanSum" style="display:none">
+								<div class="form-item clearfix">
+									<span class="form-field lfloat">贷款金额</span>
+									<div class="lfloat">
+										<p class="loan-amount-category mb_5 clearfix">
+											<span class="selected-txt lfloat">公积金</span>
+											<input type="text" value="0" id="gongjijin" class="keywors-number lfloat" maxlength="6"/>
+											<span class="form-unit lfloat">万元</span>
+										</p>
+										<p class="loan-amount-category clearfix">
+											<span class="selected-txt lfloat">商业性</span>
+											<input type="text" value="0" id="shangye" class="keywors-number lfloat" maxlength="6"/>
+											<span class="form-unit lfloat">万元</span>
+										</p>
+									</div>
+								</div>
+							</li>
+
+
+							<li id="calculatorRate">
+								<div class="form-item clearfix">
+									<span class="form-field lfloat">按揭成数</span>
+									<div class="select-box lfloat">
+										<p class="selected-con clearfix">
+											<span class="selected-txt lfloat" id="calculatorStyleData"  value="0.7">7成</span>
+											<i class="selected-arrow lfloat"></i>
+										</p>
+										<div class="select-dropmenu" id="calculatorStyleDataSelectMenu">
+											<a href="javascript:;" value="0.1">1成</a>
+											<a href="javascript:;" value="0.2">2成</a>
+											<a href="javascript:;" value="0.3">3成</a>
+											<a href="javascript:;" value="0.4">4成</a>
+											<a href="javascript:;" value="0.5">5成</a>
+											<a href="javascript:;" value="0.6">6成</a>
+											<a href="javascript:;" value="0.7" class="cur">7成</a>
+											<a href="javascript:;" value="0.8">8成</a>
+											<a href="javascript:;" value="0.9">9成</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="form-item clearfix">
+									<span class="form-field lfloat">按揭年数</span>
+									<div class="select-box lfloat">
+										<p class="selected-con clearfix">
+											<span class="selected-txt lfloat" id="timeStyle" value="30">30年(360期)</span>
+											<i class="selected-arrow lfloat"></i>
+										</p>
+										<div class="select-dropmenu" id="timeStyleSelectMenu">
+											<a href="javascript:;" value="1">1年(12期)</a>
+											<a href="javascript:;" value="2">2年(24期)</a>
+											<a href="javascript:;" value="3">3年(36期)</a>
+											<a href="javascript:;" value="4">4年(48期)</a>
+											<a href="javascript:;" value="5">5年(60期)</a>
+											<a href="javascript:;" value="6">6年(72期)</a>
+											<a href="javascript:;" value="7">7年(84期)</a>
+											<a href="javascript:;" value="8">8年(96期)</a>
+											<a href="javascript:;" value="9">9年(108期)</a>
+											<a href="javascript:;" value="10">10年(120期)</a>
+											<a href="javascript:;" value="11">11年(132期)</a>
+											<a href="javascript:;" value="12">12年(144期)</a>
+											<a href="javascript:;" value="13">13年(156期)</a>
+											<a href="javascript:;" value="14">14年(168期)</a>
+											<a href="javascript:;" value="15">15年(180期)</a>
+											<a href="javascript:;" value="16">16年(194期)</a>
+											<a href="javascript:;" value="17">17年(204期)</a>
+											<a href="javascript:;" value="18">18年(216期)</a>
+											<a href="javascript:;" value="19">19年(228期)</a>
+											<a href="javascript:;" value="20">20年(240期)</a>
+											<a href="javascript:;" value="21">20年(252期)</a>
+											<a href="javascript:;" value="22">22年(264期)</a>
+											<a href="javascript:;" value="23">23年(276期)</a>
+											<a href="javascript:;" value="24">24年(288期)</a>
+											<a href="javascript:;" value="25">25年(300期)</a>
+											<a href="javascript:;" value="26">26年(312期)</a>
+											<a href="javascript:;" value="27">27年(324期)</a>
+											<a href="javascript:;" value="28">28年(336期)</a>
+											<a href="javascript:;" value="29">29年(348期)</a>
+											<a href="javascript:;" value="30" class="cur" >30年(360期)</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="form-item clearfix">
+									<span class="form-field lfloat">还款方式</span>
+									<div class="select-box lfloat">
+										<p class="selected-con clearfix">
+											<span class="selected-txt lfloat" value="1" id="payStyle">等额本息</span>
+											<i class="selected-arrow lfloat"></i>
+										</p>
+										<div class="select-dropmenu" id="payStyleSelectMenu">
+											<a href="javascript:;" class="cur" value="1">等额本息</a>
+											<a href="javascript:;" value="2">等额本金</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="form-item clearfix">
+									<span class="form-field lfloat">贷款类别</span>
+									<div class="select-box lfloat">
+										<p class="selected-con clearfix">
+											<span class="selected-txt lfloat" id="loanStyle" value="1" >公积金贷款</span>
+											<i class="selected-arrow lfloat"></i>
+										</p>
+										<div class="select-dropmenu" id="loanStyleSelectMenu">
+											<a href="javascript:;" class="cur" value="1">公积金贷款</a>
+											<a href="javascript:;" value="2">商业贷款</a>
+											<a href="javascript:;" value="3">组合贷款</a>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li id="calculatorPanel">
+								<div class="form-item clearfix dn">
+									<span class="form-field lfloat">计算方式</span>
+									<div class="select-box lfloat">
+										<p class="selected-con clearfix">
+											<span class="selected-txt lfloat" id="calculator" value="1">根据按揭成数计算</span>
+											<i class="selected-arrow lfloat"></i>
+										</p>
+										<div class="select-dropmenu" id="calculatorSelectMenu">
+											<a href="javascript:;" class="cur" value="1">根据按揭成数计算</a>
+											<a href="javascript:;" value="2">根据贷款总额计算</a>
+										</div>
+									</div>
+								</div>
+							</li>
+
+
+							<li id="HOUSING_FUNDLi"   >
+								<div class="form-item clearfix">
+									<span class="form-field lfloat">公积金利率</span>
+									<div class="select-box lfloat">
+										<p class="selected-con clearfix">
+											<span class="selected-txt lfloat" id="HOUSING_FUNDlilv" >15年10月24日基准利率</span>
+											<i class="selected-arrow lfloat"></i>
+										</p>
+										<div class="select-dropmenu select-dropmenu-interestrate" id="HOUSING_FUNDlilvSelectMenu">
+										</div>
+									</div>
+									<div class="lfloat">
+										<input type="text" id="HOUSING_FUND_lilv_value" class="keywors-number keywors-number-percent lfloat" value="" />
+										<span class="form-unit percent lfloat">%</span>
+									</div>
+								</div>
+							</li>
+							<li id="BUSINESSLi"  style="display:none" >
+								<div class="form-item clearfix">
+									<span class="form-field lfloat">商业利率</span>
+									<div class="select-box lfloat">
+										<p class="selected-con clearfix">
+											<span class="selected-txt lfloat" id="BUSINESSlilv" ></span>
+											<i class="selected-arrow lfloat"></i>
+										</p>
+										<div class="select-dropmenu select-dropmenu-interestrate" id="BUSINESSlilvSelectMenu">
+										</div>
+									</div>
+									<div class="lfloat">
+										<input type="text" id="BUSINESS_lilv_value"  class="keywors-number keywors-number-percent lfloat" value="" />
+										<span class="form-unit percent lfloat">%</span>
+									</div>
+								</div>
+							</li>
+
+							<li>
+								<div class="calculator-btn clearfix">
+									<a href="javascript:;" class="btn_big lfloat" id="calculate">开始计算</a>
+									<p class="btn-reset lfloat"><a href="javascript:;" id="reset">重新填写</a></p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="calculate-results lfloat">
+					<div class="calculate-results-box">
+						<p class="rabbet-top"></p>
+						<p class="rabbet-bottom"></p>
+						<div class="card-box card-box06" id="cardBox">
+							<p class="card-top ie6_pngbg"></p>
+							<div class="card-main ie6_pngbg">
+								<!-- 结果输出 -->
+								<div class="card-data-loan06" id="card_data_loan">
+									<ul class="data-header">
+										<li><p class="data-field data-field-left">月均还款：</p></li>
+										<li><p class="data-results" id="avgPPanel"></p></li>
+									</ul>
+									<ul class="data-header data-list">
+										<li><p class="data-field data-field-left">首付款：</p></li>
+										<li><p class="data-results" id="fPayPanel"></p></li>
+									</ul>
+									<ul class="data-header data-list">
+										<li><p class="data-field data-field-left">房款总额：</p></li>
+										<li><p class="data-results" id="totalPanel"></p></li>
+									</ul>
+									<ul class="data-header data-list">
+										<li><p class="data-field data-field-left">贷款总额：</p></li>
+										<li><p class="data-results" id="lTotalPanel"></p></li>
+									</ul>
+									<ul class="data-header data-list">
+										<li><p class="data-field data-field-left">还款总额：</p></li>
+										<li><p class="data-results" id="pTotalPanel"></p></li>
+									</ul>
+									<ul class="data-header data-list">
+										<li><p class="data-field data-field-left">支付利息：</p></li>
+										<li><p class="data-results" id="rTotalPanel"></p></li>
+									</ul>
+									<ul class="data-header data-list">
+										<li><p class="data-field data-field-left">贷款月数：</p></li>
+										<li><p class="data-results" id="monthTPanel"></p></li>
+									</ul>
+									<ul class="data-header data-list" style="display:none" >
+										<li><p class="data-field data-field-left" >首月还款：</p></li>
+										<li><p class="data-results" id="fmPayPanel"></p></li>
+									</ul>
+									<ul class="data-header data-list" style="display:none">
+										<li><p class="data-field data-field-left">末月还款：</p></li>
+										<li><p class="data-results" id="lmPayPanel"></p></li>
+									</ul>
+									<div class="reimbursement-detail clearfix" style="display:none">
+										<span>还款明细：</span>
+										<div class="reimbursement-detail-list" id="loanListBox">
+										</div>
+									</div>
+								</div>
+								<div class="card-main-prompt">
+									<p class="prompt-title" id="baseInfoTitle">等额本息还款方式</p>
+									<p class="prompt-txt" id="baseInfoContent">等额本息还款方式：在还款期内，每月偿还同等数额的贷款（包括本金和利息），这样由于每月的还款额固定，可以有计划地控制家庭收入的支出，也便于每个家庭根据自己的收入情况，确定还贷能力。</p>
+								</div>
+								<!-- end 结果输出 -->
+							</div>
+							<p class="card-bottom ie6_pngbg"></p>
+						</div>
+					</div>
+					<p class="reference-prompt">*以上结果仅供参考</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /计算房贷 -->
+<!-- /房贷计算器 -->
+</script>
+
+<!--页脚star-->
+<footer class="footer">
+	<div class="m tc">
+		<div class="foot_nav">
+			<a href="#">关于买房吧</a>
+			<a href="#">联系我们</a>
+			<a href="#">用户协议</a>
+			<a href="#">友情链接</a>
+			<a href="#">房产百科</a>
+			<a href="#">房产问答</a>
+		</div>
+		<p>广州安信互联网金融服务有限公司</p>
+		<p class="copyright">Copyright&nbsp;©&nbsp;2016&nbsp;www.myfang8.com.&nbsp;All Rights Reserved&nbsp;ICP备案号：粤ICP备12345678号</p>
+	</div>
+</footer>
+<!--页脚end-->
+
+<script src="js/public.js"></script>
+<script src="js/json2.js"></script>
+<script src="js/jquery-ui/jquery-ui.min.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<script src="js/ghost.min.js"></script>
+<script src="js/echarts.js"></script>
+<script src="js/layer/layer.js"></script>
+<script src="js/user-imgcode.js"></script>
+<script src="js/user-login.js"></script>
+<script src="js/wen_play.js"></script>
+<script src="js/map/nearFacilityMap.js"></script>
+<script src="js/house_calculate.js"></script>
+<script src="js/photoview.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

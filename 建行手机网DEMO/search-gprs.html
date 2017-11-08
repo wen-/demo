@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>中国建设银行手机网</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width"/>
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="" id="min320" />
+<script src="js/jquery-1.6.min.js"></script>
+<script src="js/main.js"></script>
+<style type="text/css">
+.gprs_select_box{
+	padding:20px 2%;
+	border-bottom:dashed 1px #ccc;
+}
+.gprs_select_box select{
+	width:30%;
+	margin:0 1%;
+	font-size:0.9em;
+}
+.demo_gprs{
+	width:100% !important;
+	height:auto !important;
+	min-height:0 !important;
+	max-width:100% !important;
+}
+.gprs_list{
+	display:none;
+}
+</style>
+<script type="text/javascript">
+$(function(){
+	if(location.search == "?maps"){
+		$("select.l_m").val("网点地图");
+		$("div.gprs_maps").show().siblings("div.gprs_list").hide();
+	}else if(location.search == "?list"){
+		$("select.l_m").val("网点列表");
+		$("div.gprs_maps").hide().siblings("div.gprs_list").show();
+	};
+	$("select.l_m").change(function(){
+		if($(this).val() == "网点地图"){
+			$("div.gprs_maps").show().siblings("div.gprs_list").hide();
+		}else if($(this).val() == "网点列表"){
+			$("div.gprs_maps").hide().siblings("div.gprs_list").show();
+		};
+	});
+})
+</script>
+</head>
+<body>
+<div class="page search_page">
+    <div class="header">
+    <div class="site_header">
+    	<div class="clearfix">
+      		<div class="ccblogo lfloat"> 
+            	<a href="index.html"><img id="ccblogo" src="images/ccblogo.png" alt="中国建设银行－手机网" /></a>
+            </div>
+      		<div class="version rfloat">
+        		<div class="ccb_version_but">
+                	<a href="index.html" class="version1"><span class="vbg_l"></span>返回<span class="vbg_r"></span></a>
+                </div>
+        	</div>
+      	</div>
+        <div class="service"><span class="service_tel">客户服务热线：<span>95533</span></span></div>
+    </div>
+  </div><!-- /header -->
+    
+    <div class="search ccb_title">
+        <h1>周边网点查询</h1>
+    </div>
+	<div class="gprs_select_box">
+		<select>
+			<option>所有类型</option>
+			<option>营业网点</option>
+			<option>自助银行与ATM</option>
+		</select>
+		<select>
+			<option>500米</option>
+			<option selected="selected">1000米</option>
+			<option>3000米</option>
+			<option>5000米</option>
+		</select>
+		<select class="l_m">
+			<option>网点地图</option>
+			<option>网点列表</option>
+		</select>
+	</div>
+    <div class="gprs_box">
+		<div class="gprs_maps">
+    		<img src="images/gprs.jpg" class="demo_gprs" alt="网点地图" />   
+		</div> 
+		<div class="gprs_list">
+			<div class="content">
+        	<p>查询结果总记录数：31</p>
+            <p>当前页：1/4</p>
+            <p>点击名称查看详情</p>
+            <ul class="branch_list">
+                <li>
+                	<a href="search-gprs1.html">广州东泰路支行</a>
+                    <div>广州市越秀区东泰路28号</div>
+                </li>
+                <li>
+                	<a href="javascript:viod()">天河东路2号自助ATM</a>
+                    <div>天河东路2号</div>
+                </li>
+                <li>
+                	<a href="javascript:viod()">王府井自助银行</a>
+                    <div>农林下路39号</div>
+                </li>
+                <li>
+                	<a href="javascript:viod()">广州东泰路支行</a>
+                    <div>广州市越秀区东泰路28号</div>
+                </li>
+                <li>
+                	<a href="javascript:viod()">广东省分行营业部</a>
+                    <div>东风中路509号省建银大厦二楼</div>
+                </li>
+                <li>
+                	<a href="javascript:viod()">广州东山支行营业室</a>
+                    <div>东华南路166-168号</div>
+                </li>
+            </ul>
+            <div class="page"><a href="javascript:viod()">上一页</a>&nbsp;|&nbsp;<a href="javascript:viod()">下一页</a></div>
+        </div>
+		</div>    
+    </div>
+    
+	<div class="footer">
+    <h4>©版权所有&nbsp;&nbsp;<span>中国建设银行版权所有&nbsp;<br/>
+      京ICP证&nbsp;050138号&nbsp;京公网安备&nbsp;110102000450</h4>
+  </div><!-- /footer -->
+</div><!-- /page -->
+</body>
+</html>

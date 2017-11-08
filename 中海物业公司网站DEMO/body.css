@@ -1,0 +1,202 @@
+*{
+        margin:0;
+	padding:0;
+	list-style-type:none;
+	text-decoration:none;
+}
+
+#home{
+	width:900px;
+	margin:0px auto 0px auto;
+}
+
+img{
+	border:0px;
+	float:left;
+		
+}
+
+#daohang ul{
+	clear:both;
+	width:900px;
+	height:30px;
+	background:#858585 ;
+	
+}
+
+#daohang ul li{
+	float:left;
+	
+}
+
+#daohang ul li a{
+	display:block;
+	width:110px;
+	height:25px;
+	text-align:center;
+	line-height:26px;
+	color:#fff;
+	margin:5px 5px 0px 5px;
+	overflow:hidden;
+}
+
+#daohang ul li a:hover{
+	color:#95e5ee;
+}
+
+
+
+
+
+
+#zhongbu{
+	clear:both;
+	background:url(images/zhongbu.jpg) no-repeat;
+}
+
+#zhongbuzuo{
+	width:220px;
+	height:623px;
+	float:left;
+	
+}
+.biaoti1{
+	margin:255px auto 80px 140px;
+}
+.biaoti1 a,.biaoti2 a{
+	color:#32a2f9;
+}
+.biaoti1 a:hover,.biaoti2 a:hover{
+	color:#95e5ee;
+}
+.biaoti2{
+	margin:auto auto 50px 140px;
+}
+
+#lianxiwomen{
+	margin:0px auto auto 30px;
+}
+
+
+
+
+#zhongburou{
+	width:650px;
+	height:623px;
+	float:right;
+}
+	
+#zhongburou1{
+	width:280px;
+	margin:0px 10px 0px 15px;
+	float:left;
+}
+
+.biaoti3{
+	margin:35px auto 30px 70px;
+}
+
+.jianjietu{
+	float:left;
+	border:0;
+}
+.zhongburouzi1{
+	width:140px;
+	text-indent:2em;
+	float:left;
+	padding-left:5px;
+}
+.wenzhang{
+	padding-top:10px;
+	clear:both;
+	*padding-top:0px;
+}
+.wenzhang a{
+	color:#010
+}
+.wenzhang a:hover{
+	color:#fff;
+}
+.wenzhang li{
+	margin:10px 0px 10px 0px;
+	
+}
+#zhongburou2{
+	width:300px;
+	margin:0px 15px 0px 0px;
+	float:right;
+}	
+
+.biaoti4{
+	margin:35px auto 30px 65px;
+}
+.ziyuantu{
+	float:left;
+	border:0;
+}
+.zhongburouzi2{
+	width:150px;
+	text-indent:2em;
+	float:left;
+	padding-left:5px;
+}
+#zhongburou3{
+	clear:both;
+	
+}
+.biaoti5{
+	padding:25px 0px 0px 80px;
+	padding:40px 0px 0px 80px\9;
+	*padding-top:25px;
+}
+
+#zhongbudi table{
+	margin:30px auto auto auto;
+}
+
+
+
+
+
+
+#dibu{
+	text-align:center;
+	clear:both;
+}
+#dibulianjie ul{
+	
+	height:20px;
+	padding-bottom:5px;
+	width:900px;
+	background:#858585;
+	
+}
+#dibulianjie ul li{
+	float:left;
+	margin:5px;
+	color:#fff;
+	text-align:center;
+	line-height:26px;
+}
+
+#dibulianjie ul li a{
+	color:#fff;
+	
+}
+#dibulianjie ul li a:hover{
+	color:#95e5ee;
+}
+#dibulianjie ul .guanyuwomen{
+	padding:0px 10px 0px 270px;
+}
+
+
+#banquan{
+	background:url(images/dibu1.jpg) no-repeat;
+	height:77px;
+	
+}
+#banquan ul{
+	display:none;
+
+}

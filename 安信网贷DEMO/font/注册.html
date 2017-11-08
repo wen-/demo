@@ -1,0 +1,1353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="Generator" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>p2p信贷  --简单 、安全、借得到 - p2p信贷</title>
+<link rel="icon" href="favicon.ico" type="/image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico" type="/image/x-icon" />
+<meta name="keywords" content="p2p信贷—最大、最安全的网络借贷平台" />
+<meta name="description" content="p2p信贷—最大、最安全的网络借贷平台" />
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+
+<style type="text/css">
+.main_adv_box{
+	height:545px;
+}
+.fast_login{
+	position:relative;
+}
+.fast_login span{
+	position: absolute;
+	right: 0;
+	font-size: 14px;
+	top: 20px;
+	font-weight: normal;
+}
+.f_orange{
+	color:#d7d009;
+}
+.fast_login span a{
+	color:#d7d009;
+	text-decoration:underline;
+}
+.login_block{
+	height:455px;
+}
+.login_block .freebj,.login_block .freelogin,.login_block .freereg{
+	height:420px;
+}
+.agreementbox{
+	font-size:12px;
+}
+#pass_grade td{
+	height:15px;
+	font-size:12px;
+	line-height:normal;
+	background-color:#ccc;
+	text-align:center;
+}
+#pass_grade td.bg{
+	background-color:#d7d009;
+}
+/*--认证弹出框--*/
+.authentication_bg{
+	display:none;
+	position:absolute;
+	z-index:99;
+	width:100%;
+	top:0;
+	left:0;
+	background:#000;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity:0.5;
+	opacity:0.5;
+}
+.authentication_box{
+	display:none;
+	width:960px;
+	position:absolute;
+	top:160px;
+	left:50%;
+	z-index:100;
+	margin-left:-480px;	
+	background-color:#fff;
+	border:solid 1px #d7d7d7;
+}
+.authentication_t{
+	height:38px;
+	line-height:38px;
+	position:relative;
+	background:url(images/rz_t.gif) repeat-x left top ;
+}
+.authentication_t h1{
+	font-size:14px;
+	font-weight:normal;
+	color:#000;
+	padding-left:20px;
+}
+.authentication_t .close{
+	position:absolute;
+	z-index:100;
+	height:38px;
+	width:38px;
+	right:0;
+	top:0;
+	overflow:hidden;
+	text-indent:100px;
+	cursor:pointer;
+	background:url(images/rz_close.png) no-repeat;
+}
+.authentication_step{
+	margin:40px 0 0 60px;
+}
+.authentication_step .step{
+	float:left;
+}
+.authentication_step .step span{
+	display:block;
+	width:175px;
+	height:52px;
+	line-height:52px;
+	margin-left:-10px;
+	text-align:center;
+	color:#929292;
+	background-image:url(images/rz_step_bg.png);
+	background-repeat:no-repeat;
+	background-position:-178px 0;
+}
+.authentication_step .step .step1{
+	background-position:0 0;
+	margin-left:0px;
+}
+.authentication_step .step .stepend{
+	background-position:100% 0;
+}
+.authentication_step .activate span{
+	background-image:url(images/rz_step_bg1.png);
+}
+.authentication_step .activate span{
+	color:#fff;
+}
+.authentication_data,.email_data,.name_data,.card_data,.account_data{
+	display:none;
+}
+.email_data,.name_data{
+	margin-top:100px;
+}
+.email_data h2,.send_email{
+	font-size:18px;
+	margin-left:410px;
+}
+.email_data .email_input{
+	margin-left:330px;
+}
+.email_data .email_input input{
+	width:170px;
+}
+.authentication_body button,.authentication_body .btn{
+	width:180px;
+	height:40px;
+	line-height:40px;
+	font-size:16px;
+	font-family:'Microsoft YaHei';
+	border-radius:4px;
+}
+.rz_success,.next_step{
+	text-align:center;
+}
+.rz_success{
+	font-size:18px;
+	font-weight:normal;
+}
+.rz_success img{
+	vertical-align:middle;
+	margin-right:10px;
+}
+.name_input,.idcard_input{
+	margin-left:275px;
+}
+.name_input input,.idcard_input input{
+	width:260px;
+}
+.send_name{
+	margin-left:410px;
+}
+.card_data label{
+	width:350px;
+}
+.card_data .field{
+	margin-top:8px;
+	margin-bottom:8px;
+}
+.card_data dl{
+	margin-top:4px;
+}
+.card_tips{
+	margin-left:260px;	
+}
+.card_tips strong img{
+	vertical-align:middle;
+	margin-right:5px;
+}
+.account_data{
+	text-align:center;
+}
+.account_tips{
+	width: 75%;
+	border: solid 1px #e2e2e2;
+	text-align: left;
+	padding: 10px 15px;
+	background-color:#f4f4f4;
+}
+.account_tips strong{
+	color:#d66665;
+}
+.authentication_b{
+	padding:20px;
+	margin-top:40px;
+}
+.err_msg{
+	overflow:hidden;
+}
+</style>
+</head>
+<body>
+<div class="header" id="header">
+    <div class="constr">
+        <div class="wrap">
+			<div class="app_down f_l" id="J_APP_DOWN">
+				<!--<a href="javascript:void(0);"><i class="iconfont">&#xe613;</i>下载移动客户端</a>-->
+                <span class="hotline_box">服务热线：400-8888-888（24h）
+                	<a href="#" class="hotline_wx"></a><a href="#" class="hotline_qq"></a>
+                </span>
+				<div class="grcode_box ps hide">
+					<img src="images/1ca638b4782093fe89c405487e6d1c31.png"  />
+				</div>
+			</div>
+			<div class="f_r lh30">
+				<div id="user_head_tip" class="pr f_r">
+					<span class="li"><a href="index5caf.html?ctl=user&amp;act=login" class="f_white">立即登录</a></span>
+					<!--<span class="line"></span>
+					<span class="li"><a href="index69bd.html?ctl=user&amp;act=register" class="f_white">免费注册</a></span>-->
+					<!--<span class="li"><a href="index3094.html?ctl=helpcenter">帮助中心</a></span>-->
+				</div>
+			</div>		
+		</div>
+	</div>
+	<div class="main_bars">
+		<div class="main_bar wrap">	
+			<div class="logo mr15">
+				<a class="link f_l" href="index.html">
+					<span style='display:inline-block; width:402px; height:44px;margin-top:20px; background:url(images/logo.png) no-repeat; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=images/logo.png, sizingMethod=scale);_background-image:none;'></span>				
+                </a>
+			</div>     
+			<!--加载菜单-->
+			<ul class="main_nav">
+				<li class="current jcur ml5 bdr3 pr">
+					<a href="index.html" target="" class="pr20">首页</a>
+				</li>
+				<li class="jcur ml5 bdr3 pr">
+					<a href="invest.html" target="" class="pr20">我要投资 <i class="iconfont">&#xe61c;</i></a>
+					<div class="sub_main_nav ps hide">
+                        <a href="#"  target="">债权转让</a>
+                        <a href="#"  target="">个人贷款</a>
+                        <a href="#"  target="">工具箱</a>
+                        <a href="#"  target="">关于理财</a>
+                        <a href="#"  target="">成为理财人</a>
+                        <a href="#"  target="_blank">有限合伙</a>
+                    </div>
+                </li>
+				<li class="jcur ml5 bdr3 pr">
+					<a href="#" target="" class="pr20">安全保障 <i class="iconfont">&#xe61c;</i></a>
+					<div class="sub_main_nav ps hide">
+                        <a href="#" target="">政策法规</a>
+                        <a href="#" target="">隐私保护</a>
+                    </div>
+                </li>
+        		<li class="jcur ml5 bdr3 pr">
+					<a href="indexb7bb.html?ctl=acate&amp;id=25" target="" class="pr20">帮助中心 <i class="iconfont">&#xe61c;</i></a>
+					<div class="sub_main_nav ps hide">
+						<a href="#" target="">常见问题</a>
+						<a href="#" target="">平台原理</a>
+						<a href="#" target="">如何借款</a>
+						<a href="#" target="">P2P借贷费率</a>
+					</div>
+				</li>
+				<li class="ml5 bdr3 pr">
+					<a href="#" target="" >关于我们 </a>
+				</li>
+			</ul>
+			<!--加载菜单END-->
+		</div>
+	</div>
+</div>
+
+<div class="wrap " style="z-index:9; position:relative;">
+	<div class="login_block"> 
+		<!--<a title="点我"><div class="logingchange"></div></a> -->
+	   
+		<div class="freebj"></div>
+		<div class="freelogin" >
+			
+			<div class="freereg ">
+                <!--注册表单-->
+				<h3 class="fast_login">快速注册<span>已有账户<a href="登录.html">登录</a></span></h3>
+				<div style="overflow:hidden;" >
+                    <div method="post" action="#" name="signup-user-form" id="signup-user-form">
+                        <div class="blank10"></div>
+                        <div class="field username pr" >
+                            <i class="iconfont ps">&#xe614;</i>
+                            <input type="text" value="" class="f-input ui-textbox" id="settings-mobile" name="phone" size="11" tabindex="1" holder="手机号码" maxlength="11" />
+                            <div class="blank0"></div>
+                        </div>
+                        <div class="blank10"></div>
+                        <div class="field codenum pr" >
+                            <i class="iconfont ps">&#xe63d;</i>
+                            <input type="text" value="" class="f-input ui-textbox" id="reg-codenum" name="codenum" size="6" tabindex="1" holder="验证码" maxlength="6" style="width:60px;" />
+                            <button type="button" id="get_regsms_code" class="sub_btn f_r" style="padding:0 5px;font-size:12px;height:35px;line-height:35px;">发送手机验证码</button>
+                            <div class="blank0"></div>
+                        </div>
+                        <div class="blank10"></div>
+                        <div class="field password pr" >
+                            <i class="iconfont ps">&#xe615;</i>
+                            <input type="password" value="" class="f-input ui-textbox" id="signup-password" name="user_pwd" size="30" maxlength="16" tabindex="2" holder="密码" />
+                            <div class="blank0"></div>
+                        </div>
+                        <table id="pass_grade" width="100%" border="0" cellspacing="3">
+                          <tr>
+                            <td>弱</td>
+                            <td>中</td>
+                            <td>强</td>
+                          </tr>
+                        </table>
+                        <div class="field password pr" >
+                            <i class="iconfont ps">&#xe615;</i>
+                            <input type="password" value="" class="f-input ui-textbox" id="signup-password-confirm" name="user_pwd" size="30" maxlength="16" tabindex="2" holder="确认密码" />
+                            <div class="blank0"></div>
+                        </div>
+                        <div class="blank10"></div>
+                        <div class="field recommendnum pr" >
+                            <i class="iconfont ps">&#xe63e;</i>
+                            <input type="text" value="" class="f-input ui-textbox" id="settings-referer" name="recommendnum" size="6" tabindex="1" holder="推荐码" />
+                            <div class="blank0"></div>
+                        </div>
+                        <div class="err_msg" style="visibility:hidden;margin:5px 0;">
+                        	<span class="f-input-tip"><span class="form_err" title="长度在6~16之间，只能包含字符、数字和下划线。">长度在6~16之间，只能包含字符、数字和下划线。</span></span>
+                        </div>
+                        <div class="field agreementbox">
+                            <label class="ui-checkbox mt5 agreement" rel="agreement" style="float: left !important; display: inline-block;" name="agreement">
+                                <input type="checkbox" name="agreement" id="J_agreement" checked="checked" value="1" style="display: none;" />
+                            </label>
+                            <div class="f_l f_white">
+                                我同意 <a href="#" class="f_orange">《安信网贷服务条款协议》</a>
+                            </div>
+                            <div class="blank0"></div>
+                        </div>                                    
+                        <div class="blank10"></div>
+                        <div class="act">
+                            <input type="hidden" name="ajax" value="1" />
+                            <input type="submit" class="sub_btn" id="signup-mobile-submit" name="commit" value="免费注册" tabindex="4" />
+                            <div class="blank10"></div>
+                            
+                        </div>
+                    </div>
+                </div>	
+                <!--登录表单-->		
+                
+                <!--登录后显示-->
+                <div class="after_login" style="display:none;">
+                    <div class="user_name">
+                         <span class="name">账户名：<span>fanwe</span></span>
+                    </div>
+                    <div class="user_info ">
+                        <div class="user_img"><img src="images/44virtual_avatar_big.jpg" /></div>
+                        
+                        <div class="user_info_d">
+                            <a href="#"><i class="iconfont"></i>账户中心</a>
+                            <a href="#"><i class="iconfont"></i>个人资料</a>
+                            <a href="#"><i class="iconfont"></i>资金记录</a>
+                            <a href="#"><i class="iconfont"></i>站内信息</a>
+                        </div>
+                    </div>
+                    <div class="user_money">
+                        <a href="#">充值</a>
+                        <a href="#">提现</a>
+                        <a class="rrd-dimgray" href="#">退出</a>
+                    </div>
+                </div>
+                <!--登录后显示end-->			
+			</div>
+			<div class="freecord"  style="display:none;">
+				<div class="qrcordtit">移动客户端下载</div>
+				<div class="qrcordimg">
+					<img src="images/1ca638b4782093fe89c405487e6d1c31.png"  />
+				</div>
+				<div class="qrcordfooter">手机扫描二维码下载IOS/安卓</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--横幅大广告图-->
+<div id="main_adv_box" class="main_adv_box f_l">
+	<div id="main_adv_img" class="main_adv_img">
+		<span rel="1"><img src="images/00registe01_1.jpg" alt="" /></span>
+		<span rel="2"><img src="images/00registe01_2.jpg" alt="" /></span>
+		<span rel="3"></span>
+		<span rel="4"></span>	
+		<span rel="5"></span>					
+	</div>
+	<div id="main_adv_ctl" class="main_adv_ctl">
+		<ul>
+			<li rel="1">1</li>
+			<li rel="2">2</li>
+			<li rel="3">3</li>
+			<li rel="4">4</li>
+			<li rel="5">5</li>
+		</ul>
+	</div>
+</div>
+<div class="blank0"></div>
+
+<div class="showcase">
+	<div class="wrap">
+		<div class="caseblok">
+			<span>累计投资额</span>
+			<em>12000万元</em>
+		</div>
+		<div class="caseblok">
+			<span>为客户赚钱收益</span>
+			<em>1350万元</em>
+		</div>
+		<div class="caseblok">
+		<div class="back_img back_img_3"></div>
+    		<span>累计投资人数</span>
+			<em>23550人</em>
+    	</div>
+	</div>
+</div>
+
+<div id="ftw">
+	
+	<div id="ft">
+		<div class="ftbj">
+        	<div class="wrap ">
+        		<div style="padding-bottom:20px;">
+	            	<ul class="cf f_l f_box">
+	            		<li class="col hp1">
+	                    	<h3 class="f_l">使用帮助</h3>
+							<div class="blank0"></div>
+	                    	<ul class="sub-list">
+								<li><a href="#" >常见问题</a></li>
+                                <li><a href="#" >平台原理</a></li>
+								<li><a href="#" >如何借款</a></li>
+								<li><a href="#" >P2P借贷费率</a></li>
+								<li class="blank0"></li>           
+							</ul>
+							<div class="blank0"></div>
+	                	</li> 
+						<li class="col hp2">
+	                    	<h3 class="f_l">关于我们</h3>
+							<div class="blank0"></div>
+	                    	<ul class="sub-list">
+								<li><a href="#" >授权服务机构登陆</a></li>
+								<li><a href="#" >企业客户登陆</a></li>
+								<li><a href="#" >公司简介</a></li>
+								<li><a href="#" >联系我们</a></li>
+								<li class="blank0"></li>           
+							</ul>
+							<div class="blank0"></div>
+	                	</li> 
+						<li class="col hp3">
+                            <h3 class="f_l">安全保护</h3>
+                            <div class="blank0"></div>
+                            <ul class="sub-list">
+                                <li><a href="#" target="_blank">政策法规</a></li>
+                                <li><a href="#" >隐私保护</a></li>
+                                <li class="blank0"></li>           
+                            </ul>
+                            <div class="blank0"></div>
+                        </li> 
+						<li class="col hp4">
+	                    	<h3 class="f_l">了解更多</h3>
+							<div class="blank0"></div>
+                            <ul class="sub-list">
+                                <li><a href="#" >咨询热点</a></li>
+                                <li class="blank0"></li>           
+                            </ul>
+                            <div class="blank0"></div>
+                        </li> 
+						<li class="col hp5" style="margin-left:50px;width:250px;">
+	                    	<h3 class="f_l">联系我们</h3>
+							<div class="blank0"></div>
+	                    	<ul class="sub-list">
+								<li>广州市海珠区</li>
+								<li>昌岗中路237号信和广场5楼</li>
+								<li>服务邮箱：service@anxinp2p.com</li>
+								<li class="blank0"></li>           
+							</ul>
+							<div class="blank0"></div>
+	                	</li> 
+						<li class="blank0"></li>  
+	            	</ul>
+					<div class="f_r customer">
+						<div class="telphone f_r">
+                            <div class="f_r">
+                                <span class="telep b">400-888-8888</span>
+                                <span class="time f12">24小时</span>
+                            </div>
+                            <i class="iconfont f_r mt1" style="font-size:50px;line-height:50px;">&#xe620;</i>
+                        </div>
+					</div>
+					<div class="blank25"></div>
+                    <div class="blank0"></div>
+				</div>
+			</div>
+            <!--<div class="wrap">
+            	<div class="creditworthiness_box">
+                    <a href="#"><img src="images/creditworthiness1.png" alt="" /></a>
+                    <a href="#"><img src="images/creditworthiness2.png" alt="" /></a>
+                    <a href="#"><img src="images/creditworthiness3.png" alt="" /></a>
+                    <a href="#"><img src="images/creditworthiness4.png" alt="" /></a>
+                    <a href="#"><img src="images/creditworthiness5.png" alt="" /></a>
+                    <a href="#"><img src="images/creditworthiness6.png" alt="" /></a>
+                </div>
+            </div>-->
+			<div class="warp">
+				<div class="copyright">版权所有 (C) Anxinp2p.com   粤ICP备15047167号</div>
+			</div>
+		</div>	
+	</div>
+
+</div>
+
+<div class="authentication_bg"></div>
+<div class="authentication_box">
+	<div class="authentication_t">
+    	<h1>认证及绑定</h1>
+        <span class="close">关闭</span>
+    </div>
+    <div class="authentication_m">
+    	<div class="authentication_step clearfix">
+        	<span class="step activate"><span class="step1">1、邮箱认证</span></span>
+        	<span class="step"><span class="step2">2、实名认证</span></span>
+        	<span class="step"><span class="step3">3、绑定银行卡</span></span>
+        	<span class="step"><span class="step4">4、开通托管账户</span></span>
+        	<span class="step"><span class="step5 stepend">5、完成</span></span>
+        </div>
+        <div class="authentication_body">
+        	<div class="authentication_data authentication_email" style="display:block;">
+            	<div class="email_data" style="display:block;">
+                	<h2>请填写邮箱进行验证</h2>
+                    <div class="blank20"></div>
+                    <div class="email_input">
+                    	<label><span class="f_red">*</span>您的邮箱：</label>
+                        <input type="email" class="f-input ui-textbox" />
+                    </div>
+                    <div class="blank20"></div>
+                    <div class="send_email">
+                    	<button type="button" class="btn_red">发送验证邮件</button>
+                    </div>
+                </div>
+                <div class="email_data">
+                	<div class="email_success rz_success">
+                    	<img src="images/rz_r.gif" alt="" />
+                        <strong>邮箱验证已成功！</strong>
+                    </div>
+                    <div class="blank20"></div>
+                    <div class="next_step">
+                    	<button type="button" class="btn_red">下一步</button>
+                    </div>
+                </div>
+            </div>
+        	<div class="authentication_data authentication_name">
+            	<div class="name_data" style="display:block;">
+                	<div class="name_input">
+                    	<label>真实姓名/护照姓名：</label>
+                        <input type="text" class="f-input ui-textbox" />
+                    </div>
+                    <div class="blank20"></div>
+                	<div class="idcard_input">
+                    	<label>身份证号/护照号码：</label>
+                        <input type="text" class="f-input ui-textbox" />
+                    </div>
+                    <div class="blank20"></div>
+                    <div class="send_name">
+                    	<button type="button" class="btn_red">下一步</button>
+                    </div>
+                </div>
+                <div class="name_data">
+                	<div class="name_success rz_success">
+                    	<img src="images/rz_r.gif" alt="" />
+                        <strong>实名认证已成功！</strong>
+                    </div>
+                    <div class="blank20"></div>
+                    <div class="next_step">
+                    	<button type="button" class="btn_red">下一步</button>
+                    </div>
+                </div>
+            </div>
+        	<div class="authentication_data authentication_card">
+            	<div class="card_data" style="margin-top:60px;display:block;">
+                    <div class="field clearfix">
+                        <label>开户名：</label>
+                        <span><input type="text" name="real_name" id="Jbank_real_name" class="f-input ui-textbox" style="width:270px;" /></span>
+                    </div>
+                    <div class="field clearfix">
+                        <label><span class="f_red b">*</span> 选择银行：</label>
+                        <span>
+                            <select name="bank_id" class="f_l ui-select w140 select-w140 mr5" height="270">
+                                <option value="">请选择</option>
+                                <option value="36" day="1">苏格兰皇家银行</option>
+                                <option value="1" day="3">中国工商银行</option>
+                                <option value="2" day="3">中国农业银行</option>
+                                <option value="3" day="3">中国建设银行</option>
+                                <option value="4" day="3">招商银行</option>
+                                <option value="5" day="3">中国光大银行</option>
+                                <option value="6" day="3">中国邮政储蓄银行</option>
+                                <option value="7" day="3">兴业银行</option>
+                                <option value="other">其他</option>
+                            </select>
+                            <select name="otherbank" class="hide ui-select w140 select-w140" height="270">
+                                <option value="">请选择</option>
+                                <option value="9" day="3">交通银行</option>
+                                <option value="16" day="3">深圳发展银行</option>
+                                <option value="12" day="3">上海浦东发展银行</option>
+                                <option value="8" day="3">中国银行</option>
+                                <option value="10" day="3">中信银行</option>
+                                <option value="11" day="3">华夏银行</option>
+                                <option value="13" day="3">城市信用社</option>
+                                <option value="14" day="3">恒丰银行</option>
+                                <option value="15" day="3">广东发展银行</option>
+                                <option value="17" day="3">中国民生银行</option>
+                                <option value="18" day="3">中国农业发展银行</option>
+                                <option value="19" day="3">农村商业银行</option>
+                                <option value="20" day="3">农村信用社</option>
+                                <option value="21" day="3">城市商业银行</option>
+                                <option value="22" day="3">农村合作银行</option>
+                                <option value="23" day="3">浙商银行</option>
+                                <option value="24" day="3">上海农商银行</option>
+                                <option value="25" day="3">中国进出口银行</option>
+                                <option value="26" day="3">渤海银行</option>
+                                <option value="27" day="3">国家开发银行</option>
+                                <option value="28" day="3">村镇银行</option>
+                                <option value="29" day="3">徽商银行股份有限公司</option>
+                                <option value="30" day="3">南洋商业银行</option>
+                                <option value="31" day="3">韩亚银行</option>
+                                <option value="32" day="3">花旗银行</option>
+                                <option value="33" day="3">渣打银行</option>
+                                <option value="34" day="3">华一银行</option>
+                                <option value="35" day="3">东亚银行</option>
+            				</select>                   
+                        </span>
+                    </div>
+                    <div class="field clearfix">
+                    	<label for="settings-region"><span class="f_red b">*</span> 开户行所在地：</label>
+                        <select name="region_lv1" class="f_l ui-select w110 select-w110 mr5" height="248">
+                            <option value="0">请选择</option>
+                            <option value="1">中国</option>
+                        </select>
+                        <select name="region_lv2" class="f_l ui-select w110 select-w110 mr5" height="248">
+                            <option value="0">请选择</option>
+                        </select>
+                        <select name="region_lv3" class="f_l ui-select w110 select-w110 mr5" height="248">
+                            <option value="0">请选择</option>	
+                        </select>									
+                        <select name="region_lv4" class="f_l ui-select w110 select-w110" height="248">
+                            <option value="0">请选择</option>
+                        </select>
+                     </div>					
+                    <div class="field clearfix">								
+                        <label for="settings-bankzone"><span class="f_red b">*</span> 开户行：</label>
+                        <span><input type="text" name="bankzone" id="Jbank_bankzone" class="f-input ui-textbox" style="width:270px;" value="" /></span>
+                        <!--&nbsp;&nbsp;<a href="http://www.cardbaobao.com/bank/index.asp" target="_blank">网点查询</a>-->
+                    </div>
+                    <div class="field clearfix">
+                        <label><span class="f_red b">*</span> 银行卡号：</label>
+                        <span><input type="text" name="bankcard" class="f-input ui-textbox" id="Jbank_bankcard" style="width: 270px; font-weight: bolder; border-width: 1px; color: rgb(0, 0, 0);" value="" maxlength="25" /></span>
+                    </div>
+                    <div class="field clearfix">
+                        <label><span class="f_red b">*</span> 确认卡号：</label>
+                        <span><input type="text" name="reBankcard" class="f-input ui-textbox" id="Jbank_rebankcard" style="width: 270px; font-weight: bolder; border-width: 1px; color: rgb(0, 0, 0);" value="" maxlength="25" /></span>
+                    </div>
+                    <div class="blank20"></div>
+                    <div style="margin-left:380px;">
+                        <button type="button" class="btn_red" id="send_card">下一步</button>
+                    </div>
+                    <div class="blank20"></div>
+                    <div class="card_tips">
+                    	<strong><img src="images/ico_tips.png" alt="" />温馨提示</strong>
+                        <p>1、如果您填写的开户行支行不正确，可能将无法成功提现，由此产生的提现费用将不予返还。</p>
+                        <p>2、如果您不确定开户行支行名称，可打电话到所在地银行的营业网点询问或上网查询。</p>
+                        <p>3、不支持提现至信用卡账户。</p>                        
+                    </div>
+                </div>
+                
+                <div class="card_data" style="margin-top:150px;">
+                	<div class="card_success rz_success">
+                    	<img src="images/rz_r.gif" alt="" />
+                        <strong>银行卡绑定成功！</strong>
+                    </div>
+                    <div class="blank20"></div>
+                    <div class="next_step">
+                    	<button type="button" class="btn_red">下一步</button>
+                    </div>
+                </div>
+            </div>
+        	<div class="authentication_data authentication_account">
+            	<div class="account_data" style="margin-top:80px; display:block;">
+                	<h2 class="f18">为了保障您的资金安全，请您开通专属第三方托管账户</h2>
+                    <div class="blank20"></div>
+                    <img class="qdd" src="images/qdd.png" alt="" />
+                    <div class="blank20"></div>
+                    <div class="open_qdd">
+                    	<button type="button" class="btn_red">开通乾多多账户</button>
+                    </div>
+                    <div class="blank20"></div>
+                    <div class="account_tips">
+                    	<strong>请注意以下事项</strong>
+                        <p>1、开通乾多多账号，页面将会跳转至乾多多进行账户开通。</p>
+                        <p>2、开通资金托管账号是为了保护您的资金安全，请您认真填写相关信息并建议您做好记录。</p>
+                        <p>3、如果您在验证过程中，出现任何问题，请致电4006922218，或咨询理财顾问QQ4006922218</p>                        
+                    </div>
+                </div>
+                
+                <div class="account_data" style="margin-top:150px;">
+                	<div class="account_success rz_success">
+                    	<img src="images/rz_r.gif" alt="" />
+                        <strong>托管账户开通成功！</strong>
+                    </div>
+                    <div class="blank20"></div>
+                    <div class="next_step">
+                    	<button type="button" class="btn_red">下一步</button>
+                    </div>
+                </div>
+            </div>
+        	<div class="authentication_data authentication_finish">
+            	<div class="finish_data" style="margin-top:150px;">
+                	<div class="finish_success tc rz_success">
+                    	<img src="images/rz_r.gif" alt="" />
+                        <strong>恭喜您！所有认证及绑定手续均完成。</strong>
+                    </div>
+                    <div class="blank20"></div>
+                    <div class="next_step">
+                    	<a href="index.html" class="btn btn_red">立即去投资</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="authentication_b tc">
+    	<p>为了保护您的账户和资金安全，投资前请认证！</p>
+    </div>
+</div>
+
+<!--脚本重排部分可能用不到，时间紧以后再整理-->
+
+<!--登录/注册框的一些效果-->
+<script type="text/javascript">
+$(document).ready(function(){
+	 lgdh1();
+	 $(".freebj").css("opacity","0.5"); //设置透明度
+});	
+function lgdh1(){
+	$(".login_block").animate({
+	    top:'20px'
+	},800);
+	setTimeout("lgdh2()","100");  
+}	
+function lgdh2(){
+	$(".login_block").animate({
+	    top:'0px'
+	},300);
+}	
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	//回到顶部
+	$("#jumptop").bind("click", function() {
+        $("html,body").animate({
+            scrollTop: 0
+        }, "fast", "swing", function() {});
+		return false;
+    })
+});
+</script>
+
+
+
+<!--注册-->
+<script type="text/javascript">
+
+var regsiter_vy_time = null;  	//定义时间
+var is_lock_send_vy = false;	//解除锁定
+var left_rg_time = 0;			//开始时间
+
+function left_time_to_send_regvy(){
+	clearTimeout(regsiter_vy_time);
+	if(left_rg_time > 0){
+		regsiter_vy_time = setTimeout(left_time_to_send_regvy,1000);
+		$("#get_regsms_code").val(left_rg_time+"秒后重新获取验证码");
+		$("#get_regsms_code").addClass("btn_disable");
+		left_rg_time -- ;
+	}
+	else{
+		is_lock_send_vy = false;
+		$("#get_regsms_code").removeClass("btn_disable");
+		$("#get_regsms_code").val("重新获取验证码");
+		
+		left_rg_time = 0;
+	}
+}
+
+var regsiter_vy_times = null;  	//定义时间
+var is_lock_send_vys = false;	//解除锁定
+var left_rg_times = 0;			//开始时间
+function left_time_to_send_regvys(){
+	clearTimeout(regsiter_vy_times);
+	if(left_rg_times > 0){
+		regsiter_vy_times = setTimeout(left_time_to_send_regvys,1000);
+		$("#get_emregsms_code").val(left_rg_times+"秒后重新获取验证码");
+		$("#get_emregsms_code").addClass("btn_disable");
+		left_rg_times -- ;
+	}
+	else{
+		is_lock_send_vys = false;
+		$("#get_emregsms_code").removeClass("btn_disable");
+		$("#get_emregsms_code").val("重新获取验证码");
+		left_rg_times = 0;
+	}
+}
+
+$(document).ready(function(){
+	//获取验证码
+	$("#get_regsms_code").click(function(){
+		if(is_lock_send_vy || $(this).hasClass(".btn_disable")){
+			return false;
+		}
+		is_lock_send_vy = true;
+		if(!$.maxLength($("#settings-mobile").val(),11,true)){
+			$(".err_msg .form_err").text("手机号不能超过11位");
+			$(".err_msg").css("visibility","visible");
+			window.setTimeout(function(){
+				$(".err_msg").css("visibility","hidden");
+				is_lock_send_vy = false;
+			},5000);
+			return false;
+		}
+		
+		if($.trim($("#settings-mobile").val()).length == 0){	
+			$(".err_msg .form_err").text("手机号码不能为空");
+			$(".err_msg").css("visibility","visible");
+			window.setTimeout(function(){
+				$(".err_msg").css("visibility","hidden");
+				is_lock_send_vy = false;
+			},5000);
+			return false;
+		}	
+		
+		if(!$.checkMobilePhone($("#settings-mobile").val())){
+			$(".err_msg .form_err").text("手机号码格式错误");
+			$(".err_msg").css("visibility","visible");
+			window.setTimeout(function(){
+				$(".err_msg").css("visibility","hidden");
+				is_lock_send_vy = false;
+			},5000);
+			return false;
+		}	
+		var ajaxurl = APP_ROOT+"/index.php?ctl=ajax&act=get_register_verify_code";
+		
+		
+		var query = new Object();
+		query.user_mobile =  $.trim($("#settings-mobile").val());
+		$.ajax({ 
+			url: ajaxurl,
+			data:query,
+			type: "POST",
+			dataType: "json",
+			success: function(result){
+				if(result.status==1){
+					left_rg_time = 60;
+					left_time_to_send_regvy();
+					$.showSuccess(result.info,function(){
+						//to_send_msg = true;
+					});
+				}else{	
+					$(".err_msg .form_err").text(result.info).attr("title",result.info);
+					$(".err_msg").css("visibility","visible");
+					window.setTimeout(function(){
+						$(".err_msg").css("visibility","hidden");
+						is_lock_send_vy = false;
+					},5000);
+					return false;
+				}
+			},
+			error:function(){
+				$(".err_msg .form_err").text("获取失败！").attr("title","获取失败！");
+				$(".err_msg").css("visibility","visible");
+				window.setTimeout(function(){
+					$(".err_msg").css("visibility","hidden");
+					is_lock_send_vy = false;
+				},5000);
+				return false;
+			}
+		});	
+	}); 
+	//手机验证码end
+	
+	//手机验证	
+	$("#settings-mobile").on("blur",function(){
+		var obj = $(this);
+		$("#get_regsms_code").addClass("btn_disable");
+		if(!$.checkMobilePhone(obj.val())){
+			$(".err_msg .form_err").text("手机号码格式错误！").attr("title","手机号码格式错误！");
+			$(".err_msg").css("visibility","visible");
+			window.setTimeout(function(){
+				$(".err_msg").css("visibility","hidden");
+			},5000);	
+			return false;
+		}	
+		if($.trim(obj.val()).length == 0){
+			$(".err_msg .form_err").text("手机号码不能为空！").attr("title","手机号码不能为空！");
+			$(".err_msg").css("visibility","visible");
+			window.setTimeout(function(){
+				$(".err_msg").css("visibility","hidden");
+			},5000);	
+			return false;
+		}
+		var ajaxurl = APP_ROOT+"/index.php?ctl=ajax&act=check_field";
+		var query = new Object();
+		query.field_name = "mobile";
+		query.field_data = $.trim(obj.val());
+		$.ajax({ 
+			url: ajaxurl,
+			data:query,
+			type: "POST",
+			dataType: "json",
+			success: function(data){
+				if(data.status==1){					
+					$("#get_regsms_code").removeClass("btn_disable");
+					return false;
+				}else{					
+					$(".err_msg .form_err").text(data.info).attr("title",data.info);
+					$(".err_msg").css("visibility","visible");
+					window.setTimeout(function(){
+						$(".err_msg").css("visibility","hidden");
+					},5000);	
+					return false;
+				}
+			}
+		});	
+	}); 
+	
+	//单击提交
+	$("#signup-mobile-submit").click(function(){
+		var objform = $(this).parent().parent();
+		var checkform = checkRegsiter(objform);
+		if(!checkform){return false};
+		var name;
+		name=$.trim($("#signup-password").val())
+		var reg=/^[a-zA-z0-9_\W]{6,}$/;  
+		var regs=/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z_\W]{6,16}$/;
+		if(reg.test(name)){	
+			if(regs.test(name)){	
+				//formSuccess($("#signup-user-form #signup-password"),"可以使用");
+			}else{
+				$(".err_msg .form_err").text("密码安全等级低，请用数字+字母").attr("title","密码安全等级低，请用数字+字母");
+				$(".err_msg").css("visibility","visible");
+				window.setTimeout(function(){
+					$(".err_msg").css("visibility","hidden");
+				},5000);
+				return false;
+			}
+		}else{
+			$(".err_msg .form_err").text("密码长度在6~16之间，只能包含字符、数字和下划线。").attr("title","密码长度在6~16之间，只能包含字符、数字和下划线。");
+			$(".err_msg").css("visibility","visible");
+			window.setTimeout(function(){
+				$(".err_msg").css("visibility","hidden");
+			},5000);
+			return false;
+		}
+		if(!$.minLength($("#signup-password").val(),6,false)){
+			$(".err_msg .form_err").text("密码长度不能少于6位").attr("title","密码长度不能少于6位");
+			$(".err_msg").css("visibility","visible");
+			window.setTimeout(function(){
+				$(".err_msg").css("visibility","hidden");
+			},5000);	
+			return false;
+		}
+				
+		//如果都通过了就把注册信息发到后端（略），成功响应后就弹出认证
+		$(".authentication_bg").css({"height":$(document).outerHeight(true),"width":$(document).outerWidth(true)}).show();
+		$(".authentication_box").fadeIn();	
+		$(".authentication_t .close").click(function(){
+			$(this).parents(".authentication_box").fadeOut();
+			$(".authentication_bg").fadeOut();
+		});
+	});
+	
+	
+	$("#signup-user-form input,#signup-user-form select").keydown(function(e){ 
+		var objform = $(this).parent().parent();
+		var curKey = e.which; 
+		if(curKey == 13){
+			checkRegsiter(objform);
+		}; 
+	});	
+	
+	//密码验证
+	var pass_s = /^[a-zA-z0-9_\W]{6,}$/;
+	var pass_m = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z_\W]{6,}$/;
+	$("#signup-password").bind("blur",function(){
+		var obj = $(this);
+		var objp = obj;
+		//if (!hasPlaceholderSupport()) {
+		//	objp = $(obj).parent();
+		//}
+		var name;
+		name=$.trim(obj.val())
+		var reg=/^[a-zA-z0-9_\W]{6,}$/;  
+		var regs=/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z_\W]{6,16}$/;
+		if(reg.test(name)){	
+			if(regs.test(name)){	
+				//formSuccess(obj,"可以使用");
+			}else{
+				$(".err_msg .form_err").text("密码安全等级低，请用数字+字母").attr("title","密码安全等级低，请用数字+字母");
+				$(".err_msg").css("visibility","visible");
+				window.setTimeout(function(){
+					$(".err_msg").css("visibility","hidden");
+				},5000);
+				return false;
+			}
+		}else{
+			$(".err_msg .form_err").text("密码长度在6~16之间，只能包含字符、数字和下划线。").attr("title","密码长度在6~16之间，只能包含字符、数字和下划线。");
+			$(".err_msg").css("visibility","visible");
+			window.setTimeout(function(){
+				$(".err_msg").css("visibility","hidden");
+			},5000);
+			return false;
+		}
+		if(!$.minLength(obj.val(),6,false)){
+			$(".err_msg .form_err").text("密码长度不能少于6位").attr("title","密码长度不能少于6位");
+			$(".err_msg").css("visibility","visible");
+			window.setTimeout(function(){
+				$(".err_msg").css("visibility","hidden");
+			},5000);	
+			return false;
+		}
+		//objp.parent().find("#signup-password-ipt").val(obj.val());
+		//formSuccess(obj,"可以使用");
+	}).on("keyup",function(){
+		var obj = $(this);
+		var passval = $.trim(obj.val());
+		if(!passval){
+			$("#pass_grade td").removeClass("bg");
+			return false;
+		}
+		if(/^[0-9]+$/.test(passval)||/^[a-zA-z]+$/.test(passval)||/^[\W_]+$/.test(passval)){
+			$("#pass_grade td").removeClass("bg").eq(0).addClass("bg");
+		}else if(pass_s.test(passval)){
+			if(pass_m.test(passval)){	
+				$("#pass_grade td").removeClass("bg").slice(0,2).addClass("bg");
+				if(/[0-9]/.test(passval)&&/[a-zA-z]/.test(passval)&&/[\W_]/.test(passval)&&/[0-9A-Za-z\W_]{8,}/.test(passval)){
+					$("#pass_grade td").addClass("bg");
+				}
+			}
+		}
+	}); 
+	
+	//确认密码验证
+	$("#signup-password-confirm").bind("blur",function(){
+		var obj = $(this);
+		//var objp = obj;
+		//if (!hasPlaceholderSupport()) {
+		//	objp = $(obj).parent();
+		//}
+		if(obj.val()!==""){
+			if(obj.val() != $("#signup-password").val()){
+				$(".err_msg .form_err").text("两次输入密码不一致").attr("title","两次输入密码不一致");
+				$(".err_msg").css("visibility","visible");
+				window.setTimeout(function(){
+					$(".err_msg").css("visibility","hidden");
+				},5000);	
+				return false;
+			}
+		}else{
+			$(".err_msg .form_err").text("确认密码不能为空").attr("title","确认密码不能为空");
+			$(".err_msg").css("visibility","visible");
+			window.setTimeout(function(){
+				$(".err_msg").css("visibility","hidden");
+			},5000);	
+			return false;
+		}
+		//objp.parent().find("#signup-password-confirm-ipt").val(obj.val());
+		//formSuccess(obj,"验证正确");
+	}); 
+		
+										
+	checkReferer();
+	$("#settings-referer").bind("blur",function(){
+		checkReferer();
+	});
+});
+
+function  checkReferer(){
+	var val = $.trim($("#settings-referer").val());
+	if(val==""){
+		return;
+	}
+	
+	var ajaxurl = APP_ROOT+"/index.php?ctl=ajax&act=check_user";
+	var query = new Object();
+	query.val = val;
+	$.ajax({ 
+		url: ajaxurl,
+		data:query,
+		type: "POST",
+		dataType: "json",
+		success: function(data){
+			if(data.status==1){
+				//formSuccess($("#settings-referer"),"此推荐码信息正确");
+				return false;
+			}else{
+				$(".err_msg .form_err").text("推荐码不存在").attr("title","推荐码不存在");
+				$(".err_msg").css("visibility","visible");
+				window.setTimeout(function(){
+					$(".err_msg").css("visibility","hidden");
+				},5000);	
+				return false;
+			}
+		}
+	});	
+}
+
+function checkRegsiter(obj){
+	/*
+	if(!$.minLength(obj.find("#signup-username").val(),3,true))
+	{
+		obj.find("#signup-username").focus();
+		$.showErr("昵称格式错误，请重新输入");		
+		return false;
+	}
+	if(!$.maxLength(obj.find("#signup-username").val(),16,true))
+	{
+		obj.find("#signup-username").focus();
+		$.showErr("昵称格式错误，请重新输入");			
+		return false;
+	}*/
+	
+	/*xsz*/
+	if(!$.checkMobilePhone($("#settings-mobile").val())){
+		$("#settings-mobile").focus();			
+		$.showErr("手机号码格式错误，请重新输入");	
+		return false;
+	}	
+	if($.trim($("#settings-mobile").val()).length == 0){
+		$("#settings-mobile").focus();
+		$.showErr("手机号码不能为空");
+		return false;
+	}
+
+	if(!$.minLength(obj.find("#signup-password").val(),6,false)){
+		obj.find("#signup-password").focus();
+		$.showErr("密码格式错误，请重新输入");	
+		return false;
+	}
+	if(obj.find("#signup-password-confirm").val()!==""){
+		if(obj.find("#signup-password-confirm").val() != obj.find("#signup-password").val()){
+			obj.find("#signup-password-confirm").focus();
+			$.showErr("两次输入的密码不一致");			
+			return false;
+		}
+	}else{
+		obj.find("#signup-password-confirm").focus();
+		$.showErr("请输入确认密码");			
+		return false;
+	}
+	//密码
+
+	if(obj.find("#J_agreement:checked").length == 0){
+		$.showErr("请先同意  注册协议 和 隐私条款");
+		return false;
+	}
+	
+	return true;
+}
+</script>
+
+<!--认证-->
+<script src="js/region.js" type="text/javascript"></script>
+<script type="text/javascript">
+		
+$(function(){
+	//发送邮箱验证码	
+	$(".send_email button").click(function(){
+		if($.trim($(".email_input input").val()).length == 0){	
+			$.showErr("Email不能为空");			
+			return false;
+		}
+		if(!$.checkEmail($(".email_input input").val())){
+			$.showErr("Email格式错误，请重新输入");
+			return false;
+		}	
+		var ajaxurl = APP_ROOT+"/index.php?ctl=ajax&act=get_email_verify";
+		var query = new Object();
+		query.user_email =  $(".email_input input").val();
+		$.ajax({ 
+			url: ajaxurl,
+			data:query,
+			type: "POST",
+			dataType: "json",
+			success: function(result){
+				if(result.status==1){
+					//your code
+					
+				}else{	
+					$.showErr(result.info);
+					return false;
+				}
+			}
+		});	
+	}); 
+	
+	$(".next_step").click(function(){
+		$(".authentication_data").hide();
+		$(this).parents(".authentication_data").next().show();
+	});
+	
+	//实名认证
+	$(".send_name button").click(function(){
+		if($.trim($(".name_input input").val()).length == 0){	
+			$.showErr("姓名不能为空");			
+			return false;
+		}
+		if($.trim($(".idcard_input input").val()).length == 0){
+			$.showErr("证件号码不能为空");
+			return false;
+		}	
+		var ajaxurl = APP_ROOT+"/index.php?ctl=ajax&act=get_email_verify";
+		var query = new Object();
+		query.name =  $(".name_input input").val();
+		query.idcard =  $(".idcard_input input").val();
+		$.ajax({ 
+			url: ajaxurl,
+			data:query,
+			type: "POST",
+			dataType: "json",
+			success: function(result){
+				if(result.status==1){
+					//your code
+					
+				}else{	
+					$.showErr(result.info);
+					return false;
+				}
+			}
+		});	
+	}); 
+	
+	//城市联级下拉菜单
+	$(document).on("change","select[name='region_lv1']",function(){
+		load_select("1");
+	});
+	$(document).on("change","select[name='region_lv2']",function(){
+		load_select("2");
+	});
+	$(document).on("change","select[name='region_lv3']",function(){
+		load_select("3");
+	});	
+		
+	//银行选择其它时出现更多选择	
+	$(document).on("change","select[name='bank_id']",function(){
+		if($(this).val()=="other"){
+			$("select[name='otherbank']").removeClass("hide");
+		}else{
+			$("select[name='otherbank']").addClass("hide");
+		}
+		$("select[name='otherbank']").ui_select({refresh:true});
+	});
+	
+	$("#send_card").on("click",function(){
+		
+		if($("#Jbank_real_name").val()==""){
+			$.showErr("请输入开户名",function(){
+				$("#Jbank_real_name").focus();
+			});
+			return false;
+		}
+		if($("select[name='bank_id']").val()==""){
+			$.showErr("请选择银行");
+			return false;
+		}
+		if($("select[name='bank_id']").val()=="other" && $("select[name='otherbank']").val()==""){
+			$.showErr("请选择银行");
+			return false;
+		}
+		
+		if($("select[name='region_lv3']").val()=="" || $("select[name='region_lv3']").val()=="0"){
+			$.showErr("请选择开户行所在地");
+			return false;
+		}
+		
+		if($("#Jbank_bankzone").val()==""){
+			$.showErr("请输入开户行网点",function(){
+				$("#Jbank_bankzone").focus();
+			});
+			return false;
+		}
+		
+		if($.trim($("#Jbank_bankcard").val())==""){
+			$.showErr("请输入银行卡号",function(){
+				$("#Jbank_bankcard").focus();
+			});
+			return false;
+		}
+		if($.trim($("#Jbank_rebankcard").val())==""){
+			$.showErr("请输入确认银行卡号",function(){
+				$("#Jbank_rebankcard").focus();
+			});
+			return false;
+		}
+		if($.trim($("#Jbank_bankcard").val())!=$.trim($("#Jbank_rebankcard").val())){
+			$.showErr("两次输入的银行卡号不同!",function(){
+				$("#Jbank_rebankcard").focus();
+			});
+			return false;
+		}
+		
+		
+		var query = $("#Jbank_From").serialize();
+		var ajaxurl = $("#Jbank_From").attr("action");
+		$.ajax({
+			url:ajaxurl,
+			data:query,
+			type:"post",
+			dataType:"json",
+			success:function(result){
+				if(result.status==1){
+					$.showSuccess(result.info,function(){
+						window.location.reload();
+					});
+				}else{
+					$.showErr(result.info);
+				}
+			},
+			error:function(){
+				$.showErr("发生错误");
+			}
+		});
+	});
+});
+</script>
+
+
+
+</body>
+</html>

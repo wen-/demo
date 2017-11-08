@@ -1,0 +1,113 @@
+﻿@charset "utf-8";
+/* 
+ * CSS Document for xxx
+ * Copyright 2012, wen 
+ * Date: 2012-12-18
+ */
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, 
+dl, dt, dd, ul, ol, li,                          
+pre,                                             
+form, fieldset, legend, button, input, textarea, 
+th, td{                                          
+    margin: 0;
+    padding: 0;
+	font-size: 100%;
+    vertical-align:baseline;
+}
+
+
+table {
+        border-collapse:collapse;
+        border-spacing:0;
+}
+
+
+ul, ol { list-style: none; }
+
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+sup { vertical-align: text-top; }                                      
+sub { vertical-align: text-bottom; }
+
+
+legend { color: #000; }                                               
+fieldset, img { border: 0; }                                          
+button, input, select, textarea { font-size: 100%; }                  
+input , textarea {
+	outline: none;
+	background:#fff;
+}
+
+
+article, aside, details, figcaption, figure, footer,header, hgroup, menu, nav, section,
+summary, time, mark, audio, video {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+mark { background: #ff0; }
+
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+audio:not([controls]) {
+    display: none;
+}                
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+address, cite, dfn, em, i, var { font-style: normal; }                
+code, kbd, pre, samp { font-family: courier new, courier, monospace; } 
+small { font-size: 12px; }                                            
+
+
+hr {
+        background: #ddd;
+        color: #ddd;
+        clear:both;
+        float: none;
+        width: 100%;
+        height: 1px;
+        line-height: 1px;
+        font-size: 0;/
+        border: none 0;
+        margin:1em 0;
+}
+
+
+.lfloat{
+        float:left;
+        display: inline;
+}
+
+.rfloat{
+        float:right;
+        display: inline;
+}
+.clearfix:before, 
+.clearfix:after { 
+  content: ""; 
+  display: table; 
+}
+.clearfix:after { 
+  clear: both; 
+  overflow:hidden;
+}
+.clearfix { 
+  zoom: 1; 
+}
+.clear{
+	clear:both;
+}
+.absolute{
+	position:absolute;
+}
+.relative{
+	position:relative;
+}

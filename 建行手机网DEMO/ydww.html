@@ -1,0 +1,151 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>中国建设银行手机网</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="" id="min320" />
+<script type="text/javascript" src="js/jquery-1.5.min.js"></script>
+<script src="/cn/appmarket/mobile/getphonetype.js"></script>
+<script type="text/javascript" src="/cn/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/cn/common/appformarket/js/detaillogincheck.js"></script>
+<script src="/cn/common/appmarket/mobile/js/css3-mediaqueries.js"></script>
+<script src="/cn/common/appmarket/mobile/js/main.js"></script>
+<script src="/cn/common/appmarket/mobile/js/app_main.js"></script>
+<style type="text/css">
+#no_css{
+	display:none;	
+}
+</style>
+<script type="text/javascript">
+$(function(){
+	$("#no_js").hide();
+	$(".ad2 img").css({"max-width":"100%"});
+	var strHref=document.location.toString();
+		var intPos = strHref.indexOf("?");
+  		var strRight = strHref.substr(intPos + 1);//获取到右边的参数部分
+		var strspli=strRight.split("&");
+		var getdetailtype="";
+		var css="";
+	var i = 0;
+	var look = 3;
+	var $li = $(".play li");
+	var $ul = $(".play ul");
+	var li_index = $li.length;
+	var li_width = $li.eq(0).outerWidth();
+	var ul_width = li_width*li_index;
+	$ul.width(ul_width);
+	function play(a){
+		if(li_index < look){return false;};
+		if(a =="next"){
+			if(! $ul.is(":animated")){
+				$ul.animate({"left":-(li_width)},800,function(){
+					$ul.css({"left":"0"});
+					$(".play li:first").appendTo($ul)
+				});
+			};
+		};
+		if(a == "pre"){
+			if(! $ul.is(":animated")){
+				$ul.css({"left":-(li_width)});
+				$(".play li:last").prependTo($ul);
+				$ul.animate({"left":"0"},800);
+			};
+		};
+	};
+		
+	$(".pre_page").click(function(){
+		play("pre");
+	});
+	$(".next_page").click(function(){
+		play("next");
+	});
+});
+
+</script>
+</head>
+<body>
+<div id="no_css">抱歉！您的浏览器不支持CSS！因此，页面可能无法正常显示。</div>
+<div id="no_js">抱歉！您的浏览器不支持JavaScript！因此，页面可能无法正常显示。</div>
+<div class="page">
+  	<div class="header">
+		<!--#include virtual="/cn/mobile/include/headtosy.html"-->
+  	</div>
+	<!-- /header -->
+	
+    <div class="app_body_box">	
+		<div class="app_title">
+			<!--#include virtual="/cn/appmarket/mobile/include/nav_login.html"-->
+			<div class="app_title_m" id="app_titile">
+				应用详情
+			</div>
+			<!--#include virtual="/cn/appmarket/mobile/include/nav_search.html"-->
+		</div>
+		<div class="app_body">
+
+
+<div class="page page_details clearfix">
+	<div class="details_head clearfix">
+			<div class="details_pt lfloat">
+				<div class="details_pic lfloat">
+					<img src="/cn/appmarket/upload/ydwwlogo.png" alt="移动网银" />
+				</div>	
+				<div class="app_details_txt" style="margin-top: 25px;">
+					<h2>移动网银</h2>
+				</div>
+			</div>
+			<div class="down_btn rfloat">
+				<a href="https://ibsbjstar.ccb.com.cn/app/V5/CN/STY2/mobile.jsp" style="font-size: 1em;">马上进入</a>
+			</div>
+	</div>
+	
+	<div class="txt_details_box" style="border-top: 1px solid #434343;margin:0px">
+			<p>应用介绍：</p>
+			<p>移动网银是我行针对移动设备的特点推出的一版网银系统，他不仅具备网银常用的查询、转账、缴费、信用卡和投资理财功能，而且流程完全按照移动设备的特点进行设计，是您随时随地的理财好帮手。</p>
+	</div>
+
+
+				
+		<div class="show_box">
+			<span class="pre_page"></span>
+			<span class="next_page"></span>
+			<div class="play">
+				<ul class="clearfix">
+					
+						<li><img src="/cn/appmarket/upload/ydww1.jpg" alt="" /></li>
+			
+			
+						<li><img src="/cn/appmarket/upload/ydww2.jpg" alt="" /></li>
+			
+			
+						<li><img src="/cn/appmarket/upload/ydww3.jpg" alt="" /></li>
+			
+			
+						<li><img src="/cn/appmarket/upload/ydww4.jpg" alt="" /></li>			
+			
+				</ul>
+			</div>
+		</div>
+	
+			
+</div>
+
+
+	</div>
+		
+		<!--#include virtual="/cn/appmarket/mobile/include/panel.html"-->
+    </div>  
+	
+	<!--#include virtual="/cn/mobile/include/foot.html"-->
+	<!-- /footer -->
+</div><!-- /page -->
+</body>
+</html>
+
+

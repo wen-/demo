@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="author" content="yellowwen@126.com">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<title>新房首页</title>
+	<link type="text/css" rel="stylesheet" href="css/reset.min.css" />	<link type="text/css" rel="stylesheet" href="css/animate.min.css" />
+	<link type="text/css" rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
+	<link type="text/css" rel="stylesheet" href="font/iconfont.css" />
+	<link type="text/css" rel="stylesheet" href="css/main.css" />
+	<link type="text/css" rel="stylesheet" href="css/new-house.css" />
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<!--[if lt IE 9]>
+	<script type="text/javascript">
+		var h5Block = 'header,footer,section,aside,article,nav,hgroup,figure,figcaption,details,summary';
+		var h5Inline = 'time,mark,ruby,rt,rp,output,keygen,meter,progress,command,source';
+		var h5Other = 'video,audio,canvas,datalist';
+		var h5Elem = (h5Block + ',' + h5Inline + ',' + h5Other).split(',');
+		for(var i=0;i<h5Elem.length;i++){
+			document.createElement(h5Elem[i]);
+		}
+	</script>
+	<![endif]-->
+</head>
+<body>
+<!--页头star-->
+<header class="header">
+	<div class="m">
+		<a href="index.html" class="lfloat logo"><img src="images/logo.png" alt="" /></a>
+		<div class="rfloat login_info">
+			<div class="h_btn">
+				<a class="log" href="用户中心_登录.html">登录</a>
+				<a class="reg" href="注册.html">注册</a>
+			</div>
+			<div class="h_txt" style="display: none;">
+				<a href="#">
+					<img src="images/user_icon.jpg" class="headico" alt="" />
+					<span class="info_txt">欢迎<span>张三</span></span>
+				</a>
+				<a href="#" class="exit">退出</a>
+			</div>
+		</div>
+		<nav class="rfloat nav">
+			<dl>
+				<dt><a href="index.html">首页</a></dt>
+			</dl>
+			<dl>
+				<dt><a href="#">二手房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="二手房_房源列表.html">房源</a>
+					<a href="二手房_小区列表.html">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="current"><a href="#">新房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">新房首页</a>
+					<a href="#">广州新房</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">租房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">房源</a>
+					<a href="#">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">写字楼</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">出租</a>
+					<a href="#">出售</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">业主委托</a></dt>
+			</dl>
+		</nav>
+	</div>
+</header>
+
+<div class="show_box tt" style="width:100%;overflow:hidden;background: none;">
+
+	<div class="wen_play" id="wen_play">
+		<div class="wen_play_body">
+			<ul class="wen_play_box clearfix">
+				<li class="play_list"><a href="#"><img src="images/newhouse/show1.jpg" alt="" /></a></li>
+				<li class="play_list"><a href="#"><img src="images/newhouse/show2.jpg" alt="" /></a></li>
+				<li class="play_list"><a href="#"><img src="images/newhouse/show3.jpg" alt="" /></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="h_search_bg">
+		<div class="m">
+			<div class="h_search_box">
+				<br/>
+				<div class="search_m">
+					<input type="text" placeholder="请输入房源名称、房型、地址..." />
+					<button type="button">搜索</button>
+				</div>
+			</div>
+			<div class="tips">
+				<p>区域：
+					<a href="#">天河</a>
+					<a href="#">荔湾</a>
+					<a href="#">海珠</a>
+					<a href="#">白云</a>
+					<a href="#">番禺</a>
+					<a href="#">花都</a>
+					<a href="#">黄埔</a>
+					<a href="#">南沙</a>
+					<a href="#">从化</a>
+					<a href="#">增城</a>
+				</p>
+				<p>价格：
+					<a href="#">5千以下</a>
+					<a href="#">5千 - 1万</a>
+					<a href="#">1万 - 1.5万</a>
+					<a href="#">1.5万 - 2万</a>
+					<a href="#">2万 - 3万</a>
+					<a href="#">3万以上</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--页头end-->
+
+<!--页中star-->
+<!-- 适合你的就在这里 -->
+<div class="section-wrap">
+	<div class="section-wrap-inner">
+		<p class="section-title">
+			<span>适合你的<i class="gap-hfword"></i>就在这里</span>
+			<em>选择自己喜欢的楼盘类型</em>
+		</p>
+		<div class="like-hs clearfix">
+			<p class="like-hs-onsell lfloat ghost slideInRight">
+				<a href="#">
+					<span class="like-hs-titbig">在售楼盘</span>
+					<em class="like-hs-titsmal">
+						234个
+					</em>
+				</a>
+			</p>
+			<p class="like-hs-school lfloat ghost slideInUp">
+				<a href="#">
+					<span class="like-hs-titbig">小户型</span>
+					<em class="like-hs-titsmal">Smallsize Apartment</em>
+				</a>
+			</p>
+			<p class="like-hs-school lfloat ghost slideInLeft">
+				<a href="#">
+					<span class="like-hs-titbig">地铁沿线</span>
+					<em class="like-hs-titsmal">Metro Lines</em>
+				</a>
+			</p>
+		</div>
+
+		<div class="like-hs clearfix">
+			<p class="like-hs-school lfloat ghost slideInRight">
+				<a href="#">
+					<span class="like-hs-titbig">投资地产</span>
+					<em class="like-hs-titsmal">Investment Property</em>
+				</a>
+			</p>
+			<p class="like-hs-school lfloat ghost slideInDown">
+				<a href="#">
+					<span class="like-hs-titbig">现房</span>
+					<em class="like-hs-titsmal">Existing Houes</em>
+				</a>
+			</p>
+			<p class="like-hs-hot lfloat ghost slideInLeft">
+				<a href="#">
+					<span class="like-hs-titbig">不限购</span>
+					<em class="like-hs-titsmal">Not Limited To Purchase</em>
+				</a>
+			</p>
+		</div>
+
+	</div>
+</div>
+
+<!-- 优惠团购 -->
+<div class="section-wrap group-buying">
+	<div class="section-wrap-inner">
+		<p class="section-title">
+			<span>优惠团购</span>
+			<em>用最优惠的价格买到最适合的楼盘</em>
+		</p>
+		<div class="section-wrap-content clearfix">
+			<!-- left -->
+			<div class="section-wrap-item lfloat ghost slideInRight">
+				<div class="section-wrap-pic">
+					<a target="_blank" href="#">
+						<img style="width: 584px; height: 329px; display: inline-block;" class="lazy" src="images/newhouse/2_1.jpg" alt="中国美林湖">
+					</a>
+				</div>
+				<p class="group-buying-slogan"><!-- 优惠信息 -->
+					3万抵10万
+				</p>
+				<div class="section-wrap-mask">
+					<div class="section-wrap-info group-buying-info">
+						<p class="group-buying-hsname">
+							<a target="_blank" href="#">中国美林湖</a>
+						</p>
+						<p class="group-buying-price">均价：
+							<span>6800元/平米</span>
+						</p>
+						<p class="group-buying-tel">电话：400-020-0668&nbsp;&nbsp;(转)&nbsp;&nbsp;4016</p>
+						<p class="group-buying-btn">
+							<a class="btn-orange apply_newhouse" href="javascript:;">立即报名</a>
+						</p>
+						<p class="group-buying-willnum">77人已报名</p>
+					</div>
+				</div>
+			</div>
+			<!-- end left -->
+			<!-- left -->
+			<div class="section-wrap-item lfloat ghost slideInLeft">
+				<div class="section-wrap-pic">
+					<a target="_blank" href="#">
+						<img style="width: 584px; height: 329px; display: inline-block;" class="lazy" src="images/newhouse/2_2.jpg" alt="富力悦禧">
+					</a>
+				</div>
+				<p class="group-buying-slogan">3万抵15万</p>
+				<div class="section-wrap-mask">
+					<div class="section-wrap-info group-buying-info">
+						<p class="group-buying-hsname">
+							<a target="_blank" href="#">富力悦禧</a>
+						</p>
+						<p class="group-buying-price">均价：
+							<span>14500元/平米</span>
+						</p>
+						<p class="group-buying-tel">电话：400-020-0668&nbsp;&nbsp;(转)&nbsp;&nbsp;2685</p>
+						<p class="group-buying-btn">
+							<a class="btn-orange apply_newhouse" href="javascript:;">立即报名</a>
+						</p>
+						<p class="group-buying-willnum">54人已报名</p>
+					</div>
+				</div>
+			</div>
+			<!-- end left -->
+		</div>
+	</div>
+	<p class="more-hs-btn ghost slideInUp"><a href="#">查看更多团购</a></p>
+</div>
+
+<!-- 热门楼盘 -->
+<div class="section-wrap">
+	<div class="section-wrap-inner">
+		<p class="section-title">
+			<span>热门楼盘</span>
+			<em>精选城市关注度最多的楼盘</em>
+		</p>
+		<!-- con -->
+		<div class="section-wrap-con">
+			<div class="pics-play wen_play" id="picsHot">
+				<div class="js-picsbox pics-box wen_play_body">
+					<ul class="clearfix">
+						<li class="pics-item play_list">
+							<a href="#" target="_blank">
+								<div class="house-pic">
+									<img class="lazy" data-original="images/newhouse/3_1.jpg" alt="敏捷御峰国际" />
+									<p class="mask-house-pic">
+	                                    <span class="name-adr">
+	                      	                <em>敏捷御峰国际</em><br/>敏捷御峰国际 番禺 大石
+	                                    </span>
+									</p>
+								</div>
+								<div class="attributes clearfix">
+									<p class="attributes-price lfloat">
+										<span class="uncertain-price">13500</span>
+										<em>元/平米</em>
+									</p>
+								</div>
+								<p class="pjt-adr">项目地址：番禺大石105国道上（飘峰公交站旁，香江动物世界对面）</p>
+								<p class="tags clearfix">
+									<span>打折优惠</span>
+									<span>小户型</span>
+									<span>现房</span>
+								</p>
+							</a>
+							<a href="#" target="_blank">
+								<div class="house-pic">
+									<img class="lazy" data-original="images/newhouse/3_1.jpg" alt="敏捷御峰国际" />
+									<p class="mask-house-pic">
+	                                    <span class="name-adr">
+	                      	                <em>敏捷御峰国际</em><br/>敏捷御峰国际 番禺 大石
+	                                    </span>
+									</p>
+								</div>
+								<div class="attributes clearfix">
+									<p class="attributes-price lfloat">
+										<span class="uncertain-price">13500</span>
+										<em>元/平米</em>
+									</p>
+								</div>
+								<p class="pjt-adr">项目地址：番禺大石105国道上（飘峰公交站旁，香江动物世界对面）</p>
+								<p class="tags clearfix">
+									<span>打折优惠</span>
+									<span>小户型</span>
+									<span>现房</span>
+								</p>
+							</a>
+							<a href="#" target="_blank">
+								<div class="house-pic">
+									<img class="lazy" data-original="images/newhouse/3_1.jpg" alt="敏捷御峰国际" />
+									<p class="mask-house-pic">
+	                                    <span class="name-adr">
+	                      	                <em>敏捷御峰国际</em><br/>敏捷御峰国际 番禺 大石
+	                                    </span>
+									</p>
+								</div>
+								<div class="attributes clearfix">
+									<p class="attributes-price lfloat">
+										<span class="uncertain-price">13500</span>
+										<em>元/平米</em>
+									</p>
+								</div>
+								<p class="pjt-adr">项目地址：番禺大石105国道上（飘峰公交站旁，香江动物世界对面）</p>
+								<p class="tags clearfix">
+									<span>打折优惠</span>
+									<span>小户型</span>
+									<span>现房</span>
+								</p>
+							</a>
+							<a href="#" target="_blank">
+								<div class="house-pic">
+									<img class="lazy" data-original="images/newhouse/3_1.jpg" alt="敏捷御峰国际" />
+									<p class="mask-house-pic">
+	                                    <span class="name-adr">
+	                      	                <em>敏捷御峰国际</em><br/>敏捷御峰国际 番禺 大石
+	                                    </span>
+									</p>
+								</div>
+								<div class="attributes clearfix">
+									<p class="attributes-price lfloat">
+										<span class="uncertain-price">13500</span>
+										<em>元/平米</em>
+									</p>
+								</div>
+								<p class="pjt-adr">项目地址：番禺大石105国道上（飘峰公交站旁，香江动物世界对面）</p>
+								<p class="tags clearfix">
+									<span>打折优惠</span>
+									<span>小户型</span>
+									<span>现房</span>
+								</p>
+							</a>
+						</li>
+						<li class="pics-item play_list">
+							<a href="#" target="_blank">
+								<div class="house-pic">
+									<img class="lazy" data-original="images/newhouse/3_1.jpg" alt="敏捷御峰国际" />
+									<p class="mask-house-pic">
+	                                    <span class="name-adr">
+	                      	                <em>敏捷御峰国际</em><br/>敏捷御峰国际 番禺 大石
+	                                    </span>
+									</p>
+								</div>
+								<div class="attributes clearfix">
+									<p class="attributes-price lfloat">
+										<span class="uncertain-price">13500</span>
+										<em>元/平米</em>
+									</p>
+								</div>
+								<p class="pjt-adr">项目地址：番禺大石105国道上（飘峰公交站旁，香江动物世界对面）</p>
+								<p class="tags clearfix">
+									<span>打折优惠</span>
+									<span>小户型</span>
+									<span>现房</span>
+								</p>
+							</a>
+							<a href="#" target="_blank">
+								<div class="house-pic">
+									<img class="lazy" data-original="images/newhouse/3_1.jpg" alt="敏捷御峰国际" />
+									<p class="mask-house-pic">
+	                                    <span class="name-adr">
+	                      	                <em>敏捷御峰国际</em><br/>敏捷御峰国际 番禺 大石
+	                                    </span>
+									</p>
+								</div>
+								<div class="attributes clearfix">
+									<p class="attributes-price lfloat">
+										<span class="uncertain-price">13500</span>
+										<em>元/平米</em>
+									</p>
+								</div>
+								<p class="pjt-adr">项目地址：番禺大石105国道上（飘峰公交站旁，香江动物世界对面）</p>
+								<p class="tags clearfix">
+									<span>打折优惠</span>
+									<span>小户型</span>
+									<span>现房</span>
+								</p>
+							</a>
+							<a href="#" target="_blank">
+								<div class="house-pic">
+									<img class="lazy" data-original="images/newhouse/3_1.jpg" alt="敏捷御峰国际" />
+									<p class="mask-house-pic">
+	                                    <span class="name-adr">
+	                      	                <em>敏捷御峰国际</em><br/>敏捷御峰国际 番禺 大石
+	                                    </span>
+									</p>
+								</div>
+								<div class="attributes clearfix">
+									<p class="attributes-price lfloat">
+										<span class="uncertain-price">13500</span>
+										<em>元/平米</em>
+									</p>
+								</div>
+								<p class="pjt-adr">项目地址：番禺大石105国道上（飘峰公交站旁，香江动物世界对面）</p>
+								<p class="tags clearfix">
+									<span>打折优惠</span>
+									<span>小户型</span>
+									<span>现房</span>
+								</p>
+							</a>
+							<a href="#" target="_blank">
+								<div class="house-pic">
+									<img class="lazy" data-original="images/newhouse/3_1.jpg" alt="敏捷御峰国际" />
+									<p class="mask-house-pic">
+	                                    <span class="name-adr">
+	                      	                <em>敏捷御峰国际</em><br/>敏捷御峰国际 番禺 大石
+	                                    </span>
+									</p>
+								</div>
+								<div class="attributes clearfix">
+									<p class="attributes-price lfloat">
+										<span class="uncertain-price">13500</span>
+										<em>元/平米</em>
+									</p>
+								</div>
+								<p class="pjt-adr">项目地址：番禺大石105国道上（飘峰公交站旁，香江动物世界对面）</p>
+								<p class="tags clearfix">
+									<span>打折优惠</span>
+									<span>小户型</span>
+									<span>现房</span>
+								</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="wen_pre_page">&lt;</div>
+				<div class="wen_next_page">&gt;</div>
+			</div>
+		</div>
+		<!-- end con -->
+		<p class="more-hs-btn"><a href="#">查看更多新盘</a></p>
+	</div>
+</div>
+<!-- end 热门楼盘 -->
+<!-- 最新开盘 -->
+<div class="section-wrap newest">
+	<div class="section-wrap-inner">
+		<p class="section-title">
+			<span>最新开盘</span>
+			<em>预约看楼盘<i class="gap-aword"></i>新盘首发地</em>
+		</p>
+		<!-- con -->
+		<div class="section-wrap-con">
+			<div class="pics-play wen_play" id="picsNewest">
+				<div class="js-picsbox pics-box wen_play_body">
+					<ul class="clearfix">
+						<li class="pics-item play_list">
+							<a href="#" target="_blank">
+								<div class="house-pic">
+									<img class="lazy" data-original="images/newhouse/3_1.jpg" alt="敏捷御峰国际" />
+									<p class="mask-house-pic">
+	                                    <span class="name-adr">
+	                      	                <em>敏捷御峰国际</em><br/>敏捷御峰国际 番禺 大石
+	                                    </span>
+									</p>
+								</div>
+								<div class="attributes clearfix">
+									<p class="attributes-price lfloat">
+										<span class="uncertain-price">13500</span>
+										<em>元/平米</em>
+									</p>
+								</div>
+								<p class="states clearfix">
+									<span>开盘时间：2016-06-09</span>
+									<em>目前在售</em>
+								</p>
+								<p class="pjt-adr">项目地址：番禺大石105国道上（飘峰公交站旁，香江动物世界对面）</p>
+							</a>
+							<a href="#" target="_blank">
+								<div class="house-pic">
+									<img class="lazy" data-original="images/newhouse/3_1.jpg" alt="敏捷御峰国际" />
+									<p class="mask-house-pic">
+	                                    <span class="name-adr">
+	                      	                <em>敏捷御峰国际</em><br/>敏捷御峰国际 番禺 大石
+	                                    </span>
+									</p>
+								</div>
+								<div class="attributes clearfix">
+									<p class="attributes-price lfloat">
+										<span class="uncertain-price">13500</span>
+										<em>元/平米</em>
+									</p>
+								</div>
+								<p class="states clearfix">
+									<span>开盘时间：2016-06-09</span>
+									<em>目前在售</em>
+								</p>
+								<p class="pjt-adr">项目地址：番禺大石105国道上（飘峰公交站旁，香江动物世界对面）</p>
+							</a>
+							<a href="#" target="_blank">
+								<div class="house-pic">
+									<img class="lazy" data-original="images/newhouse/3_1.jpg" alt="敏捷御峰国际" />
+									<p class="mask-house-pic">
+	                                    <span class="name-adr">
+	                      	                <em>敏捷御峰国际</em><br/>敏捷御峰国际 番禺 大石
+	                                    </span>
+									</p>
+								</div>
+								<div class="attributes clearfix">
+									<p class="attributes-price lfloat">
+										<span class="uncertain-price">13500</span>
+										<em>元/平米</em>
+									</p>
+								</div>
+								<p class="states clearfix">
+									<span>开盘时间：2016-06-09</span>
+									<em>目前在售</em>
+								</p>
+								<p class="pjt-adr">项目地址：番禺大石105国道上（飘峰公交站旁，香江动物世界对面）</p>
+							</a>
+							<a href="#" target="_blank">
+								<div class="house-pic">
+									<img class="lazy" data-original="images/newhouse/3_1.jpg" alt="敏捷御峰国际" />
+									<p class="mask-house-pic">
+	                                    <span class="name-adr">
+	                      	                <em>敏捷御峰国际</em><br/>敏捷御峰国际 番禺 大石
+	                                    </span>
+									</p>
+								</div>
+								<div class="attributes clearfix">
+									<p class="attributes-price lfloat">
+										<span class="uncertain-price">13500</span>
+										<em>元/平米</em>
+									</p>
+								</div>
+								<p class="states clearfix">
+									<span>开盘时间：2016-06-09</span>
+									<em>目前在售</em>
+								</p>
+								<p class="pjt-adr">项目地址：番禺大石105国道上（飘峰公交站旁，香江动物世界对面）</p>
+							</a>
+						</li>
+						<li class="pics-item play_list">
+							<a href="#" target="_blank">
+								<div class="house-pic">
+									<img class="lazy" data-original="images/newhouse/3_1.jpg" alt="敏捷御峰国际" />
+									<p class="mask-house-pic">
+	                                    <span class="name-adr">
+	                      	                <em>敏捷御峰国际</em><br/>敏捷御峰国际 番禺 大石
+	                                    </span>
+									</p>
+								</div>
+								<div class="attributes clearfix">
+									<p class="attributes-price lfloat">
+										<span class="uncertain-price">13500</span>
+										<em>元/平米</em>
+									</p>
+								</div>
+								<p class="states clearfix">
+									<span>开盘时间：2016-06-09</span>
+									<em>目前在售</em>
+								</p>
+								<p class="pjt-adr">项目地址：番禺大石105国道上（飘峰公交站旁，香江动物世界对面）</p>
+							</a>
+							<a href="#" target="_blank">
+								<div class="house-pic">
+									<img class="lazy" data-original="images/newhouse/3_1.jpg" alt="敏捷御峰国际" />
+									<p class="mask-house-pic">
+	                                    <span class="name-adr">
+	                      	                <em>敏捷御峰国际</em><br/>敏捷御峰国际 番禺 大石
+	                                    </span>
+									</p>
+								</div>
+								<div class="attributes clearfix">
+									<p class="attributes-price lfloat">
+										<span class="uncertain-price">13500</span>
+										<em>元/平米</em>
+									</p>
+								</div>
+								<p class="states clearfix">
+									<span>开盘时间：2016-06-09</span>
+									<em>目前在售</em>
+								</p>
+								<p class="pjt-adr">项目地址：番禺大石105国道上（飘峰公交站旁，香江动物世界对面）</p>
+							</a>
+							<a href="#" target="_blank">
+								<div class="house-pic">
+									<img class="lazy" data-original="images/newhouse/3_1.jpg" alt="敏捷御峰国际" />
+									<p class="mask-house-pic">
+	                                    <span class="name-adr">
+	                      	                <em>敏捷御峰国际</em><br/>敏捷御峰国际 番禺 大石
+	                                    </span>
+									</p>
+								</div>
+								<div class="attributes clearfix">
+									<p class="attributes-price lfloat">
+										<span class="uncertain-price">13500</span>
+										<em>元/平米</em>
+									</p>
+								</div>
+								<p class="states clearfix">
+									<span>开盘时间：2016-06-09</span>
+									<em>目前在售</em>
+								</p>
+								<p class="pjt-adr">项目地址：番禺大石105国道上（飘峰公交站旁，香江动物世界对面）</p>
+							</a>
+							<a href="#" target="_blank">
+								<div class="house-pic">
+									<img class="lazy" data-original="images/newhouse/3_1.jpg" alt="敏捷御峰国际" />
+									<p class="mask-house-pic">
+	                                    <span class="name-adr">
+	                      	                <em>敏捷御峰国际</em><br/>敏捷御峰国际 番禺 大石
+	                                    </span>
+									</p>
+								</div>
+								<div class="attributes clearfix">
+									<p class="attributes-price lfloat">
+										<span class="uncertain-price">13500</span>
+										<em>元/平米</em>
+									</p>
+								</div>
+								<p class="states clearfix">
+									<span>开盘时间：2016-06-09</span>
+									<em>目前在售</em>
+								</p>
+								<p class="pjt-adr">项目地址：番禺大石105国道上（飘峰公交站旁，香江动物世界对面）</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="wen_pre_page">&lt;</div>
+				<div class="wen_next_page">&gt;</div>
+			</div>
+		</div>
+		<!-- end con -->
+		<p class="more-hs-btn"><a href="/newhouse/list">查看更多新盘</a></p>
+	</div>
+</div>
+<!-- end 最新开盘 -->
+<!-- 楼盘导购 -->
+<div class="section-wrap shopping-guide">
+	<div class="section-wrap-inner">
+		<p class="section-title">
+			<span>楼盘导购</span>
+			<em>专业的意见给你专业的指导</em>
+		</p>
+		<div class="section-wrap-content clearfix">
+			<!-- left -->
+			<div class="section-wrap-item lfloat ghost slideInLeft">
+				<div class="section-wrap-pic">
+					<a href="#" target="_blank">
+						<img width="584" height="329" class="lazy" alt="中国美林湖--美汇半岛户型鉴赏" data-original="images/newhouse/2_1.jpg" />
+					</a>
+				</div>
+				<div class="section-wrap-mask">
+					<div class="section-wrap-info">
+						<p class="shopping-guide-title"><a target="_blank" href="#">中国美林湖--美汇半岛户型鉴赏</a></p>
+						<p class="shopping-guide-txt">中国美林湖--美汇半岛户型鉴赏，一房两房三房均有，多种户型满足你的多种需求，快来看看，小编给你一一讲解！</p>
+						<p class="view-detail"><a target="_blank" href="#">了解详情</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="section-wrap-item lfloat ghost slideInRight">
+				<div class="section-wrap-pic">
+					<a href="#" target="_blank">
+						<img width="584" height="329" class="lazy" alt="自贸区最赚钱公寓，15年经营性固定分成，年增值回购计划" data-original="images/newhouse/2_2.jpg" />
+					</a>
+				</div>
+				<div class="section-wrap-mask">
+					<div class="section-wrap-info">
+						<p class="shopping-guide-title"><a target="_blank" href="#">自贸区最赚钱公寓，15年经营性固定分成，年增值回购计划</a></p>
+						<p class="shopping-guide-txt">自贸区最赚钱公寓，15年经营性固定分成，年增值回购计划，古格雅阁酒店，看房联系：罗雪莹   18002263356地       址：南沙区商贸南二路优山悦海</p>
+						<p class="view-detail"><a target="_blank" href="#">了解详情</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- end left -->
+		</div>
+		<p class="more-hs-btn ghost slideInUp"><a href="/newhouse/info">查看更多导购</a></p>
+	</div>
+</div>
+<!-- end 楼盘导购 -->
+
+<div class="footer-features clearfix">
+	<ul class="footer-features-inner m">
+		<li>
+			<div class="footer-features-item really clearfix">
+				<i class="icons icons-feature"><img src="images/newhouse/ico1.png" alt="" /></i>
+				<p class="feature-text">
+					<span class="title simhei">真实</span>
+					<span class="description">高清图片，真实成交，真实<br>信息展现真实二手房</span>
+				</p>
+			</div>
+		</li>
+		<li>
+			<div class="footer-features-item timely clearfix">
+				<i class="icons icons-feature"><img src="images/newhouse/ico2.png" alt="" /></i>
+				<p class="feature-text">
+					<span class="title simhei">及时</span>
+					<span class="description">即时在线咨询直联房产顾问<br>个人手机，沟通快，无骚扰</span>
+				</p>
+			</div>
+		</li>
+		<li>
+			<div class="footer-features-item pro clearfix">
+				<i class="icons icons-feature"><img src="images/newhouse/ico3.png" alt="" /></i>
+				<p class="feature-text">
+					<span class="title simhei">专业</span>
+					<span class="description">十万名考核认证社区专家<br>您的专职房产顾问</span>
+				</p>
+			</div>
+		</li>
+		<li>
+			<div class="footer-features-item free clearfix">
+				<i class="icons icons-feature"><img src="images/newhouse/ico4.png" alt="" /></i>
+				<p class="feature-text">
+					<span class="title simhei">自由</span>
+					<span class="description">关注，收藏，转发，信息分享<br>随心所欲</span>
+				</p>
+			</div>
+		</li>
+	</ul>
+</div>
+<!--页中end-->
+
+<div class="toolbars" id="toolbars" style="display: block;">
+	<ul>
+		<li class="tool-app">
+			<span class="tool-icon"><a href="javascript:;"><i class="icons-sidetools"></i></a></span>
+			<p class="tool-desp" style="display: none; right: 60px; opacity: 0;">
+				<em><img src="images/ewm.png" alt="" /></em><i class="icons-sidetools"></i><span>下载买房吧app</span>
+			</p>
+		</li>
+		<li class="tool-backtop" style="visibility: hidden;">
+			<span class="tool-icon"><a href="javascript:;"><i class="icons-sidetools"></i></a></span>
+			<p class="tool-desp" style="display: none; right: 60px; opacity: 0;">
+				<i class="icons-sidetools"></i><span>返回顶部</span>
+			</p>
+		</li>
+	</ul>
+</div>
+
+<script type="html/module" id="getyhTemplate">
+<div class="get-preferential-con">
+	<p class="remind-text">优惠信息将通过短信的方式发送到您填写的手机号码上</p>
+	<div class="get-preferential-item">
+		<input class="lf-keyword" type="text" id="telNum" maxlength="11">
+		<p class="lf-label">请输入您的手机号码</p>
+	</div>
+	<div class="get-preferential-item get-preferential-item-mbmsg lfloat">
+		<input class="lf-keyword" type="text" id="verificationCode">
+		<p class="lf-label">请输入收到的短信验证码</p>
+		<!-- tips -->
+		<div id="imgCode" class="confirm-tips confirm-tips-mbvcode dn ">
+			<i class="icons confirm-arrow"></i>
+			<a class="icons confirm-close" href="javascript:;" onclick="closePictureVerif()"></a>
+			<div class="confirm-con clearfix">
+				<p class="gvcode-area clearfix">
+					<span class="gvcode-area-img lfloat"><img src="images/vcode.jpg" id="codeImg" width="139" height="28"></span>
+					<span class="gvcode-area-refresh lfloat" onclick="ImgCode.changeSecurityCode()"><i class="icons"></i><em>换一张</em></span>
+				</p>
+				<div class="gvcode-input lfloat">
+					<input class="lf-keyword" type="text" id="imgCodeText">
+					<p class="lf-label">图形验证码</p>
+					<p class="lf-error dn clearfix"><i class="icons"></i><span>错误提示</span></p>
+				</div>
+				<p class="confirm-btn lfloat"><a class="btn-orange" href="javascript:;" onclick="ImgCode.registerPhoneTrendCode('apply_newhouse');">确定</a></p>
+			</div>
+		</div>
+		<!-- /tips -->
+	</div>
+	<p class="mb-msg-code get-preferential-code lfloat" id="getVCode" onclick="ImgCode.pictureCode_findRoom(event);">发送验证码</p>
+	<p class="get-preferential-btn"><a class="btn-orange" href="javascript:;" id="applySendNewHouse">确定获取</a></p>
+	<p class="free-consultation">免费咨询：400-020-0668 转 8889</p>
+</div>
+</script>
+
+<!--页脚star-->
+<footer class="footer">
+	<div class="m tc">
+		<div class="foot_nav">
+			<a href="#">关于买房吧</a>
+			<a href="#">联系我们</a>
+			<a href="#">用户协议</a>
+			<a href="#">友情链接</a>
+			<a href="#">房产百科</a>
+			<a href="#">房产问答</a>
+		</div>
+		<p>广州安信互联网金融服务有限公司</p>
+		<p class="copyright">Copyright&nbsp;©&nbsp;2016&nbsp;www.myfang8.com.&nbsp;All Rights Reserved&nbsp;ICP备案号：粤ICP备12345678号</p>
+	</div>
+</footer>
+<!--页脚end-->
+
+<script src="js/public.js"></script>
+<script src="js/json2.js"></script>
+<script src="js/jquery-ui/jquery-ui.min.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<script src="js/ghost.min.js"></script>
+<script src="js/echarts.js"></script>
+<script src="js/layer/layer.js"></script>
+<script src="js/user-imgcode.js"></script>
+<script src="js/wen_play.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

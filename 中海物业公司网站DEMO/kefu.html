@@ -1,0 +1,231 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>中海物业管理公司</title>
+<link rel="stylesheet" type="text/css" href="body1.css" />
+<link rel="stylesheet" type="text/css" href="font.css" />
+<style type="text/css">
+        .code
+        {
+            background-image:url(code.jpg);
+            font-family:Arial;
+            font-style:italic;
+            color:Red;
+            border:0;
+            padding:2px 3px;
+            letter-spacing:3px;
+            font-weight:bolder;
+        }
+        .unchanged
+        {
+            border:0;
+        }
+    </style>
+    <script language="javascript" type="text/javascript">
+    
+     var code ; //在全局 定义验证码
+     function createCode()
+     { 
+       code = "";
+       var codeLength = 6;//验证码的长度
+       var checkCode = document.getElementById("checkCode");
+       var selectChar = new Array(0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z');//所有候选组成验证码的字符，当然也可以用中文的
+        
+       for(var i=0;i<codeLength;i++)
+       {
+      
+        
+       var charIndex = Math.floor(Math.random()*36);
+       code +=selectChar[charIndex];
+       
+       
+       }
+//       alert(code);
+       if(checkCode)
+       {
+         checkCode.className="code";
+         checkCode.value = code;
+       }
+       
+     }
+     
+      function validate ()
+     {
+       var inputCode = document.getElementById("input1").value;
+       if(inputCode.length <=0)
+       {
+           alert("请输入验证码！");
+       }
+       else if(inputCode != code )
+       {
+          alert("验证码输入错误！");
+          createCode();//刷新验证码
+       }
+       else
+       {
+         alert("谢谢您的留言！");javascript:window.location.reload();
+       }
+       
+       }
+       
+    </script>
+</head>
+<body id="show17" onload="createCode()"> 
+<div id="tou">
+<image src="images/tou.jpg" />
+<div id="daohang">
+<ul>
+<li id="daohang1"><a href="kefu.html" title="客服中心">客服中心</a></li>
+<li id="daohang2"><a href="index.html" title="网站首页">网站首页</a></li>
+<li id="daohang3"><a href="jianjie.html" title="公司简介">公司简介</a></li>
+<li id="daohang4"><a href="ziyuan.html" title="业务资源">业务资源</a></li>
+<li id="daohang5"><a href="loupan.html" title="管理楼盘">管理楼盘</a></li>
+<li id="daohang6"><a href="zhaoping.html" title="诚聘英才">诚聘英才</a></li>
+<li id="daohang7"><a href="sequ.html" title="社区文化">社区文化</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="zhongbu">
+<div id="zhongbu1"><image src="images\zhongbu1.jpg" /></div>
+<div id="zhongbu2">
+<h4 class="lanmu"><b>栏目导航</b></h4>
+<ul><b>
+<li><a href="jianjie.html" title="">公司简介</a></li>
+<li><a href="jianjie1.html" title="">发展历程</a></li>
+<li><a href="jianjie2.html" title="">企业文化</a></li>
+<li><a href="jianjie3.html" title="">公司荣誉</a></li></b>
+</ul>
+<image src="images\lianxi.jpg" />
+</div>
+
+<div id="zhongbu3">
+<h4 class="biaoti"><b>咨询反馈</b></h4>
+<span><b>尊敬的客户朋友：</b></span><p></p>
+<p>中海物业将一如既往的秉承以“客户第一，服务至上”的工作宗旨，以提升居住价值、扩大投资价值、关注合作价值三大价值体系为导向，不断致力于提供完美的服务、可靠的品质和优异的管理，以满足客户日益增长的需要。我们真诚的欢迎广大客户朋友对我们提出宝贵的意见或建议，我们承诺尽快进行处理、改进和反馈。</p>
+<span>中海物业因您而精彩，真心谢谢您的参与！<span>
+<p></p>
+<form id="feedbacksmallform" method="post" action="" name="gform">
+<table width="100%" border="0" cellspacing="0" cellpadding="3" >
+ 
+<tr> 
+      <td width="140" align="right">主题：</td>
+      <td> 
+        <input type="text" name="title" value="" class="input" style="width:399px" />
+        <font style='color:red'>*</font> <div style="padding-top:3px;color:#666"></div>  </td>
+    </tr>
+ 
+    <tr> 
+      <td width="140" align="right">内容：</td>
+      <td> 
+        <textarea name="content"  rows="10" class="textarea" style="width:399px" ></textarea>
+        <font style='color:red'>*</font> 
+        <div style="padding-top:3px;color:#666"></div>  </td>
+    </tr>
+ 
+ 
+<tr> 
+      <td width="140" align="right">地区/楼盘：</td>
+      <td> 
+        <input type="text" name="name" value="" class="input" style="width:399px" />
+        <font style='color:red'>*</font> <div style="padding-top:3px;color:#666"></div>  </td>
+    </tr>
+ 
+<tr> 
+      <td width="140" align="right">公司名称/业主姓名：</td>
+      <td> 
+        <input type="text" name="sex" value="" class="input" style="width:399px" />
+        <font style='color:red'>*</font> <div style="padding-top:3px;color:#666"></div>  </td>
+    </tr>
+ 
+<tr> 
+      <td width="140" align="right">公司/业主住址：</td>
+      <td> 
+        <input type="text" name="tel" value="" class="input" style="width:399px" />
+         <div style="padding-top:3px;color:#666"></div>  </td>
+    </tr>
+ 
+<tr> 
+      <td width="140" align="right">邮政编码：</td>
+      <td> 
+        <input type="text" name="zip" value="" class="input" style="width:399px" />
+         <div style="padding-top:3px;color:#666"></div>  </td>
+    </tr>
+ 
+<tr> 
+      <td width="140" align="right">联系人：</td>
+      <td> 
+        <input type="text" name="address" value="" class="input" style="width:399px" />
+        <font style='color:red'>*</font> <div style="padding-top:3px;color:#666"></div>  </td>
+    </tr>
+ 
+<tr> 
+      <td width="140" align="right">联系电话：</td>
+      <td> 
+        <input type="text" name="email" value="" class="input" style="width:399px" />
+         <div style="padding-top:3px;color:#666"></div>  </td>
+    </tr>
+ 
+<tr> 
+      <td width="140" align="right">E-mail：</td>
+      <td> 
+        <input type="text" name="qq" value="" class="input" style="width:399px" />
+        <font style='color:red'>*</font> <div style="padding-top:3px;color:#666"></div>  </td>
+    </tr>
+ 
+    <tr>
+      <td width="140" align="right">验 证 码：</td>
+      <td><input  type="text"   id="input1" />
+    <input type="text" onclick="createCode()" readonly="readonly" id="checkCode" class="unchanged" style="width: 80px"  />  
+</td>
+    </tr>
+	<tr height="30"><td width="140">&nbsp</td>
+          <td><input id="Button1"  onclick="validate();" type="button" value="提交" />&nbsp
+	  </td>
+    </tr>
+  </table>
+</form>
+
+
+</div>
+<div id="zhongbu4"><image src="images\zhongbu3.jpg" /></div>
+</div>
+
+
+
+
+
+<div id="dibu">
+<div id="dibulianjie">
+<ul>
+<li class="guanyuwomen"><a href="jianjie.html" title="">关于我们</a></li>
+<li>｜</li>
+<li><a href="zhaoping2.html" title="">联系方式</a></li>
+<li>｜</li>
+<li><a href="kefu.html" title="">投诉建议</a></li>
+<li>｜</li>
+<li><a href="zhaoping.html" title="">招聘英才</a></li>
+<li>｜</li>
+<li><a href="#" title="">友情链接</a></li>
+</ul>
+</div>
+
+<div id="banquan">
+<ul>
+<li>Copyright &copy 2010-2011 COBD,All Rights Reserved</li>
+<li>版权所有中海物业管理有限公司（华南区）</li>
+</ul>
+</div>
+
+</div>
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,2059 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width"/>
+<title>中国建设银行手机网</title>
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/new_version1.css" />
+<link rel="stylesheet" href="" id="min320" />
+<link rel="stylesheet" href="css/media.css" />
+<script src="js/jquery-1.6.min.js"></script>
+<script src="js/modernizr_css.js"></script>
+<script src="js/iScroll.js"></script>
+<script src="js/main.js"></script>
+<style type="text/css">
+	
+
+
+</style>
+<script type="text/javascript">
+$(function(){
+	$("#fundData_box .list_t").click(function(){
+		//$(this).parent("li").toggleClass("on_fund").siblings("li").removeClass("on_fund");
+	});
+	$("#fundData_box .list_t").live("click",function(){
+		$(this).parent("li").toggleClass("on_fund").siblings("li").removeClass("on_fund");
+	});
+	$("div.ad5_fund li").width(Math.round($("#ad5_fund").innerWidth()*0.25));
+	$("div.ad5_fund").css({"width":Math.round($("div.ad5_fund li").width()*$("div.ad5_fund li").length)});
+	$("div.ad5_fund li").live("click",function(){
+		var index = $(this).index();
+		$(this).addClass("active5").siblings("li").removeClass("active5");
+		$("div.new_fund_data").eq(index).show().siblings(".new_fund_data").hide();
+	});
+});
+/*
+if(Modernizr.csstransforms){//判断是否支持CSS3的动画样式
+$(function(){
+	$(window).resize(function(){
+		$("div.ad5_fund li").width(Math.round($("#ad5_fund").innerWidth()*0.25));
+		$("div.ad5_fund").css({"width":Math.round($("div.ad5_fund li").width()*$("div.ad5_fund li").length)});
+		myScroll5._resize();
+	});
+});
+//实例化对象
+var myScroll5;
+//ad1
+function loaded5() {
+	myScroll5 = new iScroll('ad5_fund', {
+		snap: false,
+		momentum: true,
+		vScroll: false,
+		hScrollbar: false,
+		onScrollEnd:function(){
+			if(myScroll5.x == 0||myScroll5.x+1 == 0){
+				$("span.fund_next").show();
+				$("span.fund_pre").hide();
+			};
+			if(myScroll5.x == myScroll5.maxScrollX||myScroll5.x-1 == myScroll5.maxScrollX){
+				$("span.fund_next").hide();
+				$("span.fund_pre").show();
+			};
+			
+		}
+	 });
+};
+
+document.addEventListener('DOMContentLoaded', loaded5, false);
+
+
+$("span.fund_next").live("click",function(){
+	var left_x = myScroll5.x;
+	myScroll5.scrollTo(left_x-Math.round($("div.ad5_fund li").width()));
+});
+$("span.fund_pre").live("click",function(){
+	var left_x = myScroll5.x;
+	myScroll5.scrollTo(left_x+Math.round($("div.ad5_fund li").width()));
+});
+}else{
+
+$(function(){
+	$("#ad5_fund ul").css({"position":"absolute"});
+	$("#new_fund_title").myplay({show_n:4,pre_page:"span.fund_pre",next_page:"span.fund_next"});
+	$(window).resize(function(){
+		$("div.ad5_fund li").width(Math.round($("#ad5_fund").innerWidth()*0.25));
+		$("div.ad5_fund").css({"width":Math.round($("div.ad5_fund li").width()*$("div.ad5_fund li").length)});
+		$(".new_fund_title").myplay({show_n:4,pre_page:"span.fund_pre",next_page:"span.fund_next"});
+	});
+})
+}
+*/
+</script>
+
+</head>
+<body>
+<div class="page">
+    <div class="header">
+    <div class="site_header">
+    	<div class="clearfix">
+      		<div class="ccblogo lfloat"> 
+            	<a href="index.html"><img id="ccblogo" src="images/ccblogo.png" alt="中国建设银行－手机网" /></a>
+            </div>
+      		<div class="version rfloat">
+        		<div class="ccb_version_but">
+                	<a href="index.html" class="version1"><span class="vbg_l"></span>返回<span class="vbg_r"></span></a>
+                </div>
+        	</div>
+      	</div>
+		<div class="service"><span class="service_tel">客户服务热线：<span>95533</span></span></div>
+		</div>
+	</div><!-- /header -->
+	
+	<div class="nav_site new_ccb_title">
+		<a href="index.html">首页</a>&nbsp;&gt;&nbsp;<span>贵金属买卖</span>
+	</div>
+	<!--
+	<div id="new_fund_title" class="new_fund_title">
+		<div id="ad5_fund" class="fund_title_list">
+			<div class="ad5_fund">
+				<ul class="clearfix">
+					<li class="active5">股票型</li>
+					<li>混合型</li>
+					<li>债券型</li>
+					<li>货币型</li>
+					<li>QIDD型</li>
+				</ul>
+			</div>
+		</div>
+		<span class="fund_pre"><span></span></span>
+		<span class="fund_next"><span></span></span>
+	</div>
+	-->
+	<div id="new_fund" class="new_fund">
+		<div id="fundData_box">
+			<div class="new_fund_data gjs" style="display:block">
+				
+				<ul>
+					<li class="on_fund">
+						<div class="list_t">
+							<span>Au9995</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">客户买入价：345.25</span>
+								<span class="list_info_t">客户卖出价：345.05</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t gjs_t1">单位：元/克</span>
+								<span class="list_info_t gjs_t2">报价时间：05月22日 15:19分</span>
+							</div>						
+							<!--<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">实时买入</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">实时卖出</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">挂单买入</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">挂单卖出</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>-->
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>Au9999</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">客户买入价：345.25</span>
+								<span class="list_info_t">客户卖出价：345.05</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t gjs_t1">单位：元/克</span>
+								<span class="list_info_t gjs_t2">报价时间：05月22日 15:19分</span>
+							</div>						
+							<!--<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">实时买入</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">实时卖出</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">挂单买入</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">挂单卖出</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>-->
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>人民币银</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">客户买入价：345.25</span>
+								<span class="list_info_t">客户卖出价：345.05</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t gjs_t1">单位：元/克</span>
+								<span class="list_info_t gjs_t2">报价时间：05月22日 15:19分</span>
+							</div>						
+							<!--<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">实时买入</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">实时卖出</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">挂单买入</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">挂单卖出</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>-->
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>人民币铂</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">客户买入价：345.25</span>
+								<span class="list_info_t">客户卖出价：345.05</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t gjs_t1">单位：元/克</span>
+								<span class="list_info_t gjs_t2">报价时间：05月22日 15:19分</span>
+							</div>						
+							<!--<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">实时买入</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">实时卖出</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">挂单买入</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">挂单卖出</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>-->
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>美元金（钞）</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">客户买入价：345.25</span>
+								<span class="list_info_t">客户卖出价：345.05</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t gjs_t1">单位：元/克</span>
+								<span class="list_info_t gjs_t2">报价时间：05月22日 15:19分</span>
+							</div>						
+							<!--<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">实时买入</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">实时卖出</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">挂单买入</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">挂单卖出</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>-->
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>美元金（汇）</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">客户买入价：345.25</span>
+								<span class="list_info_t">客户卖出价：345.05</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t gjs_t1">单位：元/克</span>
+								<span class="list_info_t gjs_t2">报价时间：05月22日 15:19分</span>
+							</div>						
+							<!--<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">实时买入</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">实时卖出</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">挂单买入</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">挂单卖出</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>-->
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>美元银（钞）</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">客户买入价：345.25</span>
+								<span class="list_info_t">客户卖出价：345.05</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t gjs_t1">单位：元/克</span>
+								<span class="list_info_t gjs_t2">报价时间：05月22日 15:19分</span>
+							</div>						
+							<!--<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">实时买入</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">实时卖出</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">挂单买入</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">挂单卖出</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>-->
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>美元银（汇）</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">客户买入价：345.25</span>
+								<span class="list_info_t">客户卖出价：345.05</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t gjs_t1">单位：元/克</span>
+								<span class="list_info_t gjs_t2">报价时间：05月22日 15:19分</span>
+							</div>						
+							<!--<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">实时买入</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">实时卖出</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">挂单买入</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">挂单卖出</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>-->
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>美元铂（钞）</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">客户买入价：345.25</span>
+								<span class="list_info_t">客户卖出价：345.05</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t gjs_t1">单位：元/克</span>
+								<span class="list_info_t gjs_t2">报价时间：05月22日 15:19分</span>
+							</div>						
+							<!--<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">实时买入</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">实时卖出</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">挂单买入</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">挂单卖出</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>-->
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>美元铂（汇）</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">客户买入价：345.25</span>
+								<span class="list_info_t">客户卖出价：345.05</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t gjs_t1">单位：元/克</span>
+								<span class="list_info_t gjs_t2">报价时间：05月22日 15:19分</span>
+							</div>						
+							<!--<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">实时买入</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">实时卖出</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">挂单买入</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">挂单卖出</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>-->
+						</div>
+					</li>
+				</ul>
+			</div>
+            
+            <!--
+			<div class="new_fund_data">
+				
+				<ul>
+					<li>
+						<div class="list_t">
+							<span>上投摩根动力型股票</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li class="on_fund">
+						<div class="list_t">
+							<span>中欧中小盘股票（LOF）</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>长城品牌优选股票</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>广发小盘成长股票（LFO）</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>新华优选消费股票</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>易方达科翔股票</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>长城品牌优选股票</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>金元惠理经济股票</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>新华优选消费股票</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>中欧中小盘股票（LOF）</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="new_fund_data">
+				
+				<ul>
+					<li>
+						<div class="list_t">
+							<span>上投摩根动力型股票</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>中欧中小盘股票（LOF）</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li class="on_fund">
+						<div class="list_t">
+							<span>长城品牌优选股票</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>广发小盘成长股票（LFO）</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>新华优选消费股票</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>易方达科翔股票</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>长城品牌优选股票</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>金元惠理经济股票</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>新华优选消费股票</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>中欧中小盘股票（LOF）</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="new_fund_data">
+				
+				<ul>
+					<li>
+						<div class="list_t">
+							<span>上投摩根动力型股票</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>中欧中小盘股票（LOF）</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>长城品牌优选股票</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li class="on_fund">
+						<div class="list_t">
+							<span>广发小盘成长股票（LFO）</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>新华优选消费股票</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>易方达科翔股票</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>长城品牌优选股票</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>金元惠理经济股票</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>新华优选消费股票</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="list_t">
+							<span>中欧中小盘股票（LOF）</span>
+						</div>
+						<div class="list_b">
+							<div class="list_info list_info1">
+								<span class="list_info_t">基金代码：160089</span>
+								<span class="list_info_t">基金管理人：上投基金</span>
+							</div>
+							<div class="list_info list_info2 no_border">
+								<span class="list_info_t">分额净值：1.1360</span>
+								<span class="list_info_t">累计分额净值：1.1360</span>
+							</div>
+							<div class="list_info list_info3 txt_center">
+								<span>过去三个月净值增长率：9.45%</span>
+							</div>							
+							<div class="list_info list_info4 no_border txt_center">
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">申购</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">购买</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">赎回</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+								<a href="#">
+									<span class="btn1_bg">
+										<span class="btn1_ico_l"></span>
+										<span class="btn1_ico_m">自动理财</span>
+										<span class="btn1_ico_r"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+            -->
+		</div>
+    </div>
+	
+	<div class="footer">
+		<h4>©版权所有&nbsp;&nbsp;<span>中国建设银行版权所有&nbsp;<br/>
+      京ICP证&nbsp;050138号&nbsp;京公网安备&nbsp;110102000450 </h4>
+	</div>
+
+</div>
+</body>
+</html>

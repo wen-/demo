@@ -1,0 +1,7 @@
+[
+	{ "label": "城市假日园","parentAreaName":"天河","childAreaName":"东圃","roomTotal":25,"url":"http://www.myfang8.com" },
+	{ "label": "朝阳路小区","parentAreaName":"番禺","childAreaName":"大石","roomTotal":18,"url":"http://www.myfang8.com" },
+	{ "label": "翠馨华庭","parentAreaName":"海珠","childAreaName":"广州大道南","roomTotal":13,"url":"http://www.myfang8.com" },
+	{ "label": "城启波尔多庄园","parentAreaName":"越秀","childAreaName":"淘金","roomTotal":11,"url":"http://www.myfang8.com" },
+	{ "label": "春鸿居","parentAreaName":"白云","childAreaName":"白云大道北","roomTotal":10,"url":"http://www.myfang8.com" }
+]

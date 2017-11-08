@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="author" content="yellowwen@126.com">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<title>用户中心</title>
+	<link type="text/css" rel="stylesheet" href="css/reset.min.css" />	<link type="text/css" rel="stylesheet" href="css/animate.min.css" />
+	<link type="text/css" rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
+	<link type="text/css" rel="stylesheet" href="font/iconfont.css" />
+	<link type="text/css" rel="stylesheet" href="css/main.css" />
+	<link type="text/css" rel="stylesheet" href="css/user-center.css" />
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<!--[if lt IE 9]>
+	<script type="text/javascript">
+		var h5Block = 'header,footer,section,aside,article,nav,hgroup,figure,figcaption,details,summary';
+		var h5Inline = 'time,mark,ruby,rt,rp,output,keygen,meter,progress,command,source';
+		var h5Other = 'video,audio,canvas,datalist';
+		var h5Elem = (h5Block + ',' + h5Inline + ',' + h5Other).split(',');
+		for(var i=0;i<h5Elem.length;i++){
+			document.createElement(h5Elem[i]);
+		}
+	</script>
+	<![endif]-->
+</head>
+<body>
+<!--页头star-->
+<header class="header">
+	<div class="m">
+		<a href="index.html" class="lfloat logo"><img src="images/logo.png" alt="" /></a>
+		<div class="rfloat login_info">
+			<div class="h_btn" style="display: none;">
+				<a class="log" href="用户中心_登录.html">登录</a>
+				<a class="reg" href="注册.html">注册</a>
+			</div>
+			<div class="h_txt">
+				<a href="#">
+					<img src="images/user_icon.jpg" class="headico" alt="" />
+					<span class="info_txt">欢迎<span>张三</span></span>
+				</a>
+				<a href="#" class="exit">退出</a>
+			</div>
+		</div>
+		<nav class="rfloat nav">
+			<dl>
+				<dt><a href="index.html">首页</a></dt>
+			</dl>
+			<dl>
+				<dt><a href="#">二手房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">房源</a>
+					<a href="#">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">新房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">新房首页</a>
+					<a href="#">广州新房</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">租房</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">房源</a>
+					<a href="#">小区</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">写字楼</a></dt>
+				<dd>
+					<i class="arrow_ico"></i>
+					<a href="#">出租</a>
+					<a href="#">出售</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#">业主委托</a></dt>
+			</dl>
+		</nav>
+	</div>
+</header>
+<!--页头end-->
+
+<section class="section bg_grey">
+	<!--用户中心str-->
+	<div class="user-container clearfix">
+		<!-- left -->
+		<div class="container-left lfloat">
+			<!-- photo -->
+			<p class="user-photo">
+				<a><img src="images/xtg.png"></a>
+			</p>
+			<p class="user-name">林晓冬</p>
+			<!-- /photo -->
+			<!-- nav -->
+			<div class="side-nav">
+				<ul>
+					<li><a href="用户中心_首页.html"><span>首<em class="gap-dbword"></em>页</span></a></li>
+					<li><a href="用户中心_房源收藏.html"><span>房源收藏</span></a></li>
+					<li><a href="用户中心_浏览历史.html"><span>浏览历史</span></a></li>
+					<li><a href="用户中心_委托记录.html"><span>委托记录</span></a></li>
+					<li><a href="用户中心_我邀请的人.html"><span>我邀请的人</span></a></li>
+				</ul>
+			</div>
+			<!-- /nav -->
+		</div>
+		<!-- /left -->
+		<!-- right -->
+		<div class="container-right lfloat">
+			<div class="container-right-inner">
+				<div class="right-inner-main">
+					<!-- top -->
+					<div class="title clearfix">
+						<span class="welcomes lfloat">欢迎来到买房吧</span>
+						<p class="exit cur rfloat">
+							<a href="javascript:;"><i class="icon-user"></i></a>
+						</p>
+						<p class="setting setting-cur rfloat">
+							<a href="用户中心_个人资料.html"><i class="icon-user"></i></a>
+						</p>
+						<!--   消息提醒模块
+						<p class="msg  rfloat">
+							<a href="/uo/remindMsgList"><i class="icon-user"></i></a>
+						</p>-->
+						<p class="qr-code rfloat" id="qrCode">
+							<a href="javascript:;"><i class="icon-user"></i></a>
+							<span class="qr-code-dropmenu">
+								<b class="icon-user"></b>
+								<i class="icons"><img src="images/ewm.png" alt="" /></i>
+								<em>用买房吧APP找房更方便扫描二维码进行下载</em>
+							</span>
+						</p>
+					</div>
+					<!-- /top -->
+					<!-- main -->
+					<div class="content-layer">
+						<!-- phead -->
+						<p class="phead">
+							<span class="cur">
+								<a href="用户中心_个人资料.html">个人资料</a>
+							</span>
+							<span>
+								<a href="用户中心_修改密码.html">修改密码</a>
+							</span>
+							<span>
+								<a href="用户中心_消息提醒设置.html">消息提醒设置</a>
+							</span>
+						</p>
+						<!-- /phead -->
+						<!-- dbody -->
+						<div class="dbody">
+							<ul>
+								<li class="clearfix">
+									<span class="dbody-field dbody-field-photo">头<em class="gap-dbword"></em>像</span>
+									<div class="lfloat">
+										<p class="upload-photo">
+											<img width="100" height="100" id="userPicShow" src="images/xtg.png">
+											<span class="progress"><span></span></span>
+										</p>
+										<div class="upload-btn">
+											<span>修改头像</span>
+											<div id="fileToUpload" class="upload-file"></div><br>
+											<input type="hidden" id="pictureUrl" name="pictureUrl" value="images/xtg.png">
+										</div>
+										<p class="upload-tips">仅支持JPG、GIF、PNG格式，且文件小于2M</p>
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="dbody-field">昵<em class="gap-dbword"></em>称</span>
+									<input class="keyword-text" id="name" type="text" value="林晓冬">
+								</li>
+								<li class="clearfix">
+									<span class="dbody-field">邮<em class="gap-dbword"></em>箱</span>
+									<input class="keyword-text" type="text" id="email" value="">
+								</li>
+								<li class="city-group clearfix">
+									<span class="dbody-field">城<em class="gap-dbword"></em>市</span>
+
+									<div class="drop-menu-item lfloat">
+										<p class="drop-menu-trigger">
+											<span id="city" class="selected">广州</span>
+											<i class="icon-user"></i>
+										</p>
+										<p class="drop-menu-list">
+											<a href="javascript:;">深圳</a>
+											<a href="javascript:;">珠海</a>
+											<a href="javascript:;">东莞</a>
+											<a href="javascript:;">惠州</a>
+											<a href="javascript:;">中山</a>
+											<a href="javascript:;">上海</a>
+											<a href="javascript:;" class="cur">广州</a>
+											<a href="javascript:;">成都</a>
+											<a href="javascript:;">重庆</a>
+											<a href="javascript:;">武汉</a>
+											<a href="javascript:;">苏州</a>
+											<a href="javascript:;">南京</a>
+											<a href="javascript:;">郑州</a>
+											<a href="javascript:;">杭州</a>
+											<a href="javascript:;">佛山</a>
+											<a href="javascript:;">北京</a>
+											<a href="javascript:;">无锡</a>
+											<a href="javascript:;">大连</a>
+											<a href="javascript:;">福州</a>
+											<a href="javascript:;">哈尔滨</a>
+											<a href="javascript:;">海口</a>
+											<a href="javascript:;">合肥</a>
+											<a href="javascript:;">济南</a>
+											<a href="javascript:;">昆明</a>
+											<a href="javascript:;">昆山</a>
+											<a href="javascript:;">南昌</a>
+											<a href="javascript:;">南通</a>
+											<a href="javascript:;">宁波</a>
+											<a href="javascript:;">青岛</a>
+											<a href="javascript:;">三亚</a>
+											<a href="javascript:;">厦门</a>
+											<a href="javascript:;">沈阳</a>
+											<a href="javascript:;">石家庄</a>
+											<a href="javascript:;">太原</a>
+											<a href="javascript:;">天津</a>
+											<a href="javascript:;">西安</a>
+											<a href="javascript:;">长春</a>
+											<a href="javascript:;">长沙</a>
+											<a href="javascript:;">香港</a>
+											<a href="javascript:;">南宁</a>
+											<a href="javascript:;">常州</a>
+											<a href="javascript:;">兰州</a>
+											<a href="javascript:;">烟台</a>
+											<a href="javascript:;">贵阳</a>
+											<a href="javascript:;">温州</a>
+											<a href="javascript:;">淮南</a>
+											<a href="javascript:;">怀化</a>
+											<a href="javascript:;">嘉兴</a>
+											<a href="javascript:;">滨州</a>
+											<a href="javascript:;">日照</a>
+											<a href="javascript:;">玉溪</a>
+											<a href="javascript:;">吉林</a>
+											<a href="javascript:;">乐山</a>
+											<a href="javascript:;">遵义</a>
+											<a href="javascript:;">赣州</a>
+											<a href="javascript:;">潍坊</a>
+											<a href="javascript:;">红河</a>
+											<a href="javascript:;">保山</a>
+											<a href="javascript:;">清远</a>
+											<a href="javascript:;">平顶山</a>
+											<a href="javascript:;">德州</a>
+											<a href="javascript:;">临沂</a>
+											<a href="javascript:;">廊坊</a>
+											<a href="javascript:;">保定</a>
+											<a href="javascript:;">淄博</a>
+											<a href="javascript:;">楚雄</a>
+											<a href="javascript:;">拉萨</a>
+										</p>
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="dbody-field js-field-mbnum">手机号码</span>
+									<span class="crt-mb-num lfloat">13226618373</span>
+								</li>
+							</ul>
+						</div>
+						<p class="btn-save"><a class="btn_big" href="javascript:;" onclick="UserOperation.updateUserInfo();">保存修改</a></p>
+						<!-- /dbody -->
+					</div>
+					<!-- /main -->
+				</div>
+			</div>
+		</div>
+		<!-- /right -->
+	</div>
+	<!--用户中心end-->
+</section>
+
+<!--页中end-->
+
+<!--页脚star-->
+<footer class="footer">
+	<div class="m tc">
+		<div class="foot_nav">
+			<a href="#">关于买房吧</a>
+			<a href="#">联系我们</a>
+			<a href="#">用户协议</a>
+			<a href="#">友情链接</a>
+			<a href="#">房产百科</a>
+			<a href="#">房产问答</a>
+		</div>
+		<p>广州安信互联网金融服务有限公司</p>
+		<p class="copyright">Copyright&nbsp;©&nbsp;2016&nbsp;www.myfang8.com.&nbsp;All Rights Reserved&nbsp;ICP备案号：粤ICP备12345678号</p>
+	</div>
+</footer>
+<!--页脚end-->
+
+<script src="js/public.js"></script>
+<script src="js/json2.js"></script>
+<script src="js/jquery-ui/jquery-ui.min.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<script src="js/ghost.min.js"></script>
+<script src="js/echarts.js"></script>
+<script src="js/layer/layer.js"></script>
+<script src="js/wen_play.js"></script>
+<script src="js/main.js"></script>
+<script src="js/webuploader/webuploader.nolog.js"></script>
+<script src="js/user-operation.js"></script>
+</body>
+</html>

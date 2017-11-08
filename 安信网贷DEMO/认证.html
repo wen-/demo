@@ -1,0 +1,518 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="Generator" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>p2p信贷  --简单 、安全、借得到 - p2p信贷</title>
+<link rel="icon" href="favicon.ico" type="/image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico" type="/image/x-icon" />
+<meta name="keywords" content="p2p信贷—最大、最安全的网络借贷平台" />
+<meta name="description" content="p2p信贷—最大、最安全的网络借贷平台" />
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+
+<style type="text/css">
+
+/*--认证--*/
+
+.authentication_box{
+	width:960px;
+}
+.authentication_t{
+	height:38px;
+	line-height:38px;
+	position:relative;
+}
+.authentication_t h1{
+	font-size:18px;
+	font-weight:normal;
+	color:#000;
+	padding-left:20px;
+}
+.authentication_t .close{
+	position:absolute;
+	z-index:100;
+	height:38px;
+	width:38px;
+	right:0;
+	top:0;
+	overflow:hidden;
+	text-indent:100px;
+	cursor:pointer;
+	background:url(images/rz_close.png) no-repeat;
+}
+.authentication_step{
+	margin:20px 0 0 20px;
+}
+.authentication_step .step{
+	float:left;
+}
+.authentication_step .step span{
+	display:block;
+	width:175px;
+	height:52px;
+	line-height:52px;
+	margin-left:-10px;
+	text-align:center;
+	color:#929292;
+	background-image:url(images/rz_step_bg.png);
+	background-repeat:no-repeat;
+	background-position:-178px 0;
+}
+.authentication_step .step .step1{
+	background-position:0 0;
+	margin-left:0px;
+}
+.authentication_step .step .stepend{
+	background-position:100% 0;
+}
+.authentication_step .activate span{
+	background-image:url(images/rz_step_bg1.png);
+}
+.authentication_step .activate span{
+	color:#fff;
+}
+.authentication_body{
+	min-height:300px;
+}
+.authentication_data,.email_data,.name_data,.card_data,.account_data{
+	display:none;
+}
+.email_data,.name_data{
+	margin-top:100px;
+}
+.email_data h2,.send_email{
+	font-size:18px;
+	margin-left:410px;
+}
+.email_data .email_input{
+	margin-left:330px;
+}
+.email_data .email_input input{
+	width:170px;
+}
+.authentication_body button,.authentication_body .btn{
+	width:180px;
+	height:40px;
+	line-height:40px;
+	font-size:16px;
+	font-family:'Microsoft YaHei';
+	border-radius:4px;
+}
+.rz_success,.next_step{
+	text-align:center;
+}
+.rz_success{
+	font-size:18px;
+	font-weight:normal;
+}
+.rz_success img{
+	vertical-align:middle;
+	margin-right:10px;
+}
+.name_input,.idcard_input{
+	margin-left:275px;
+}
+.name_input input,.idcard_input input{
+	width:260px;
+}
+.send_name{
+	margin-left:410px;
+}
+.card_data label{
+	width:350px;
+}
+.card_data .field{
+	margin-top:8px;
+	margin-bottom:8px;
+}
+.card_data dl{
+	margin-top:4px;
+}
+.card_tips{
+	margin-left:260px;	
+}
+.card_tips strong img{
+	vertical-align:middle;
+	margin-right:5px;
+}
+.account_data{
+	text-align:center;
+}
+.account_tips{
+	width: 75%;
+	border: solid 1px #e2e2e2;
+	text-align: left;
+	padding: 10px 15px;
+	background-color:#f4f4f4;
+}
+.account_tips strong{
+	color:#d66665;
+}
+.authentication_b{
+	padding:20px;
+	margin-top:40px;
+}
+.err_msg{
+	overflow:hidden;
+}
+</style>
+</head>
+<body>
+<div class="header" id="header">
+    <div class="constr">
+        <div class="wrap">
+			<div class="app_down f_l" id="J_APP_DOWN">
+				<!--<a href="javascript:void(0);"><i class="iconfont">&#xe613;</i>下载移动客户端</a>-->
+                <span class="hotline_box">服务热线：400-8888-888（24h）
+                	<a href="#" class="hotline_wx"></a><a href="#" class="hotline_qq"></a>
+                </span>
+				<div class="grcode_box ps hide">
+					<img src="images/1ca638b4782093fe89c405487e6d1c31.png"  />
+				</div>
+			</div>
+			<div class="f_r lh30">
+				<div id="user_head_tip" class="pr f_r">
+					<span class="li"><a href="index5caf.html?ctl=user&amp;act=login" class="f_white">立即登录</a></span>
+					<!--<span class="line"></span>
+					<span class="li"><a href="index69bd.html?ctl=user&amp;act=register" class="f_white">免费注册</a></span>-->
+					<!--<span class="li"><a href="index3094.html?ctl=helpcenter">帮助中心</a></span>-->
+				</div>
+			</div>		
+		</div>
+	</div>
+	<div class="main_bars">
+		<div class="main_bar wrap">	
+			<div class="logo mr15">
+				<a class="link f_l" href="index.html">
+					<span style='display:inline-block; width:402px; height:44px;margin-top:20px; background:url(images/logo.png) no-repeat; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=images/logo.png, sizingMethod=scale);_background-image:none;'></span>				
+                </a>
+			</div>     
+			<!--加载菜单-->
+			<ul class="main_nav">
+				<li class="jcur ml5 bdr3 pr">
+					<a href="index.html" target="" class="pr20">首页</a>
+				</li>
+				<li class="jcur ml5 bdr3 pr">
+					<a href="invest.html" target="" class="pr20">我要投资 <i class="iconfont">&#xe61c;</i></a>
+					<div class="sub_main_nav ps hide">
+                        <a href="#"  target="">债权转让</a>
+                        <a href="#"  target="">个人贷款</a>
+                        <a href="#"  target="">工具箱</a>
+                        <a href="#"  target="">关于理财</a>
+                        <a href="#"  target="">成为理财人</a>
+                        <a href="#"  target="_blank">有限合伙</a>
+                    </div>
+                </li>
+				<li class="jcur ml5 bdr3 pr">
+					<a href="#" target="" class="pr20">安全保障 <i class="iconfont">&#xe61c;</i></a>
+					<div class="sub_main_nav ps hide">
+                        <a href="#" target="">政策法规</a>
+                        <a href="#" target="">隐私保护</a>
+                    </div>
+                </li>
+        		<li class="jcur ml5 bdr3 pr">
+					<a href="indexb7bb.html?ctl=acate&amp;id=25" target="" class="pr20">帮助中心 <i class="iconfont">&#xe61c;</i></a>
+					<div class="sub_main_nav ps hide">
+						<a href="#" target="">常见问题</a>
+						<a href="#" target="">平台原理</a>
+						<a href="#" target="">如何借款</a>
+						<a href="#" target="">P2P借贷费率</a>
+					</div>
+				</li>
+				<li class="ml5 bdr3 pr">
+					<a href="#" target="" >关于我们 </a>
+				</li>
+			</ul>
+			<!--加载菜单END-->
+		</div>
+	</div>
+</div>
+
+<div class="blank40"></div>
+
+<div class="wrap">
+	<div class="authentication_box">
+        <div class="authentication_t">
+            <h1>认证及绑定</h1>
+        </div>
+        <div class="authentication_m">
+            <div class="authentication_step clearfix">
+                <span class="step activate"><span class="step1">1、邮箱认证</span></span>
+                <span class="step"><span class="step2">2、实名认证</span></span>
+                <span class="step"><span class="step3 stepend">3、开通托管账户</span></span>
+            </div>
+            <div class="authentication_body">
+                <div class="authentication_data authentication_email" style="display:block;">
+                    <div class="email_data" style="display:block;">
+                        <h2>请填写邮箱进行验证</h2>
+                        <div class="blank20"></div>
+                        <div class="email_input">
+                            <label><span class="f_red">*</span>您的邮箱：</label>
+                            <input type="email" class="f-input ui-textbox" />
+                        </div>
+                        <div class="blank20"></div>
+                        <div class="send_email">
+                            <button type="button" class="btn_red">发送验证邮件</button>
+                        </div>
+                    </div>
+                    <div class="email_data">
+                        <h2>请填写邮箱收到的验证码</h2>
+                        <div class="blank20"></div>
+                        <div class="emailcode_input">
+                            <label><span class="f_red">*</span>验证码：</label>
+                            <input type="text" class="f-input ui-textbox" />
+                        </div>
+                        <div class="blank20"></div>
+                        <div class="send_emailcode">
+                            <button type="button" class="btn_red">下一步</button>
+                        </div>
+                    </div>
+                    <div class="email_data">
+                        <div class="email_success rz_success">
+                            <img src="/theme/images/rz_r.gif" alt="" />
+                            <strong>邮箱验证已成功！</strong>
+                        </div>
+                        <div class="blank20"></div>
+                        <div class="next_step">
+                            <button type="button" class="btn_red">下一步</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="authentication_data authentication_name">
+                    <div class="name_data" style="display:block;">
+                        <div class="name_input">
+                            <label>真实姓名：</label>
+                            <input type="text" class="f-input ui-textbox" />
+                        </div>
+                        <div class="blank20"></div>
+                        <div class="idcard_input">
+                            <label>身份证号：</label>
+                            <input type="text" class="f-input ui-textbox" />
+                        </div>
+                        <div class="blank20"></div>
+                        <div class="send_name">
+                            <button type="button" id="next_step_1" class="btn_red">下一步</button>
+                        </div>
+                    </div>
+                    <div class="name_data">
+                        <div class="name_success rz_success">
+                            <img src="/theme/images/rz_r.gif" alt="" />
+                            <strong>实名认证已成功！</strong>
+                        </div>
+                        <div class="blank20"></div>
+                        <div class="next_step">
+                            <button type="button" id="next_step_2" class="btn_red">下一步</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="authentication_data authentication_account">
+                    <div class="account_data" style="margin-top:80px; display:block;">
+                        <h2 class="f18">为了保障您的资金安全，请您开通专属第三方托管账户</h2>
+                        <div class="blank20"></div>
+                        <img class="qdd" src="/theme/images/qdd.png" alt="" />
+                        <div class="blank20"></div>
+                        <div class="open_qdd">
+								<form id="formu" name="formu" action="http://218.4.234.150:88/main/loan/toloanregisterbind.action" method="post">
+									<input id="SQRegisterType" name="RegisterType" value="2" type="hidden" />
+									<input id="SQAccountType" name="AccountType" value="" type="hidden" />
+									<input id="SQMobile" name="Mobile" value="" type="hidden" />
+									<input id="SQEmail" name="Email" value="" type="hidden" />
+									<input id="SQRealName" name="RealName" value="" type="hidden" />
+									<input id="SQIdentificationNo" name="IdentificationNo" value="" type="hidden" />
+									<input id="SQLoanPlatformAccount" name="LoanPlatformAccount" value="" type="hidden" />
+									<input id="SQPlatformMoneymoremore" name="PlatformMoneymoremore" value="" type="hidden" />
+									<input id="SQRandomTimeStamp" name="RandomTimeStamp" value="" type="hidden" />
+									<input id="SQRemark1" name="Remark1" value="" type="hidden" />
+									<input id="SQRemark2" name="Remark2" value="" type="hidden" />
+									<input id="SQRemark3" name="Remark3" value="" type="hidden" />
+									<input id="SQReturnURL" name="ReturnURL" value="" type="hidden" />
+									<input id="SQNotifyURL" name="NotifyURL" value="" type="hidden" />
+									<input id="SQSignInfo" name="SignInfo" value="" type="hidden" />
+									<button type="submit" class="btn_red">开通乾多多账户</button>
+								</form>
+								
+							
+                        </div>
+                        <div class="blank20"></div>
+                        <div class="account_tips">
+                            <strong>请注意以下事项</strong>
+                            <p>1、开通乾多多账号，页面将会跳转至乾多多进行账户开通。</p>
+                            <p>2、开通资金托管账号是为了保护您的资金安全，请您认真填写相关信息并建议您做好记录。</p>
+                            <p>3、如果您在验证过程中，出现任何问题，请致电4006922218，或咨询理财顾问QQ4006922218</p>
+                        </div>
+                    </div>
+                    <div class="account_data" style="margin-top:150px;">
+                        <div class="account_success rz_success">
+                            <img src="/theme/images/rz_r.gif" alt="" />
+                            <strong>托管账户开通成功！</strong>
+                        </div>
+                        <div class="blank20"></div>
+                        <div class="next_step">
+                            <button type="button" class="btn_red">下一步</button>
+                        </div>
+                    </div>
+                    <div class="authentication_data authentication_finish">
+                        <div class="finish_data" style="margin-top:150px;">
+                            <div class="finish_success tc rz_success">
+                                <img src="images/rz_r.gif" alt="" />
+                                <strong>恭喜您！所有认证及绑定手续均完成。</strong>
+                            </div>
+                            <div class="blank20"></div>
+                            <div class="next_step">
+                                <a href="index.html" class="btn btn_red">立即去投资</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="authentication_b tc">
+            <p>为了保护您的账户和资金安全，投资前请认证！</p>
+        </div>
+    </div>
+</div>
+
+<div id="ftw">
+	
+	<div id="ft">
+		<div class="ftbj">
+        	<div class="wrap ">
+        		<div style="padding-bottom:20px;">
+	            	<ul class="cf f_l f_box">
+	            		<li class="col hp1">
+	                    	<h3 class="f_l">使用帮助</h3>
+							<div class="blank0"></div>
+	                    	<ul class="sub-list">
+								<li><a href="#" >常见问题</a></li>
+                                <li><a href="#" >平台原理</a></li>
+								<li><a href="#" >如何借款</a></li>
+								<li><a href="#" >P2P借贷费率</a></li>
+								<li class="blank0"></li>           
+							</ul>
+							<div class="blank0"></div>
+	                	</li> 
+						<li class="col hp2">
+	                    	<h3 class="f_l">关于我们</h3>
+							<div class="blank0"></div>
+	                    	<ul class="sub-list">
+								<li><a href="#" >授权服务机构登陆</a></li>
+								<li><a href="#" >企业客户登陆</a></li>
+								<li><a href="#" >公司简介</a></li>
+								<li><a href="#" >联系我们</a></li>
+								<li class="blank0"></li>           
+							</ul>
+							<div class="blank0"></div>
+	                	</li> 
+						<li class="col hp3">
+                            <h3 class="f_l">安全保护</h3>
+                            <div class="blank0"></div>
+                            <ul class="sub-list">
+                                <li><a href="#" target="_blank">政策法规</a></li>
+                                <li><a href="#" >隐私保护</a></li>
+                                <li class="blank0"></li>           
+                            </ul>
+                            <div class="blank0"></div>
+                        </li> 
+						<li class="col hp4">
+	                    	<h3 class="f_l">了解更多</h3>
+							<div class="blank0"></div>
+                            <ul class="sub-list">
+                                <li><a href="#" >咨询热点</a></li>
+                                <li class="blank0"></li>           
+                            </ul>
+                            <div class="blank0"></div>
+                        </li> 
+						<li class="col hp5" style="margin-left:50px;width:250px;">
+	                    	<h3 class="f_l">联系我们</h3>
+							<div class="blank0"></div>
+	                    	<ul class="sub-list">
+								<li>广州市海珠区</li>
+								<li>昌岗中路237号信和广场5楼</li>
+								<li>服务邮箱：service@anxinp2p.com</li>
+								<li class="blank0"></li>           
+							</ul>
+							<div class="blank0"></div>
+	                	</li> 
+						<li class="blank0"></li>  
+	            	</ul>
+					<div class="f_r customer">
+						<div class="telphone f_r">
+                            <div class="f_r">
+                                <span class="telep b">400-888-8888</span>
+                                <span class="time f12">24小时</span>
+                            </div>
+                            <i class="iconfont f_r mt1" style="font-size:50px;line-height:50px;">&#xe620;</i>
+                        </div>
+					</div>
+					<div class="blank25"></div>
+                    <div class="blank0"></div>
+				</div>
+			</div>
+            <!--<div class="wrap">
+            	<div class="creditworthiness_box">
+                    <a href="#"><img src="images/creditworthiness1.png" alt="" /></a>
+                    <a href="#"><img src="images/creditworthiness2.png" alt="" /></a>
+                    <a href="#"><img src="images/creditworthiness3.png" alt="" /></a>
+                    <a href="#"><img src="images/creditworthiness4.png" alt="" /></a>
+                    <a href="#"><img src="images/creditworthiness5.png" alt="" /></a>
+                    <a href="#"><img src="images/creditworthiness6.png" alt="" /></a>
+                </div>
+            </div>-->
+			<div class="warp">
+				<div class="copyright">版权所有 (C) Anxinp2p.com   粤ICP备15047167号</div>
+			</div>
+		</div>	
+	</div>
+
+</div>
+<input type="hidden" id="which_step" value="" />
+
+<!--脚本重排部分可能用不到，时间紧以后再整理-->
+
+<!--登录/注册框的一些效果-->
+<script type="text/javascript">
+$(document).ready(function(){
+	 lgdh1();
+	 $(".freebj").css("opacity","0.5"); //设置透明度
+});	
+function lgdh1(){
+	$(".login_block").animate({
+	    top:'20px'
+	},800);
+	setTimeout("lgdh2()","100");  
+}	
+function lgdh2(){
+	$(".login_block").animate({
+	    top:'0px'
+	},300);
+}	
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	//回到顶部
+	$("#jumptop").bind("click", function() {
+        $("html,body").animate({
+            scrollTop: 0
+        }, "fast", "swing", function() {});
+		return false;
+    })
+	//页面加载时判断进行到了第几 步
+        var rz_step = $("#which_step").val();
+		rz_step = rz_step>=1?rz_step-1:0;
+        $(".authentication_step .step").removeClass("activate").eq(rz_step).addClass("activate");
+        $(".authentication_data").hide().eq(rz_step).show();
+});
+</script>
+
+
+
+</body>
+</html>
