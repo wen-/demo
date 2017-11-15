@@ -156,7 +156,7 @@ bbd_public.errTips = function(msg) {
 };
 
 $(function(){
-	$(".banner").height(($(window).width()*.7/1.77)*1.1);
+	$(".banner").height(($("body").width()*.7/1.77)*1.1);
 	var swiper = new Swiper('.swiper-container', {
 		slidesPerView: 3,
 		spaceBetween: 5,
@@ -174,7 +174,7 @@ $(function(){
 		}
 	});
 	$(window).resize(function(){
-		$(".banner").height(($(window).width()*.7/1.77)*1.1);
+		$(".banner").height(($("body").width()*.7/1.77)*1.1);
 	});
 
 	function ui_alert(obj){
@@ -232,7 +232,7 @@ $(function(){
 			return false;
 		}
 		ui_alert({
-			"msg":'<div><img class="getImgCode" src="'+ interface.codeImg + "?" + new Date().getTime() +'" alt="" style="width: 100%;height: 2.5em;display: block;margin: -.5em auto 1em;" /><input type="text" id="imgCode" placeholder="请输入图形码" style="width: 100%;border: solid 1px #ccc;padding: .5em 0;text-align: center;border-radius: 6px;" /></div>',
+			"msg":'<div><img class="getImgCode" src="'+ interface.codeImg + "?" + new Date().getTime() +'" alt="" style="width: 100%;height: 2.5em;display: block;margin: -.5em auto 1em;background: url('+ interface.loadImg +') no-repeat center center;" /><input type="text" id="imgCode" placeholder="请输入图形码" style="width: 100%;border: solid 1px #ccc;padding: .5em 0;text-align: center;border-radius: 6px;" /></div>',
 			"yes":function(){
 				var 图形码 = $("#imgCode").val();
 				var smsCode = interface.smsCode;
@@ -288,22 +288,38 @@ $(function(){
 			"手机":phone,
 			"验证码":code,
 			"密码":password,
-			"来源":interface.origin
+			"来源":interface.origin,
+			"对外编号":$this.data("code")
 		};
 		if(id == "regBtn"){
 			ajaxfun(interface.reg,query,function(obj){
 				if(obj.状态 == 200){
 					var url = $this.data("url") || "/h5/贷款/推荐";
-					window.location.href = url;
+					if($this.hasClass("tg_page")){
+						$this.removeClass("disable").html("注册领现金");
+						window.location.href = "/h5/用户/添加微信";
+					}else{
+						$this.removeClass("disable").html("注册");
+						window.location.href = url;
+					}
 				}else{
 					bbd_public.errTips(obj.状态说明);
-					$this.removeClass("disable").html("注册");
+					if($this.hasClass("tg_page")){
+						$this.removeClass("disable").html("注册领现金");
+					}else{
+						$this.removeClass("disable").html("注册");
+					}
 				}
 			},function(err){
 				bbd_public.errTips("提交失败 "+err.status);
-				$this.removeClass("disable").html("注册");
+				if($this.hasClass("tg_page")){
+					$this.removeClass("disable").html("注册领现金");
+				}else{
+					$this.removeClass("disable").html("注册");
+				}
 			});
 		}else{
+			query.帐号 = phone;
 			ajaxfun(interface.findPassword,query,function(obj){
 				if(obj.状态 == 200){
 					$this.html("重置成功");
@@ -374,6 +390,7 @@ $(function(){
 		ajaxfun(interface.login,query,function(obj){
 			if(obj.状态 == 200){
 				var url = $this.data("url") || "/h5/贷款/推荐";
+				$this.removeClass("disable").html("登录");
 				window.location.href = url;
 			}else{
 				bbd_public.errTips(obj.状态说明);
@@ -689,9 +706,9 @@ $(function(){
 		ajaxfun(interface.userInfo,query,function(obj){
 			if(obj.状态 == 200){
 				$this.html("保存成功");
-				location.href = "/h5/用户/我的";
 				setTimeout(function(){
 					$this.removeClass("disable").html("保存资料");
+					location.href = "/h5/用户/我的";
 				},1500);
 			}else{
 				bbd_public.errTips(obj.状态说明);
